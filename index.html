@@ -215,6 +215,12 @@ a{color:#1B2A38}a:hover{color:#B8452F}
 [style*="padding: 104px 24px"],[style*="padding: 96px 24px"],[style*="padding: 88px 24px"]{padding-top:64px!important;padding-bottom:64px!important}
 [style*="padding: 72px 0 32px"]{padding-top:56px!important}
 }
+.tipbtn{position:relative}
+.tipbtn::after{content:attr(data-tip);position:absolute;left:50%;top:calc(100% + 12px);transform:translate(-50%,-4px);width:250px;background:#FFFFFF;color:#33475A;border:1.5px solid #33485A;border-radius:12px;padding:10px 14px;font-size:13.5px;font-weight:400;line-height:1.4;text-align:center;box-shadow:0 12px 28px rgba(27,42,56,.15);opacity:0;pointer-events:none;transition:opacity .2s,transform .2s;z-index:5}
+.tipbtn::before{content:"";position:absolute;left:50%;top:calc(100% + 6px);width:10px;height:10px;background:#FFFFFF;border-left:1.5px solid #33485A;border-top:1.5px solid #33485A;transform:translateX(-50%) rotate(45deg);opacity:0;transition:opacity .2s;z-index:6}
+.tipbtn:hover::after,.tipbtn:focus-visible::after{opacity:1;transform:translate(-50%,0)}
+.tipbtn:hover::before,.tipbtn:focus-visible::before{opacity:1}
+@media (hover:none){.tipbtn::after,.tipbtn::before{display:none}}
 .lift{transition:transform .3s ease, box-shadow .3s ease}
 .lift:hover{transform:translateY(-6px);box-shadow:0 18px 36px rgba(27,42,56,.12)}
 @media (prefers-reduced-motion: no-preference){
@@ -260,10 +266,9 @@ a{color:#1B2A38}a:hover{color:#B8452F}
 <h1 class="fade" style="--d: 0.15s; margin: 0; font-family: 'Young Serif', serif; font-weight: 400; font-size: clamp(30px, 3.4vw, 44px); line-height: 1.18; letter-spacing: -0.01em; max-width: 19ch; text-wrap: balance"><span style="color: #1B2A38">Your customers love your product.</span> <span style="color: #6F8494">Your prospects have no idea.</span></h1>
 <p class="fade" style="--d: 0.3s; margin: 0; font-family: 'Young Serif', serif; font-size: clamp(18px, 1.6vw, 22px); color: #33475A">Let’s change that.</p>
 <div class="fade" style="--d: 0.45s; display: flex; flex-wrap: wrap; justify-content: center; gap: 12px 22px; align-items: center; margin-top: 6px">
-<a href="/starter-kit" style="text-decoration: none; background: #1B2A38; color: #EEF1F2; border-radius: 999px; padding: 13px 24px; font-weight: 500">Get the free starter kit →</a>
+<a href="/starter-kit" class="tipbtn" data-tip="Checklist, email template and 10 interview questions. Free, no email needed." style="text-decoration: none; background: #1B2A38; color: #EEF1F2; border-radius: 999px; padding: 13px 24px; font-weight: 500">Get your first 5 reviews: free kit →</a>
 <a href="https://calendly.com/ultha-ugc/30min" style="text-underline-offset: 5px; display: inline-flex; align-items: center; gap: 8px">or book a 30-min call</a>
 </div>
-<p class="fade" style="--d: 0.55s; margin: -4px 0 0; font-size: 14px; color: #5A6B79">How to get your first 5 customer reviews · checklist + templates · no email needed</p>
 </div>
 <svg class="herosvg" viewBox="0 0 1200 600" preserveAspectRatio="xMidYMax slice" style="position: relative; z-index: 0; display: block; width: 100%; height: clamp(300px, 44vw, 540px); margin-top: clamp(-170px, -11vw, -30px)" role="img" aria-label="Customers who love the product stand on one cliff. A rope bridge with three planks (customer reviews, short form content, LLMs optimization) crosses a foggy ravine to prospects with a problem, who wonder who can solve it.">
 <defs>
