@@ -68,7 +68,7 @@ a{color:#1B2A38}a:hover{color:#B8452F}
 .vs .new{align-self:stretch;display:flex;align-items:center}
 .vs .arrow{justify-self:center;width:38px;height:38px;border-radius:50%;background:#1B2A38;color:#FFE29A;display:flex;align-items:center;justify-content:center;font-size:18px}
 .vs .new{background:#FFFFFF;border-radius:18px;padding:20px 24px;font-family:'Young Serif',serif;font-size:23px;border:1.5px solid #33485A;box-shadow:0 0 0 4px rgba(255,226,154,.6)}
-@media (max-width:700px){.vs,.vs-head{grid-template-columns:1fr}.vs .arrow{transform:rotate(90deg);margin:8px 0}.vs-head span:nth-child(2){display:none}}
+@media (max-width:700px){.vs,.vs-head{grid-template-columns:1fr 30px 1fr}.vs-head{font-size:10.5px;letter-spacing:.1em;padding:0}.vs-head span{gap:5px}.vs .old{font-size:13.5px;padding:12px 12px;border-radius:14px;gap:8px;line-height:1.35}.vs .old::before{width:18px;height:18px;font-size:9px}.vs .new{font-size:15px;padding:12px 12px;border-radius:14px;line-height:1.3}.vs .arrow{width:24px;height:24px;font-size:12px}}
 .chip{background:#FFFFFF;border:1.5px solid #33485A;border-radius:999px;padding:7px 14px;font-size:14px}
 .prices{display:flex;gap:28px;align-items:stretch;perspective:1400px;padding:24px 0 34px}
 .price{position:relative;flex:1 1 0;min-width:0;background:#FFFFFF;border:2px solid #1B2A38;border-radius:24px;padding:30px 28px;display:flex;flex-direction:column;gap:10px;box-shadow:0 12px 0 #1B2A38,0 34px 50px rgba(27,42,56,.18);transition:transform .35s cubic-bezier(.2,.8,.2,1)}
@@ -195,10 +195,10 @@ a{color:#1B2A38}a:hover{color:#B8452F}
 .roadsvg{display:block;width:100%;height:auto;-webkit-mask-image:linear-gradient(90deg,transparent,#000 3%,#000 97%,transparent);mask-image:linear-gradient(90deg,transparent,#000 3%,#000 97%,transparent)}
 .roadhint{display:none;text-align:center;font-family:Caveat,cursive;font-size:20px;color:#6F8494}
 @media (max-width:900px){.roadwrap{overflow-x:auto;margin:0 -20px;padding:0 20px;scrollbar-width:none}.roadwrap::-webkit-scrollbar{display:none}.roadsvg{width:1040px;max-width:none}.roadhint{display:block}}
-.mcap{display:none}.mlabel{display:none}
+.mcap{display:none}.mlabel{display:none}.roadm{display:none}
 @media (max-width:900px){
 .svgcap{display:none}
-.mcap{display:block;margin:6px auto 0;padding:0 24px;max-width:340px;text-align:center;font-family:Caveat,cursive;font-size:20px;line-height:1.25;color:#1B2A38;position:relative}
+.mcap{display:block;margin:14px auto 0;padding:0 24px;max-width:320px;text-align:center;font-family:Caveat,cursive;font-size:18px;line-height:1.25;color:#1B2A38;position:relative}
 .lanlabel{display:none!important}
 .pc.c2,#q2:checked~.pcs .c2,.pc.c2:hover,#q1:checked~.pcs .c1,#q3:checked~.pcs .c3{transform:none}
 .pcs{gap:28px}
@@ -208,6 +208,7 @@ a{color:#1B2A38}a:hover{color:#B8452F}
 .topbar nav a:not(:last-child){display:none}
 .herosvg{height:300px!important;margin-top:-6px!important}
 .dlabel{display:none}.mlabel{display:inline}
+.roadwrap,.roadhint{display:none!important}.roadm{display:block}
 [style*="padding: 104px 24px"],[style*="padding: 96px 24px"],[style*="padding: 88px 24px"]{padding-top:64px!important;padding-bottom:64px!important}
 [style*="padding: 72px 0 32px"]{padding-top:56px!important}
 }
@@ -288,7 +289,7 @@ a{color:#1B2A38}a:hover{color:#B8452F}
 <g transform="translate(296 346)"><path class="heart" style="--d: 1.2s" d="M0 0c-6-4-6-9-2-10 2 0 2 1 2 2 0-1 0-2 2-2 4 1 4 6-2 10z"></path></g>
 <g transform="translate(340 352)"><path class="heart" style="--d: 2.3s" d="M0 0c-6-4-6-9-2-10 2 0 2 1 2 2 0-1 0-2 2-2 4 1 4 6-2 10z"></path></g>
 </g>
-<text class="dlabel" x="294" y="314" font-family="Caveat, cursive" font-size="21" fill="#1B2A38" text-anchor="middle">your customers</text><text class="mlabel" x="350" y="322" font-family="Caveat, cursive" font-size="30" fill="#1B2A38" text-anchor="middle">your customers</text>
+<text class="dlabel" x="294" y="314" font-family="Caveat, cursive" font-size="21" fill="#1B2A38" text-anchor="middle">your customers</text><text class="mlabel" x="330" y="306" font-family="Caveat, cursive" font-size="26" fill="#1B2A38" text-anchor="middle">your customers</text>
 <defs><clipPath id="solidpart"><rect x="0" y="0" width="708" height="600"></rect></clipPath><clipPath id="dotpart"><rect x="708" y="0" width="600" height="600"></rect></clipPath></defs>
 <g clip-path="url(#solidpart)"><path d="M432 396 Q645 450 858 396" fill="none" stroke="#33485A" stroke-width="2"></path><path d="M432 420 Q645 474 858 420" fill="none" stroke="#33485A" stroke-width="2"></path><g stroke="#33485A" stroke-width="1.2"><path d="M462 404.1V427.1"></path><path d="M496 410.8V433.8"></path><path d="M530 416.1V439.1"></path><path d="M564 420.1V443.1"></path><path d="M598 422.7V445.7"></path><path d="M632 423.9V446.9"></path><path d="M666 423.7V446.7"></path><path d="M700 422.2V445.2"></path><path d="M734 419.3V442.3"></path><path d="M768 415.0V438.0"></path><path d="M802 409.3V432.3"></path><path d="M836 402.3V425.3"></path></g></g>
 <g clip-path="url(#dotpart)" opacity="0.7"><path d="M432 396 Q645 450 858 396" fill="none" stroke="#33485A" stroke-width="2" stroke-dasharray="2 6" stroke-linecap="round"></path><path d="M432 420 Q645 474 858 420" fill="none" stroke="#33485A" stroke-width="2" stroke-dasharray="2 6" stroke-linecap="round"></path><g stroke="#33485A" stroke-width="1.2" stroke-dasharray="2 4"><path d="M462 404.1V427.1"></path><path d="M496 410.8V433.8"></path><path d="M530 416.1V439.1"></path><path d="M564 420.1V443.1"></path><path d="M598 422.7V445.7"></path><path d="M632 423.9V446.9"></path><path d="M666 423.7V446.7"></path><path d="M700 422.2V445.2"></path><path d="M734 419.3V442.3"></path><path d="M768 415.0V438.0"></path><path d="M802 409.3V432.3"></path><path d="M836 402.3V425.3"></path></g></g>
@@ -301,7 +302,7 @@ a{color:#1B2A38}a:hover{color:#B8452F}
 </g>
 <g fill="none" stroke="#33485A" stroke-width="2.2" stroke-linecap="round"><path d="M1027 388 L1036 382"></path><circle cx="1041" cy="378" r="6"></circle></g>
 <g class="fogB" filter="url(#fogblur)" fill="#FFFFFF" opacity="0.5"><ellipse cx="1010" cy="396" rx="160" ry="30"></ellipse></g>
-<text class="dlabel" x="1010" y="318" font-family="Caveat, cursive" font-size="21" fill="#1B2A38" text-anchor="middle">your prospects, searching</text><text class="mlabel" x="852" y="322" font-family="Caveat, cursive" font-size="30" fill="#1B2A38" text-anchor="middle">your prospects</text>
+<text class="dlabel" x="1010" y="318" font-family="Caveat, cursive" font-size="21" fill="#1B2A38" text-anchor="middle">your prospects, searching</text><text class="mlabel" x="852" y="306" font-family="Caveat, cursive" font-size="26" fill="#1B2A38" text-anchor="middle">your prospects</text>
 <g class="ghost" font-family="Caveat, cursive" fill="#5A6B79" text-anchor="middle"><text x="978" y="352" font-size="20">?</text><text x="1040" y="344" font-size="16">?</text></g>
 <path d="M0 548 C240 530 480 556 720 562 C900 566 1060 552 1200 550 V600 H0Z" fill="#5E7586"></path>
 <g class="fogB" filter="url(#fogblur)" fill="#FFFFFF" opacity="0.85"><ellipse cx="600" cy="570" rx="460" ry="28"></ellipse></g>
@@ -514,6 +515,26 @@ a{color:#1B2A38}a:hover{color:#B8452F}
 <g class="fogA" filter="url(#rfog)" fill="#FFFFFF" opacity="0.95"><ellipse cx="1190" cy="210" rx="90" ry="50"></ellipse><ellipse cx="10" cy="236" rx="80" ry="50"></ellipse></g>
 </svg>
 </div>
+<div class="roadm"><svg viewBox="0 0 390 940" role="img" aria-label="My path: 2016 co-founded a marketing agency, 40+ brands. 2020 to 2021 marketing consultant, 20+ clients in 7 countries. 2021 M.S. Technology Management at UCSB. 2022 to 2025 product at impact.com, 25+ major launches. 2025 short-form videos for ads. Now ultha.co." style="display:block;width:100%;max-width:440px;margin:0 auto;height:auto">
+<defs>
+<filter id="wcm" x="-20%" y="-5%" width="140%" height="110%"><feTurbulence type="fractalNoise" baseFrequency="0.035" numOctaves="3" seed="4" result="n"/><feDisplacementMap in="SourceGraphic" in2="n" scale="5" xChannelSelector="R" yChannelSelector="G"/></filter>
+<filter id="rfogm" x="-30%" y="-60%" width="160%" height="220%"><feGaussianBlur stdDeviation="14"/></filter>
+<radialGradient id="rglowm"><stop offset="0%" stop-color="#FFE29A"/><stop offset="45%" stop-color="#F2B33D" stop-opacity="0.45"/><stop offset="100%" stop-color="#F2B33D" stop-opacity="0"/></radialGradient>
+<linearGradient id="rfadem" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#EEF1F2"/><stop offset=".06" stop-color="#EEF1F2" stop-opacity="0"/><stop offset=".94" stop-color="#EEF1F2" stop-opacity="0"/><stop offset="1" stop-color="#EEF1F2"/></linearGradient>
+</defs>
+<g class="fogB" filter="url(#rfogm)" fill="#FFFFFF" opacity="0.7"><ellipse cx="195" cy="240" rx="150" ry="30"/><ellipse cx="195" cy="560" rx="150" ry="30"/></g>
+<path d="M195 -30 L195 15 C300 40 300 140 195 165 C90 190 90 290 195 315 C300 340 300 440 195 465 C90 490 90 590 195 615 C300 640 300 740 195 765 C90 790 90 890 195 915 L195 1000" fill="none" stroke="#7F95A4" stroke-width="22" stroke-linecap="round" filter="url(#wcm)"/>
+<path d="M195 -30 L195 15 C300 40 300 140 195 165 C90 190 90 290 195 315 C300 340 300 440 195 465 C90 490 90 590 195 615 C300 640 300 740 195 765 C90 790 90 890 195 915 L195 1000" fill="none" stroke="#5E7586" stroke-width="17" stroke-linecap="round" opacity="0.55" filter="url(#wcm)"/>
+<path d="M195 -30 L195 15 C300 40 300 140 195 165 C90 190 90 290 195 315 C300 340 300 440 195 465 C90 490 90 590 195 615 C300 640 300 740 195 765 C90 790 90 890 195 915 L195 1000" fill="none" stroke="#EEF1F2" stroke-width="2" stroke-dasharray="8 10" stroke-linecap="round"/>
+<g class="fogA" filter="url(#rfogm)" fill="#FFFFFF" opacity="0.75"><ellipse cx="195" cy="400" rx="70" ry="16"/><ellipse cx="195" cy="720" rx="80" ry="16"/></g>
+<rect x="0" y="0" width="390" height="940" fill="url(#rfadem)"/>
+<g transform="translate(22 28)"><polygon points="0,38 18,8 36,38" fill="#93A8B5"/><polygon points="13,16 18,8 23,16 20,15 18,18 16,15" fill="#FFFFFF"/><polygon points="20,38 34,18 48,38" fill="#7F95A4"/><polygon points="31,23 34,18 37,23 35,22 34,25 33,22" fill="#FFFFFF"/></g><text x="22" y="94" font-family="Young Serif, serif" font-size="22" fill="#1B2A38">2016</text><text x="22" y="116" font-family="Caveat, cursive" font-size="18" fill="#1B2A38">co-founded a marketing</text><text x="22" y="135" font-family="Caveat, cursive" font-size="17" fill="#5A6B79">agency · 40+ brands</text><g transform="translate(214 178)"><path d="M13 8 V4 Q13 1 16 1 H24 Q27 1 27 4 V8" fill="none" stroke="#1B2A38" stroke-width="2"/><rect x="2" y="8" width="36" height="26" rx="5" fill="#C9A27A" stroke="#1B2A38" stroke-width="1.5"/><path d="M2 19 H38" stroke="#1B2A38" stroke-width="1.2"/><rect x="16" y="16" width="8" height="6" rx="1.5" fill="#FFE29A" stroke="#1B2A38"/></g><text x="214" y="244" font-family="Young Serif, serif" font-size="22" fill="#1B2A38">2020–21</text><text x="214" y="266" font-family="Caveat, cursive" font-size="18" fill="#1B2A38">marketing consultant</text><text x="214" y="285" font-family="Caveat, cursive" font-size="16" fill="#5A6B79">20+ clients, 7 countries</text><g transform="translate(22 328)"><path d="M2 14 L22 5 L42 14 L22 23Z" fill="#1B2A38"/><path d="M9 18 V29 C16 34 28 34 35 29 V18 L22 23Z" fill="#33485A"/><path d="M42 14 V27" stroke="#F2B33D" stroke-width="2"/><circle cx="42" cy="29" r="2.6" fill="#F2B33D"/></g><text x="22" y="394" font-family="Young Serif, serif" font-size="22" fill="#1B2A38">2021</text><text x="22" y="416" font-family="Caveat, cursive" font-size="18" fill="#1B2A38">M.S. Technology</text><text x="22" y="435" font-family="Caveat, cursive" font-size="17" fill="#5A6B79">Management, UCSB</text><g transform="translate(214 478)"><rect x="4" y="10" width="34" height="30" fill="#5E7586" stroke="#1B2A38" stroke-width="1.2"/><rect x="12" y="3" width="18" height="7" fill="#4E6474" stroke="#1B2A38" stroke-width="1.2"/><g fill="#FFE29A"><rect x="9" y="15" width="6" height="5"/><rect x="18" y="15" width="6" height="5"/><rect x="27" y="15" width="6" height="5"/><rect x="9" y="25" width="6" height="5"/><rect x="27" y="25" width="6" height="5"/></g><rect x="18" y="32" width="6" height="8" fill="#1B2A38"/></g><text x="214" y="544" font-family="Young Serif, serif" font-size="22" fill="#1B2A38">2022–25</text><text x="214" y="566" font-family="Caveat, cursive" font-size="18" fill="#1B2A38">product, impact.com</text><text x="214" y="585" font-family="Caveat, cursive" font-size="17" fill="#5A6B79">25+ major launches</text><g transform="translate(22 628)"><g transform="rotate(-6 14 20)"><rect x="4" y="0" width="24" height="40" rx="5" fill="#1B2A38"/><rect x="7" y="4" width="18" height="32" rx="3" fill="#E36F5A"/><circle cx="16" cy="20" r="5" fill="rgba(255,255,255,.85)"/><path d="M14 17 L19 20 L14 23Z" fill="#1B2A38"/></g><path d="M32 6 C32 3 36 3 36 6 C36 3 40 3 40 6 C40 9 36 11 36 12 C36 11 32 9 32 6Z" fill="#E36F5A"/></g><text x="22" y="694" font-family="Young Serif, serif" font-size="22" fill="#1B2A38">2025</text><text x="22" y="716" font-family="Caveat, cursive" font-size="18" fill="#1B2A38">short-form videos</text><text x="22" y="735" font-family="Caveat, cursive" font-size="17" fill="#5A6B79">for ads</text>
+<circle class="twinkle gb" cx="236" cy="800" r="46" fill="url(#rglowm)"/>
+<g transform="translate(224 776)"><rect x="0" y="0" width="24" height="6" rx="2" fill="#33485A"/><path d="M2 6 H22 L25 34 H-1Z" fill="#FFE29A" stroke="#1B2A38" stroke-width="1.5"/><path d="M12 13 C8 19 8 25 12 29 C16 25 16 19 12 13Z" fill="#F2B33D"/><rect x="-2" y="34" width="28" height="6" rx="2" fill="#33485A"/></g>
+<text x="214" y="844" font-family="Caveat, cursive" font-size="18" fill="#B8452F">2026 · now</text>
+<text x="214" y="870" font-family="Young Serif, serif" font-size="24" fill="#1B2A38">ultha.co</text>
+<text x="214" y="891" font-family="Caveat, cursive" font-size="17" fill="#5A6B79">your startup, next →</text>
+</svg></div>
 <span class="roadhint" aria-hidden="true">swipe along the road →</span>
 </div>
 </section>
