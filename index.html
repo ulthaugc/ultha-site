@@ -115,7 +115,7 @@ a{color:#1B2A38}a:hover{color:#B8452F}
 .aboutphoto{grid-column:1;grid-row:1;width:100%;height:100%;min-height:620px;max-height:760px;object-fit:cover;object-position:38% 30%;display:block}
 .aboutcard{grid-column:2;grid-row:1;position:relative;z-index:1;margin:56px clamp(24px,5vw,80px) 56px -72px;max-width:520px;background:rgba(238,241,242,.94);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);border:1.5px solid #33485A;border-radius:26px;padding:30px 34px 24px;display:flex;flex-direction:column;gap:14px;box-shadow:0 30px 60px rgba(27,42,56,.18)}
 .aboutnote{grid-column:1;grid-row:1;align-self:end;justify-self:start;position:relative;z-index:1;margin:0 0 32px 32px;font-family:Caveat,cursive;font-size:26px;color:#FFFFFF;text-shadow:0 2px 8px rgba(0,0,0,.5)}
-@media (max-width:760px){.about{grid-template-columns:1fr}.aboutphoto{min-height:0;height:440px}.aboutcard{grid-column:1;grid-row:2;margin:-60px 16px 40px;padding:26px}.aboutnote{display:none}}
+@media (max-width:900px){.about{grid-template-columns:1fr}.aboutphoto{min-height:0;height:440px}.aboutcard{grid-column:1;grid-row:2;margin:-60px 16px 40px;padding:26px}.aboutnote{display:none}}
 .sr{position:absolute;opacity:0;pointer-events:none}
 .plans{display:flex;flex-direction:column;gap:18px}
 .track{position:relative;display:grid;grid-template-columns:repeat(3,1fr);gap:16px;padding-bottom:4px}
@@ -194,18 +194,22 @@ a{color:#1B2A38}a:hover{color:#B8452F}
 .roadwrap{width:100%}
 .roadsvg{display:block;width:100%;height:auto;-webkit-mask-image:linear-gradient(90deg,transparent,#000 3%,#000 97%,transparent);mask-image:linear-gradient(90deg,transparent,#000 3%,#000 97%,transparent)}
 .roadhint{display:none;text-align:center;font-family:Caveat,cursive;font-size:20px;color:#6F8494}
-@media (max-width:760px){.roadwrap{overflow-x:auto;margin:0 -20px;padding:0 20px;scrollbar-width:none}.roadwrap::-webkit-scrollbar{display:none}.roadsvg{width:980px;max-width:none}.roadhint{display:block}}
-.mcap{display:none}
+@media (max-width:900px){.roadwrap{overflow-x:auto;margin:0 -20px;padding:0 20px;scrollbar-width:none}.roadwrap::-webkit-scrollbar{display:none}.roadsvg{width:1040px;max-width:none}.roadhint{display:block}}
+.mcap{display:none}.mlabel{display:none}
+@media (max-width:900px){
+.svgcap{display:none}
+.mcap{display:block;margin:6px auto 0;padding:0 24px;max-width:340px;text-align:center;font-family:Caveat,cursive;font-size:20px;line-height:1.25;color:#1B2A38;position:relative}
+.lanlabel{display:none!important}
+.pc.c2,#q2:checked~.pcs .c2,.pc.c2:hover,#q1:checked~.pcs .c1,#q3:checked~.pcs .c3{transform:none}
+.pcs{gap:28px}
+.soc{flex-wrap:wrap;row-gap:10px}.soc>span{flex-basis:100%}.aboutcard{margin-left:auto!important;margin-right:auto!important;width:calc(100% - 32px);box-sizing:border-box}
+}
 @media (max-width:760px){
 .topbar nav a:not(:last-child){display:none}
-.herosvg{height:250px!important;margin-top:-10px!important}
-.svgcap{display:none}
-.mcap{display:block;margin:-6px auto 0;padding:0 24px;max-width:320px;text-align:center;font-family:Caveat,cursive;font-size:19px;line-height:1.25;color:#1B2A38;position:relative}
-.lanlabel{display:none!important}
-.soc{flex-wrap:wrap}
-.pc.c2,#q2:checked~.pcs .c2,.pc.c2:hover{transform:none}
-#q1:checked~.pcs .c1,#q3:checked~.pcs .c3{transform:none}
-.pcs{gap:28px}
+.herosvg{height:300px!important;margin-top:-6px!important}
+.dlabel{display:none}.mlabel{display:inline}
+[style*="padding: 104px 24px"],[style*="padding: 96px 24px"],[style*="padding: 88px 24px"]{padding-top:64px!important;padding-bottom:64px!important}
+[style*="padding: 72px 0 32px"]{padding-top:56px!important}
 }
 .lift{transition:transform .3s ease, box-shadow .3s ease}
 .lift:hover{transform:translateY(-6px);box-shadow:0 18px 36px rgba(27,42,56,.12)}
@@ -284,7 +288,7 @@ a{color:#1B2A38}a:hover{color:#B8452F}
 <g transform="translate(296 346)"><path class="heart" style="--d: 1.2s" d="M0 0c-6-4-6-9-2-10 2 0 2 1 2 2 0-1 0-2 2-2 4 1 4 6-2 10z"></path></g>
 <g transform="translate(340 352)"><path class="heart" style="--d: 2.3s" d="M0 0c-6-4-6-9-2-10 2 0 2 1 2 2 0-1 0-2 2-2 4 1 4 6-2 10z"></path></g>
 </g>
-<text x="294" y="314" font-family="Caveat, cursive" font-size="21" fill="#1B2A38" text-anchor="middle">your customers</text>
+<text class="dlabel" x="294" y="314" font-family="Caveat, cursive" font-size="21" fill="#1B2A38" text-anchor="middle">your customers</text><text class="mlabel" x="350" y="322" font-family="Caveat, cursive" font-size="30" fill="#1B2A38" text-anchor="middle">your customers</text>
 <defs><clipPath id="solidpart"><rect x="0" y="0" width="708" height="600"></rect></clipPath><clipPath id="dotpart"><rect x="708" y="0" width="600" height="600"></rect></clipPath></defs>
 <g clip-path="url(#solidpart)"><path d="M432 396 Q645 450 858 396" fill="none" stroke="#33485A" stroke-width="2"></path><path d="M432 420 Q645 474 858 420" fill="none" stroke="#33485A" stroke-width="2"></path><g stroke="#33485A" stroke-width="1.2"><path d="M462 404.1V427.1"></path><path d="M496 410.8V433.8"></path><path d="M530 416.1V439.1"></path><path d="M564 420.1V443.1"></path><path d="M598 422.7V445.7"></path><path d="M632 423.9V446.9"></path><path d="M666 423.7V446.7"></path><path d="M700 422.2V445.2"></path><path d="M734 419.3V442.3"></path><path d="M768 415.0V438.0"></path><path d="M802 409.3V432.3"></path><path d="M836 402.3V425.3"></path></g></g>
 <g clip-path="url(#dotpart)" opacity="0.7"><path d="M432 396 Q645 450 858 396" fill="none" stroke="#33485A" stroke-width="2" stroke-dasharray="2 6" stroke-linecap="round"></path><path d="M432 420 Q645 474 858 420" fill="none" stroke="#33485A" stroke-width="2" stroke-dasharray="2 6" stroke-linecap="round"></path><g stroke="#33485A" stroke-width="1.2" stroke-dasharray="2 4"><path d="M462 404.1V427.1"></path><path d="M496 410.8V433.8"></path><path d="M530 416.1V439.1"></path><path d="M564 420.1V443.1"></path><path d="M598 422.7V445.7"></path><path d="M632 423.9V446.9"></path><path d="M666 423.7V446.7"></path><path d="M700 422.2V445.2"></path><path d="M734 419.3V442.3"></path><path d="M768 415.0V438.0"></path><path d="M802 409.3V432.3"></path><path d="M836 402.3V425.3"></path></g></g>
@@ -297,7 +301,7 @@ a{color:#1B2A38}a:hover{color:#B8452F}
 </g>
 <g fill="none" stroke="#33485A" stroke-width="2.2" stroke-linecap="round"><path d="M1027 388 L1036 382"></path><circle cx="1041" cy="378" r="6"></circle></g>
 <g class="fogB" filter="url(#fogblur)" fill="#FFFFFF" opacity="0.5"><ellipse cx="1010" cy="396" rx="160" ry="30"></ellipse></g>
-<text x="1010" y="318" font-family="Caveat, cursive" font-size="21" fill="#1B2A38" text-anchor="middle">your prospects, searching</text>
+<text class="dlabel" x="1010" y="318" font-family="Caveat, cursive" font-size="21" fill="#1B2A38" text-anchor="middle">your prospects, searching</text><text class="mlabel" x="852" y="322" font-family="Caveat, cursive" font-size="30" fill="#1B2A38" text-anchor="middle">your prospects</text>
 <g class="ghost" font-family="Caveat, cursive" fill="#5A6B79" text-anchor="middle"><text x="978" y="352" font-size="20">?</text><text x="1040" y="344" font-size="16">?</text></g>
 <path d="M0 548 C240 530 480 556 720 562 C900 566 1060 552 1200 550 V600 H0Z" fill="#5E7586"></path>
 <g class="fogB" filter="url(#fogblur)" fill="#FFFFFF" opacity="0.85"><ellipse cx="600" cy="570" rx="460" ry="28"></ellipse></g>
