@@ -1,0 +1,192 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Customer Proof Starter Kit · Ultha</title>
+<meta name="description" content="A free starter kit for founders: who to ask, the email to send, 10 customer interview questions, and where to post reviews, testimonials and case studies so prospects and LLMs find them.">
+<meta property="og:title" content="The Customer Proof Starter Kit (free)">
+<meta property="og:description" content="Get your first 5 reviews and testimonials this month. Checklist, email template and 10 interview questions.">
+<meta property="og:image" content="https://ultha.co/og.jpg">
+<meta property="og:url" content="https://ultha.co/starter-kit">
+<link rel="canonical" href="https://ultha.co/starter-kit">
+<meta name="robots" content="noindex">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%231B2A38'/%3E%3Ctext x='32' y='44' font-family='Georgia,serif' font-size='36' fill='%23FFE29A' text-anchor='middle'%3EU%3C/text%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Young+Serif&amp;family=Figtree:wght@400;500;700&amp;family=Caveat:wght@600&amp;display=swap">
+<style>
+:root{--bg:#EEF1F2;--ink:#1B2A38;--muted:#46596A;--soft:#E4E9EC;--line:#C6D0D6;--amber:#F2B33D;--sun:#FFE29A;--coral:#B8452F}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:Figtree,system-ui,sans-serif;font-size:17px;line-height:1.6}
+a{color:var(--ink)}a:hover{color:var(--coral)}
+.wrap{max-width:760px;margin:0 auto;padding:0 20px}
+header{max-width:1180px;margin:0 auto;padding:22px 24px;display:flex;justify-content:space-between;align-items:center}
+.logo{font-family:'Young Serif',serif;font-size:22px;letter-spacing:.02em;text-decoration:none}
+.btn{display:inline-block;text-decoration:none;background:var(--ink);color:#EEF1F2;border-radius:999px;padding:11px 20px;font-weight:500}
+.btn:hover{color:var(--sun)}
+.hero{text-align:center;padding:40px 0 28px}
+.welcome{margin:8px 0 0;background:#fff;border:1.5px solid #33485A;border-radius:14px;padding:12px 16px;text-align:center;font-weight:500;box-shadow:0 0 0 4px rgba(255,226,154,.7)}
+.kicker{font-size:13px;letter-spacing:.14em;text-transform:uppercase;color:#4B5D6C}
+h1{font-family:'Young Serif',serif;font-weight:400;font-size:clamp(32px,4.4vw,48px);line-height:1.15;margin:10px 0 12px;text-wrap:balance}
+.lede{font-size:19px;color:var(--muted);max-width:34em;margin:0 auto}
+.hand{font-family:Caveat,cursive;color:var(--coral);font-size:22px}
+.toc{display:flex;flex-wrap:wrap;justify-content:center;gap:8px;margin:24px 0 0}
+.toc a{background:#fff;border:1.5px solid #33485A;border-radius:999px;padding:6px 14px;font-size:14px;text-decoration:none}
+.step{background:#fff;border:1.5px solid #33485A;border-radius:22px;padding:28px 28px 24px;margin:22px 0;position:relative}
+.num{position:absolute;top:-16px;left:24px;background:var(--ink);color:var(--sun);font-family:'Young Serif',serif;border-radius:999px;padding:3px 14px;font-size:15px}
+h2{font-family:'Young Serif',serif;font-weight:400;font-size:26px;line-height:1.25;margin:6px 0 6px}
+.why{color:var(--muted);margin:0 0 14px}
+ul.check{list-style:none;padding:0;margin:0;display:flex;flex-direction:column;gap:10px}
+ul.check li{position:relative;padding-left:34px}
+ul.check li::before{content:"";position:absolute;left:0;top:3px;width:20px;height:20px;border:2px solid #33485A;border-radius:6px;background:#fff}
+ol.q{margin:0;padding-left:22px;display:flex;flex-direction:column;gap:8px}
+ol.q li::marker{color:var(--coral);font-weight:700}
+.tpl{position:relative;background:var(--soft);border-radius:14px;padding:44px 20px 18px;font-size:15.5px;white-space:pre-wrap;margin:6px 0 0}
+.copy{position:absolute;top:10px;right:10px;border:1.5px solid #33485A;background:#fff;border-radius:999px;padding:4px 12px;font:500 13px Figtree,sans-serif;cursor:pointer}
+.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}
+.mini{background:var(--soft);border-radius:14px;padding:14px 16px}
+.mini b{display:block;font-family:'Young Serif',serif;font-weight:400;font-size:18px;margin-bottom:2px}
+.mini span{font-size:14.5px;color:var(--muted)}
+.tip{margin:14px 0 0;font-size:15px;color:var(--muted)}
+.tip::before{content:"✦ ";color:var(--amber)}
+.cta{background:var(--ink);color:#C9D3DA;border-radius:26px;padding:34px 30px;margin:40px 0 64px;text-align:center}
+.cta h2{color:#EEF1F2}
+.cta .btn{background:var(--sun);color:var(--ink);margin-top:14px}
+.print{background:none;border:0;font:500 15px Figtree,sans-serif;text-decoration:underline;text-underline-offset:4px;cursor:pointer;color:var(--ink);margin-top:14px}
+footer{text-align:center;font-size:14px;color:var(--muted);padding:0 0 40px}
+@media (max-width:640px){body{font-size:16px}.step{padding:24px 18px 20px}.grid{grid-template-columns:1fr}.header-call{padding:9px 16px;font-size:15px}h2{font-size:23px}}
+@media print{header,.toc,.copy,.cta,.print,footer{display:none}.step{break-inside:avoid;border-color:#999}body{background:#fff}}
+</style>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"HowTo","name":"Customer Proof Starter Kit: get your first 5 reviews and testimonials","author":{"@type":"Person","name":"Ultha Niraula","url":"https://ultha.co/"},"step":[{"@type":"HowToStep","name":"Pick 5 customers to ask"},{"@type":"HowToStep","name":"Ask for a feedback call"},{"@type":"HowToStep","name":"Run a 20-minute call with 10 questions"},{"@type":"HowToStep","name":"Turn one call into three assets"},{"@type":"HowToStep","name":"Post it where prospects and LLMs look"},{"@type":"HowToStep","name":"Make it a weekly habit"}]}</script>
+</head>
+<body>
+<header>
+<a class="logo" href="/">ULTHA</a>
+<a class="btn header-call" href="https://calendly.com/ultha-ugc/30min">Book a call</a>
+</header>
+
+<main class="wrap">
+<div class="welcome" id="welcome" hidden>🎉 You're in! Bookmark this page. It's yours to keep.</div>
+<section class="hero">
+<span class="kicker">Free starter kit</span>
+<h1>Get your first 5 customer reviews this month.</h1>
+<p class="lede">The exact checklist I use with startups: who to ask, what to send, what to ask on the call, and where to post it so prospects (and ChatGPT) find it.</p>
+<p class="hand">takes about 2 hours total</p>
+<nav class="toc" aria-label="Kit sections">
+<a href="#s1">1 · Who to ask</a><a href="#s2">2 · The feedback call</a><a href="#s3">3 · 10 questions</a><a href="#s4">4 · One call, 3 assets</a><a href="#s5">5 · Where to post</a><a href="#s6">6 · Weekly habit</a>
+</nav>
+</section>
+
+<section class="step" id="s1">
+<span class="num">1</span>
+<h2>Pick 5 customers to ask</h2>
+<p class="why">Start with the people who already say nice things. You're not convincing anyone. You're just writing it down.</p>
+<ul class="check">
+<li>Customers who've used you for 2+ months</li>
+<li>Someone who sent a "this is great" message, Slack, or support ticket</li>
+<li>People who renewed, upgraded or referred someone</li>
+<li>A mix of roles: a founder, a manager and a daily user</li>
+<li>Your champion at your best-known logo</li>
+</ul>
+<p class="tip">Search your inbox and Slack for "love", "amazing", "saved us". That's your list.</p>
+</section>
+
+<section class="step" id="s2">
+<span class="num">2</span>
+<h2>Ask for a feedback call (not a testimonial)</h2>
+<p class="why">Don't lead with "can we feature you?" Ask for honest feedback. People love being asked for their opinion, and the best quotes come out naturally once they're talking.</p>
+<div class="tpl"><button class="copy" data-t="t1" type="button">Copy</button><div id="t1">Subject: Quick chat next week?
+
+Hi [Name],
+
+When you said [their exact words, e.g. "it’s the one tool everyone actually uses"], it stuck with me.
+
+We're so glad it's been working for you, and we'd love to learn from you: what's working, and what we could still improve.
+
+Do you have 20 minutes for a quick chat next week? Any of these work?
+• [Tue 10am]
+• [Wed 2pm]
+• [Thu 11am]
+
+Thank you,
+[Your name]</div></div>
+<p class="tip">Send it from someone they already talk to: their account manager, customer success lead or the founder they met. A name they recognize gets opened. A no-reply address gets ignored.</p>
+<p class="tip">Use their exact words from a past email, Slack or call. Follow up once after 4 days.</p>
+<p class="tip">Only at the end of the call, if they've said great things, ask: "Would you be open to us sharing what you just said? I'll send it to you to approve first."</p>
+</section>
+
+<section class="step" id="s3">
+<span class="num">3</span>
+<h2>On the call: 10 questions</h2>
+<p class="why">Record it (with permission). Ask, then stay quiet. The best lines come after a pause.</p>
+<ol class="q">
+<li>What were you using before us, and what was frustrating about it?</li>
+<li>What made you start looking for something new?</li>
+<li>What almost stopped you from choosing us?</li>
+<li>What did the first week look like?</li>
+<li>What's one thing that's easier now?</li>
+<li>Can you put a number on it: time, money, headcount, hours?</li>
+<li>Who on your team uses it most, and what do they say?</li>
+<li>If we disappeared tomorrow, what would you miss?</li>
+<li>How would you describe us to a friend in one sentence?</li>
+<li>Who else do you know who should be using this?</li>
+</ol>
+<p class="tip">Questions 6 and 9 give you your headline quote. Question 10 gives you your next lead.</p>
+</section>
+
+<section class="step" id="s4">
+<span class="num">4</span>
+<h2>Turn one call into three assets</h2>
+<p class="why">Don't let a great call die in a recording folder.</p>
+<div class="grid">
+<div class="mini"><b>⭐ A review</b><span>Send them the G2 or Google link right after the call, while they're warm. Suggest 2–3 points they said.</span></div>
+<div class="mini"><b>💬 A testimonial</b><span>One quote + name, role, company, photo. Use their exact words from Q9 or Q6.</span></div>
+<div class="mini"><b>📄 A mini case study</b><span>Before → why they switched → what changed (with a number). 300 words is plenty.</span></div>
+</div>
+<p class="tip">Always send the draft back for approval. It builds trust and they often add a better line.</p>
+</section>
+
+<section class="step" id="s5">
+<span class="num">5</span>
+<h2>Post it where prospects (and LLMs) look</h2>
+<p class="why">A great quote on a slide deck helps no one. Put it where people search.</p>
+<ul class="check">
+<li>G2, Capterra or Google Business: whichever your buyers check</li>
+<li>Your homepage, near your main button</li>
+<li>Your pricing page (that's where doubts show up)</li>
+<li>A dedicated case study page with a clear title</li>
+<li>LinkedIn: the founder posts the story, tags the customer</li>
+<li>Reddit or community threads where your category comes up</li>
+<li>A short video version on YouTube (60 seconds is enough)</li>
+</ul>
+<p class="tip">LLMs like ChatGPT lean on reviews and pages you don't own. Third-party sites count more than your own homepage.</p>
+</section>
+
+<section class="step" id="s6">
+<span class="num">6</span>
+<h2>Make it a weekly habit</h2>
+<p class="why">Proof compounds. One call a week is 50 stories a year.</p>
+<ul class="check">
+<li>Book 1 customer call every week</li>
+<li>Publish 1 asset within 7 days of each call</li>
+<li>Ask every happy support ticket for a review</li>
+<li>Once a month, ask ChatGPT "what's the best tool for [your category]?" and note if you show up</li>
+</ul>
+<button class="print" type="button" onclick="window.print()">Print or save this checklist as PDF</button>
+</section>
+
+<section class="cta">
+<h2>Rather have someone do this for you?</h2>
+<p>That's literally my job. I run the calls, write the reviews, testimonials and case studies, make the videos, and put them where your prospects look.</p>
+<a class="btn" href="https://calendly.com/ultha-ugc/30min">Book a 30-min call</a>
+<p style="margin:12px 0 0"><a href="/" style="color:#C9D3DA">← Back to ultha.co</a></p>
+</section>
+</main>
+<footer>© 2026 Ultha · Santa Barbara, CA</footer>
+<script>
+if(location.search.indexOf("welcome")>-1){document.getElementById("welcome").hidden=false}
+document.querySelectorAll('.copy').forEach(function(b){b.addEventListener('click',function(){var t=document.getElementById(b.dataset.t).innerText;try{navigator.clipboard.writeText(t).then(function(){b.textContent='Copied ✓';setTimeout(function(){b.textContent='Copy'},1800)})}catch(e){}})});
+</script>
+</body>
+</html>

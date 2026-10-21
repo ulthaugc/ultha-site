@@ -3,10 +3,10 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Customer Proof Starter Kit · Ultha</title>
-<meta name="description" content="A free starter kit for founders: who to ask, the email to send, 10 customer interview questions, and where to post reviews, testimonials and case studies so prospects and LLMs find them.">
-<meta property="og:title" content="The Customer Proof Starter Kit (free)">
-<meta property="og:description" content="Get your first 5 reviews and testimonials this month. Checklist, email template and 10 interview questions.">
+<title>Free Customer Proof Starter Kit · Ultha</title>
+<meta name="description" content="A free starter kit for founders: who to ask, the email to send, 10 customer call questions, and where to post reviews and testimonials so prospects and LLMs find them.">
+<meta property="og:title" content="Get your first 5 customer reviews this month (free kit)">
+<meta property="og:description" content="Checklist, email template and 10 call questions. The exact process I use with startups.">
 <meta property="og:image" content="https://ultha.co/og.jpg">
 <meta property="og:url" content="https://ultha.co/starter-kit">
 <link rel="canonical" href="https://ultha.co/starter-kit">
@@ -16,172 +16,167 @@
 <style>
 :root{--bg:#EEF1F2;--ink:#1B2A38;--muted:#46596A;--soft:#E4E9EC;--line:#C6D0D6;--amber:#F2B33D;--sun:#FFE29A;--coral:#B8452F}
 *{box-sizing:border-box}
-html{scroll-behavior:smooth}
-body{margin:0;background:var(--bg);color:var(--ink);font-family:Figtree,system-ui,sans-serif;font-size:17px;line-height:1.6}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:Figtree,system-ui,sans-serif;font-size:17px;line-height:1.6;overflow-x:hidden}
 a{color:var(--ink)}a:hover{color:var(--coral)}
-.wrap{max-width:760px;margin:0 auto;padding:0 20px}
-header{max-width:1180px;margin:0 auto;padding:22px 24px;display:flex;justify-content:space-between;align-items:center}
+header{position:relative;z-index:2;max-width:1180px;margin:0 auto;padding:22px 24px;display:flex;justify-content:space-between;align-items:center}
 .logo{font-family:'Young Serif',serif;font-size:22px;letter-spacing:.02em;text-decoration:none}
-.btn{display:inline-block;text-decoration:none;background:var(--ink);color:#EEF1F2;border-radius:999px;padding:11px 20px;font-weight:500}
-.btn:hover{color:var(--sun)}
-.hero{text-align:center;padding:40px 0 28px}
+.navlink{font-size:15px;text-decoration:none}
+.fogwrap{position:relative;overflow:hidden}
+.fogsvg{position:absolute;inset:0;width:100%;height:100%;pointer-events:none}
+@keyframes fogdrift{from{transform:translateX(-40px)}to{transform:translateX(40px)}}
+@keyframes fogdrift2{from{transform:translateX(50px)}to{transform:translateX(-50px)}}
+@keyframes fade{from{opacity:0;transform:translateY(10px)}to{opacity:1;transform:none}}
+@media (prefers-reduced-motion:no-preference){.fogA{animation:fogdrift 16s ease-in-out infinite alternate}.fogB{animation:fogdrift2 21s ease-in-out infinite alternate}.fade{animation:fade .9s ease both;animation-delay:var(--d,0s)}}
+.hero{position:relative;z-index:1;max-width:1120px;margin:0 auto;padding:24px 24px 72px;display:grid;grid-template-columns:1.05fr .95fr;gap:56px;align-items:center}
 .kicker{font-size:13px;letter-spacing:.14em;text-transform:uppercase;color:#4B5D6C}
-h1{font-family:'Young Serif',serif;font-weight:400;font-size:clamp(32px,4.4vw,48px);line-height:1.15;margin:10px 0 12px;text-wrap:balance}
-.lede{font-size:19px;color:var(--muted);max-width:34em;margin:0 auto}
-.hand{font-family:Caveat,cursive;color:var(--coral);font-size:22px}
-.toc{display:flex;flex-wrap:wrap;justify-content:center;gap:8px;margin:24px 0 0}
-.toc a{background:#fff;border:1.5px solid #33485A;border-radius:999px;padding:6px 14px;font-size:14px;text-decoration:none}
-.step{background:#fff;border:1.5px solid #33485A;border-radius:22px;padding:28px 28px 24px;margin:22px 0;position:relative}
-.num{position:absolute;top:-16px;left:24px;background:var(--ink);color:var(--sun);font-family:'Young Serif',serif;border-radius:999px;padding:3px 14px;font-size:15px}
-h2{font-family:'Young Serif',serif;font-weight:400;font-size:26px;line-height:1.25;margin:6px 0 6px}
-.why{color:var(--muted);margin:0 0 14px}
-ul.check{list-style:none;padding:0;margin:0;display:flex;flex-direction:column;gap:10px}
-ul.check li{position:relative;padding-left:34px}
-ul.check li::before{content:"";position:absolute;left:0;top:3px;width:20px;height:20px;border:2px solid #33485A;border-radius:6px;background:#fff}
-ol.q{margin:0;padding-left:22px;display:flex;flex-direction:column;gap:8px}
-ol.q li::marker{color:var(--coral);font-weight:700}
-.tpl{position:relative;background:var(--soft);border-radius:14px;padding:44px 20px 18px;font-size:15.5px;white-space:pre-wrap;margin:6px 0 0}
-.copy{position:absolute;top:10px;right:10px;border:1.5px solid #33485A;background:#fff;border-radius:999px;padding:4px 12px;font:500 13px Figtree,sans-serif;cursor:pointer}
-.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}
-.mini{background:var(--soft);border-radius:14px;padding:14px 16px}
-.mini b{display:block;font-family:'Young Serif',serif;font-weight:400;font-size:18px;margin-bottom:2px}
-.mini span{font-size:14.5px;color:var(--muted)}
-.tip{margin:14px 0 0;font-size:15px;color:var(--muted)}
-.tip::before{content:"✦ ";color:var(--amber)}
-.cta{background:var(--ink);color:#C9D3DA;border-radius:26px;padding:34px 30px;margin:40px 0 64px;text-align:center}
-.cta h2{color:#EEF1F2}
-.cta .btn{background:var(--sun);color:var(--ink);margin-top:14px}
-.print{background:none;border:0;font:500 15px Figtree,sans-serif;text-decoration:underline;text-underline-offset:4px;cursor:pointer;color:var(--ink);margin-top:14px}
-footer{text-align:center;font-size:14px;color:var(--muted);padding:0 0 40px}
-@media (max-width:640px){body{font-size:16px}.step{padding:24px 18px 20px}.grid{grid-template-columns:1fr}.header-call{padding:9px 16px;font-size:15px}h2{font-size:23px}}
-@media print{header,.toc,.copy,.cta,.print,footer{display:none}.step{break-inside:avoid;border-color:#999}body{background:#fff}}
+h1{font-family:'Young Serif',serif;font-weight:400;font-size:clamp(34px,4.2vw,52px);line-height:1.12;margin:10px 0 14px;text-wrap:balance}
+h1 span{color:#6F8494}
+.lede{font-size:19px;color:var(--muted);margin:0 0 22px;max-width:30em}
+form{background:#fff;border:1.5px solid #33485A;border-radius:22px;padding:22px;box-shadow:0 24px 50px rgba(27,42,56,.12);max-width:460px}
+.row{display:flex;flex-direction:column;gap:10px}
+label{font-size:13px;font-weight:500;color:#33475A}
+input[type=text],input[type=email]{width:100%;font:inherit;font-size:16px;padding:13px 15px;border:1.5px solid var(--line);border-radius:12px;background:var(--bg);color:var(--ink)}
+input:focus{outline:none;border-color:var(--ink);background:#fff;box-shadow:0 0 0 4px rgba(255,226,154,.7)}
+.hp{position:absolute;left:-9999px;width:1px;height:1px;opacity:0}
+button[type=submit]{margin-top:6px;width:100%;font:500 17px Figtree,sans-serif;background:var(--ink);color:#EEF1F2;border:0;border-radius:999px;padding:15px 22px;cursor:pointer;transition:transform .15s}
+button[type=submit]:hover{transform:translateY(-2px);color:var(--sun)}
+button[disabled]{opacity:.7;cursor:wait}
+.fine{margin:10px 2px 0;font-size:13px;color:#5A6B79;text-align:center}
+.err{display:none;margin:8px 2px 0;font-size:14px;color:var(--coral)}
+.preview{position:relative;transform:rotate(1.5deg)}
+.sheet{position:relative;background:#fff;border:1.5px solid #33485A;border-radius:18px;padding:12px;box-shadow:0 30px 60px rgba(27,42,56,.18);overflow:hidden}
+.sheet img{display:block;width:100%;height:auto;border-radius:10px;filter:blur(3.5px) saturate(.9);transform:scale(1.02)}
+.sheet::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(255,255,255,0) 30%,rgba(238,241,242,.85) 100%)}
+.lock{position:absolute;z-index:2;left:50%;top:50%;transform:translate(-50%,-50%);background:var(--ink);color:var(--sun);border-radius:999px;padding:10px 18px;font-weight:500;font-size:15px;white-space:nowrap;box-shadow:0 10px 24px rgba(27,42,56,.3)}
+.tape{position:absolute;z-index:3;top:-12px;left:50%;width:96px;height:26px;margin-left:-48px;background:rgba(201,162,122,.6);transform:rotate(-3deg)}
+.note{position:absolute;z-index:3;right:-6px;bottom:-30px;font-family:Caveat,cursive;font-size:22px;color:var(--coral);transform:rotate(-3deg)}
+section{max-width:1060px;margin:0 auto;padding:72px 24px}
+h2{font-family:'Young Serif',serif;font-weight:400;font-size:clamp(28px,3.2vw,38px);line-height:1.2;margin:8px 0 10px;text-align:center}
+.sub{text-align:center;color:var(--muted);margin:0 auto 34px;max-width:36em}
+.inside{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.inside li{background:#fff;border:1.5px solid #33485A;border-radius:18px;padding:22px 20px;display:flex;flex-direction:column;gap:6px}
+.inside .ic{font-size:26px;line-height:1}
+.inside b{font-family:'Young Serif',serif;font-weight:400;font-size:19px;line-height:1.3}
+.inside span{font-size:15px;color:var(--muted)}
+.band{background:var(--soft)}
+.who{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin:0;padding:0;list-style:none}
+.who li{text-align:center;padding:8px 12px}
+.who .big{font-family:'Young Serif',serif;font-size:21px;display:block;margin-bottom:4px}
+.who span{color:var(--muted);font-size:15px}
+.me{display:flex;gap:22px;align-items:center;max-width:720px;margin:0 auto;background:#fff;border:1.5px solid #33485A;border-radius:22px;padding:22px}
+.me img{width:96px;height:96px;border-radius:50%;object-fit:cover;object-position:40% 22%;flex:none;box-shadow:0 0 0 5px rgba(255,226,154,.7)}
+.me p{margin:0;font-size:16px;color:#33475A}
+.me b{font-family:'Young Serif',serif;font-weight:400;font-size:20px;color:var(--ink);display:block;margin-bottom:4px}
+.final{text-align:center}
+.final form{margin:0 auto;text-align:left}
+footer{text-align:center;font-size:14px;color:var(--muted);padding:8px 0 40px}
+@media (max-width:860px){.hero{grid-template-columns:1fr;gap:56px;padding-bottom:56px}.preview{max-width:440px;margin:0 auto}.inside{grid-template-columns:1fr 1fr}.who{grid-template-columns:1fr}section{padding:56px 20px}}
+@media (max-width:560px){body{font-size:16px}.hero{padding:8px 20px 48px}.inside{grid-template-columns:1fr}.me{flex-direction:column;text-align:center}form{padding:18px}}
 </style>
-<script type="application/ld+json">{"@context":"https://schema.org","@type":"HowTo","name":"Customer Proof Starter Kit: get your first 5 reviews and testimonials","author":{"@type":"Person","name":"Ultha Niraula","url":"https://ultha.co/"},"step":[{"@type":"HowToStep","name":"Pick 5 customers to ask"},{"@type":"HowToStep","name":"Ask for a feedback call"},{"@type":"HowToStep","name":"Run a 20-minute call with 10 questions"},{"@type":"HowToStep","name":"Turn one call into three assets"},{"@type":"HowToStep","name":"Post it where prospects and LLMs look"},{"@type":"HowToStep","name":"Make it a weekly habit"}]}</script>
 </head>
 <body>
+<div class="fogwrap">
+<svg class="fogsvg" viewBox="0 0 1200 700" preserveAspectRatio="none" aria-hidden="true">
+<defs><filter id="fb" x="-20%" y="-60%" width="140%" height="220%"><feGaussianBlur stdDeviation="22"/></filter></defs>
+<path d="M0 560 C200 520 380 540 600 560 C820 580 1000 540 1200 548 V700 H0Z" fill="#DCE3E7"/>
+<path d="M0 620 C240 600 480 628 720 636 C900 642 1060 626 1200 624 V700 H0Z" fill="#CDD7DD"/>
+<g class="fogA" filter="url(#fb)" fill="#FFFFFF" opacity="0.85"><ellipse cx="200" cy="560" rx="300" ry="40"/><ellipse cx="1000" cy="600" rx="320" ry="40"/></g>
+<g class="fogB" filter="url(#fb)" fill="#FFFFFF" opacity="0.7"><ellipse cx="700" cy="140" rx="300" ry="30"/><ellipse cx="160" cy="260" rx="220" ry="26"/></g>
+</svg>
 <header>
 <a class="logo" href="/">ULTHA</a>
-<a class="btn header-call" href="https://calendly.com/ultha-ugc/30min">Book a call</a>
+<a class="navlink" href="/">← Back to ultha.co</a>
 </header>
-
-<main class="wrap">
-<section class="hero">
-<span class="kicker">Free starter kit</span>
-<h1>Get your first 5 customer reviews this month.</h1>
-<p class="lede">The exact checklist I use with startups: who to ask, what to send, what to ask on the call, and where to post it so prospects (and ChatGPT) find it.</p>
-<p class="hand">no email needed · takes 2 hours total</p>
-<nav class="toc" aria-label="Kit sections">
-<a href="#s1">1 · Who to ask</a><a href="#s2">2 · The feedback call</a><a href="#s3">3 · 10 questions</a><a href="#s4">4 · One call, 3 assets</a><a href="#s5">5 · Where to post</a><a href="#s6">6 · Weekly habit</a>
-</nav>
-</section>
-
-<section class="step" id="s1">
-<span class="num">1</span>
-<h2>Pick 5 customers to ask</h2>
-<p class="why">Start with the people who already say nice things. You're not convincing anyone. You're just writing it down.</p>
-<ul class="check">
-<li>Customers who've used you for 2+ months</li>
-<li>Someone who sent a "this is great" message, Slack, or support ticket</li>
-<li>People who renewed, upgraded or referred someone</li>
-<li>A mix of roles: a founder, a manager and a daily user</li>
-<li>Your champion at your best-known logo</li>
-</ul>
-<p class="tip">Search your inbox and Slack for "love", "amazing", "saved us". That's your list.</p>
-</section>
-
-<section class="step" id="s2">
-<span class="num">2</span>
-<h2>Ask for a feedback call (not a testimonial)</h2>
-<p class="why">Don't lead with "can we feature you?" Ask for honest feedback. People love being asked for their opinion, and the best quotes come out naturally once they're talking.</p>
-<div class="tpl"><button class="copy" data-t="t1" type="button">Copy</button><div id="t1">Subject: Quick chat next week?
-
-Hi [Name],
-
-When you said [their exact words, e.g. "it’s the one tool everyone actually uses"], it stuck with me.
-
-We're so glad it's been working for you, and we'd love to learn from you: what's working, and what we could still improve.
-
-Do you have 20 minutes for a quick chat next week? Any of these work?
-• [Tue 10am]
-• [Wed 2pm]
-• [Thu 11am]
-
-Thank you,
-[Your name]</div></div>
-<p class="tip">Send it from the founder, not a no-reply address. Mention one specific thing they said or did if you can. Follow up once after 4 days.</p>
-<p class="tip">Only at the end of the call, if they've said great things, ask: "Would you be open to us sharing what you just said? I'll send it to you to approve first."</p>
-</section>
-
-<section class="step" id="s3">
-<span class="num">3</span>
-<h2>On the call: 10 questions</h2>
-<p class="why">Record it (with permission). Ask, then stay quiet. The best lines come after a pause.</p>
-<ol class="q">
-<li>What were you using before us, and what was frustrating about it?</li>
-<li>What made you start looking for something new?</li>
-<li>What almost stopped you from choosing us?</li>
-<li>What did the first week look like?</li>
-<li>What's one thing that's easier now?</li>
-<li>Can you put a number on it: time, money, headcount, hours?</li>
-<li>Who on your team uses it most, and what do they say?</li>
-<li>If we disappeared tomorrow, what would you miss?</li>
-<li>How would you describe us to a friend in one sentence?</li>
-<li>Who else do you know who should be using this?</li>
-</ol>
-<p class="tip">Questions 6 and 9 give you your headline quote. Question 10 gives you your next lead.</p>
-</section>
-
-<section class="step" id="s4">
-<span class="num">4</span>
-<h2>Turn one call into three assets</h2>
-<p class="why">Don't let a great call die in a recording folder.</p>
-<div class="grid">
-<div class="mini"><b>⭐ A review</b><span>Send them the G2 or Google link right after the call, while they're warm. Suggest 2–3 points they said.</span></div>
-<div class="mini"><b>💬 A testimonial</b><span>One quote + name, role, company, photo. Use their exact words from Q9 or Q6.</span></div>
-<div class="mini"><b>📄 A mini case study</b><span>Before → why they switched → what changed (with a number). 300 words is plenty.</span></div>
+<div class="hero">
+<div>
+<span class="kicker fade">Free starter kit</span>
+<h1 class="fade" style="--d:.1s">Get your first 5 customer reviews <span>this month.</span></h1>
+<p class="lede fade" style="--d:.2s">The exact playbook I use with startups: who to ask, the email that gets a yes, what to ask on the call, and where to post it so prospects and ChatGPT find it.</p>
+<form class="fade signup" style="--d:.3s" action="/api/subscribe" method="POST" novalidate>
+<div class="row">
+<label for="n1">First name</label>
+<input id="n1" name="name" type="text" autocomplete="given-name" placeholder="Alex">
+<label for="e1">Work email</label>
+<input id="e1" name="email" type="email" autocomplete="email" placeholder="alex@yourstartup.com" required>
+<input class="hp" name="company" type="text" tabindex="-1" autocomplete="off" aria-hidden="true">
+<button type="submit">Send me the kit →</button>
 </div>
-<p class="tip">Always send the draft back for approval. It builds trust and they often add a better line.</p>
-</section>
+<p class="err" role="alert"></p>
+<p class="fine">Instant access. No spam, unsubscribe anytime.</p>
+</form>
+</div>
+<div class="preview fade" style="--d:.35s" aria-hidden="true">
+<span class="tape"></span>
+<div class="sheet"><img src="kit-preview.jpg" alt=""></div>
+<span class="lock">🔒 Unlock the full kit</span>
+<span class="note">6 steps, 2 hours ✍️</span>
+</div>
+</div>
+</div>
 
-<section class="step" id="s5">
-<span class="num">5</span>
-<h2>Post it where prospects (and LLMs) look</h2>
-<p class="why">A great quote on a slide deck helps no one. Put it where people search.</p>
-<ul class="check">
-<li>G2, Capterra or Google Business: whichever your buyers check</li>
-<li>Your homepage, near your main button</li>
-<li>Your pricing page (that's where doubts show up)</li>
-<li>A dedicated case study page with a clear title</li>
-<li>LinkedIn: the founder posts the story, tags the customer</li>
-<li>Reddit or community threads where your category comes up</li>
-<li>A short video version on YouTube (60 seconds is enough)</li>
+<section>
+<span class="kicker" style="display:block;text-align:center">What's inside</span>
+<h2>Everything to go from zero to five reviews</h2>
+<p class="sub">No theory. Copy, paste and send. Each step takes about 20 minutes.</p>
+<ul class="inside">
+<li><span class="ic">🎯</span><b>Who to ask first</b><span>A checklist to find the 5 customers most likely to say yes, using a 2-minute inbox search.</span></li>
+<li><span class="ic">✉️</span><b>The email that gets a yes</b><span>A copy-paste feedback request, plus who should send it so it actually gets opened.</span></li>
+<li><span class="ic">🎙️</span><b>10 call questions</b><span>The questions that pull out real stories, and the exact moment to ask for a quote.</span></li>
+<li><span class="ic">⭐</span><b>One call, three assets</b><span>Turn a 20-minute chat into a review, a testimonial and a mini case study.</span></li>
+<li><span class="ic">📍</span><b>Where to post it</b><span>The sites your prospects and LLMs actually check, in order of impact.</span></li>
+<li><span class="ic">🔁</span><b>A 30-min weekly habit</b><span>Keep the stories coming, plus a monthly "does ChatGPT know us?" check.</span></li>
 </ul>
-<p class="tip">LLMs like ChatGPT lean on reviews and pages you don't own. Third-party sites count more than your own homepage.</p>
 </section>
 
-<section class="step" id="s6">
-<span class="num">6</span>
-<h2>Make it a weekly habit</h2>
-<p class="why">Proof compounds. One call a week is 50 stories a year.</p>
-<ul class="check">
-<li>Book 1 customer call every week</li>
-<li>Publish 1 asset within 7 days of each call</li>
-<li>Ask every happy support ticket for a review</li>
-<li>Once a month, ask ChatGPT "what's the best tool for [your category]?" and note if you show up</li>
+<div class="band">
+<section>
+<h2>Made for founders who</h2>
+<ul class="who" style="margin-top:28px">
+<li><span class="big">Have happy customers</span><span>but almost no reviews or testimonials to show for it.</span></li>
+<li><span class="big">Just raised</span><span>and need prospects to trust you before your first marketer starts.</span></li>
+<li><span class="big">Want to show up in ChatGPT</span><span>when buyers ask for the best tool in your category.</span></li>
 </ul>
-<button class="print" type="button" onclick="window.print()">Print or save this checklist as PDF</button>
+</section>
+</div>
+
+<section>
+<div class="me">
+<img src="ultha-photo.jpg" alt="Ultha">
+<p><b>Hi, I'm Ultha.</b>Former product manager and marketer. I help seed to Series A startups turn customer love into reviews, videos and stories that build trust. This kit is the same process I run with clients.</p>
+</div>
 </section>
 
-<section class="cta">
-<h2>Rather have someone do this for you?</h2>
-<p>That's literally my job. I run the calls, write the reviews, testimonials and case studies, make the videos, and put them where your prospects look.</p>
-<a class="btn" href="https://calendly.com/ultha-ugc/30min">Book a 30-min call</a>
-<p style="margin:12px 0 0"><a href="/" style="color:#C9D3DA">← Back to ultha.co</a></p>
+<section class="final" style="padding-top:8px">
+<h2>Grab the kit</h2>
+<p class="sub">Free. Instant. Yours to keep.</p>
+<form class="signup" action="/api/subscribe" method="POST" novalidate>
+<div class="row">
+<label for="n2">First name</label>
+<input id="n2" name="name" type="text" autocomplete="given-name" placeholder="Alex">
+<label for="e2">Work email</label>
+<input id="e2" name="email" type="email" autocomplete="email" placeholder="alex@yourstartup.com" required>
+<input class="hp" name="company" type="text" tabindex="-1" autocomplete="off" aria-hidden="true">
+<button type="submit">Send me the kit →</button>
+</div>
+<p class="err" role="alert"></p>
+<p class="fine">Instant access. No spam, unsubscribe anytime.</p>
+</form>
 </section>
-</main>
 <footer>© 2026 Ultha · Santa Barbara, CA</footer>
 <script>
-document.querySelectorAll('.copy').forEach(function(b){b.addEventListener('click',function(){var t=document.getElementById(b.dataset.t).innerText;try{navigator.clipboard.writeText(t).then(function(){b.textContent='Copied ✓';setTimeout(function(){b.textContent='Copy'},1800)})}catch(e){}})});
+document.querySelectorAll('form.signup').forEach(function(f){
+  f.addEventListener('submit',function(ev){
+    ev.preventDefault();
+    var err=f.querySelector('.err'),btn=f.querySelector('button'),email=f.elements['email'].value.trim();
+    if(!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)){err.textContent='Please enter a valid email.';err.style.display='block';f.elements['email'].focus();return}
+    err.style.display='none';btn.disabled=true;btn.textContent='Sending…';
+    fetch('/api/subscribe',{method:'POST',headers:{'Content-Type':'application/json','Accept':'application/json'},body:JSON.stringify({name:f.elements['name'].value,email:email,company:f.elements['company'].value})})
+      .then(function(r){return r.json().catch(function(){return {ok:r.ok}})})
+      .then(function(d){if(d&&d.ok){location.href='/kit?welcome=1'}else{throw new Error(d&&d.error||'x')}})
+      .catch(function(e){btn.disabled=false;btn.textContent='Send me the kit →';err.textContent=(e&&e.message&&e.message!=='x')?e.message:'Something went wrong. Please try again.';err.style.display='block'});
+  });
+});
+if(location.search.indexOf('error=email')>-1){var e=document.querySelector('.err');e.textContent='Please enter a valid email.';e.style.display='block'}
 </script>
 </body>
 </html>
