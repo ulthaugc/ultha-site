@@ -2,7 +2,7 @@
 
 > Ultha Niraula helps early-stage tech startups turn what their customers already say into proof that buyers and AI search trust: customer interviews, reviews, testimonials, case studies, short videos, and placement on review sites and communities.
 
-About: Former product manager at impact.com, co-founder of a marketing agency that worked with 40+ brands, M.S. in Technology Management from UCSB. Based in Santa Barbara, CA.
+About: Former product manager and co-founder of a marketing agency that worked with 40+ brands, before going solo. M.S. in Technology Management from UCSB. Based in Santa Barbara, CA.
 
 ## Guides
 - [Stop asking customers "How do you like our product?"](https://ultha.co/guides/stop-asking-how-do-you-like-our-product): 5 interview questions that get customers to tell real, specific stories instead of polite praise.
