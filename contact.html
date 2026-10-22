@@ -1,0 +1,189 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Let's Talk · Ultha</title>
+<meta name="description" content="Tell me about your startup. I'll reply within 2–3 business days with whether I can help and what I'd do first.">
+<meta property="og:title" content="Let's talk about your customer proof">
+<meta property="og:description" content="Tell me about your startup. I'll reply within 2–3 business days.">
+<meta property="og:image" content="https://ultha.co/og.jpg">
+<meta property="og:url" content="https://ultha.co/contact">
+<link rel="canonical" href="https://ultha.co/contact">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Young+Serif&amp;family=Figtree:wght@400;500;700&amp;family=Caveat:wght@600&amp;display=swap">
+<style>
+:root{--bg:#EEF1F2;--ink:#1B2A38;--muted:#46596A;--soft:#E4E9EC;--line:#C6D0D6;--amber:#F2B33D;--sun:#FFE29A;--coral:#B8452F}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:Figtree,system-ui,sans-serif;font-size:17px;line-height:1.6;overflow-x:hidden}
+a{color:var(--ink)}a:hover{color:var(--coral)}
+header{position:relative;z-index:2;max-width:1180px;margin:0 auto;padding:22px 24px;display:flex;justify-content:space-between;align-items:center}
+.logo{font-family:'Young Serif',serif;font-size:22px;letter-spacing:.02em;text-decoration:none}
+.navlink{font-size:15px;text-decoration:none}
+.fogwrap{position:relative;overflow:hidden;min-height:100vh}
+.fogsvg{position:absolute;inset:0;width:100%;height:100%;pointer-events:none}
+@keyframes fogdrift{from{transform:translateX(-40px)}to{transform:translateX(40px)}}
+@keyframes fogdrift2{from{transform:translateX(50px)}to{transform:translateX(-50px)}}
+@keyframes fade{from{opacity:0;transform:translateY(10px)}to{opacity:1;transform:none}}
+@keyframes glow{0%,100%{opacity:.75}50%{opacity:1}}
+@media (prefers-reduced-motion:no-preference){.fogA{animation:fogdrift 16s ease-in-out infinite alternate}.fogB{animation:fogdrift2 21s ease-in-out infinite alternate}.fade{animation:fade .9s ease both;animation-delay:var(--d,0s)}.lglow{animation:glow 3.5s ease-in-out infinite}}
+.wrap{position:relative;z-index:1;max-width:1120px;margin:0 auto;padding:20px 24px 90px;display:grid;grid-template-columns:.9fr 1.1fr;gap:64px;align-items:start}
+.kicker{font-size:13px;letter-spacing:.14em;text-transform:uppercase;color:#4B5D6C}
+h1{font-family:'Young Serif',serif;font-weight:400;font-size:clamp(34px,4.2vw,52px);line-height:1.12;margin:10px 0 14px;text-wrap:balance}
+h1 span{color:#6F8494}
+.lede{font-size:19px;color:var(--muted);margin:0 0 28px;max-width:28em}
+.steps{list-style:none;margin:0 0 30px;padding:0;display:flex;flex-direction:column;gap:14px}
+.steps li{display:flex;gap:14px;align-items:flex-start}
+.steps .n{flex:none;width:32px;height:32px;border-radius:50%;background:var(--ink);color:var(--sun);display:flex;align-items:center;justify-content:center;font-weight:700;font-size:15px}
+.steps b{display:block;font-weight:500}
+.steps span{font-size:15px;color:var(--muted)}
+.me{display:flex;gap:16px;align-items:center;background:#fff;border:1.5px solid #33485A;border-radius:20px;padding:16px 18px;max-width:420px;position:relative}
+.me img{width:64px;height:64px;border-radius:50%;object-fit:cover;object-position:40% 22%;flex:none;box-shadow:0 0 0 4px rgba(255,226,154,.7)}
+.me p{margin:0;font-size:15px;color:#33475A;line-height:1.45}
+.me b{font-family:'Young Serif',serif;font-weight:400;font-size:18px;color:var(--ink)}
+.note{position:absolute;right:-8px;bottom:-30px;font-family:Caveat,cursive;font-size:22px;color:var(--coral);transform:rotate(-3deg)}
+.lantern{position:absolute;right:-64px;top:-118px;width:120px;pointer-events:none}
+form{position:relative;background:#fff;border:1.5px solid #33485A;border-radius:24px;padding:28px;box-shadow:0 24px 50px rgba(27,42,56,.12)}
+.grid2{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+.field{display:flex;flex-direction:column;gap:7px;margin-bottom:18px}
+label,.lab{font-size:13px;font-weight:500;color:#33475A}
+.opt{font-weight:400;color:#7A8A97}
+input[type=text],input[type=email],input[type=url],textarea{width:100%;font:inherit;font-size:16px;padding:12px 14px;border:1.5px solid var(--line);border-radius:12px;background:var(--bg);color:var(--ink)}
+textarea{min-height:96px;resize:vertical}
+input:focus,textarea:focus{outline:none;border-color:var(--ink);background:#fff;box-shadow:0 0 0 4px rgba(255,226,154,.7)}
+.chips{display:flex;flex-wrap:wrap;gap:8px}
+.chips input{position:absolute;opacity:0;pointer-events:none}
+.chips label{cursor:pointer;font-size:15px;font-weight:500;color:var(--ink);border:1.5px solid var(--line);background:var(--bg);border-radius:999px;padding:8px 14px;transition:all .15s;user-select:none}
+.chips label:hover{border-color:var(--ink)}
+.chips input:checked+label{background:var(--ink);border-color:var(--ink);color:var(--sun)}
+.chips input:focus-visible+label{box-shadow:0 0 0 4px rgba(255,226,154,.7)}
+.groups{display:flex;flex-direction:column;gap:12px}.grp{background:var(--bg);border-radius:16px;padding:12px 14px 14px}.gh{font-size:14px;font-weight:700;margin-bottom:8px;display:flex;gap:6px;align-items:center}.gh em{font-style:normal;font-weight:400;color:#7A8A97}.grp .chips label{background:#fff}
+.hp{position:absolute;left:-9999px;width:1px;height:1px;opacity:0}
+button[type=submit]{width:100%;font:500 17px Figtree,sans-serif;background:var(--ink);color:#EEF1F2;border:0;border-radius:999px;padding:15px 22px;cursor:pointer;transition:transform .15s}
+button[type=submit]:hover{transform:translateY(-2px);color:var(--sun)}
+button[disabled]{opacity:.7;cursor:wait}
+.fine{margin:12px 2px 0;font-size:13px;color:#5A6B79;text-align:center}
+.err{display:none;margin:0 2px 12px;font-size:14px;color:var(--coral)}
+.done{display:none;text-align:center;padding:40px 10px}
+.done .big{font-family:'Young Serif',serif;font-size:32px;line-height:1.2;margin:14px 0 8px}
+.done p{color:var(--muted);margin:0 auto 18px;max-width:24em}
+.sent form .formbody{display:none}.sent form .done{display:block}
+footer{position:relative;z-index:1;text-align:center;font-size:14px;color:var(--muted);padding:0 0 40px}
+@media (max-width:900px){.wrap{grid-template-columns:1fr;gap:40px}.lantern{display:none}}
+@media (max-width:560px){body{font-size:16px}.wrap{padding:8px 16px 64px}form{padding:20px}.grid2{grid-template-columns:1fr;gap:0}}
+</style>
+</head>
+<body>
+<div class="fogwrap">
+<svg class="fogsvg" viewBox="0 0 1200 900" preserveAspectRatio="none" aria-hidden="true">
+<defs><filter id="fb" x="-20%" y="-60%" width="140%" height="220%"><feGaussianBlur stdDeviation="22"/></filter></defs>
+<path d="M0 760 C200 720 380 740 600 760 C820 780 1000 740 1200 748 V900 H0Z" fill="#DCE3E7"/>
+<path d="M0 820 C240 800 480 828 720 836 C900 842 1060 826 1200 824 V900 H0Z" fill="#CDD7DD"/>
+<g class="fogA" filter="url(#fb)" fill="#FFFFFF" opacity="0.85"><ellipse cx="200" cy="760" rx="300" ry="40"/><ellipse cx="1000" cy="800" rx="320" ry="40"/></g>
+<g class="fogB" filter="url(#fb)" fill="#FFFFFF" opacity="0.7"><ellipse cx="700" cy="140" rx="300" ry="30"/><ellipse cx="160" cy="300" rx="220" ry="26"/></g>
+</svg>
+<header>
+<a class="logo" href="/" style="display:inline-flex;align-items:center;gap:10px"><img src="ultha-mark.svg" alt="" width="34" height="18">ULTHA</a>
+<a class="navlink" href="/">← Back to ultha.co</a>
+</header>
+
+<div class="wrap">
+<div>
+<span class="kicker fade">Let's talk</span>
+<h1 class="fade" style="--d:.1s">Tell me about your startup. <span>I'll take it from there.</span></h1>
+<p class="lede fade" style="--d:.2s">No sales call, no pitch deck. Just a few questions so I can see if I can help, and what I'd do first.</p>
+<ol class="steps fade" style="--d:.3s">
+<li><span class="n">1</span><div><b>You fill this in</b><span>Takes about 2 minutes.</span></div></li>
+<li><span class="n">2</span><div><b>I reply within 2–3 business days</b><span>With honest thoughts, even if I'm not the right fit.</span></div></li>
+<li><span class="n">3</span><div><b>We chat if it makes sense</b><span>A short call, at a time that works for you.</span></div></li>
+</ol>
+<div class="me fade" style="--d:.4s">
+<img src="ultha-photo.jpg" alt="Ultha">
+<p><b>Hi, I'm Ultha.</b><br>Every message comes straight to me. No bots, no SDRs.</p>
+<span class="note">I read every one ✍️</span>
+</div>
+</div>
+
+<form class="fade" style="--d:.25s" action="/api/contact" method="POST" novalidate>
+<svg class="lantern" viewBox="0 0 120 220" aria-hidden="true"><defs><radialGradient id="lg"><stop offset="0" stop-color="#FFE29A"/><stop offset=".5" stop-color="#F2B33D" stop-opacity=".4"/><stop offset="1" stop-color="#F2B33D" stop-opacity="0"/></radialGradient></defs><circle class="lglow" cx="60" cy="150" r="60" fill="url(#lg)"/><path d="M60 74 V110" stroke="#1B2A38" stroke-width="2"/><rect x="44" y="110" width="32" height="8" rx="2" fill="#33485A"/><path d="M46 118 H74 L78 170 H42Z" fill="#FFE29A" stroke="#1B2A38" stroke-width="2"/><path d="M60 128 C53 140 53 152 60 160 C67 152 67 140 60 128Z" fill="#F2B33D"/><rect x="39" y="170" width="42" height="8" rx="2" fill="#33485A"/></svg>
+<div class="formbody">
+<div class="grid2">
+<div class="field"><label for="name">Your name</label><input id="name" name="name" type="text" autocomplete="name" placeholder="Alex Rivera" required></div>
+<div class="field"><label for="email">Work email</label><input id="email" name="email" type="email" autocomplete="email" placeholder="alex@yourstartup.com" required></div>
+</div>
+<div class="field"><label for="site">Company website</label><input id="site" name="website" type="text" autocomplete="url" placeholder="yourstartup.com"></div>
+<div class="field"><span class="lab">Stage</span>
+<div class="chips" role="radiogroup">
+<input type="radio" name="stage" id="st1" value="Pre-seed"><label for="st1">Pre-seed</label>
+<input type="radio" name="stage" id="st2" value="Seed"><label for="st2">Seed</label>
+<input type="radio" name="stage" id="st3" value="Series A"><label for="st3">Series A</label>
+<input type="radio" name="stage" id="st4" value="Series B+"><label for="st4">Series B+</label>
+<input type="radio" name="stage" id="st5" value="Bootstrapped"><label for="st5">Bootstrapped</label>
+</div></div>
+<div class="field"><span class="lab">What would help most? <span class="opt">(pick any)</span></span>
+<div class="groups">
+<div class="grp"><div class="gh"><span>⭐</span> Customer proof <em>· capture</em></div><div class="chips">
+<input type="checkbox" name="needs" id="nd1" value="Customer testimonials"><label for="nd1">Customer testimonials</label>
+<input type="checkbox" name="needs" id="nd2" value="Product reviews"><label for="nd2">Product reviews</label>
+<input type="checkbox" name="needs" id="nd3" value="Case studies"><label for="nd3">Case studies</label>
+</div></div>
+<div class="grp"><div class="gh"><span>🎬</span> Short-form content <em>· show</em></div><div class="chips">
+<input type="checkbox" name="needs" id="nd4" value="Content creation"><label for="nd4">Content creation</label>
+<input type="checkbox" name="needs" id="nd5" value="Ghostwriting for socials"><label for="nd5">Ghostwriting for socials</label>
+<input type="checkbox" name="needs" id="nd6" value="User-generated content"><label for="nd6">User-generated content (UGC)</label>
+<input type="checkbox" name="needs" id="nd7" value="Social media management"><label for="nd7">Social media management</label>
+</div></div>
+<div class="grp"><div class="gh"><span>🤖</span> Getting found <em>· search &amp; AI</em></div><div class="chips">
+<input type="checkbox" name="needs" id="nd8" value="Showing up in AI search"><label for="nd8">Showing up in AI search</label>
+<input type="checkbox" name="needs" id="nd9" value="G2 / Capterra profiles"><label for="nd9">G2 / Capterra profiles</label>
+<input type="checkbox" name="needs" id="nd10" value="Website optimization"><label for="nd10">Website optimization</label>
+<input type="checkbox" name="needs" id="nd11" value="Blog &amp; website content"><label for="nd11">Blog &amp; website content</label>
+</div></div>
+</div></div>
+<div class="field"><span class="lab">Which plan are you interested in? <span class="opt">(optional)</span></span>
+<div class="chips" role="radiogroup">
+<input type="radio" name="tier" id="t1" value="Proof Sprint"><label for="t1">Proof Sprint</label>
+<input type="radio" name="tier" id="t2" value="90-Day Proof Engine"><label for="t2">90-Day Proof Engine</label>
+<input type="radio" name="tier" id="t3" value="Keep it running"><label for="t3">Keep it running</label>
+</div></div>
+<div class="field"><div class="chips"><input type="checkbox" name="needs" id="nd12" value="Not sure yet"><label for="nd12">🤷 Not sure yet, help me figure it out</label></div></div>
+<div class="field"><label for="msg">Anything else? <span class="opt">(optional)</span></label><textarea id="msg" name="message" placeholder="e.g. We have 30 customers who love us but zero reviews online."></textarea></div>
+<input class="hp" name="company" type="text" tabindex="-1" autocomplete="off" aria-hidden="true">
+<p class="err" role="alert"></p>
+<button type="submit">Send it to Ultha →</button>
+<p class="fine">I'll reply within 2–3 business days. Your info stays with me.</p>
+</div>
+<div class="done" aria-live="polite">
+<svg width="70" height="110" viewBox="40 100 40 80" aria-hidden="true"><circle cx="60" cy="146" r="34" fill="#FFE29A" opacity=".6"/><rect x="44" y="110" width="32" height="8" rx="2" fill="#33485A"/><path d="M46 118 H74 L78 170 H42Z" fill="#FFE29A" stroke="#1B2A38" stroke-width="2"/><path d="M60 128 C53 140 53 152 60 160 C67 152 67 140 60 128Z" fill="#F2B33D"/></svg>
+<div class="big">Got it, thank you!</div>
+<p>I'll read it myself and reply within 2–3 business days. In the meantime, the free starter kit is a good first step.</p>
+<a href="/starter-kit" style="font-weight:500">Grab the free starter kit →</a>
+</div>
+</form>
+</div>
+<footer>Prefer email? <a href="mailto:ultha@ultha.co">ultha@ultha.co</a> · © 2026 Ultha · Santa Barbara, CA</footer>
+</div>
+<script>
+(function(){
+var f=document.querySelector('form'),err=f.querySelector('.err'),btn=f.querySelector('button');
+function show(m){err.textContent=m;err.style.display='block'}
+f.addEventListener('submit',function(ev){
+  ev.preventDefault();
+  var name=f.elements['name'].value.trim(),email=f.elements['email'].value.trim();
+  if(!name){show('Please add your name.');f.elements['name'].focus();return}
+  if(!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)){show('Please enter a valid email.');f.elements['email'].focus();return}
+  err.style.display='none';btn.disabled=true;btn.textContent='Sending…';
+  var needs=[].slice.call(f.querySelectorAll('input[name=needs]:checked')).map(function(i){return i.value});
+  var st=f.querySelector('input[name=stage]:checked'),tr=f.querySelector('input[name=tier]:checked');
+  var data={name:name,email:email,website:f.elements['website'].value.trim(),stage:st?st.value:'',tier:tr?tr.value:'',needs:needs,message:f.elements['message'].value.trim(),company:f.elements['company'].value};
+  fetch('/api/contact',{method:'POST',headers:{'Content-Type':'application/json','Accept':'application/json'},body:JSON.stringify(data)})
+    .then(function(r){return r.json().catch(function(){return {ok:r.ok}})})
+    .then(function(d){if(d&&d.ok){document.body.classList.add('sent');f.scrollIntoView({behavior:'smooth',block:'center'})}else{throw new Error(d&&d.error||'x')}})
+    .catch(function(e){btn.disabled=false;btn.textContent='Send it to Ultha →';show((e&&e.message&&e.message!=='x')?e.message:'Something went wrong. Please try again, or email ultha@ultha.co.')});
+});
+})();
+</script>
+</body>
+</html>
