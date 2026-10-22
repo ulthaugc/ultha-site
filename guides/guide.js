@@ -5,8 +5,8 @@
   // copy buttons: copies the nearest .qt (question) or [data-copy] target
   document.querySelectorAll('.copy').forEach(function(b){
     b.addEventListener('click',function(){
-      var src=b.dataset.target?document.getElementById(b.dataset.target):(b.closest('.qq')||b.parentNode).querySelector('.qt');
-      var t=(src?src.innerText:'').replace(/^["“]|["”]$/g,'').trim();
+      var src=b.dataset.target?document.getElementById(b.dataset.target):b.parentNode.querySelector('.qt');
+      var t=(src?src.innerText:'').replace(/^"|"$/g,'').trim();
       var done=function(){var o=b.textContent;b.textContent='Copied ✓';setTimeout(function(){b.textContent=o},1600)};
       if(navigator.clipboard){navigator.clipboard.writeText(t).then(done,done)}else{done()}
     });
