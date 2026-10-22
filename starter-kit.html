@@ -19,7 +19,7 @@
 *{box-sizing:border-box}
 body{margin:0;background:var(--bg);color:var(--ink);font-family:Figtree,system-ui,sans-serif;font-size:17px;line-height:1.6;overflow-x:hidden}
 a{color:var(--ink)}a:hover{color:var(--coral)}
-header{position:relative;z-index:2;max-width:1180px;margin:0 auto;padding:22px 24px;display:flex;justify-content:space-between;align-items:center}
+header{position:relative;z-index:2;max-width:1180px;margin:0 auto;padding:16px 24px;display:flex;justify-content:space-between;align-items:center}
 .logo{font-family:'Young Serif',serif;font-size:22px;letter-spacing:.02em;text-decoration:none}
 .navlink{font-size:15px;text-decoration:none}
 .fogwrap{position:relative;overflow:hidden}
@@ -28,11 +28,11 @@ header{position:relative;z-index:2;max-width:1180px;margin:0 auto;padding:22px 2
 @keyframes fogdrift2{from{transform:translateX(50px)}to{transform:translateX(-50px)}}
 @keyframes fade{from{opacity:0;transform:translateY(10px)}to{opacity:1;transform:none}}
 @media (prefers-reduced-motion:no-preference){.fogA{animation:fogdrift 16s ease-in-out infinite alternate}.fogB{animation:fogdrift2 21s ease-in-out infinite alternate}.fade{animation:fade .9s ease both;animation-delay:var(--d,0s)}}
-.hero{position:relative;z-index:1;max-width:1120px;margin:0 auto;padding:24px 24px 72px;display:grid;grid-template-columns:1.05fr .95fr;gap:56px;align-items:center}
+.hero{position:relative;z-index:1;max-width:1120px;margin:0 auto;padding:8px 24px 40px;display:grid;grid-template-columns:1.15fr .85fr;gap:48px;align-items:center}
 .kicker{font-size:13px;letter-spacing:.14em;text-transform:uppercase;color:#4B5D6C}
-h1{font-family:'Young Serif',serif;font-weight:400;font-size:clamp(34px,4.2vw,52px);line-height:1.12;margin:10px 0 14px;text-wrap:balance}
+h1{font-family:'Young Serif',serif;font-weight:400;font-size:clamp(30px,3.4vw,44px);line-height:1.12;margin:8px 0 12px;text-wrap:balance}
 h1 span{color:#6F8494}
-.lede{font-size:19px;color:var(--muted);margin:0 0 22px;max-width:30em}
+.lede{font-size:17px;color:var(--muted);margin:0 0 20px;max-width:32em}
 form{background:#fff;border:1.5px solid #33485A;border-radius:22px;padding:22px;box-shadow:0 24px 50px rgba(27,42,56,.12);max-width:460px}
 .row{display:flex;flex-direction:column;gap:10px}
 label{font-size:13px;font-weight:500;color:#33475A}
@@ -44,7 +44,7 @@ button[type=submit]:hover{transform:translateY(-2px);color:var(--sun)}
 button[disabled]{opacity:.7;cursor:wait}
 .fine{margin:10px 2px 0;font-size:13px;color:#5A6B79;text-align:center}
 .err{display:none;margin:8px 2px 0;font-size:14px;color:var(--coral)}
-.preview{position:relative;transform:rotate(1.5deg)}
+.preview{position:relative;transform:rotate(1.5deg);max-width:380px;justify-self:center}
 .sheet{position:relative;background:#fff;border:1.5px solid #33485A;border-radius:18px;padding:12px;box-shadow:0 30px 60px rgba(27,42,56,.18);overflow:hidden}
 .sheet img{display:block;width:100%;height:auto;border-radius:10px;filter:blur(3.5px) saturate(.9);transform:scale(1.02)}
 .sheet::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(255,255,255,0) 30%,rgba(238,241,242,.85) 100%)}
@@ -70,6 +70,16 @@ h2{font-family:'Young Serif',serif;font-weight:400;font-size:clamp(28px,3.2vw,38
 .me b{font-family:'Young Serif',serif;font-weight:400;font-size:20px;color:var(--ink);display:block;margin-bottom:4px}
 .final{text-align:center}
 .final form{margin:0 auto;text-align:left}
+.signup.compact{max-width:560px;padding:18px}
+.signup.compact .row{display:grid;grid-template-columns:1fr 1.4fr;gap:10px 12px}
+.signup.compact label{display:none}
+.signup.compact button{grid-column:1/-1;margin-top:2px}
+.signup.compact .fine{margin-top:8px}
+.peek{position:relative;z-index:1;text-align:center;margin:0 0 8px;font-size:15px;color:var(--muted)}
+.peek a{text-decoration:none;display:inline-flex;flex-direction:column;align-items:center;gap:4px}
+.peek span{font-size:20px;animation:bob 1.8s ease-in-out infinite}
+@keyframes bob{0%,100%{transform:translateY(0)}50%{transform:translateY(5px)}}
+@media (max-width:560px){.signup.compact .row{grid-template-columns:1fr}}
 footer{text-align:center;font-size:14px;color:var(--muted);padding:8px 0 40px}
 @media (max-width:860px){.hero{grid-template-columns:1fr;gap:56px;padding-bottom:56px}.preview{max-width:440px;margin:0 auto}.inside{grid-template-columns:1fr 1fr}.who{grid-template-columns:1fr}section{padding:56px 20px}}
 @media (max-width:560px){body{font-size:16px}.hero{padding:8px 20px 48px}.inside{grid-template-columns:1fr}.me{flex-direction:column;text-align:center}form{padding:18px}}
@@ -93,12 +103,12 @@ footer{text-align:center;font-size:14px;color:var(--muted);padding:8px 0 40px}
 <span class="kicker fade">Free starter kit</span>
 <h1 class="fade" style="--d:.1s">Get your first 5 customer reviews <span>this month.</span></h1>
 <p class="lede fade" style="--d:.2s">The exact playbook I use with startups: who to ask, the email that gets a yes, what to ask on the call, and where to post it so prospects and AI search find it.</p>
-<form class="fade signup" style="--d:.3s" action="/api/subscribe" method="POST" novalidate>
+<form class="fade signup compact" style="--d:.3s" action="/api/subscribe" method="POST" novalidate>
 <div class="row">
 <label for="n1">First name</label>
-<input id="n1" name="name" type="text" autocomplete="given-name" placeholder="Alex">
+<input id="n1" name="name" type="text" autocomplete="given-name" placeholder="First name" aria-label="First name">
 <label for="e1">Work email</label>
-<input id="e1" name="email" type="email" autocomplete="email" placeholder="alex@yourstartup.com" required>
+<input id="e1" name="email" type="email" autocomplete="email" placeholder="Work email" aria-label="Work email" required>
 <input class="hp" name="company" type="text" tabindex="-1" autocomplete="off" aria-hidden="true">
 <button type="submit">Send me the kit →</button>
 </div>
@@ -113,9 +123,10 @@ footer{text-align:center;font-size:14px;color:var(--muted);padding:8px 0 40px}
 <span class="note">6 steps, 2 hours ✍️</span>
 </div>
 </div>
+<p class="peek"><a href="#inside">See what's inside<span>↓</span></a></p>
 </div>
 
-<section>
+<section id="inside">
 <span class="kicker" style="display:block;text-align:center">What's inside</span>
 <h2>Everything to go from zero to five reviews</h2>
 <p class="sub">No theory. Copy, paste and send. Each step takes about 20 minutes.</p>
