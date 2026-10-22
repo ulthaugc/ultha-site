@@ -244,7 +244,17 @@ a{color:#1B2A38}a:hover{color:#B8452F}
 }
 }
 </style>
-<style>.wn{background:#1B2A38;color:#C9D3DA;position:relative;overflow:hidden}
+<style>
+.heroglow{position:absolute;left:50%;top:10px;width:min(900px,92vw);height:340px;transform:translateX(-50%);background:radial-gradient(ellipse at 50% 45%,rgba(255,226,154,.55),rgba(255,226,154,.18) 45%,rgba(255,226,154,0) 70%);pointer-events:none;z-index:-1}
+.herohl{margin:0;font-family:'Young Serif',serif;font-weight:400;font-size:clamp(36px,4.3vw,60px);line-height:1.1;letter-spacing:-.015em}
+.herohl .l1{display:block;color:#1B2A38}
+.herohl .l2{display:block;color:#6F8494}
+.noidea{position:relative;white-space:nowrap;color:#1B2A38}
+.noidea::after{content:"";position:absolute;left:-2%;right:-2%;bottom:.04em;height:.32em;background:#FFE29A;border-radius:.2em;transform:rotate(-1.5deg);z-index:-1}
+.herosub{margin:0;font-family:Caveat,cursive;font-size:clamp(28px,2.6vw,36px);color:#B8452F;transform:rotate(-2deg)}
+.herosub span{color:#F2B33D}
+@media (max-width:760px){.herohl .l1,.herohl .l2{display:inline}.heroglow{height:260px}}
+.wn{background:#1B2A38;color:#C9D3DA;position:relative;overflow:hidden}
 .wn::before{content:"";position:absolute;right:-120px;top:-120px;width:420px;height:420px;border-radius:50%;background:radial-gradient(#FFE29A55,transparent 65%)}
 .wn-in{position:relative;max-width:1060px;margin:0 auto;padding:96px 24px}
 .wn-head{max-width:720px;margin:0 auto 44px;text-align:center}
@@ -321,9 +331,10 @@ a{color:#1B2A38}a:hover{color:#B8452F}
 <a href="https://calendly.com/ultha-ugc/30min" style="text-decoration: none; background: #1B2A38; color: #EEF1F2; border-radius: 999px; padding: 9px 18px">Book a call</a>
 </nav>
 </header>
-<div id="top" style="position: relative; z-index: 2; max-width: 680px; margin: 0 auto; padding: clamp(28px, 5vw, 56px) 20px 0; display: flex; flex-direction: column; align-items: center; text-align: center; gap: 14px">
-<h1 class="fade" style="--d: 0.15s; margin: 0; font-family: 'Young Serif', serif; font-weight: 400; font-size: clamp(30px, 3.4vw, 44px); line-height: 1.18; letter-spacing: -0.01em; max-width: 19ch; text-wrap: balance"><span style="color: #1B2A38">Your customers love your product.</span> <span style="color: #6F8494">Your prospects have no idea.</span></h1>
-<p class="fade" style="--d: 0.3s; margin: 0; font-family: 'Young Serif', serif; font-size: clamp(18px, 1.6vw, 22px); color: #33475A">Let’s change that.</p>
+<div id="top" style="position: relative; z-index: 2; max-width: 1040px; margin: 0 auto; padding: clamp(36px, 6vw, 72px) 24px 0; display: flex; flex-direction: column; align-items: center; text-align: center; gap: 20px">
+<div aria-hidden="true" class="heroglow"></div>
+<h1 class="fade herohl" style="--d: 0.15s"><span class="l1">Your customers love your product.</span> <span class="l2">Your prospects have <span class="noidea">no idea.</span></span></h1>
+<p class="fade herosub" style="--d: 0.3s">Let’s change that. <span>✦</span></p>
 <div class="fade" style="--d: 0.45s; display: flex; flex-wrap: wrap; justify-content: center; gap: 12px 22px; align-items: center; margin-top: 6px">
 <a href="/starter-kit" class="tipbtn" data-tip="Checklist, email template and 10 call questions. Free, instant access." style="text-decoration: none; background: #1B2A38; color: #EEF1F2; border-radius: 999px; padding: 13px 24px; font-weight: 500">Get your first 5 reviews: free kit →</a>
 <a href="https://calendly.com/ultha-ugc/30min" style="text-underline-offset: 5px; display: inline-flex; align-items: center; gap: 8px">or book a 30-min call</a>
@@ -387,7 +398,7 @@ a{color:#1B2A38}a:hover{color:#B8452F}
 <div class="wn-in">
 <div class="reveal wn-head">
 <span class="wn-kick">Why this matters now</span>
-<h2>Trust is the new currency. <span>Your buyers spend it before they ever talk to you.</span></h2>
+<h2>Trust is the new currency.</h2>
 <p>Buyers trust online info less every year (47% trust it less than they did a year ago). So they go looking for proof from people like them. Here's where they look.</p>
 </div>
 <div class="wn-grid">
