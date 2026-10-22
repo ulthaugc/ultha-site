@@ -244,6 +244,62 @@ a{color:#1B2A38}a:hover{color:#B8452F}
 }
 }
 </style>
+<style>.wn{background:#1B2A38;color:#C9D3DA;position:relative;overflow:hidden}
+.wn::before{content:"";position:absolute;right:-120px;top:-120px;width:420px;height:420px;border-radius:50%;background:radial-gradient(#FFE29A55,transparent 65%)}
+.wn-in{position:relative;max-width:1060px;margin:0 auto;padding:96px 24px}
+.wn-head{max-width:720px;margin:0 auto 44px;text-align:center}
+.wn-kick{font-size:13px;letter-spacing:.14em;text-transform:uppercase;color:#8FA3B1}
+.wn h2,.lp h2{font-family:'Young Serif',serif;font-weight:400;font-size:clamp(30px,3.6vw,44px);line-height:1.15;margin:10px 0 14px;text-wrap:balance}
+.wn h2{color:#fff}.wn h2 span{color:#FFE29A}
+.wn-head p{font-size:17px;margin:0 auto;max-width:36em}
+.wn-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}
+.wn-stat{background:#22354A;border:1px solid #33485A;border-radius:20px;padding:24px 20px;display:flex;flex-direction:column;gap:8px}
+.wn-n{font-family:'Young Serif',serif;font-size:52px;line-height:1;color:#FFE29A}
+.wn-stat b{font-weight:500;color:#fff;font-size:16px;line-height:1.4}
+.wn-so{font-size:14px;line-height:1.45;color:#A9BAC5}
+.wn-stat cite{margin-top:auto;padding-top:8px;font-style:normal;font-size:12px;color:#7F95A4}
+.wn-hand{text-align:center;font-family:Caveat,cursive;font-size:26px;color:#FFE29A;margin:36px 0 0}
+.lp{background:#EEF1F2}
+.vid{display:inline-flex;align-items:center;gap:14px;margin-top:22px;text-decoration:none;background:#fff;border:1.5px solid #33485A;border-radius:999px;padding:8px 22px 8px 8px;box-shadow:0 10px 24px rgba(27,42,56,.08);transition:transform .2s}
+.vid:hover{transform:translateY(-3px)}
+.vid-thumb{position:relative;width:64px;height:64px;border-radius:50%;overflow:hidden;flex:none;box-shadow:0 0 0 4px rgba(255,226,154,.8)}
+.vid-thumb img{width:100%;height:100%;object-fit:cover;object-position:40% 22%}
+.vid-play{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;background:rgba(27,42,56,.35);color:#fff;font-size:20px}
+.vid-txt{display:flex;flex-direction:column;text-align:left;line-height:1.3}
+.vid-txt b{font-family:'Young Serif',serif;font-weight:400;font-size:18px;color:#1B2A38}
+.vid-txt span{font-size:13px;color:#5E7586}
+
+.lp-in{max-width:1060px;margin:0 auto;padding:96px 24px}
+.lp-head{max-width:680px;margin:0 auto 20px;text-align:center}
+.lp-head .wn-kick{color:#4B5D6C}
+.lp-head p{color:#46596A;font-size:17px;margin:0}
+.lp-wheel{position:relative;max-width:900px;height:640px;margin:0 auto}
+.lp-ring{position:absolute;left:50%;top:50%;width:560px;height:560px;transform:translate(-50%,-50%)}
+.lp-node{position:absolute;width:250px;background:#fff;border:1.5px solid #33485A;border-radius:18px;padding:16px 18px;display:flex;flex-direction:column;gap:4px;box-shadow:0 14px 30px rgba(27,42,56,.08)}
+.lp-node b{font-weight:700;font-size:16px;line-height:1.3}
+.lp-node span{font-size:14px;color:#46596A;line-height:1.45}
+.lp-node em{display:block;font-style:normal;color:#8A6410;font-weight:500;margin-top:4px}
+.lp-step{font-size:12px!important;letter-spacing:.12em;text-transform:uppercase;font-weight:700;color:#B8452F!important}
+.n1{left:50%;top:0;transform:translateX(-50%)}
+.n2{right:0;top:50%;transform:translateY(-50%)}
+.n3{left:50%;bottom:0;transform:translateX(-50%)}
+.n4{left:0;top:50%;transform:translateY(-50%)}
+.lp-back{position:absolute;left:10px;top:150px;font-family:Caveat,cursive;font-size:24px;color:#B8452F;transform:rotate(-8deg)}
+.lp-src{text-align:center;font-size:12px;color:#7A8A97;max-width:720px;margin:24px auto 0}
+@media (max-width:900px){.wn-grid{grid-template-columns:1fr 1fr}}
+@media (max-width:760px){
+.wn-in,.lp-in{padding:64px 20px}
+.wn-grid{grid-template-columns:1fr}
+.wn-stat{flex-direction:row;flex-wrap:wrap;align-items:baseline;column-gap:14px}
+.wn-n{font-size:44px}.wn-stat b{flex:1;min-width:180px}.wn-so,.wn-stat cite{flex-basis:100%}
+.lp-wheel{height:auto;display:flex;flex-direction:column;gap:30px;padding:10px 0}
+.lp-ring{display:none}
+.lp-node{position:relative;width:auto;left:auto!important;right:auto!important;top:auto!important;bottom:auto!important;transform:none!important}
+.lp-node:not(.n4)::after{content:"↓";position:absolute;left:50%;bottom:-28px;transform:translateX(-50%);font-size:20px;color:#1B2A38}
+.lp-back{position:static;transform:none;text-align:center;font-size:24px}
+.lp-back::before{content:"";display:block;width:56px;height:56px;margin:0 auto 6px;border-radius:50%;background:radial-gradient(#FFE29A,#F2B33D00 70%)}
+}
+</style>
 <style>html{scroll-behavior:smooth}body{overflow-x:hidden}</style>
 <script type="application/ld+json">
 {"@context":"https://schema.org","@type":"ProfessionalService","name":"Ultha","url":"https://ultha.co/","description":"I turn your best customers into reviews, testimonials, short videos and case studies that build trust with prospects and authority with LLMs. Customer proof for seed to Series A startups.","founder":{"@type":"Person","name":"Ultha Niraula","jobTitle":"Founder","sameAs":["https://www.linkedin.com/in/ulthaniraula/","https://instagram.com/ultha.co"]},"areaServed":"US","address":{"@type":"PostalAddress","addressLocality":"Santa Barbara","addressRegion":"CA","addressCountry":"US"}}
@@ -326,6 +382,23 @@ a{color:#1B2A38}a:hover{color:#B8452F}
 <div class="heroband" style="position: relative; z-index: 2; margin-top: -48px; background: linear-gradient(180deg, rgba(238,241,242,0) 0%, #EEF1F2 100%)"><p class="mcap"><span class="marrow">↑</span>Your customers trust you. Your prospects don’t, yet.<br>I build the bridge.</p><div aria-hidden="true" style="height: 48px"></div></div>
 </section>
 
+<section id="whynow" class="wn">
+<div class="wn-in">
+<div class="reveal wn-head">
+<span class="wn-kick">Why this matters now</span>
+<h2>Trust is the new currency. <span>Your buyers spend it before they ever talk to you.</span></h2>
+<p>Buyers trust online info less every year (47% trust it less than they did a year ago). So they go looking for proof from people like them. Here's where they look.</p>
+</div>
+<div class="wn-grid">
+<div class="wn-stat reveal"><span class="wn-n">17%</span><b>of the buying process is spent talking to sales reps.</b><span class="wn-so">The rest of the time, buyers are reading about you without you.</span><cite>Gartner</cite></div>
+<div class="wn-stat reveal"><span class="wn-n">74%</span><b>of tech buyers read customer reviews before buying.</b><span class="wn-so">Vendor marketing ranked dead last in what they consult.</span><cite>TrustRadius, 2026</cite></div>
+<div class="wn-stat reveal"><span class="wn-n">51%</span><b>of software buyers now start research in an AI chatbot, not Google.</b><span class="wn-so">If AI tools don't mention you, you're not on the shortlist.</span><cite>G2, 2026</cite></div>
+<div class="wn-stat reveal"><span class="wn-n">270%</span><b>more likely to buy when a product has 5 reviews vs. none.</b><span class="wn-so">Your first 5 reviews do the heaviest lifting.</span><cite>Northwestern University, Spiegel Research Center</cite></div>
+</div>
+<p class="wn-hand">your customers are already saying the right things. buyers just can't hear them yet.</p>
+</div>
+</section>
+
 <section id="what" style="position: relative; padding: 96px 24px 96px">
 <div class="reveal" style="max-width: 680px; margin: 0 auto; display: flex; flex-direction: column; gap: 12px; align-items: center; text-align: center">
 <span style="font-size: 13px; letter-spacing: 0.14em; text-transform: uppercase; color: #4B5D6C">How I build it</span>
@@ -400,6 +473,42 @@ a{color:#1B2A38}a:hover{color:#B8452F}
 <div class="reveal" style="position: relative; z-index: 1; text-align: center; padding-top: 48px">
 <span style="display: inline-block; background: #1B2A38; color: #FFE29A; border-radius: 999px; padding: 10px 20px; font-size: 15px">…and your prospects finally see you.</span>
 </div>
+</div>
+</section>
+
+<section id="loop" class="lp">
+<div class="lp-in">
+<div class="reveal lp-head">
+<span class="wn-kick">The big picture</span>
+<h2>How it all works together</h2>
+<p>Each piece feeds the next. One customer conversation turns into proof, proof turns into content, and content shows up where buyers and AI search look. More buyers trust you, you get more customers, and the loop keeps going.</p>
+<a class="vid" href="#" aria-label="Watch: how it all works together, 90 seconds">
+<span class="vid-thumb"><img src="ultha-photo.jpg" alt=""><span class="vid-play">▶</span></span>
+<span class="vid-txt"><b>Watch me explain it</b><span>90 seconds · the whole system on one whiteboard</span></span>
+</a>
+</div>
+<div class="lp-wheel reveal">
+<svg class="lp-ring" viewBox="0 0 600 600" aria-hidden="true">
+<defs><marker id="lpa" viewBox="0 0 10 10" refX="6" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M1 1 L8 5 L1 9" fill="none" stroke="#1B2A38" stroke-width="1.8" stroke-linecap="round"/></marker>
+<radialGradient id="lpg"><stop offset="0" stop-color="#FFE29A"/><stop offset=".55" stop-color="#F2B33D" stop-opacity=".35"/><stop offset="1" stop-color="#F2B33D" stop-opacity="0"/></radialGradient></defs>
+<circle cx="300" cy="300" r="205" fill="none" stroke="#C6D0D6" stroke-width="2" stroke-dasharray="3 9" stroke-linecap="round"/>
+<path d="M352 103 A205 205 0 0 1 497 248" fill="none" stroke="#1B2A38" stroke-width="2.5" marker-end="url(#lpa)"/>
+<path d="M497 352 A205 205 0 0 1 352 497" fill="none" stroke="#1B2A38" stroke-width="2.5" marker-end="url(#lpa)"/>
+<path d="M248 497 A205 205 0 0 1 103 352" fill="none" stroke="#1B2A38" stroke-width="2.5" marker-end="url(#lpa)"/>
+<path d="M103 248 A205 205 0 0 1 248 103" fill="none" stroke="#B8452F" stroke-width="2.5" stroke-dasharray="7 6" marker-end="url(#lpa)"/>
+<circle cx="300" cy="300" r="120" fill="url(#lpg)"/>
+<path d="M300 205 V245" stroke="#1B2A38" stroke-width="2.5"/>
+<rect x="282" y="245" width="36" height="9" rx="3" fill="#33485A"/><path d="M285 254 H315 L320 312 H280Z" fill="#FFE29A" stroke="#1B2A38" stroke-width="2.5"/><path d="M300 266 C292 280 292 294 300 302 C308 294 308 280 300 266Z" fill="#F2B33D"/><rect x="276" y="312" width="48" height="9" rx="3" fill="#33485A"/>
+<text x="300" y="352" text-anchor="middle" font-family="Young Serif, serif" font-size="24" fill="#1B2A38">Trust</text>
+<text x="300" y="376" text-anchor="middle" font-family="Figtree, sans-serif" font-size="14" fill="#5E7586">buyers believe you</text>
+</svg>
+<div class="lp-node n1"><span class="lp-step">1 · Listen</span><b>🎙️ Customer conversations</b><span>15-minute chats with customers who love you.</span></div>
+<div class="lp-node n2"><span class="lp-step">2 · Capture</span><b>⭐ Reviews, testimonials, case studies</b><span>Real words from real customers. <em>5 reviews = 270% more likely to buy.</em></span></div>
+<div class="lp-node n3"><span class="lp-step">3 · Show</span><b>🎬 UGC, short videos, social</b><span>Your customers' stories, made to be watched. <em>87% say a video convinced them to buy.</em></span></div>
+<div class="lp-node n4"><span class="lp-step">4 · Get found</span><b>🔍 Review sites, website, AI search</b><span>Placed where buyers and AI tools look. <em>51% start in an AI chatbot.</em></span></div>
+<div class="lp-back">↺ more customers → more stories</div>
+</div>
+<p class="lp-src">Sources: Gartner; TrustRadius 2026 B2B Buying Disconnect report (1,862 tech buyers); G2 2026 AI search report (1,076 B2B buyers); Northwestern University Spiegel Research Center; Wyzowl State of Video Marketing 2025.</p>
 </div>
 </section>
 
