@@ -17,6 +17,10 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Young+Serif&amp;family=Figtree:wght@400;500;700&amp;family=Caveat:wght@600&amp;family=Oswald:wght@500;700&amp;display=swap">
 <style>
+.stickybar{position:sticky;top:0;z-index:50;background:rgba(238,241,242,.82);-webkit-backdrop-filter:blur(12px);backdrop-filter:blur(12px);transition:box-shadow .3s}
+.stickybar.scrolled{box-shadow:0 1px 0 rgba(27,42,56,.08),0 8px 24px rgba(27,42,56,.06)}
+.stickybar .topbar{padding-top:14px!important;padding-bottom:14px!important}
+html{scroll-padding-top:80px}
 body{margin:0;background:#EEF1F2}
 a{color:#1B2A38}a:hover{color:#B8452F}
 .gb{transform-box:fill-box;transform-origin:center}
@@ -360,14 +364,13 @@ a{color:#1B2A38}a:hover{color:#B8452F}
 .lp-back::before{content:"";display:block;width:56px;height:56px;margin:0 auto 6px;border-radius:50%;background:radial-gradient(#FFE29A,#F2B33D00 70%)}
 }
 </style>
-<style>html{scroll-behavior:smooth}body{overflow-x:hidden}</style>
+<style>html{scroll-behavior:smooth}body{overflow-x:clip}</style>
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"AboutPage","url":"https://ultha.co/about","mainEntity":{"@type":"Person","name":"Ultha Niraula","jobTitle":"Founder, ultha.co","url":"https://ultha.co","sameAs":["https://www.linkedin.com/in/ulthaniraula/","https://instagram.com/ultha.co"],"alumniOf":"University of California, Santa Barbara"}}</script>
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"AboutPage","url":"https://ultha.co/about","mainEntity":{"@type":"Person","name":"Ultha Niraula","jobTitle":"Founder, ultha.co","url":"https://ultha.co","sameAs":["https://www.linkedin.com/in/ulthaniraula/","https://instagram.com/ultha.co"],"alumniOf":"University of California, Santa Barbara"}}</script>
 </head>
 <body>
 <div style="font-family: 'Figtree', system-ui, sans-serif; color: #1B2A38; background: #EEF1F2; font-size: 17px; line-height: 1.6">
-<section style="position:relative;overflow:hidden">
-<header class="topbar" style="position: relative; z-index: 2; max-width: 1180px; margin: 0 auto; padding: 22px 24px; display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 12px">
+<div class="stickybar"><header class="topbar" style="position: relative; z-index: 2; max-width: 1180px; margin: 0 auto; box-sizing: border-box; padding: 22px 24px; display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 12px">
 <a href="/" style="text-decoration:none;color:inherit;font-family: 'Young Serif', serif; font-size: 22px; letter-spacing: 0.02em; display: inline-flex; align-items: center; gap: 10px"><img src="ultha-mark.svg" alt="" width="34" height="18">ULTHA</a>
 <nav style="display: flex; flex-wrap: wrap; align-items: center; gap: 26px; font-size: 15px">
 <a href="/#loop" style="text-decoration: none">How it works</a>
@@ -376,7 +379,9 @@ a{color:#1B2A38}a:hover{color:#B8452F}
 <a href="/guides" style="text-decoration: none">Guides</a>
 <a href="https://calendly.com/ultha-ugc/30min" style="text-decoration: none; background: #1B2A38; color: #EEF1F2; border-radius: 999px; padding: 9px 18px">Book a call</a>
 </nav>
-</header>
+</header></div>
+<section style="position:relative;overflow:hidden">
+
 <div style="max-width:760px;margin:0 auto;padding:clamp(40px,6vw,80px) 24px clamp(24px,4vw,48px);text-align:center">
 <span style="font-size:13px;letter-spacing:.14em;text-transform:uppercase;color:#4B5D6C">About me</span>
 <h1 style="margin:12px 0 16px;font-family:'Young Serif',serif;font-weight:400;font-size:clamp(34px,4.4vw,56px);line-height:1.1">Hi, I'm Ultha.</h1>
@@ -535,5 +540,6 @@ a{color:#1B2A38}a:hover{color:#B8452F}
 </div>
 </footer>
 </div>
+<script>(function(){var b=document.querySelector(".stickybar");if(!b)return;var f=function(){b.classList.toggle("scrolled",scrollY>8)};addEventListener("scroll",f,{passive:true});f()})();</script>
 </body>
 </html>
