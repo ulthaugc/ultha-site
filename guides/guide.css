@@ -47,8 +47,8 @@ p{margin:0 0 18px}
 .copy:hover{color:var(--sun)}
 .reveal{width:100%;text-align:left;font:500 15px Figtree,sans-serif;background:var(--bg);border:1.5px dashed var(--line);border-radius:14px;padding:12px 16px;cursor:pointer;color:var(--ink)}
 .reveal:hover{border-color:var(--ink)}
-.answer{display:none;background:var(--bg);border-radius:14px;padding:14px 16px;font-size:16px}
-.answer .ex{display:inline-block;font-size:11px;letter-spacing:.12em;text-transform:uppercase;font-weight:700;background:#fff;border:1px solid var(--line);border-radius:999px;padding:1px 9px;margin-bottom:6px;color:var(--slate)}
+.answer{display:block;margin-top:2px;background:#FFFBEF;border-left:4px solid var(--amber);border-radius:6px 14px 14px 6px;padding:14px 18px;font-family:'Young Serif',serif;font-size:18px;line-height:1.5;color:var(--ink)}
+.answer .ex{font-family:Figtree,sans-serif;display:inline-block;font-size:11px;letter-spacing:.12em;text-transform:uppercase;font-weight:700;background:#fff;border:1px solid var(--line);border-radius:999px;padding:1px 9px;margin-bottom:6px;color:var(--slate)}
 .open .answer{display:block}.open .reveal{display:none}
 .tip{display:flex;gap:10px;margin-top:14px;font-size:16px;color:#33475A}
 .tip b{color:var(--ink)}
