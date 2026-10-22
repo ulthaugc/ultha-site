@@ -277,6 +277,16 @@ a{color:#1B2A38}a:hover{color:#B8452F}
 #loop .lpvid-reel{position:relative;z-index:1;display:block;height:100%;width:auto;aspect-ratio:9/16;margin:0 auto;object-fit:cover;object-position:40% 25%;box-shadow:0 0 40px rgba(0,0,0,.35)}
 #loop .lpvid-badge{z-index:2}
 @media (max-width:760px){#loop .lpvid-frame{aspect-ratio:9/16}#loop .lpvid{max-width:300px!important}#loop .lpvid-bg,#loop .lpvid-frame::after{display:none}#loop .lpvid-reel{width:100%;height:100%}}
+#loop .lpvid-mock{position:relative;overflow:hidden}
+#loop .lpvid-mock img{width:100%;height:100%;object-fit:cover;display:block}
+#loop .lpvid-mock::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(27,42,56,0) 55%,rgba(27,42,56,.65))}
+.vm-tag{position:absolute;top:14px;left:14px;z-index:2;font:500 12px Figtree,sans-serif;color:#1B2A38;background:#FFE29A;border-radius:999px;padding:4px 11px}
+.vm-cap{position:absolute;left:14px;right:14px;bottom:52px;z-index:2;text-align:center;font:500 14px/1.35 Figtree,sans-serif;color:#fff;text-shadow:0 2px 6px rgba(0,0,0,.45)}
+.vm-cap b{color:#FFE29A;font-weight:700}
+.vm-play{position:absolute;left:50%;top:64%;transform:translate(-50%,-50%);z-index:2;width:60px;height:60px;border-radius:50%;background:rgba(255,255,255,.9);display:flex;align-items:center;justify-content:center;padding-left:4px;box-shadow:0 10px 30px rgba(0,0,0,.25)}
+.vm-bar{position:absolute;left:14px;right:14px;bottom:16px;z-index:2;display:flex;align-items:center;gap:10px;font:500 12px Figtree,sans-serif;color:#fff}
+.vm-track{flex:1;height:4px;border-radius:4px;background:rgba(255,255,255,.35)}
+.vm-track span{display:block;width:0;height:100%}
 /* calmer loop cards */
 #loop .lp-node{border:1px solid #C6D0D6;box-shadow:0 8px 20px rgba(27,42,56,.06);gap:2px;padding:16px 18px}
 #loop .lp-step{color:#8FA3B1!important;letter-spacing:.14em}
@@ -460,12 +470,16 @@ a{color:#1B2A38}a:hover{color:#B8452F}
 <div class="lp-cols">
 <figure class="lpvid">
 <div class="lpvid-frame">
-<!-- When the vertical video is ready, use:
-<div class="lpvid-bg" style="background-image:url(/ultha-photo.jpg)"></div>
-<video class="lpvid-reel" src="/intro.mp4" poster="/ultha-photo.jpg" controls playsinline preload="metadata"></video> -->
-<div class="lpvid-bg" style="background-image:url(ultha-photo.jpg)"></div>
-<img class="lpvid-reel" src="ultha-photo.jpg" alt="Ultha explaining how customer proof works">
-<span class="lpvid-badge">🎥 Video coming soon</span>
+<!-- When the vertical video is ready, replace the .lpvid-mock block with:
+<video class="lpvid-reel" src="/intro.mp4" poster="/video-poster.jpg" controls playsinline preload="metadata"></video> -->
+<div class="lpvid-bg" style="background-image:url(video-poster.jpg)"></div>
+<div class="lpvid-reel lpvid-mock" role="img" aria-label="Video coming soon: Ultha explains how customer proof works in 90 seconds">
+<img src="video-poster.jpg" alt="">
+<span class="vm-tag">Coming soon</span>
+<span class="vm-cap">Your customers already sell for you.<br><b>Your buyers just can't hear them.</b></span>
+<span class="vm-play" aria-hidden="true"><svg viewBox="0 0 24 24" width="30" height="30"><path d="M8 5v14l11-7z" fill="#1B2A38"/></svg></span>
+<span class="vm-bar" aria-hidden="true"><span class="vm-time">0:00 / 1:30</span><span class="vm-track"><span></span></span><svg viewBox="0 0 24 24" width="18" height="18"><path d="M4 9v6h4l5 4V5L8 9H4zm12.5 3a4.5 4.5 0 0 0-2.5-4v8a4.5 4.5 0 0 0 2.5-4z" fill="#fff"/></svg></span>
+</div>
 </div>
 <figcaption>Watch me explain it in 90 seconds</figcaption>
 </figure>
