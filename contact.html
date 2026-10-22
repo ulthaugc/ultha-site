@@ -139,7 +139,7 @@ footer{position:relative;z-index:1;text-align:center;font-size:14px;color:var(--
 <input type="checkbox" name="needs" id="nd8" value="Showing up in AI search"><label for="nd8">Showing up in AI search</label>
 <input type="checkbox" name="needs" id="nd9" value="G2 / Capterra profiles"><label for="nd9">G2 / Capterra profiles</label>
 <input type="checkbox" name="needs" id="nd10" value="Website optimization"><label for="nd10">Website optimization</label>
-<input type="checkbox" name="needs" id="nd11" value="Website content posts"><label for="nd11">Website content posts</label>
+<input type="checkbox" name="needs" id="nd11" value="Blog &amp; website content"><label for="nd11">Blog &amp; website content</label>
 </div></div>
 </div></div>
 <div class="field"><span class="lab">Which plan are you interested in? <span class="opt">(optional)</span></span>
@@ -163,7 +163,7 @@ footer{position:relative;z-index:1;text-align:center;font-size:14px;color:var(--
 </div>
 </form>
 </div>
-<footer>Prefer email? <a href="mailto:hello@ultha.co">hello@ultha.co</a> · © 2026 Ultha · Santa Barbara, CA</footer>
+<footer>Prefer email? <a href="mailto:ultha@ultha.co">ultha@ultha.co</a> · © 2026 Ultha · Santa Barbara, CA</footer>
 </div>
 <script>
 (function(){
@@ -181,7 +181,7 @@ f.addEventListener('submit',function(ev){
   fetch('/api/contact',{method:'POST',headers:{'Content-Type':'application/json','Accept':'application/json'},body:JSON.stringify(data)})
     .then(function(r){return r.json().catch(function(){return {ok:r.ok}})})
     .then(function(d){if(d&&d.ok){document.body.classList.add('sent');f.scrollIntoView({behavior:'smooth',block:'center'})}else{throw new Error(d&&d.error||'x')}})
-    .catch(function(e){btn.disabled=false;btn.textContent='Send it to Ultha →';show((e&&e.message&&e.message!=='x')?e.message:'Something went wrong. Please try again, or email hello@ultha.co.')});
+    .catch(function(e){btn.disabled=false;btn.textContent='Send it to Ultha →';show((e&&e.message&&e.message!=='x')?e.message:'Something went wrong. Please try again, or email ultha@ultha.co.')});
 });
 })();
 </script>
