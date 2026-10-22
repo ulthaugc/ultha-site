@@ -292,15 +292,16 @@ a{color:#1B2A38}a:hover{color:#B8452F}
 .cp-stars{color:#F2B33D;letter-spacing:3px;font-size:15px}
 .cp-card blockquote{margin:0;font-family:'Young Serif',serif;font-size:clamp(20px,2.2vw,25px);line-height:1.4}
 .cp{background:#1B2A38;text-align:left}
-.cp::before{content:"";position:absolute;top:0;right:0;bottom:0;width:58%;background:linear-gradient(90deg,#1B2A38 0%,rgba(27,42,56,.55) 35%,rgba(27,42,56,.3) 100%),url(proof-bg-ultha.jpg) 62% 28%/cover no-repeat;pointer-events:none}
+@media (min-width:901px){#clients .cp-in{display:flex;flex-direction:column;align-items:flex-end}#clients .cp-in>*{width:100%;max-width:600px}}
+.cp::before{content:"";position:absolute;top:0;left:0;bottom:0;width:56%;background:linear-gradient(270deg,#1B2A38 0%,rgba(27,42,56,.5) 35%,rgba(27,42,56,.2) 100%),url(proof-bg-photo.jpg) 30% 28%/cover no-repeat;pointer-events:none}
 .cp-in{position:relative;z-index:1}
 .cp-word{display:none}
 .cp-in{max-width:1180px}
 .cp-k,.cp h2{display:block;max-width:640px}
 .cp h2{margin-bottom:44px}
-.cp-stack{margin:0;max-width:640px}
-#clients .cp-nav{justify-content:flex-start;max-width:640px;margin:56px 0 0}
-@media (max-width:900px){.cp{text-align:center}.cp::before{width:100%;background:linear-gradient(180deg,rgba(27,42,56,.86),rgba(27,42,56,.94)),url(proof-bg-ultha.jpg) center 20%/cover}.cp-k,.cp h2,.cp-stack,#clients .cp-nav{margin-left:auto;margin-right:auto}#clients .cp-nav{justify-content:center}}
+.cp-stack{margin:0;max-width:600px}
+#clients .cp-nav{justify-content:flex-start;max-width:600px;margin:56px 0 0}
+@media (max-width:900px){.cp{text-align:center}.cp::before{width:100%;background:linear-gradient(180deg,rgba(27,42,56,.86),rgba(27,42,56,.94)),url(proof-bg-photo.jpg) center 20%/cover}.cp-k,.cp h2,.cp-stack,#clients .cp-nav{margin-left:auto;margin-right:auto}#clients .cp-nav{justify-content:center}}
 .cp-av{width:50px;height:50px;border-radius:50%;flex:none;display:flex;align-items:center;justify-content:center;font-family:'Young Serif',serif;font-size:17px;background:#FFE29A;color:#1B2A38}
 .cp-who{flex:1}
 .cp h2 span{color:#FFE29A}
@@ -616,7 +617,7 @@ a{color:#1B2A38}a:hover{color:#B8452F}
 <div class="cp-back b2"></div><div class="cp-back b1"></div>
 <figure class="cp-card on" aria-hidden="false">
 <div class="cp-top"><span class="cp-av">JP</span><span class="cp-who"><b>Jayson Peppar</b>Bizbox Digital</span><span class="cp-stars">★★★★★</span></div>
-<blockquote>“I’ve hired close to 100 people and I am not easily impressed. An outstanding A-Player.”</blockquote>
+<blockquote>“I’ve hired close to 100 people and I am not easily impressed. An outstanding A&#8209;Player.”</blockquote>
 </figure>
 <figure class="cp-card" aria-hidden="true">
 <div class="cp-top"><span class="cp-av">AS</span><span class="cp-who"><b>Alessandra Sagredo</b>Exhale Marketing</span><span class="cp-stars">★★★★★</span></div>
