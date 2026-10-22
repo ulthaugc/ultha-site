@@ -276,45 +276,40 @@ a{color:#1B2A38}a:hover{color:#B8452F}
 .wn-so{font-size:14px;line-height:1.45;color:#A9BAC5}
 .wn-stat cite{margin-top:auto;padding-top:8px;font-style:normal;font-size:12px;color:#7F95A4}
 .wn-hand{text-align:center;font-family:Caveat,cursive;font-size:26px;color:#FFE29A;margin:36px 0 0}
-.pl{position:relative;overflow:hidden;background:radial-gradient(ellipse at 50% 0%,#24384B,#1B2A38 55%,#142130);color:#C9D3DA}
-.pl-in{position:relative;z-index:1;max-width:1120px;margin:0 auto;padding:100px 24px 90px}
-.pl-head{text-align:center;max-width:700px;margin:0 auto 34px}
-.pl-k{font-size:13px;letter-spacing:.14em;text-transform:uppercase;color:#8FA3B1}
-.pl-head h2{margin:12px 0 12px;font-family:'Young Serif',serif;font-weight:400;font-size:clamp(30px,3.8vw,46px);line-height:1.12;color:#fff}
-.pl-head h2 span{color:#FFE29A}
-.pl-stats{margin:0;font-size:15px;color:#A9BAC5}.pl-stats b{color:#F2B33D;letter-spacing:2px;margin-right:6px}
-.pl-rope{height:60px;margin:0 4% -40px}.pl-rope svg{width:100%;height:100%;display:block}
-.pl-row{display:grid;grid-template-columns:repeat(3,1fr);gap:26px;align-items:start}
-.pl-stop{margin:0;display:flex;flex-direction:column;align-items:center}
-.s2{margin-top:34px}
-.pl-lan{width:58px;height:116px;overflow:visible;transform-origin:30px 0}
-.pl-card{position:relative;margin-top:-6px;background:rgba(255,255,255,.97);border-radius:22px;padding:22px 22px 20px;color:#1B2A38;box-shadow:0 0 0 1px rgba(255,226,154,.25),0 20px 50px rgba(0,0,0,.35),0 -14px 40px rgba(255,226,154,.12)}
-.pl-story{display:grid;grid-template-columns:1fr 1fr;gap:10px;padding-bottom:14px;margin-bottom:14px;border-bottom:1px dashed #C6D0D6;font-size:13px;line-height:1.4;color:#46596A}
-.pl-story i{display:block;font-style:normal;font-size:11px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:#8FA3B1;margin-bottom:3px}
-.pl-card blockquote{margin:0 0 18px;font-family:'Young Serif',serif;font-size:18px;line-height:1.45}
-.pl-card mark{background:linear-gradient(transparent 62%,#FFE29A 62%);color:inherit;padding:0 2px}
-.pl-card figcaption{display:flex;align-items:center;gap:12px;font-size:13px;color:#5A6B79}
-.pl-card figcaption b{display:block;font-size:15px;color:#1B2A38}
-.pl-av{width:40px;height:40px;border-radius:50%;flex:none;display:flex;align-items:center;justify-content:center;font:700 13px Figtree,sans-serif;background:#FFE29A;color:#1B2A38}
-.pl-jedi{text-align:center;margin:44px 0 0;font-family:Caveat,cursive;font-size:30px;color:#FFE29A}
-.pl-jedi span{font-family:Figtree,sans-serif;font-size:14px;color:#8FA3B1}
-.pl-fog{position:absolute;left:-10%;width:120%;height:180px;border-radius:50%;background:radial-gradient(ellipse,rgba(198,211,219,.16),rgba(198,211,219,0) 70%);filter:blur(10px);pointer-events:none}
-.f1{bottom:12%}.f2{top:30%;opacity:.7}
-@media (prefers-reduced-motion:no-preference){
-.pl-lan{animation:plSway 5s ease-in-out infinite}
-.s2 .pl-lan{animation-delay:-1.6s}.s3 .pl-lan{animation-delay:-3.1s}
-.pl-flame{transform-box:fill-box;transform-origin:50% 100%;animation:plFlick 1.5s ease-in-out infinite}
-.pl-glow{transform-box:fill-box;transform-origin:center;animation:plGlow 3s ease-in-out infinite}
-.pl-stop{animation:plRise .9s cubic-bezier(.2,.9,.3,1.15) both}
-.s1{animation-delay:.2s}.s2{animation-delay:.7s}.s3{animation-delay:1.2s}
-.f1{animation:plFog 18s ease-in-out infinite alternate}.f2{animation:plFog 24s ease-in-out infinite alternate-reverse}
-}
-@keyframes plSway{0%,100%{transform:rotate(-4deg)}50%{transform:rotate(4deg)}}
-@keyframes plFlick{0%,100%{transform:scale(1)}35%{transform:scale(.86,1.1)}70%{transform:scale(1.07,.93)}}
-@keyframes plGlow{0%,100%{opacity:.7;transform:scale(.9)}50%{opacity:1;transform:scale(1.25)}}
-@keyframes plRise{from{opacity:0;transform:translateY(30px)}to{opacity:1;transform:none}}
-@keyframes plFog{from{transform:translateX(-4%)}to{transform:translateX(4%)}}
-@media (max-width:900px){.pl-row{grid-template-columns:1fr;gap:10px;max-width:520px;margin:0 auto}.s2{margin-top:0}.pl-rope{display:none}.pl-in{padding:72px 20px}.pl-lan{width:46px;height:92px}}
+.sp{position:relative;overflow:hidden;background:#FFE29A;color:#1B2A38}
+.sp-mark{position:absolute;right:4%;top:-40px;font-family:'Young Serif',serif;font-size:420px;line-height:1;color:rgba(27,42,56,.07);pointer-events:none}
+.sp-in{position:relative;max-width:1080px;margin:0 auto;padding:96px 24px 80px}
+.sp-top{display:flex;justify-content:space-between;align-items:flex-end;gap:24px;margin-bottom:34px}
+.sp-k{font-size:13px;letter-spacing:.14em;text-transform:uppercase;color:#6B5418}
+.sp-top h2{margin:10px 0 0;font-family:'Young Serif',serif;font-weight:400;font-size:clamp(28px,3.4vw,42px);line-height:1.12}
+.sp-top h2 span{color:#7A6224}
+.sp-nav{display:flex;align-items:center;gap:10px;flex:none}
+.sp-count{font-size:14px;color:#6B5418;margin-right:6px}.sp-count b{color:#1B2A38}
+.sp-arrow{width:46px;height:46px;border-radius:50%;border:1.5px solid #1B2A38;background:transparent;color:#1B2A38;font-size:18px;cursor:pointer;transition:background .2s,color .2s}
+.sp-arrow:hover{background:#1B2A38;color:#FFE29A}
+.sp-stage{position:relative;min-height:300px}
+.sp-slide{position:absolute;inset:0;margin:0;opacity:0;transform:translateY(14px);transition:opacity .6s,transform .6s;pointer-events:none}
+.sp-slide.on{position:relative;opacity:1;transform:none;pointer-events:auto}
+.sp-built{display:inline-block;font-size:13px;font-weight:500;background:rgba(255,255,255,.6);border-radius:999px;padding:6px 14px;margin-bottom:16px}
+.sp-built:before{content:"✦ ";color:#B8452F}
+.sp-slide blockquote{margin:0 0 24px;max-width:900px;font-family:'Young Serif',serif;font-size:clamp(26px,3.3vw,42px);line-height:1.22}
+.sp-slide u{text-decoration-thickness:3px;text-underline-offset:7px}
+.sp-slide figcaption{display:flex;align-items:center;gap:12px;font-size:14px;color:#6B5418}
+.sp-slide figcaption b{display:block;font-size:16px;color:#1B2A38}
+.sp-av{width:44px;height:44px;border-radius:50%;flex:none;display:inline-flex;align-items:center;justify-content:center;font:700 13px Figtree,sans-serif;background:#1B2A38;color:#FFE29A}
+.sp-tabs{display:flex;flex-wrap:wrap;gap:10px;margin-top:34px}
+.sp-tab{position:relative;overflow:hidden;display:flex;align-items:center;gap:10px;padding:8px 18px 8px 8px;border-radius:999px;border:1.5px solid rgba(27,42,56,.25);background:rgba(255,255,255,.35);font:500 14px Figtree,sans-serif;color:#1B2A38;cursor:pointer}
+.sp-tab .sp-av{width:32px;height:32px;font-size:11px;background:#fff;color:#1B2A38}
+.sp-tab.on{background:#1B2A38;border-color:#1B2A38;color:#fff}
+.sp-tab.on .sp-av{background:#FFE29A}
+.sp-bar{position:absolute;left:0;right:0;bottom:0;height:3px;display:none}
+.sp-tab.on .sp-bar{display:block}
+.sp-bar i{display:block;height:100%;width:0;background:#FFE29A;animation:spProg 7s linear forwards}
+.sp.hold .sp-bar i{animation-play-state:paused}
+.sp-foot{margin:22px 0 0;font-size:14px;color:#6B5418}
+@keyframes spProg{to{width:100%}}
+@media (prefers-reduced-motion:reduce){.sp-bar{display:none!important}}
+@media (max-width:760px){.sp-in{padding:64px 20px}.sp-top{flex-direction:column;align-items:flex-start}.sp-mark{font-size:240px}.sp-stage{min-height:360px}.sp-tab>span:not(.sp-av){display:none}.sp-tab{padding:6px}}
 .meet{background:#EEF1F2}
 .meet-in{max-width:860px;margin:0 auto;padding:80px 24px;display:flex;gap:28px;align-items:center}
 .meet-in img{width:120px;height:120px;border-radius:50%;object-fit:cover;object-position:40% 22%;flex:none;box-shadow:0 0 0 6px rgba(255,226,154,.7)}
@@ -610,44 +605,42 @@ a{color:#1B2A38}a:hover{color:#B8452F}
 
 
 
-<section id="clients" class="pl">
-<svg width="0" height="0" style="position:absolute" aria-hidden="true"><defs><radialGradient id="plg"><stop offset="0" stop-color="#FFE29A" stop-opacity=".95"/><stop offset=".5" stop-color="#F2B33D" stop-opacity=".35"/><stop offset="1" stop-color="#F2B33D" stop-opacity="0"/></radialGradient></defs></svg>
-<div class="pl-fog f1" aria-hidden="true"></div><div class="pl-fog f2" aria-hidden="true"></div>
-<div class="pl-in">
-<div class="pl-head">
-<span class="pl-k">What clients say</span>
-<h2>I practice what I preach.<br><span>Here’s my own customer proof.</span></h2>
-<p class="pl-stats"><b>★★★★★</b> 5.0 on every review</p>
+<section id="clients" class="sp">
+<span class="sp-mark" aria-hidden="true">“</span>
+<div class="sp-in">
+<div class="sp-top">
+<div><span class="sp-k">What clients say</span>
+<h2>I practice what I preach.<br><span>Here’s my own customer proof.</span></h2></div>
+<div class="sp-nav"><span class="sp-count"><b>1</b> / 4</span><button class="sp-arrow" data-d="-1" aria-label="Previous review">←</button><button class="sp-arrow" data-d="1" aria-label="Next review">→</button></div>
 </div>
-<div class="pl-rope" aria-hidden="true"><svg viewBox="0 0 1000 60" preserveAspectRatio="none"><path d="M0 8 Q250 58 500 30 T1000 8" fill="none" stroke="#5E7586" stroke-width="2" stroke-dasharray="2 7" stroke-linecap="round"/></svg></div>
-<div class="pl-row">
-<figure class="pl-stop s1">
-<svg class="pl-lan" viewBox="0 0 60 120" aria-hidden="true"><circle class="pl-glow" cx="30" cy="62" r="30" fill="url(#plg)"/><path d="M30 0 V22" stroke="#C6D3DB" stroke-width="2"/><rect x="14" y="22" width="32" height="8" rx="3" fill="#5E7586"/><path d="M17 30 H43 L47 82 H13Z" fill="#FFE29A" stroke="#0F1A24" stroke-width="2.5"/><path class="pl-flame" d="M30 42 C23 54 23 66 30 74 C37 66 37 54 30 42Z" fill="#F2B33D"/><rect x="10" y="82" width="40" height="8" rx="3" fill="#5E7586"/></svg>
-<div class="pl-card">
-<div class="pl-story"><span><i>The ask</i>An agency-wide system for every project.</span><span><i>What happened</i>Built it, rolled it out. The whole company runs on it.</span></div>
-<blockquote>“She expertly helped us set up our systems, which our <mark>entire company is now running on</mark>. We are currently creating a new position for her.”</blockquote>
-<figcaption><span class="pl-av">AS</span><span><b>Alessandra Sagredo</b>Exhale Marketing</span></figcaption>
+<div class="sp-stage" aria-live="polite"><figure class="sp-slide on" data-i="0" aria-hidden="false">
+<span class="sp-built">Built an agency-wide system the whole company runs on</span>
+<blockquote>“She expertly helped us set up our systems, which our <u>entire company is now running on</u>. We are currently creating a new position for her.”</blockquote>
+<figcaption><span class="sp-av">AS</span><span><b>Alessandra Sagredo</b>Exhale Marketing</span></figcaption>
+</figure><figure class="sp-slide" data-i="1" aria-hidden="true">
+<span class="sp-built">Moved lead gen, sales and ops into one place, then trained the team</span>
+<blockquote>“We implemented it in all aspects of our business, from lead generation to sales and operations. She then <u>trained our internal staff</u>.”</blockquote>
+<figcaption><span class="sp-av">WV</span><span><b>Wout Van Damme</b>Adsparc</span></figcaption>
+</figure><figure class="sp-slide" data-i="2" aria-hidden="true">
+<span class="sp-built">Joined as their project manager to get the team set up and efficient</span>
+<blockquote>“I’ve hired close to 100 people and I am not easily impressed. <u>An outstanding A-Player</u> who adds tremendous value to any organization.”</blockquote>
+<figcaption><span class="sp-av">JP</span><span><b>Jayson Peppar</b>Bizbox Digital</span></figcaption>
+</figure><figure class="sp-slide" data-i="3" aria-hidden="true">
+<span class="sp-built">Ran their workflows, reports and automations</span>
+<blockquote>“She is a Jedi. <u>Hire her first.</u> Simple.”</blockquote>
+<figcaption><span class="sp-av">RN</span><span><b>Robert Neumann</b>CoreShop Solutions</span></figcaption>
+</figure></div>
+<div class="sp-tabs"><button class="sp-tab on" data-i="0" aria-label="Show review from Alessandra Sagredo, Exhale Marketing"><span class="sp-av">AS</span><span>Exhale Marketing</span><i class="sp-bar"><i></i></i></button><button class="sp-tab" data-i="1" aria-label="Show review from Wout Van Damme, Adsparc"><span class="sp-av">WV</span><span>Adsparc</span><i class="sp-bar"><i></i></i></button><button class="sp-tab" data-i="2" aria-label="Show review from Jayson Peppar, Bizbox Digital"><span class="sp-av">JP</span><span>Bizbox Digital</span><i class="sp-bar"><i></i></i></button><button class="sp-tab" data-i="3" aria-label="Show review from Robert Neumann, CoreShop Solutions"><span class="sp-av">RN</span><span>CoreShop Solutions</span><i class="sp-bar"><i></i></i></button></div>
+<p class="sp-foot">★★★★★ 5.0 on every review</p>
 </div>
-</figure>
-<figure class="pl-stop s2">
-<svg class="pl-lan" viewBox="0 0 60 120" aria-hidden="true"><circle class="pl-glow" cx="30" cy="62" r="30" fill="url(#plg)"/><path d="M30 0 V22" stroke="#C6D3DB" stroke-width="2"/><rect x="14" y="22" width="32" height="8" rx="3" fill="#5E7586"/><path d="M17 30 H43 L47 82 H13Z" fill="#FFE29A" stroke="#0F1A24" stroke-width="2.5"/><path class="pl-flame" d="M30 42 C23 54 23 66 30 74 C37 66 37 54 30 42Z" fill="#F2B33D"/><rect x="10" y="82" width="40" height="8" rx="3" fill="#5E7586"/></svg>
-<div class="pl-card">
-<div class="pl-story"><span><i>The ask</i>Get every team working in one place.</span><span><i>What happened</i>Lead gen, sales and ops moved over, and the team got trained.</span></div>
-<blockquote>“We implemented it in all aspects of our business, from lead generation to sales and operations. She then <mark>trained our internal staff</mark>.”</blockquote>
-<figcaption><span class="pl-av">WV</span><span><b>Wout Van Damme</b>Adsparc</span></figcaption>
-</div>
-</figure>
-<figure class="pl-stop s3">
-<svg class="pl-lan" viewBox="0 0 60 120" aria-hidden="true"><circle class="pl-glow" cx="30" cy="62" r="30" fill="url(#plg)"/><path d="M30 0 V22" stroke="#C6D3DB" stroke-width="2"/><rect x="14" y="22" width="32" height="8" rx="3" fill="#5E7586"/><path d="M17 30 H43 L47 82 H13Z" fill="#FFE29A" stroke="#0F1A24" stroke-width="2.5"/><path class="pl-flame" d="M30 42 C23 54 23 66 30 74 C37 66 37 54 30 42Z" fill="#F2B33D"/><rect x="10" y="82" width="40" height="8" rx="3" fill="#5E7586"/></svg>
-<div class="pl-card">
-<div class="pl-story"><span><i>The ask</i>Get the team set up and efficient, fast.</span><span><i>What happened</i>Joined as their project manager and made it stick.</span></div>
-<blockquote>“I’ve hired close to 100 people and I am not easily impressed. <mark>An outstanding A-Player</mark> who adds tremendous value to any organization.”</blockquote>
-<figcaption><span class="pl-av">JP</span><span><b>Jayson Peppar</b>Bizbox Digital</span></figcaption>
-</div>
-</figure>
-</div>
-<p class="pl-jedi">“She is a Jedi. Hire her first. Simple.” <span>— Robert Neumann, CoreShop Solutions</span></p>
-</div>
+<script>(function(){var r=document.getElementById('clients');if(!r)return;var S=r.querySelectorAll('.sp-slide'),T=r.querySelectorAll('.sp-tab'),C=r.querySelector('.sp-count b'),n=S.length,i=0,t,DUR=7000;
+function go(k,user){i=(k+n)%n;S.forEach(function(e,j){e.classList.toggle('on',j===i);e.setAttribute('aria-hidden',j===i?'false':'true')});T.forEach(function(e,j){e.classList.toggle('on',j===i);var b=e.querySelector('.sp-bar i');b.style.animation='none';b.offsetHeight;b.style.animation=''});C.textContent=i+1;clearTimeout(t);if(!paused)t=setTimeout(function(){go(i+1)},DUR)}
+var paused=matchMedia('(prefers-reduced-motion: reduce)').matches;
+T.forEach(function(e){e.addEventListener('click',function(){go(+e.dataset.i,1)})});
+r.querySelectorAll('.sp-arrow').forEach(function(e){e.addEventListener('click',function(){go(i+ +e.dataset.d,1)})});
+r.addEventListener('mouseenter',function(){r.classList.add('hold');clearTimeout(t)});r.addEventListener('mouseleave',function(){r.classList.remove('hold');if(!paused)t=setTimeout(function(){go(i+1)},DUR)});
+var x0=null;r.addEventListener('touchstart',function(e){x0=e.touches[0].clientX},{passive:true});r.addEventListener('touchend',function(e){if(x0===null)return;var dx=e.changedTouches[0].clientX-x0;if(Math.abs(dx)>40)go(i+(dx<0?1:-1),1);x0=null});
+go(0)})();</script>
 </section>
 
 <section id="pricing" style="background: #E4E9EC">
