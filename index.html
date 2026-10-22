@@ -594,20 +594,6 @@ a{color:#1B2A38}a:hover{color:#B8452F}
 </div>
 </section>
 
-<section id="why" class="meet">
-<div class="meet-in reveal">
-<img src="ultha-photo.jpg" alt="Ultha Niraula">
-<div>
-<span class="meet-k">Who's behind this</span>
-<p class="meet-h">Hi, I'm Ultha. Product brain, marketer's instincts, creator's eye.</p>
-<p class="meet-p">Former product manager and co-founder of a marketing agency that worked with 40+ brands, before going solo.</p>
-<a class="meet-a" href="/about">Read my story →</a>
-</div>
-</div>
-</section>
-
-
-
 <section id="clients" class="cp">
 <span class="cp-word" aria-hidden="true">proof</span>
 <div class="cp-in">
@@ -649,6 +635,18 @@ r.querySelectorAll('.cp-arrow').forEach(function(e){e.addEventListener('click',f
 var st=r.querySelector('.cp-stack');st.addEventListener('mouseenter',function(){r.classList.add('hold');clearTimeout(t)});st.addEventListener('mouseleave',function(){r.classList.remove('hold');go(i)});
 var x0=null;st.addEventListener('touchstart',function(e){x0=e.touches[0].clientX},{passive:true});st.addEventListener('touchend',function(e){if(x0===null)return;var dx=e.changedTouches[0].clientX-x0;if(Math.abs(dx)>40)go(i+(dx<0?1:-1));x0=null});
 go(0)})();</script>
+</section>
+
+<section id="why" class="meet">
+<div class="meet-in reveal">
+<img src="ultha-photo.jpg" alt="Ultha Niraula">
+<div>
+<span class="meet-k">Who's behind this</span>
+<p class="meet-h">Hi, I'm Ultha. Product brain, marketer's instincts, creator's eye.</p>
+<p class="meet-p">Former product manager and co-founder of a marketing agency that worked with 40+ brands, before going solo.</p>
+<a class="meet-a" href="/about">Read my story →</a>
+</div>
+</div>
 </section>
 
 <section id="pricing" style="background: #E4E9EC">
