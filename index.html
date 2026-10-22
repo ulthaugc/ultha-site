@@ -270,6 +270,23 @@ a{color:#1B2A38}a:hover{color:#B8452F}
 .wn-stat cite{margin-top:auto;padding-top:8px;font-style:normal;font-size:12px;color:#7F95A4}
 .wn-hand{text-align:center;font-family:Caveat,cursive;font-size:26px;color:#FFE29A;margin:36px 0 0}
 .lp{background:#EEF1F2}
+.lp-node{transition:border-color .4s,box-shadow .4s,transform .4s}
+.lp-node.lit{border-color:#F2B33D;box-shadow:0 0 0 4px rgba(255,226,154,.7),0 14px 30px rgba(27,42,56,.1)}
+.lp-trail{transition:opacity .3s}
+.lp-glow{transition:opacity .6s}
+@media (min-width:1100px){
+#loop .lp-in{max-width:1180px}
+#loop .lp-head{margin:0 auto 28px}
+#loop .lp-cols{display:grid;grid-template-columns:400px 1fr;gap:40px;align-items:center}
+#loop .lpvid{margin:0;max-width:none}
+#loop .lp-wheel{max-width:none;width:100%;height:600px}
+#loop .lp-ring{width:470px;height:470px}
+#loop .lp-node{width:212px;padding:12px 14px}
+#loop .lp-node b{font-size:15px}
+#loop .lp-node>span{font-size:13px}
+#loop .lp-back{left:8px;top:96px;font-size:20px}
+}
+
 .lpvid{margin:26px auto 0;max-width:640px}
 .lpvid-frame{position:relative;aspect-ratio:16/9;border-radius:22px;overflow:hidden;border:1.5px solid #33485A;background:#1B2A38;box-shadow:0 20px 44px rgba(27,42,56,.14)}
 .lpvid-frame img,.lpvid-frame video{width:100%;height:100%;object-fit:cover;object-position:40% 25%;display:block}
@@ -431,7 +448,10 @@ a{color:#1B2A38}a:hover{color:#B8452F}
 <div class="reveal lp-head">
 <span class="wn-kick">How I build it</span>
 <h2>How it all works together</h2>
-<p>Each piece feeds the next. One customer conversation turns into proof, proof turns into content, and content shows up where buyers and AI search look. More buyers trust you, you get more customers, and the loop keeps going.</p>
+<p>One customer conversation becomes proof, proof becomes content, and content shows up where buyers and AI search look. Then the loop keeps going.</p>
+
+</div>
+<div class="lp-cols">
 <figure class="lpvid">
 <div class="lpvid-frame">
 <!-- Swap this placeholder for: <video src="/intro.mp4" poster="/ultha-photo.jpg" controls playsinline preload="metadata"></video> -->
@@ -440,7 +460,7 @@ a{color:#1B2A38}a:hover{color:#B8452F}
 </div>
 <figcaption>Watch me walk through it in 90 seconds</figcaption>
 </figure>
-</div>
+
 <div class="lp-wheel reveal">
 <svg class="lp-ring" viewBox="0 0 600 600" aria-hidden="true">
 <defs><marker id="lpa" viewBox="0 0 10 10" refX="6" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M1 1 L8 5 L1 9" fill="none" stroke="#1B2A38" stroke-width="1.8" stroke-linecap="round"/></marker>
@@ -450,12 +470,12 @@ a{color:#1B2A38}a:hover{color:#B8452F}
 <path d="M497 352 A205 205 0 0 1 352 497" fill="none" stroke="#1B2A38" stroke-width="2.5" marker-end="url(#lpa)"/>
 <path d="M248 497 A205 205 0 0 1 103 352" fill="none" stroke="#1B2A38" stroke-width="2.5" marker-end="url(#lpa)"/>
 <path d="M103 248 A205 205 0 0 1 248 103" fill="none" stroke="#B8452F" stroke-width="2.5" stroke-dasharray="7 6" marker-end="url(#lpa)"/>
-<g class="lp-travel"><circle r="16" fill="#FFE29A" opacity=".55"><animateMotion dur="9s" repeatCount="indefinite" path="M300 95 A205 205 0 1 1 299.9 95"/></circle><circle r="6" fill="#F2B33D"><animateMotion dur="9s" repeatCount="indefinite" path="M300 95 A205 205 0 1 1 299.9 95"/></circle></g>
+<path class="lp-trail" d="M300 95 A205 205 0 1 1 299.99 95" fill="none" stroke="#F2B33D" stroke-width="5" stroke-linecap="round"/>
 <circle class="lp-glow" cx="300" cy="300" r="120" fill="url(#lpg)"/>
-<g class="lp-lantern"><path d="M300 205 V245" stroke="#1B2A38" stroke-width="2.5"/>
-<rect x="282" y="245" width="36" height="9" rx="3" fill="#33485A"/><path d="M285 254 H315 L320 312 H280Z" fill="#FFE29A" stroke="#1B2A38" stroke-width="2.5"/><path class="lp-flame" d="M300 266 C292 280 292 294 300 302 C308 294 308 280 300 266Z" fill="#F2B33D"/><rect x="276" y="312" width="48" height="9" rx="3" fill="#33485A"/></g>
-<text x="300" y="352" text-anchor="middle" font-family="Young Serif, serif" font-size="24" fill="#1B2A38">Trust</text>
-<text x="300" y="376" text-anchor="middle" font-family="Figtree, sans-serif" font-size="14" fill="#5E7586">buyers believe you</text>
+
+<text x="300" y="302" text-anchor="middle" font-family="Young Serif, serif" font-size="38" fill="#1B2A38">Trust</text>
+<text x="300" y="330" text-anchor="middle" font-family="Figtree, sans-serif" font-size="16" fill="#5E7586">buyers believe you</text>
+<g class="lp-walker" transform="translate(300 95)"><g class="lp-sw"><circle cx="0" cy="44" r="46" fill="url(#lpg)"/><path d="M0 -6 V8" stroke="#1B2A38" stroke-width="2.5"/><rect x="-16" y="8" width="32" height="8" rx="3" fill="#33485A"/><path d="M-13 16 H13 L17 66 H-17Z" fill="#FFE29A" stroke="#1B2A38" stroke-width="2.5"/><path class="lp-flame" d="M0 27 C-7 39 -7 51 0 58 C7 51 7 39 0 27Z" fill="#F2B33D"/><rect x="-20" y="66" width="40" height="8" rx="3" fill="#33485A"/></g></g>
 </svg>
 <div class="lp-node n1"><span class="lp-step">1 · Listen</span><b>🎙️ Customer conversations</b><span>15-minute chats with customers who love you.</span></div>
 <div class="lp-node n2"><span class="lp-step">2 · Capture</span><b>⭐ Reviews, testimonials, case studies</b><span>Real words from real customers. <em>5 reviews = 270% more likely to buy.</em></span></div>
@@ -463,8 +483,32 @@ a{color:#1B2A38}a:hover{color:#B8452F}
 <div class="lp-node n4"><span class="lp-step">4 · Get found</span><b>🔍 Review sites, website, AI search</b><span>Placed where buyers and AI tools look. <em>51% start in an AI chatbot.</em></span></div>
 <div class="lp-back">↺ more customers → more stories</div>
 </div>
+</div>
 <p class="lp-src">Sources: Gartner; TrustRadius 2026 B2B Buying Disconnect report (1,862 tech buyers); G2 2026 AI search report (1,076 B2B buyers); Northwestern University Spiegel Research Center; Wyzowl State of Video Marketing 2025.</p>
 </div>
+
+<script>
+(function(){
+var sec=document.getElementById('loop');if(!sec)return;
+var walker=sec.querySelector('.lp-walker'),trail=sec.querySelector('.lp-trail'),glow=sec.querySelector('.lp-glow'),sw=sec.querySelector('.lp-sw');
+var nodes=[sec.querySelector('.n1'),sec.querySelector('.n2'),sec.querySelector('.n3'),sec.querySelector('.n4')];
+if(!walker||!trail)return;
+var L=trail.getTotalLength();trail.style.strokeDasharray=L;trail.style.strokeDashoffset=L;
+var reduce=window.matchMedia&&matchMedia('(prefers-reduced-motion: reduce)').matches;
+function place(p){var pt=trail.getPointAtLength(L*(p%1));walker.setAttribute('transform','translate('+pt.x.toFixed(1)+' '+pt.y.toFixed(1)+')')}
+function lit(n){nodes.forEach(function(el,i){if(el)el.classList.toggle('lit',i<n)});if(glow)glow.style.opacity=(0.35+0.16*n).toFixed(2)}
+if(reduce){place(0);lit(4);trail.style.strokeDashoffset=0;return}
+var DWELL=1300,MOVE=1500,CYC=4*(DWELL+MOVE),t0=null,run=false;
+function ease(x){return x<.5?2*x*x:1-Math.pow(-2*x+2,2)/2}
+function frame(ts){if(!run)return;if(t0===null)t0=ts;var t=(ts-t0)%CYC,seg=Math.floor(t/(DWELL+MOVE)),r=t-seg*(DWELL+MOVE),p,lean=0;
+if(r<DWELL){p=seg/4;lit(seg+1)}else{var k=ease((r-DWELL)/MOVE);p=(seg+k)/4;lean=Math.sin(k*Math.PI)*-10;lit(seg+1)}
+place(p);sw.setAttribute('transform','rotate('+lean.toFixed(1)+')');
+trail.style.strokeDashoffset=seg===3&&r>=DWELL?L:(L*(1-Math.min(p,1)));
+if(seg===3&&r>=DWELL){trail.style.opacity=1-ease((r-DWELL)/MOVE)}else{trail.style.opacity=1}
+requestAnimationFrame(frame)}
+var io=new IntersectionObserver(function(e){var v=e[0].isIntersecting;if(v&&!run){run=true;t0=null;requestAnimationFrame(frame)}else if(!v){run=false}},{threshold:.2});io.observe(sec);
+})();
+</script>
 </section>
 
 <section style="background: #E4E9EC">
