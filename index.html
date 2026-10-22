@@ -270,21 +270,22 @@ a{color:#1B2A38}a:hover{color:#B8452F}
 .wn-stat cite{margin-top:auto;padding-top:8px;font-style:normal;font-size:12px;color:#7F95A4}
 .wn-hand{text-align:center;font-family:Caveat,cursive;font-size:26px;color:#FFE29A;margin:36px 0 0}
 .lp{background:#EEF1F2}
+/* calmer loop cards */
+#loop .lp-node{border:1px solid #C6D0D6;box-shadow:0 8px 20px rgba(27,42,56,.06);gap:2px;padding:16px 18px}
+#loop .lp-step{color:#8FA3B1!important;letter-spacing:.14em}
+#loop .lp-node b{font-family:'Young Serif',serif;font-weight:400;font-size:19px;line-height:1.25;margin:2px 0 4px}
+#loop .lp-node>span{color:#5A6B79}
+#loop .lp-node em{color:#1B2A38;font-weight:500;margin-top:8px;padding-top:8px;border-top:1px solid #E4E9EC}
+#loop .lp-back{color:#8FA3B1}
+#loop .lpvid{margin-bottom:44px}
+#loop .lp-node.lit{border-color:#F2B33D;box-shadow:0 0 0 3px rgba(255,226,154,.55),0 8px 20px rgba(27,42,56,.06)}
+
 .lp-node{transition:border-color .4s,box-shadow .4s,transform .4s}
 .lp-node.lit{border-color:#F2B33D;box-shadow:0 0 0 4px rgba(255,226,154,.7),0 14px 30px rgba(27,42,56,.1)}
 .lp-trail{transition:opacity .3s}
 .lp-glow{transition:opacity .6s}
 @media (min-width:1100px){
-#loop .lp-in{max-width:1180px}
-#loop .lp-head{margin:0 auto 28px}
-#loop .lp-cols{display:grid;grid-template-columns:300px 1fr;gap:48px;align-items:center}
-#loop .lpvid{margin:0;max-width:300px}
-#loop .lp-wheel{max-width:none;width:100%;height:600px}
-#loop .lp-ring{width:470px;height:470px}
-#loop .lp-node{width:212px;padding:12px 14px}
-#loop .lp-node b{font-size:15px}
-#loop .lp-node>span{font-size:13px}
-#loop .lp-back{left:8px;top:96px;font-size:20px}
+#loop .lpvid{max-width:340px}
 }
 
 .lpvid{margin:26px auto 0;max-width:300px}
@@ -459,7 +460,7 @@ a{color:#1B2A38}a:hover{color:#B8452F}
 <img src="ultha-photo.jpg" alt="Ultha explaining how customer proof works">
 <span class="lpvid-badge">🎥 Video coming soon</span>
 </div>
-<figcaption>Watch me explain it in 90 sec</figcaption>
+<figcaption>Watch me explain it in 90 seconds</figcaption>
 </figure>
 
 <div class="lp-wheel reveal">
@@ -470,7 +471,7 @@ a{color:#1B2A38}a:hover{color:#B8452F}
 <path d="M352 103 A205 205 0 0 1 497 248" fill="none" stroke="#1B2A38" stroke-width="2.5" marker-end="url(#lpa)"/>
 <path d="M497 352 A205 205 0 0 1 352 497" fill="none" stroke="#1B2A38" stroke-width="2.5" marker-end="url(#lpa)"/>
 <path d="M248 497 A205 205 0 0 1 103 352" fill="none" stroke="#1B2A38" stroke-width="2.5" marker-end="url(#lpa)"/>
-<path d="M103 248 A205 205 0 0 1 248 103" fill="none" stroke="#B8452F" stroke-width="2.5" stroke-dasharray="7 6" marker-end="url(#lpa)"/>
+<path d="M103 248 A205 205 0 0 1 248 103" fill="none" stroke="#8FA3B1" stroke-width="2.5" stroke-dasharray="7 6" marker-end="url(#lpa)"/>
 <path class="lp-trail" d="M300 95 A205 205 0 1 1 299.99 95" fill="none" stroke="#F2B33D" stroke-width="5" stroke-linecap="round"/>
 <circle class="lp-glow" cx="300" cy="300" r="120" fill="url(#lpg)"/>
 
@@ -478,10 +479,10 @@ a{color:#1B2A38}a:hover{color:#B8452F}
 <text x="300" y="330" text-anchor="middle" font-family="Figtree, sans-serif" font-size="16" fill="#5E7586">buyers believe you</text>
 <g class="lp-walker" transform="translate(300 95)"><g class="lp-sw"><circle cx="0" cy="44" r="46" fill="url(#lpg)"/><path d="M0 -6 V8" stroke="#1B2A38" stroke-width="2.5"/><rect x="-16" y="8" width="32" height="8" rx="3" fill="#33485A"/><path d="M-13 16 H13 L17 66 H-17Z" fill="#FFE29A" stroke="#1B2A38" stroke-width="2.5"/><path class="lp-flame" d="M0 27 C-7 39 -7 51 0 58 C7 51 7 39 0 27Z" fill="#F2B33D"/><rect x="-20" y="66" width="40" height="8" rx="3" fill="#33485A"/></g></g>
 </svg>
-<div class="lp-node n1"><span class="lp-step">1 · Listen</span><b>🎙️ Customer conversations</b><span>15-minute chats with customers who love you.</span></div>
-<div class="lp-node n2"><span class="lp-step">2 · Capture</span><b>⭐ Reviews, testimonials, case studies</b><span>Real words from real customers. <em>5 reviews = 270% more likely to buy.</em></span></div>
-<div class="lp-node n3"><span class="lp-step">3 · Show</span><b>🎬 UGC, short videos, social</b><span>Your customers' stories, made to be watched. <em>87% say a video convinced them to buy.</em></span></div>
-<div class="lp-node n4"><span class="lp-step">4 · Get found</span><b>🔍 Review sites, website, AI search</b><span>Placed where buyers and AI tools look. <em>51% start in an AI chatbot.</em></span></div>
+<div class="lp-node n1"><span class="lp-step">1 · Listen</span><b>Customer conversations</b><span>15-minute chats with customers who love you.</span></div>
+<div class="lp-node n2"><span class="lp-step">2 · Capture</span><b>Reviews, testimonials, case studies</b><span>Real words from real customers. <em>5 reviews make buyers 270% more likely to buy</em></span></div>
+<div class="lp-node n3"><span class="lp-step">3 · Show</span><b>UGC, short videos, social</b><span>Your customers' stories, made to be watched. <em>87% say a video convinced them to buy</em></span></div>
+<div class="lp-node n4"><span class="lp-step">4 · Get found</span><b>Review sites, website, AI search</b><span>Placed where buyers and AI tools look. <em>51% of buyers start research in AI chatbots</em></span></div>
 <div class="lp-back">↺ more customers → more stories</div>
 </div>
 </div>
