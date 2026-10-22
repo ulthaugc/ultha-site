@@ -119,26 +119,36 @@ footer{position:relative;z-index:1;text-align:center;font-size:14px;color:var(--
 <input type="radio" name="stage" id="st1" value="Pre-seed"><label for="st1">Pre-seed</label>
 <input type="radio" name="stage" id="st2" value="Seed"><label for="st2">Seed</label>
 <input type="radio" name="stage" id="st3" value="Series A"><label for="st3">Series A</label>
-<input type="radio" name="stage" id="st4" value="Later"><label for="st4">Later</label>
+<input type="radio" name="stage" id="st4" value="Series B+"><label for="st4">Series B+</label>
+<input type="radio" name="stage" id="st5" value="Bootstrapped"><label for="st5">Bootstrapped</label>
 </div></div>
 <div class="field"><span class="lab">What would help most? <span class="opt">(pick any)</span></span>
 <div class="groups">
 <div class="grp"><div class="gh"><span>⭐</span> Customer proof <em>· capture</em></div><div class="chips">
-<input type="checkbox" name="needs" id="nd1" value="Reviews"><label for="nd1">Reviews</label>
-<input type="checkbox" name="needs" id="nd2" value="Testimonials"><label for="nd2">Testimonials</label>
+<input type="checkbox" name="needs" id="nd1" value="Customer testimonials"><label for="nd1">Customer testimonials</label>
+<input type="checkbox" name="needs" id="nd2" value="Product reviews"><label for="nd2">Product reviews</label>
 <input type="checkbox" name="needs" id="nd3" value="Case studies"><label for="nd3">Case studies</label>
 </div></div>
 <div class="grp"><div class="gh"><span>🎬</span> Short-form content <em>· show</em></div><div class="chips">
 <input type="checkbox" name="needs" id="nd4" value="Content creation"><label for="nd4">Content creation</label>
-<input type="checkbox" name="needs" id="nd5" value="UGC management"><label for="nd5">UGC management</label>
-<input type="checkbox" name="needs" id="nd6" value="Content management"><label for="nd6">Content management</label>
+<input type="checkbox" name="needs" id="nd5" value="Ghostwriting for socials"><label for="nd5">Ghostwriting for socials</label>
+<input type="checkbox" name="needs" id="nd6" value="User-generated content"><label for="nd6">User-generated content (UGC)</label>
+<input type="checkbox" name="needs" id="nd7" value="Social media management"><label for="nd7">Social media management</label>
 </div></div>
 <div class="grp"><div class="gh"><span>🤖</span> Getting found <em>· search &amp; AI</em></div><div class="chips">
-<input type="checkbox" name="needs" id="nd7" value="Showing up in ChatGPT"><label for="nd7">Showing up in ChatGPT</label>
-<input type="checkbox" name="needs" id="nd8" value="Review site profiles"><label for="nd8">G2 / Capterra profiles</label>
+<input type="checkbox" name="needs" id="nd8" value="Showing up in AI search"><label for="nd8">Showing up in AI search</label>
+<input type="checkbox" name="needs" id="nd9" value="G2 / Capterra profiles"><label for="nd9">G2 / Capterra profiles</label>
+<input type="checkbox" name="needs" id="nd10" value="Website optimization"><label for="nd10">Website optimization</label>
+<input type="checkbox" name="needs" id="nd11" value="Website content posts"><label for="nd11">Website content posts</label>
 </div></div>
-<div class="chips" style="margin-top:2px"><input type="checkbox" name="needs" id="nd9" value="Not sure yet"><label for="nd9">🤷 Not sure yet, help me figure it out</label></div>
 </div></div>
+<div class="field"><span class="lab">Which plan are you interested in? <span class="opt">(optional)</span></span>
+<div class="chips" role="radiogroup">
+<input type="radio" name="tier" id="t1" value="Proof Sprint"><label for="t1">Proof Sprint</label>
+<input type="radio" name="tier" id="t2" value="90-Day Proof Engine"><label for="t2">90-Day Proof Engine</label>
+<input type="radio" name="tier" id="t3" value="Keep it running"><label for="t3">Keep it running</label>
+</div></div>
+<div class="field"><div class="chips"><input type="checkbox" name="needs" id="nd12" value="Not sure yet"><label for="nd12">🤷 Not sure yet, help me figure it out</label></div></div>
 <div class="field"><label for="msg">Anything else? <span class="opt">(optional)</span></label><textarea id="msg" name="message" placeholder="e.g. We have 30 customers who love us but zero reviews online."></textarea></div>
 <input class="hp" name="company" type="text" tabindex="-1" autocomplete="off" aria-hidden="true">
 <p class="err" role="alert"></p>
@@ -166,8 +176,8 @@ f.addEventListener('submit',function(ev){
   if(!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)){show('Please enter a valid email.');f.elements['email'].focus();return}
   err.style.display='none';btn.disabled=true;btn.textContent='Sending…';
   var needs=[].slice.call(f.querySelectorAll('input[name=needs]:checked')).map(function(i){return i.value});
-  var st=f.querySelector('input[name=stage]:checked');
-  var data={name:name,email:email,website:f.elements['website'].value.trim(),stage:st?st.value:'',needs:needs,message:f.elements['message'].value.trim(),company:f.elements['company'].value};
+  var st=f.querySelector('input[name=stage]:checked'),tr=f.querySelector('input[name=tier]:checked');
+  var data={name:name,email:email,website:f.elements['website'].value.trim(),stage:st?st.value:'',tier:tr?tr.value:'',needs:needs,message:f.elements['message'].value.trim(),company:f.elements['company'].value};
   fetch('/api/contact',{method:'POST',headers:{'Content-Type':'application/json','Accept':'application/json'},body:JSON.stringify(data)})
     .then(function(r){return r.json().catch(function(){return {ok:r.ok}})})
     .then(function(d){if(d&&d.ok){document.body.classList.add('sent');f.scrollIntoView({behavior:'smooth',block:'center'})}else{throw new Error(d&&d.error||'x')}})
