@@ -270,6 +270,22 @@ a{color:#1B2A38}a:hover{color:#B8452F}
 .wn-stat cite{margin-top:auto;padding-top:8px;font-style:normal;font-size:12px;color:#7F95A4}
 .wn-hand{text-align:center;font-family:Caveat,cursive;font-size:26px;color:#FFE29A;margin:36px 0 0}
 .lp{background:#EEF1F2}
+.lpvid{margin:26px auto 0;max-width:640px}
+.lpvid-frame{position:relative;aspect-ratio:16/9;border-radius:22px;overflow:hidden;border:1.5px solid #33485A;background:#1B2A38;box-shadow:0 20px 44px rgba(27,42,56,.14)}
+.lpvid-frame img,.lpvid-frame video{width:100%;height:100%;object-fit:cover;object-position:40% 25%;display:block}
+.lpvid-badge{position:absolute;left:14px;bottom:14px;background:rgba(27,42,56,.85);color:#FFE29A;font-size:14px;border-radius:999px;padding:6px 14px}
+.lpvid figcaption{margin-top:10px;font-family:Caveat,cursive;font-size:22px;color:#5E7586}
+.lp-lantern{transform-box:view-box;transform-origin:300px 205px}
+@media (prefers-reduced-motion:no-preference){
+.lp-lantern{animation:lpsway 4.5s ease-in-out infinite}
+.lp-flame{transform-box:fill-box;transform-origin:50% 100%;animation:lpflick 1.6s ease-in-out infinite}
+.lp-glow{transform-box:fill-box;transform-origin:center;animation:lppulse 3.2s ease-in-out infinite}
+}
+@media (prefers-reduced-motion:reduce){.lp-travel{display:none}}
+@keyframes lpsway{0%,100%{transform:rotate(-5deg)}50%{transform:rotate(5deg)}}
+@keyframes lpflick{0%,100%{transform:scale(1,1)}30%{transform:scale(.88,1.08)}60%{transform:scale(1.06,.94)}}
+@keyframes lppulse{0%,100%{opacity:.75;transform:scale(.94)}50%{opacity:1;transform:scale(1.06)}}
+
 .vid[hidden]{display:none}
 .vid{display:inline-flex;align-items:center;gap:14px;margin-top:22px;text-decoration:none;background:#fff;border:1.5px solid #33485A;border-radius:999px;padding:8px 22px 8px 8px;box-shadow:0 10px 24px rgba(27,42,56,.08);transition:transform .2s}
 .vid:hover{transform:translateY(-3px)}
@@ -324,7 +340,7 @@ a{color:#1B2A38}a:hover{color:#B8452F}
 <header class="topbar" style="position: relative; z-index: 2; max-width: 1180px; margin: 0 auto; padding: 22px 24px; display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 12px">
 <span style="font-family: 'Young Serif', serif; font-size: 22px; letter-spacing: 0.02em; display: inline-flex; align-items: center; gap: 10px"><img src="ultha-mark.svg" alt="" width="34" height="18">ULTHA</span>
 <nav style="display: flex; flex-wrap: wrap; align-items: center; gap: 26px; font-size: 15px">
-<a href="#what" style="text-decoration: none">How it works</a>
+<a href="#loop" style="text-decoration: none">How it works</a>
 <a href="#why" style="text-decoration: none">About</a>
 <a href="#pricing" style="text-decoration: none">Pricing</a>
 <a href="/guides" style="text-decoration: none">Guides</a>
@@ -410,93 +426,20 @@ a{color:#1B2A38}a:hover{color:#B8452F}
 </div>
 </section>
 
-<section id="what" style="position: relative; padding: 96px 24px 96px">
-<div class="reveal" style="max-width: 680px; margin: 0 auto; display: flex; flex-direction: column; gap: 12px; align-items: center; text-align: center">
-<span style="font-size: 13px; letter-spacing: 0.14em; text-transform: uppercase; color: #4B5D6C">How I build it</span>
-<h2 style="margin: 0; font-family: 'Young Serif', serif; font-weight: 400; font-size: clamp(30px, 3.6vw, 44px); line-height: 1.15; text-wrap: balance">Your customers are your best marketers. I make sure they’re heard.</h2>
-<p style="margin: 0; font-size: 18px; color: #46596A; max-width: 46ch">It starts with one honest conversation with your customer. Here’s where it goes from there.</p>
-</div>
-
-<div class="trail" style="position: relative; max-width: 720px; margin: 48px auto 0">
-<div class="spine" aria-hidden="true">
-<div style="position: absolute; left: 79px; top: 0; bottom: 0; border-left: 2px dashed #A9BAC5"></div>
-<div class="lantern">
-<div style="position: absolute; left: 77px; bottom: 46px; width: 4px; height: 220vh; border-radius: 3px; background: linear-gradient(to top, #F2B33D, rgba(242,179,61,0.35) 30%, rgba(242,179,61,0) 70%)"></div>
-<div style="position: absolute; left: 25px; top: -24px; width: 110px; height: 110px; border-radius: 50%; background: radial-gradient(circle, rgba(255,226,154,0.95) 0%, rgba(242,179,61,0.35) 40%, rgba(242,179,61,0) 70%)"></div>
-<svg class="sway" width="36" height="54" viewBox="0 0 56 84" style="position: relative; display: block; margin: 0 auto">
-<path d="M28 0 V10" stroke="#1B2A38" stroke-width="2"></path>
-<path d="M18 16 Q28 6 38 16" fill="none" stroke="#1B2A38" stroke-width="2.4" stroke-linecap="round"></path>
-<rect x="12" y="16" width="32" height="8" rx="3" fill="#33485A"></rect>
-<path d="M14 24 H42 L46 64 H10Z" fill="#FFE29A" stroke="#1B2A38" stroke-width="2" stroke-linejoin="round"></path>
-<path d="M28 34 C22 42 22 50 28 56 C34 50 34 42 28 34Z" fill="#F2B33D"></path>
-<path d="M22 24 L20 64 M34 24 L36 64" stroke="#1B2A38" stroke-width="1.4" opacity="0.6"></path>
-<rect x="8" y="64" width="40" height="8" rx="3" fill="#33485A"></rect>
-</svg>
-<span class="lanlabel" style="position: relative; display: block; margin-top: 4px; text-align: center; font-family: Caveat, cursive; font-size: 16px; line-height: 1; color: #1B2A38">your customers’<br>voice</span>
-</div>
-</div>
-
-<div class="stop left">
-<span class="link" aria-hidden="true"></span>
-<div class="reveal"><div class="polaroid" style="--r: -1.6deg">
-<span class="tape" aria-hidden="true"></span>
-<div class="demo clear"><span class="ex">example</span>
-<div class="rv"><div class="rvtop"><span class="av">👩🏽‍💻</span><div><b>Priya S.</b><small>Head of Ops · Series A</small></div><span class="src">G2</span></div>
-<div class="stars">★★★★★</div>
-<p>“We had onboarding live in a day. Our team actually uses it.”</p></div></div>
-<div class="cap">
-<span class="stopno">stop 1 · capture</span>
-<h3>Customer reviews</h3>
-<p>Every site has five stars now. I interview your best customers for testimonials and case studies that prove yours are real.</p>
-</div>
-</div></div>
-</div>
-
-<div class="stop right">
-<span class="link" aria-hidden="true"></span>
-<div class="reveal"><div class="polaroid" style="--r: 1.4deg">
-<span class="tape" aria-hidden="true"></span>
-<div class="demo clear"><span class="ex">example</span>
-<div class="reel"><span class="rtag">🎬 UGC</span><span class="rface">🙋🏻‍♀️</span><span class="rcap">POV: I set up our CRM before my coffee got cold ☕</span><span class="rside">❤️<br>💬<br>↗</span><span class="rplay">▶</span></div></div>
-<div class="cap">
-<span class="stopno">stop 2 · show</span>
-<h3>Short form content</h3>
-<p>UGC and short videos that show your product in action, from creators and real users.</p>
-</div>
-</div></div>
-</div>
-
-<div class="stop left">
-<span class="link" aria-hidden="true"></span>
-<div class="reveal"><div class="polaroid" style="--r: -1deg">
-<span class="tape" aria-hidden="true"></span>
-<div class="demo clear"><span class="ex">example</span>
-<div class="chat"><div class="q">best onboarding tool for a small team?</div>
-<div class="a"><span class="spark">✦</span><div>Founders on G2 and Reddit keep recommending <mark>YourStartup</mark>. Customers say setup takes a day.<div class="cites"><span>G2</span><span>YouTube</span><span>Reddit</span></div></div></div></div></div>
-<div class="cap">
-<span class="stopno">stop 3 · get found</span>
-<h3>LLMs optimization</h3>
-<p>Your proof placed on your site, review sites, YouTube and communities, built to show up in search and LLMs.</p>
-</div>
-</div></div>
-</div>
-
-<div class="reveal" style="position: relative; z-index: 1; text-align: center; padding-top: 48px">
-<span style="display: inline-block; background: #1B2A38; color: #FFE29A; border-radius: 999px; padding: 10px 20px; font-size: 15px">…and your prospects finally see you.</span>
-</div>
-</div>
-</section>
-
 <section id="loop" class="lp">
 <div class="lp-in">
 <div class="reveal lp-head">
-<span class="wn-kick">The big picture</span>
+<span class="wn-kick">How I build it</span>
 <h2>How it all works together</h2>
 <p>Each piece feeds the next. One customer conversation turns into proof, proof turns into content, and content shows up where buyers and AI search look. More buyers trust you, you get more customers, and the loop keeps going.</p>
-<a class="vid" href="#loop" aria-label="Watch: how it all works together, 90 seconds">
-<span class="vid-thumb"><img src="ultha-photo.jpg" alt=""><span class="vid-play">▶</span></span>
-<span class="vid-txt"><b>Watch me explain it</b><span>90 seconds · the whole system on one whiteboard</span></span>
-</a>
+<figure class="lpvid">
+<div class="lpvid-frame">
+<!-- Swap this placeholder for: <video src="/intro.mp4" poster="/ultha-photo.jpg" controls playsinline preload="metadata"></video> -->
+<img src="ultha-photo.jpg" alt="Ultha explaining how customer proof works">
+<span class="lpvid-badge">🎥 Video coming soon</span>
+</div>
+<figcaption>Watch me walk through it in 90 seconds</figcaption>
+</figure>
 </div>
 <div class="lp-wheel reveal">
 <svg class="lp-ring" viewBox="0 0 600 600" aria-hidden="true">
@@ -507,9 +450,10 @@ a{color:#1B2A38}a:hover{color:#B8452F}
 <path d="M497 352 A205 205 0 0 1 352 497" fill="none" stroke="#1B2A38" stroke-width="2.5" marker-end="url(#lpa)"/>
 <path d="M248 497 A205 205 0 0 1 103 352" fill="none" stroke="#1B2A38" stroke-width="2.5" marker-end="url(#lpa)"/>
 <path d="M103 248 A205 205 0 0 1 248 103" fill="none" stroke="#B8452F" stroke-width="2.5" stroke-dasharray="7 6" marker-end="url(#lpa)"/>
-<circle cx="300" cy="300" r="120" fill="url(#lpg)"/>
-<path d="M300 205 V245" stroke="#1B2A38" stroke-width="2.5"/>
-<rect x="282" y="245" width="36" height="9" rx="3" fill="#33485A"/><path d="M285 254 H315 L320 312 H280Z" fill="#FFE29A" stroke="#1B2A38" stroke-width="2.5"/><path d="M300 266 C292 280 292 294 300 302 C308 294 308 280 300 266Z" fill="#F2B33D"/><rect x="276" y="312" width="48" height="9" rx="3" fill="#33485A"/>
+<g class="lp-travel"><circle r="16" fill="#FFE29A" opacity=".55"><animateMotion dur="9s" repeatCount="indefinite" path="M300 95 A205 205 0 1 1 299.9 95"/></circle><circle r="6" fill="#F2B33D"><animateMotion dur="9s" repeatCount="indefinite" path="M300 95 A205 205 0 1 1 299.9 95"/></circle></g>
+<circle class="lp-glow" cx="300" cy="300" r="120" fill="url(#lpg)"/>
+<g class="lp-lantern"><path d="M300 205 V245" stroke="#1B2A38" stroke-width="2.5"/>
+<rect x="282" y="245" width="36" height="9" rx="3" fill="#33485A"/><path d="M285 254 H315 L320 312 H280Z" fill="#FFE29A" stroke="#1B2A38" stroke-width="2.5"/><path class="lp-flame" d="M300 266 C292 280 292 294 300 302 C308 294 308 280 300 266Z" fill="#F2B33D"/><rect x="276" y="312" width="48" height="9" rx="3" fill="#33485A"/></g>
 <text x="300" y="352" text-anchor="middle" font-family="Young Serif, serif" font-size="24" fill="#1B2A38">Trust</text>
 <text x="300" y="376" text-anchor="middle" font-family="Figtree, sans-serif" font-size="14" fill="#5E7586">buyers believe you</text>
 </svg>
@@ -736,7 +680,7 @@ a{color:#1B2A38}a:hover{color:#B8452F}
 </div>
 <div style="display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; gap: 16px; border-top: 1px solid #33485A; padding-top: 24px; font-size: 15px">
 <span style="font-family: 'Young Serif', serif; font-size: 20px; color: #EEF1F2; display: inline-flex; align-items: center; gap: 10px"><img src="ultha-mark-white.svg" alt="" width="30" height="16">ULTHA</span>
-<nav style="display: flex; flex-wrap: wrap; gap: 22px"><a href="#what" style="color: #C9D3DA; text-decoration: none">How it works</a><a href="#why" style="color: #C9D3DA; text-decoration: none">About</a><a href="#pricing" style="color: #C9D3DA; text-decoration: none">Pricing</a><a href="#faq" style="color: #C9D3DA; text-decoration: none">FAQ</a><a href="/starter-kit" style="color: #C9D3DA; text-decoration: none">Free starter kit</a><a href="/guides" style="color: #C9D3DA; text-decoration: none">Guides</a><a href="https://calendly.com/ultha-ugc/30min" style="color: #C9D3DA; text-decoration: none">Book a call</a></nav>
+<nav style="display: flex; flex-wrap: wrap; gap: 22px"><a href="#loop" style="color: #C9D3DA; text-decoration: none">How it works</a><a href="#why" style="color: #C9D3DA; text-decoration: none">About</a><a href="#pricing" style="color: #C9D3DA; text-decoration: none">Pricing</a><a href="#faq" style="color: #C9D3DA; text-decoration: none">FAQ</a><a href="/starter-kit" style="color: #C9D3DA; text-decoration: none">Free starter kit</a><a href="/guides" style="color: #C9D3DA; text-decoration: none">Guides</a><a href="https://calendly.com/ultha-ugc/30min" style="color: #C9D3DA; text-decoration: none">Book a call</a></nav>
 <span>© 2026 Ultha · Santa Barbara, CA</span>
 </div>
 </div>
