@@ -17,6 +17,13 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Young+Serif&amp;family=Figtree:wght@400;500;700&amp;family=Caveat:wght@600&amp;family=Oswald:wght@500;700&amp;display=swap">
 <style>
+.btn3d{text-decoration:none;background:#fff;color:#1B2A38;border-radius:999px;padding:15px 28px;font-weight:500;box-shadow:0 5px 0 #C6D0D6,0 14px 24px rgba(27,42,56,.12);transition:transform .15s,box-shadow .15s}
+.btn3d:hover{transform:translateY(-2px);box-shadow:0 7px 0 #C6D0D6,0 18px 28px rgba(27,42,56,.14)}
+.btn3d:active{transform:translateY(4px);box-shadow:0 1px 0 #C6D0D6,0 6px 12px rgba(27,42,56,.12)}
+.stickybar{position:sticky;top:0;z-index:50;background:rgba(238,241,242,.82);-webkit-backdrop-filter:blur(12px);backdrop-filter:blur(12px);transition:box-shadow .3s}
+.stickybar.scrolled{box-shadow:0 1px 0 rgba(27,42,56,.08),0 8px 24px rgba(27,42,56,.06)}
+.stickybar .topbar{padding-top:14px!important;padding-bottom:14px!important}
+html{scroll-padding-top:80px}
 body{margin:0;background:#EEF1F2}
 a{color:#1B2A38}a:hover{color:#B8452F}
 .gb{transform-box:fill-box;transform-origin:center}
@@ -269,6 +276,51 @@ a{color:#1B2A38}a:hover{color:#B8452F}
 .wn-so{font-size:14px;line-height:1.45;color:#A9BAC5}
 .wn-stat cite{margin-top:auto;padding-top:8px;font-style:normal;font-size:12px;color:#7F95A4}
 .wn-hand{text-align:center;font-family:Caveat,cursive;font-size:26px;color:#FFE29A;margin:36px 0 0}
+.cp{position:relative;overflow:hidden;background:#1B2A38;color:#C9D3DA;text-align:center}
+.cp-word{position:absolute;left:0;right:0;top:46%;transform:translateY(-50%);font-family:'Young Serif',serif;font-size:clamp(160px,24vw,320px);line-height:1;color:rgba(255,255,255,.035);pointer-events:none;letter-spacing:-.02em}
+.cp-in{position:relative;max-width:820px;margin:0 auto;padding:100px 24px 90px}
+.cp-k{font-size:13px;letter-spacing:.14em;text-transform:uppercase;color:#8FA3B1}
+.cp h2{margin:10px 0 48px;font-family:'Young Serif',serif;font-weight:400;font-size:clamp(30px,3.6vw,44px);color:#fff}
+.cp h2{line-height:1.15}
+.cp-stack{position:relative;max-width:720px;margin:0 auto;display:grid}
+.cp-back{position:absolute;height:60px;border-radius:28px;bottom:-17px;left:20px;right:20px;background:#C6D3DB;opacity:.7}
+.cp-back.b2{bottom:-34px;left:40px;right:40px;background:#5E7586;opacity:.5}
+.cp-card{grid-area:1/1;position:relative;margin:0;background:#fff;border-radius:28px;padding:32px 40px 34px;box-sizing:border-box;text-align:left;color:#1B2A38;box-shadow:0 30px 60px rgba(0,0,0,.3);opacity:0;transform:translateY(10px) scale(.98);transition:opacity .5s,transform .5s;pointer-events:none}
+.cp-card.on{opacity:1;transform:none;pointer-events:auto}
+.cp-top{display:flex;align-items:center;gap:14px;margin-bottom:18px;font-size:14px;color:#5E7586}
+.cp-top b{display:block;font-size:17px;color:#1B2A38}
+.cp-stars{color:#F2B33D;letter-spacing:3px;font-size:15px}
+.cp-card blockquote{margin:0;font-family:'Young Serif',serif;font-size:clamp(20px,2.2vw,25px);line-height:1.4}
+.cp{background:#1B2A38;text-align:left}
+@media (min-width:901px){#clients .cp-in>*{max-width:760px}}
+.cp::before{content:"";position:absolute;top:0;right:0;bottom:0;width:40%;background:linear-gradient(90deg,#1B2A38 0%,rgba(27,42,56,.5) 30%,rgba(27,42,56,.25) 100%),url(proof-bg-photo.jpg) 50% 52%/auto 220% no-repeat;pointer-events:none}
+.cp-in{position:relative;z-index:1}
+.cp-word{display:none}
+.cp-in{max-width:1180px}
+.cp-k,.cp h2{display:block;max-width:760px}
+.cp h2{margin-bottom:44px}
+.cp-stack{margin:0;max-width:760px}
+#clients .cp-nav{justify-content:flex-start;max-width:760px;margin:56px 0 0}
+@media (max-width:900px){.cp{text-align:center}.cp::before{width:100%;background:linear-gradient(180deg,rgba(27,42,56,.86),rgba(27,42,56,.94)),url(proof-bg-photo.jpg) center 20%/cover}.cp-k,.cp h2,.cp-stack,#clients .cp-nav{margin-left:auto;margin-right:auto}#clients .cp-nav{justify-content:center}}
+.cp-av{width:50px;height:50px;border-radius:50%;flex:none;display:flex;align-items:center;justify-content:center;font-family:'Young Serif',serif;font-size:17px;background:#FFE29A;color:#1B2A38}
+.cp-who{flex:1}
+.cp h2 span{color:#FFE29A}
+@media (max-width:640px){.cp-card{padding:26px 22px}}
+.cp-nav{display:flex;align-items:center;justify-content:center;gap:18px;margin-top:64px}
+.cp-arrow{width:42px;height:42px;border-radius:50%;border:1.5px solid #5E7586;background:transparent;color:#EEF1F2;font-size:16px;cursor:pointer}
+.cp-arrow:hover{border-color:#FFE29A;color:#FFE29A}
+.cp-dots{display:flex;gap:8px}
+.cp-dot{width:8px;height:8px;border-radius:4px;border:0;padding:0;background:#5E7586;cursor:pointer;transition:width .3s,background .3s}
+.cp-dot.on{width:26px;background:#FFE29A}
+@media (max-width:640px){.cp-in{padding:72px 18px}.cp-top{flex-direction:column;align-items:center;text-align:center}.cp-card blockquote{text-align:center}}
+.meet{background:#EEF1F2}
+.meet-in{max-width:860px;margin:0 auto;padding:80px 24px;display:flex;gap:28px;align-items:center}
+.meet-in img{width:120px;height:120px;border-radius:50%;object-fit:cover;object-position:40% 22%;flex:none;box-shadow:0 0 0 6px rgba(255,226,154,.7)}
+.meet-k{font-size:13px;letter-spacing:.14em;text-transform:uppercase;color:#4B5D6C}
+.meet-h{margin:6px 0 8px;font-family:'Young Serif',serif;font-size:clamp(22px,2.4vw,28px);line-height:1.25;color:#1B2A38}
+.meet-p{margin:0 0 12px;font-size:16px;color:#46596A}
+.meet-a{font-weight:500;color:#1B2A38;text-underline-offset:4px}
+@media (max-width:640px){.meet-in{flex-direction:column;text-align:center;padding:56px 20px}}
 .lp{background:#EEF1F2}
 #loop .lpvid{max-width:920px!important;margin:30px auto 48px}
 #loop .lpvid-frame{aspect-ratio:16/9;background:#1B2A38}
@@ -287,6 +339,18 @@ a{color:#1B2A38}a:hover{color:#B8452F}
 .vm-bar{position:absolute;left:14px;right:14px;bottom:16px;z-index:2;display:flex;align-items:center;gap:10px;font:500 12px Figtree,sans-serif;color:#fff}
 .vm-track{flex:1;height:4px;border-radius:4px;background:rgba(255,255,255,.35)}
 .vm-track span{display:block;width:0;height:100%}
+/* card sequence animation */
+@media (prefers-reduced-motion:no-preference){
+#loop .lp-node{animation:lpIn .7s cubic-bezier(.2,.9,.3,1.3) both, lpCycle 8s ease-in-out infinite}
+#loop .n1{animation-delay:.2s,1.6s}
+#loop .n2{animation-delay:.6s,3.6s}
+#loop .n3{animation-delay:1s,5.6s}
+#loop .n4{animation-delay:1.4s,7.6s}
+#loop .lp-glow{animation:lppulse 3.2s ease-in-out infinite}
+}
+@keyframes lpIn{from{opacity:0;scale:.7}to{opacity:1;scale:1}}
+@keyframes lpCycle{0%,22%,100%{scale:1;border-color:#C6D0D6;box-shadow:0 8px 20px rgba(27,42,56,.06)}6%,14%{scale:1.07;border-color:#F2B33D;box-shadow:0 0 0 4px rgba(255,226,154,.6),0 18px 34px rgba(27,42,56,.14)}}
+@media (max-width:760px){@keyframes lpCycle{0%,22%,100%{scale:1;border-color:#C6D0D6}6%,14%{scale:1.03;border-color:#F2B33D;box-shadow:0 0 0 4px rgba(255,226,154,.6)}}}
 /* calmer loop cards */
 #loop .lp-node{border:1px solid #C6D0D6;box-shadow:0 8px 20px rgba(27,42,56,.06);gap:2px;padding:16px 18px}
 #loop .lp-step{color:#8FA3B1!important;letter-spacing:.14em}
@@ -360,35 +424,36 @@ a{color:#1B2A38}a:hover{color:#B8452F}
 .lp-back::before{content:"";display:block;width:56px;height:56px;margin:0 auto 6px;border-radius:50%;background:radial-gradient(#FFE29A,#F2B33D00 70%)}
 }
 </style>
-<style>html{scroll-behavior:smooth}body{overflow-x:hidden}</style>
+<style>html{scroll-behavior:smooth}body{overflow-x:clip}</style>
 <script type="application/ld+json">
 {"@context":"https://schema.org","@type":"ProfessionalService","name":"Ultha","url":"https://ultha.co/","description":"I turn your best customers into reviews, testimonials, short videos and case studies that build trust with prospects and authority with LLMs. Customer proof for seed to Series A startups.","founder":{"@type":"Person","name":"Ultha Niraula","jobTitle":"Founder","sameAs":["https://www.linkedin.com/in/ulthaniraula/","https://instagram.com/ultha.co"]},"areaServed":"US","address":{"@type":"PostalAddress","addressLocality":"Santa Barbara","addressRegion":"CA","addressCountry":"US"}}
 </script>
-<script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "Can’t I just use ChatGPT for this?", "acceptedAnswer": {"@type": "Answer", "text": "ChatGPT can write copy. It can’t call your customers. LLMs trust what real customers say on sites you don’t own: reviews, videos, communities. That part needs a human."}}, {"@type": "Question", "name": "Do my customers have to be on camera?", "acceptedAnswer": {"@type": "Answer", "text": "No. Every interview becomes written reviews and stories first. Video is only for customers who want it."}}, {"@type": "Question", "name": "What do you need from me?", "acceptedAnswer": {"@type": "Answer", "text": "A 30-min kickoff and intros to 5 to 10 customers who already love you. I handle the rest, and you approve everything before it goes live."}}, {"@type": "Question", "name": "When will I see something?", "acceptedAnswer": {"@type": "Answer", "text": "First reviews and videos go live in the first month. Search and LLM visibility builds over the months after."}}, {"@type": "Question", "name": "Who is this for?", "acceptedAnswer": {"@type": "Answer", "text": "Seed to Series A tech startups with happy customers and no marketer yet."}}]}</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "Can’t I just use AI for this?", "acceptedAnswer": {"@type": "Answer", "text": "AI can write copy. It can’t call your customers. LLMs trust what real customers say on sites you don’t own: reviews, videos, communities. That part needs a human."}}, {"@type": "Question", "name": "Do my customers have to be on camera?", "acceptedAnswer": {"@type": "Answer", "text": "No. Every interview becomes written reviews and stories first. Video is only for customers who want it."}}, {"@type": "Question", "name": "What do you need from me?", "acceptedAnswer": {"@type": "Answer", "text": "A 30-min kickoff and intros to 5 to 10 customers who already love you. I handle the rest, and you approve everything before it goes live."}}, {"@type": "Question", "name": "When will I see something?", "acceptedAnswer": {"@type": "Answer", "text": "First reviews and videos go live in the first month. Search and LLM visibility builds over the months after."}}, {"@type": "Question", "name": "Who is this for?", "acceptedAnswer": {"@type": "Answer", "text": "Seed to Series A tech startups with happy customers and no marketer yet."}}]}</script>
 </head>
 <body>
 <div style="font-family: 'Figtree', system-ui, sans-serif; color: #1B2A38; background: #EEF1F2; font-size: 17px; line-height: 1.6">
-<section style="position: relative; overflow: hidden">
-<div aria-hidden="true" style="position: absolute; z-index: 1; left: 10%; top: 0; width: 80%; height: 70%; background: radial-gradient(ellipse at 50% 46%, rgba(238,241,242,0.96) 34%, rgba(238,241,242,0.55) 54%, rgba(238,241,242,0) 70%); pointer-events: none"></div>
-<header class="topbar" style="position: relative; z-index: 2; max-width: 1180px; margin: 0 auto; padding: 22px 24px; display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 12px">
+<div class="stickybar"><header class="topbar" style="position: relative; z-index: 2; max-width: 1180px; margin: 0 auto; box-sizing: border-box; padding: 22px 24px; display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 12px">
 <span style="font-family: 'Young Serif', serif; font-size: 22px; letter-spacing: 0.02em; display: inline-flex; align-items: center; gap: 10px"><img src="ultha-mark.svg" alt="" width="34" height="18">ULTHA</span>
 <nav style="display: flex; flex-wrap: wrap; align-items: center; gap: 26px; font-size: 15px">
 <a href="#loop" style="text-decoration: none">How it works</a>
-<a href="#why" style="text-decoration: none">About</a>
+<a href="/about" style="text-decoration: none">About</a>
 <a href="#pricing" style="text-decoration: none">Pricing</a>
 <a href="/guides" style="text-decoration: none">Guides</a>
 <a href="https://calendly.com/ultha-ugc/30min" style="text-decoration: none; background: #1B2A38; color: #EEF1F2; border-radius: 999px; padding: 9px 18px">Book a call</a>
 </nav>
-</header>
-<div id="top" style="position: relative; z-index: 2; max-width: 1040px; margin: 0 auto; padding: clamp(36px, 6vw, 72px) 24px 0; display: flex; flex-direction: column; align-items: center; text-align: center; gap: 20px">
+</header></div>
+<section style="position: relative; overflow: hidden">
+<div aria-hidden="true" style="position: absolute; z-index: 1; left: 10%; top: 0; width: 80%; height: 70%; background: radial-gradient(ellipse at 50% 46%, rgba(238,241,242,0.96) 34%, rgba(238,241,242,0.55) 54%, rgba(238,241,242,0) 70%); pointer-events: none"></div>
+
+<div id="top" style="position: relative; z-index: 2; max-width: 1040px; margin: 0 auto; padding: clamp(56px, 9vw, 120px) 24px clamp(40px, 6vw, 80px); display: flex; flex-direction: column; align-items: center; text-align: center; gap: 28px">
 <h1 class="fade herohl" style="--d: 0.15s"><span class="l1">Your customers love your product.</span> <span class="l2">Your prospects have <span class="noidea">no idea.</span></span></h1>
-<p class="fade" style="--d: 0.3s; margin: 0; font-family: 'Young Serif', serif; font-size: clamp(20px, 1.8vw, 26px); color: #33475A">Let’s change that.</p>
+<p class="fade" style="--d: 0.3s; margin: -6px 0 0; font-family: 'Young Serif', serif; font-size: clamp(20px, 1.8vw, 26px); color: #33475A">Let’s change that.</p>
 <div class="fade" style="--d: 0.45s; display: flex; flex-wrap: wrap; justify-content: center; gap: 12px 22px; align-items: center; margin-top: 6px">
-<a href="/starter-kit" class="tipbtn" data-tip="Checklist, email template and 10 call questions. Free, instant access." style="text-decoration: none; background: #1B2A38; color: #EEF1F2; border-radius: 999px; padding: 13px 24px; font-weight: 500">Get your first 5 reviews: free kit →</a>
-<a href="https://calendly.com/ultha-ugc/30min" style="text-underline-offset: 5px; display: inline-flex; align-items: center; gap: 8px">or book a 30-min call</a>
+<a href="/starter-kit" class="tipbtn btn3d" data-tip="Checklist, email template and 10 call questions. Free, instant access.">Get your first 5 reviews: free kit →</a>
+<a href="/contact" style="text-underline-offset: 5px; display: inline-flex; align-items: center; gap: 8px">or ask me a question</a>
 </div>
 </div>
-<svg class="herosvg" viewBox="0 0 1200 600" preserveAspectRatio="xMidYMax slice" style="position: relative; z-index: 0; display: block; width: 100%; height: clamp(300px, 44vw, 540px); margin-top: clamp(-170px, -11vw, -30px)" role="img" aria-label="Customers who love the product stand on one cliff. A rope bridge with three planks (customer reviews, short form content, LLMs optimization) crosses a foggy ravine to prospects with a problem, who wonder who can solve it.">
+<svg class="herosvg" viewBox="0 0 1200 600" preserveAspectRatio="xMidYMax slice" style="position: relative; z-index: 0; display: block; width: 100%; height: clamp(260px, 34vw, 420px); margin-top: clamp(-70px, -4vw, -10px)" role="img" aria-label="Customers who love the product stand on one cliff. A rope bridge with three planks (customer reviews, short form content, LLMs optimization) crosses a foggy ravine to prospects with a problem, who wonder who can solve it.">
 <defs>
 <filter id="fogblur" x="-20%" y="-50%" width="140%" height="200%"><feGaussianBlur stdDeviation="18"></feGaussianBlur></filter>
 <radialGradient id="glow"><stop offset="0%" stop-color="#FFE29A" stop-opacity="1"></stop><stop offset="45%" stop-color="#F2B33D" stop-opacity="0.45"></stop><stop offset="100%" stop-color="#F2B33D" stop-opacity="0"></stop></radialGradient>
@@ -493,12 +558,10 @@ a{color:#1B2A38}a:hover{color:#B8452F}
 <path d="M497 352 A205 205 0 0 1 352 497" fill="none" stroke="#1B2A38" stroke-width="2.5" marker-end="url(#lpa)"/>
 <path d="M248 497 A205 205 0 0 1 103 352" fill="none" stroke="#1B2A38" stroke-width="2.5" marker-end="url(#lpa)"/>
 <path d="M103 248 A205 205 0 0 1 248 103" fill="none" stroke="#8FA3B1" stroke-width="2.5" stroke-dasharray="7 6" marker-end="url(#lpa)"/>
-<path class="lp-trail" d="M300 95 A205 205 0 1 1 299.99 95" fill="none" stroke="#F2B33D" stroke-width="5" stroke-linecap="round"/>
 <circle class="lp-glow" cx="300" cy="300" r="120" fill="url(#lpg)"/>
 
 <text x="300" y="302" text-anchor="middle" font-family="Young Serif, serif" font-size="38" fill="#1B2A38">Trust</text>
 <text x="300" y="330" text-anchor="middle" font-family="Figtree, sans-serif" font-size="16" fill="#5E7586">buyers believe you</text>
-<g class="lp-walker" transform="translate(300 95)"><g class="lp-sw"><circle cx="0" cy="44" r="46" fill="url(#lpg)"/><path d="M0 -6 V8" stroke="#1B2A38" stroke-width="2.5"/><rect x="-16" y="8" width="32" height="8" rx="3" fill="#33485A"/><path d="M-13 16 H13 L17 66 H-17Z" fill="#FFE29A" stroke="#1B2A38" stroke-width="2.5"/><path class="lp-flame" d="M0 27 C-7 39 -7 51 0 58 C7 51 7 39 0 27Z" fill="#F2B33D"/><rect x="-20" y="66" width="40" height="8" rx="3" fill="#33485A"/></g></g>
 </svg>
 <div class="lp-node n1"><span class="lp-step">1 · Listen</span><b>Customer conversations</b><span>15-minute chats with customers who love you.</span></div>
 <div class="lp-node n2"><span class="lp-step">2 · Capture</span><b>Reviews, testimonials, case studies</b><span>Real words from real customers. <em>5 reviews make buyers 270% more likely to buy</em></span></div>
@@ -510,28 +573,7 @@ a{color:#1B2A38}a:hover{color:#B8452F}
 <p class="lp-src">Sources: Gartner; TrustRadius 2026 B2B Buying Disconnect report (1,862 tech buyers); G2 2026 AI search report (1,076 B2B buyers); Northwestern University Spiegel Research Center; Wyzowl State of Video Marketing 2025.</p>
 </div>
 
-<script>
-(function(){
-var sec=document.getElementById('loop');if(!sec)return;
-var walker=sec.querySelector('.lp-walker'),trail=sec.querySelector('.lp-trail'),glow=sec.querySelector('.lp-glow'),sw=sec.querySelector('.lp-sw');
-var nodes=[sec.querySelector('.n1'),sec.querySelector('.n2'),sec.querySelector('.n3'),sec.querySelector('.n4')];
-if(!walker||!trail)return;
-var L=trail.getTotalLength();trail.style.strokeDasharray=L;trail.style.strokeDashoffset=L;
-var reduce=window.matchMedia&&matchMedia('(prefers-reduced-motion: reduce)').matches;
-function place(p){var pt=trail.getPointAtLength(L*(p%1));walker.setAttribute('transform','translate('+pt.x.toFixed(1)+' '+pt.y.toFixed(1)+')')}
-function lit(n){nodes.forEach(function(el,i){if(el)el.classList.toggle('lit',i<n)});if(glow)glow.style.opacity=(0.35+0.16*n).toFixed(2)}
-if(reduce){place(0);lit(4);trail.style.strokeDashoffset=0;return}
-var DWELL=1300,MOVE=1500,CYC=4*(DWELL+MOVE),t0=null,run=false;
-function ease(x){return x<.5?2*x*x:1-Math.pow(-2*x+2,2)/2}
-function frame(ts){if(!run)return;if(t0===null)t0=ts;var t=(ts-t0)%CYC,seg=Math.floor(t/(DWELL+MOVE)),r=t-seg*(DWELL+MOVE),p,lean=0;
-if(r<DWELL){p=seg/4;lit(seg+1)}else{var k=ease((r-DWELL)/MOVE);p=(seg+k)/4;lean=Math.sin(k*Math.PI)*-10;lit(seg+1)}
-place(p);sw.setAttribute('transform','rotate('+lean.toFixed(1)+')');
-trail.style.strokeDashoffset=seg===3&&r>=DWELL?L:(L*(1-Math.min(p,1)));
-if(seg===3&&r>=DWELL){trail.style.opacity=1-ease((r-DWELL)/MOVE)}else{trail.style.opacity=1}
-requestAnimationFrame(frame)}
-var io=new IntersectionObserver(function(e){var v=e[0].isIntersecting;if(v&&!run){run=true;t0=null;requestAnimationFrame(frame)}else if(!v){run=false}},{threshold:.2});io.observe(sec);
-})();
-</script>
+
 </section>
 
 <section style="background: #E4E9EC">
@@ -552,133 +594,53 @@ var io=new IntersectionObserver(function(e){var v=e[0].isIntersecting;if(v&&!run
 </div>
 </section>
 
-<section id="why" class="about">
-<img class="aboutphoto" src="ultha-photo.jpg" alt="Ultha working on her laptop by a window full of trees">
-<span class="aboutnote reveal" aria-hidden="true">that’s me, prepping your interview questions ✍️</span>
-<div class="aboutcard reveal">
-<span style="font-size: 13px; letter-spacing: 0.14em; text-transform: uppercase; color: #4B5D6C">Why me</span>
-<h2 style="margin: 0; font-family: 'Young Serif', serif; font-weight: 400; font-size: clamp(28px, 3vw, 38px); line-height: 1.15; text-wrap: balance">Product brain. Marketer’s instincts. Creator’s eye.</h2>
-<div style="display: flex; flex-direction: column; gap: 10px; font-size: 17px; color: #33475A">
-<p style="margin: 0">Every startup I’ve worked with had customers saying amazing things. It just lived in Slack threads and sales calls, where no prospect could ever see it.</p>
-<p style="margin: 0; color: #1B2A38; font-weight: 700">Now I turn your happiest customers into the trust that sells for you, before you ever get on a call.</p>
+<section id="why" class="meet">
+<div class="meet-in reveal">
+<img src="ultha-photo.jpg" alt="Ultha Niraula">
+<div>
+<span class="meet-k">Who's behind this</span>
+<p class="meet-h">Hi, I'm Ultha. Product brain, marketer's instincts, creator's eye.</p>
+<p class="meet-p">Former product manager and co-founder of a marketing agency that worked with 40+ brands, before going solo.</p>
+<a class="meet-a" href="/about">Read my story →</a>
 </div>
-<div class="soc"><span style="font-family: Caveat, cursive; font-size: 26px; color: #B8452F; margin-right: auto">— Ultha</span><a href="https://www.linkedin.com/in/ulthaniraula/">LinkedIn ↗</a><a href="https://instagram.com/ultha.co">Instagram @ultha.co ↗</a></div>
 </div>
 </section>
 
-<section id="path" style="position: relative; background: #EEF1F2; overflow: hidden">
-<div style="max-width: 1400px; margin: 0 auto; padding: 72px 0 32px; display: flex; flex-direction: column; gap: 6px">
-<div class="reveal" style="text-align: center; display: flex; flex-direction: column; gap: 8px; align-items: center">
-<span style="font-size: 13px; letter-spacing: 0.14em; text-transform: uppercase; color: #4B5D6C">My path</span>
-<h2 style="margin: 0; font-family: 'Young Serif', serif; font-weight: 400; font-size: clamp(28px, 3.2vw, 40px)">Ten years, two countries, one road.</h2>
+
+
+<section id="clients" class="cp">
+<span class="cp-word" aria-hidden="true">proof</span>
+<div class="cp-in">
+<span class="cp-k">What clients say</span>
+<h2>I practice what I preach.<br><span>Here’s my customer proof.</span></h2>
+<div class="cp-stack" aria-live="polite">
+<div class="cp-back b2"></div><div class="cp-back b1"></div>
+<figure class="cp-card on" aria-hidden="false">
+<div class="cp-top"><span class="cp-av">JP</span><span class="cp-who"><b>Jayson Peppar</b>Bizbox Digital</span><span class="cp-stars">★★★★★</span></div>
+<blockquote>“I’ve hired close to 100 people and I am not easily impressed. An outstanding A&#8209;Player.”</blockquote>
+</figure>
+<figure class="cp-card" aria-hidden="true">
+<div class="cp-top"><span class="cp-av">AS</span><span class="cp-who"><b>Alessandra Sagredo</b>Exhale Marketing</span><span class="cp-stars">★★★★★</span></div>
+<blockquote>“She expertly helped us set up our systems, which our entire company is now running on.”</blockquote>
+</figure>
+<figure class="cp-card" aria-hidden="true">
+<div class="cp-top"><span class="cp-av">WV</span><span class="cp-who"><b>Wout Van Damme</b>Adsparc</span><span class="cp-stars">★★★★★</span></div>
+<blockquote>“She trained our internal staff and shared her extensive knowledge with our team.”</blockquote>
+</figure>
+<figure class="cp-card" aria-hidden="true">
+<div class="cp-top"><span class="cp-av">RN</span><span class="cp-who"><b>Robert Neumann</b>CoreShop Solutions</span><span class="cp-stars">★★★★★</span></div>
+<blockquote>“She is a Jedi. Hire her first. Simple.”</blockquote>
+</figure>
 </div>
-<div class="roadwrap">
-<svg class="roadsvg" viewBox="0 30 1200 330" role="img" aria-label="An illustrated winding road through my path: 2016 co-founded a marketing agency that served 40+ brands. 2020 to 2021 marketing consultant for 20+ clients in 7 countries. 2021 M.S. Technology Management at UCSB. 2022 to 2025 product at impact.com with 25+ major launches. 2025 created short-form videos for ads. Now ultha.co, with the road continuing toward your startup.">
-<defs>
-<filter id="wc" x="-5%" y="-20%" width="110%" height="140%"><feTurbulence type="fractalNoise" baseFrequency="0.035" numOctaves="3" seed="4" result="n"></feTurbulence><feDisplacementMap in="SourceGraphic" in2="n" scale="5" xChannelSelector="R" yChannelSelector="G"></feDisplacementMap></filter>
-<filter id="wc2" x="-5%" y="-20%" width="110%" height="140%"><feTurbulence type="fractalNoise" baseFrequency="0.09" numOctaves="2" seed="9" result="n"></feTurbulence><feColorMatrix in="n" type="matrix" values="0 0 0 0 0.26  0 0 0 0 0.33  0 0 0 0 0.40  0 0 0 1.4 -0.55" result="spots"></feColorMatrix><feComposite in="spots" in2="SourceGraphic" operator="in"></feComposite></filter>
-<filter id="rfog" x="-20%" y="-60%" width="140%" height="220%"><feGaussianBlur stdDeviation="16"></feGaussianBlur></filter>
-<radialGradient id="rglow"><stop offset="0%" stop-color="#FFE29A" stop-opacity="1"></stop><stop offset="45%" stop-color="#F2B33D" stop-opacity="0.45"></stop><stop offset="100%" stop-color="#F2B33D" stop-opacity="0"></stop></radialGradient>
-<marker id="ah" viewBox="0 0 10 10" refX="7" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M1 1 L8 5 L1 9" fill="none" stroke="#1B2A38" stroke-width="1.6" stroke-linecap="round"></path></marker>
-</defs>
-
-<!-- soft fog behind -->
-<g class="fogB" filter="url(#rfog)" fill="#FFFFFF" opacity="0.8"><ellipse cx="300" cy="210" rx="260" ry="40"></ellipse><ellipse cx="820" cy="215" rx="280" ry="40"></ellipse></g>
-
-<!-- watercolor road -->
-<g id="rd">
-<path d="M-30 222 C70 222 130 178 250 177 C380 176 392 238 478 239 C566 240 604 178 706 177 C810 176 834 239 926 239 C1012 239 1020 206 1096 205 C1150 204 1200 205 1240 205" fill="none" stroke="#7F95A4" stroke-width="30" stroke-linejoin="round" filter="url(#wc)"></path>
-<path d="M-30 222 C70 222 130 178 250 177 C380 176 392 238 478 239 C566 240 604 178 706 177 C810 176 834 239 926 239 C1012 239 1020 206 1096 205 C1150 204 1200 205 1240 205" fill="none" stroke="#5E7586" stroke-width="25" stroke-linejoin="round" filter="url(#wc2)" opacity="0.8"></path>
-<path d="M-30 222 C70 222 130 178 250 177 C380 176 392 238 478 239 C566 240 604 178 706 177 C810 176 834 239 926 239 C1012 239 1020 206 1096 205 C1150 204 1200 205 1240 205" fill="none" stroke="#EEF1F2" stroke-width="2.5" stroke-dasharray="10 12" stroke-linecap="round" opacity="0.9"></path>
-</g>
-
-<!-- drifting fog over the road -->
-<g class="fogA" filter="url(#rfog)" fill="#FFFFFF" opacity="0.78"><ellipse cx="400" cy="212" rx="90" ry="20"/><ellipse cx="820" cy="214" rx="110" ry="20"/></g>
-<g class="fogB" filter="url(#rfog)" fill="#FFFFFF" opacity="0.5"><ellipse cx="560" cy="300" rx="320" ry="22"/><ellipse cx="420" cy="70" rx="260" ry="18"/><ellipse cx="980" cy="80" rx="200" ry="16"/></g>
-<g transform="translate(0 34)">
-<!-- TOP · 2016 -->
-<g transform="translate(40 40)">
-<polygon points="0,78 34,24 68,78" fill="#93A8B5"></polygon><polygon points="25,38 34,24 43,38 38,35 34,41 30,36" fill="#FFFFFF"></polygon>
-<polygon points="40,78 66,40 94,78" fill="#7F95A4"></polygon><polygon points="59,50 66,40 73,50 69,48 66,53 63,49" fill="#FFFFFF"></polygon>
-<path d="M34 26 Q50 40 66 42" fill="none" stroke="#1B2A38" stroke-width=".8"></path><path d="M40 30 l4 6 l3 -7z" fill="#E36F5A"></path><path d="M49 35 l4 6 l3 -6z" fill="#F2B33D"></path><path d="M57 39 l4 6 l3 -6z" fill="#5E95B5"></path>
-</g>
-<text x="146" y="58" font-family="Young Serif, serif" font-size="26" fill="#1B2A38">2016</text>
-<text x="146" y="82" font-family="Caveat, cursive" font-size="21" fill="#1B2A38">co-founded a marketing agency</text>
-<text x="146" y="102" font-family="Caveat, cursive" font-size="19" fill="#5A6B79">served 40+ brands</text>
-
-</g>
-<g transform="translate(0 -44)">
-<!-- BOTTOM · 2020–21 -->
-<g transform="translate(232 322)"><path d="M14 8 V4 Q14 0 18 0 H28 Q32 0 32 4 V8" fill="none" stroke="#1B2A38" stroke-width="2"/><rect x="2" y="8" width="42" height="30" rx="5" fill="#C9A27A" stroke="#1B2A38" stroke-width="1.5"/><path d="M2 20 H44" stroke="#1B2A38" stroke-width="1.2"/><rect x="19" y="17" width="8" height="6" rx="1.5" fill="#FFE29A" stroke="#1B2A38" stroke-width="1"/></g>
-<text x="290" y="342" font-family="Young Serif, serif" font-size="26" fill="#1B2A38">2020–21</text>
-<text x="290" y="366" font-family="Caveat, cursive" font-size="21" fill="#1B2A38">marketing consultant</text>
-<text x="290" y="386" font-family="Caveat, cursive" font-size="19" fill="#5A6B79">20+ clients, 7 countries</text>
-</g>
-<g transform="translate(0 34)">
-<!-- TOP · 2021 -->
-<g transform="translate(472 36) scale(1.15)">
-<path d="M22 22 L44 12 L66 22 L44 32Z" fill="#1B2A38"></path><path d="M30 26 V38 C38 44 50 44 58 38 V26 L44 32Z" fill="#33485A"></path><path d="M66 22 V36" stroke="#F2B33D" stroke-width="2"></path><circle cx="66" cy="38" r="3" fill="#F2B33D"></circle>
-
-</g>
-<text x="550" y="58" font-family="Young Serif, serif" font-size="26" fill="#1B2A38">2021</text>
-<text x="550" y="82" font-family="Caveat, cursive" font-size="21" fill="#1B2A38">M.S. Technology Management</text>
-<text x="550" y="102" font-family="Caveat, cursive" font-size="19" fill="#5A6B79">UC Santa Barbara</text>
-</g>
-<g transform="translate(0 -44)">
-<!-- BOTTOM · 2022–25 -->
-<g transform="translate(652 312)">
-<rect x="0" y="16" width="58" height="62" fill="#5E7586" stroke="#1B2A38" stroke-width="1.3"></rect><rect x="12" y="4" width="34" height="12" fill="#4E6474" stroke="#1B2A38" stroke-width="1.3"></rect>
-<g fill="#FFE29A"><rect x="8" y="26" width="10" height="9"></rect><rect x="24" y="26" width="10" height="9"></rect><rect x="40" y="26" width="10" height="9"></rect><rect x="8" y="44" width="10" height="9"></rect><rect x="40" y="44" width="10" height="9"></rect></g><rect x="24" y="44" width="10" height="9" fill="#C6D0D6"></rect><rect x="22" y="62" width="14" height="16" fill="#1B2A38"></rect>
-</g>
-<text x="726" y="342" font-family="Young Serif, serif" font-size="26" fill="#1B2A38">2022–25</text>
-<text x="726" y="366" font-family="Caveat, cursive" font-size="21" fill="#1B2A38">product at impact.com</text>
-<text x="726" y="386" font-family="Caveat, cursive" font-size="19" fill="#5A6B79">25+ major launches</text>
-</g>
-<g transform="translate(0 34)">
-<!-- TOP · 2025 -->
-<g transform="translate(840 34) rotate(-6)">
-<rect x="0" y="0" width="36" height="62" rx="7" fill="#1B2A38"></rect><rect x="4" y="6" width="28" height="50" rx="4" fill="#E36F5A"></rect><circle cx="18" cy="30" r="8" fill="rgba(255,255,255,.85)"></circle><path d="M15 26 L22 30 L15 34Z" fill="#1B2A38"></path>
-</g>
-<g transform="translate(880 34)"><path class="heart" style="--d: 0s" d="M0 4 C0 -1 7 -1 7 4 C7 -1 14 -1 14 4 C14 9 7 13 7 15 C7 13 0 9 0 4Z" fill="#E36F5A"></path></g>
-<text x="900" y="58" font-family="Young Serif, serif" font-size="26" fill="#1B2A38">2025</text>
-<text x="900" y="82" font-family="Caveat, cursive" font-size="21" fill="#1B2A38">created short-form</text>
-<text x="900" y="102" font-family="Caveat, cursive" font-size="19" fill="#5A6B79">videos for ads</text>
-</g>
-<g transform="translate(0 30)">
-<!-- now: lantern above the road, label below -->
-<circle class="twinkle gb" cx="1062" cy="120" r="64" fill="url(#rglow)"></circle>
-<path d="M1062 172 V96" stroke="#1B2A38" stroke-width="3"></path><path d="M1062 96 H1080 V104" fill="none" stroke="#1B2A38" stroke-width="2"></path>
-<g transform="translate(1068 104)"><rect x="0" y="0" width="24" height="6" rx="2" fill="#33485A"></rect><path d="M2 6 H22 L25 34 H-1Z" fill="#FFE29A" stroke="#1B2A38" stroke-width="1.5"></path><path d="M12 13 C8 19 8 25 12 29 C16 25 16 19 12 13Z" fill="#F2B33D"></path><rect x="-2" y="34" width="28" height="6" rx="2" fill="#33485A"></rect></g>
-<text x="1074" y="236" font-family="Caveat, cursive" font-size="20" fill="#B8452F" text-anchor="middle">2026 · now</text>
-<text x="1074" y="264" font-family="Young Serif, serif" font-size="27" fill="#1B2A38" text-anchor="middle">ultha.co</text>
-<text x="1074" y="288" font-family="Caveat, cursive" font-size="18" fill="#5A6B79" text-anchor="middle">your startup, next →</text>
-</g>
-<!-- road fades into fog at the edges -->
-<g class="fogA" filter="url(#rfog)" fill="#FFFFFF" opacity="0.95"><ellipse cx="1190" cy="210" rx="90" ry="50"></ellipse><ellipse cx="10" cy="236" rx="80" ry="50"></ellipse></g>
-</svg>
+<div class="cp-nav"><button class="cp-arrow" data-d="-1" aria-label="Previous review">←</button><div class="cp-dots"><button class="cp-dot on" aria-label="Show review 1"></button><button class="cp-dot" aria-label="Show review 2"></button><button class="cp-dot" aria-label="Show review 3"></button><button class="cp-dot" aria-label="Show review 4"></button></div><button class="cp-arrow" data-d="1" aria-label="Next review">→</button></div>
 </div>
-<div class="roadm"><svg viewBox="0 0 390 940" role="img" aria-label="My path: 2016 co-founded a marketing agency, 40+ brands. 2020 to 2021 marketing consultant, 20+ clients in 7 countries. 2021 M.S. Technology Management at UCSB. 2022 to 2025 product at impact.com, 25+ major launches. 2025 short-form videos for ads. Now ultha.co." style="display:block;width:100%;max-width:440px;margin:0 auto;height:auto">
-<defs>
-<filter id="wcm" x="-20%" y="-5%" width="140%" height="110%"><feTurbulence type="fractalNoise" baseFrequency="0.035" numOctaves="3" seed="4" result="n"/><feDisplacementMap in="SourceGraphic" in2="n" scale="5" xChannelSelector="R" yChannelSelector="G"/></filter>
-<filter id="rfogm" x="-30%" y="-60%" width="160%" height="220%"><feGaussianBlur stdDeviation="14"/></filter>
-<radialGradient id="rglowm"><stop offset="0%" stop-color="#FFE29A"/><stop offset="45%" stop-color="#F2B33D" stop-opacity="0.45"/><stop offset="100%" stop-color="#F2B33D" stop-opacity="0"/></radialGradient>
-<linearGradient id="rfadem" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#EEF1F2"/><stop offset=".06" stop-color="#EEF1F2" stop-opacity="0"/><stop offset=".94" stop-color="#EEF1F2" stop-opacity="0"/><stop offset="1" stop-color="#EEF1F2"/></linearGradient>
-</defs>
-<g class="fogB" filter="url(#rfogm)" fill="#FFFFFF" opacity="0.7"><ellipse cx="195" cy="240" rx="150" ry="30"/><ellipse cx="195" cy="560" rx="150" ry="30"/></g>
-<path d="M195 -30 L195 15 C300 40 300 140 195 165 C90 190 90 290 195 315 C300 340 300 440 195 465 C90 490 90 590 195 615 C300 640 300 740 195 765 C90 790 90 890 195 915 L195 1000" fill="none" stroke="#7F95A4" stroke-width="22" stroke-linecap="round" filter="url(#wcm)"/>
-<path d="M195 -30 L195 15 C300 40 300 140 195 165 C90 190 90 290 195 315 C300 340 300 440 195 465 C90 490 90 590 195 615 C300 640 300 740 195 765 C90 790 90 890 195 915 L195 1000" fill="none" stroke="#5E7586" stroke-width="17" stroke-linecap="round" opacity="0.55" filter="url(#wcm)"/>
-<path d="M195 -30 L195 15 C300 40 300 140 195 165 C90 190 90 290 195 315 C300 340 300 440 195 465 C90 490 90 590 195 615 C300 640 300 740 195 765 C90 790 90 890 195 915 L195 1000" fill="none" stroke="#EEF1F2" stroke-width="2" stroke-dasharray="8 10" stroke-linecap="round"/>
-<g class="fogA" filter="url(#rfogm)" fill="#FFFFFF" opacity="0.75"><ellipse cx="195" cy="400" rx="70" ry="16"/><ellipse cx="195" cy="720" rx="80" ry="16"/></g>
-<rect x="0" y="0" width="390" height="940" fill="url(#rfadem)"/>
-<g transform="translate(22 28)"><polygon points="0,38 18,8 36,38" fill="#93A8B5"/><polygon points="13,16 18,8 23,16 20,15 18,18 16,15" fill="#FFFFFF"/><polygon points="20,38 34,18 48,38" fill="#7F95A4"/><polygon points="31,23 34,18 37,23 35,22 34,25 33,22" fill="#FFFFFF"/></g><text x="22" y="94" font-family="Young Serif, serif" font-size="22" fill="#1B2A38">2016</text><text x="22" y="116" font-family="Caveat, cursive" font-size="18" fill="#1B2A38">co-founded a marketing</text><text x="22" y="135" font-family="Caveat, cursive" font-size="17" fill="#5A6B79">agency · 40+ brands</text><g transform="translate(214 178)"><path d="M13 8 V4 Q13 1 16 1 H24 Q27 1 27 4 V8" fill="none" stroke="#1B2A38" stroke-width="2"/><rect x="2" y="8" width="36" height="26" rx="5" fill="#C9A27A" stroke="#1B2A38" stroke-width="1.5"/><path d="M2 19 H38" stroke="#1B2A38" stroke-width="1.2"/><rect x="16" y="16" width="8" height="6" rx="1.5" fill="#FFE29A" stroke="#1B2A38"/></g><text x="214" y="244" font-family="Young Serif, serif" font-size="22" fill="#1B2A38">2020–21</text><text x="214" y="266" font-family="Caveat, cursive" font-size="18" fill="#1B2A38">marketing consultant</text><text x="214" y="285" font-family="Caveat, cursive" font-size="16" fill="#5A6B79">20+ clients, 7 countries</text><g transform="translate(22 328)"><path d="M2 14 L22 5 L42 14 L22 23Z" fill="#1B2A38"/><path d="M9 18 V29 C16 34 28 34 35 29 V18 L22 23Z" fill="#33485A"/><path d="M42 14 V27" stroke="#F2B33D" stroke-width="2"/><circle cx="42" cy="29" r="2.6" fill="#F2B33D"/></g><text x="22" y="394" font-family="Young Serif, serif" font-size="22" fill="#1B2A38">2021</text><text x="22" y="416" font-family="Caveat, cursive" font-size="18" fill="#1B2A38">M.S. Technology</text><text x="22" y="435" font-family="Caveat, cursive" font-size="17" fill="#5A6B79">Management, UCSB</text><g transform="translate(214 478)"><rect x="4" y="10" width="34" height="30" fill="#5E7586" stroke="#1B2A38" stroke-width="1.2"/><rect x="12" y="3" width="18" height="7" fill="#4E6474" stroke="#1B2A38" stroke-width="1.2"/><g fill="#FFE29A"><rect x="9" y="15" width="6" height="5"/><rect x="18" y="15" width="6" height="5"/><rect x="27" y="15" width="6" height="5"/><rect x="9" y="25" width="6" height="5"/><rect x="27" y="25" width="6" height="5"/></g><rect x="18" y="32" width="6" height="8" fill="#1B2A38"/></g><text x="214" y="544" font-family="Young Serif, serif" font-size="22" fill="#1B2A38">2022–25</text><text x="214" y="566" font-family="Caveat, cursive" font-size="18" fill="#1B2A38">product, impact.com</text><text x="214" y="585" font-family="Caveat, cursive" font-size="17" fill="#5A6B79">25+ major launches</text><g transform="translate(22 628)"><g transform="rotate(-6 14 20)"><rect x="4" y="0" width="24" height="40" rx="5" fill="#1B2A38"/><rect x="7" y="4" width="18" height="32" rx="3" fill="#E36F5A"/><circle cx="16" cy="20" r="5" fill="rgba(255,255,255,.85)"/><path d="M14 17 L19 20 L14 23Z" fill="#1B2A38"/></g><path d="M32 6 C32 3 36 3 36 6 C36 3 40 3 40 6 C40 9 36 11 36 12 C36 11 32 9 32 6Z" fill="#E36F5A"/></g><text x="22" y="694" font-family="Young Serif, serif" font-size="22" fill="#1B2A38">2025</text><text x="22" y="716" font-family="Caveat, cursive" font-size="18" fill="#1B2A38">short-form videos</text><text x="22" y="735" font-family="Caveat, cursive" font-size="17" fill="#5A6B79">for ads</text>
-<circle class="twinkle gb" cx="236" cy="800" r="46" fill="url(#rglowm)"/>
-<g transform="translate(224 776)"><rect x="0" y="0" width="24" height="6" rx="2" fill="#33485A"/><path d="M2 6 H22 L25 34 H-1Z" fill="#FFE29A" stroke="#1B2A38" stroke-width="1.5"/><path d="M12 13 C8 19 8 25 12 29 C16 25 16 19 12 13Z" fill="#F2B33D"/><rect x="-2" y="34" width="28" height="6" rx="2" fill="#33485A"/></g>
-<text x="214" y="844" font-family="Caveat, cursive" font-size="18" fill="#B8452F">2026 · now</text>
-<text x="214" y="870" font-family="Young Serif, serif" font-size="24" fill="#1B2A38">ultha.co</text>
-<text x="214" y="891" font-family="Caveat, cursive" font-size="17" fill="#5A6B79">your startup, next →</text>
-</svg></div>
-<span class="roadhint" aria-hidden="true">swipe along the road →</span>
-</div>
+<script>(function(){var r=document.getElementById('clients');if(!r)return;var C=r.querySelectorAll('.cp-card'),D=r.querySelectorAll('.cp-dot'),n=C.length,i=0,t,DUR=6500,reduce=matchMedia('(prefers-reduced-motion: reduce)').matches;
+function go(k){i=(k+n)%n;C.forEach(function(e,j){e.classList.toggle('on',j===i);e.setAttribute('aria-hidden',j===i?'false':'true')});D.forEach(function(e,j){e.classList.toggle('on',j===i)});clearTimeout(t);if(!reduce&&!r.classList.contains('hold'))t=setTimeout(function(){go(i+1)},DUR)}
+D.forEach(function(e,j){e.addEventListener('click',function(){go(j)})});
+r.querySelectorAll('.cp-arrow').forEach(function(e){e.addEventListener('click',function(){go(i+ +e.dataset.d)})});
+var st=r.querySelector('.cp-stack');st.addEventListener('mouseenter',function(){r.classList.add('hold');clearTimeout(t)});st.addEventListener('mouseleave',function(){r.classList.remove('hold');go(i)});
+var x0=null;st.addEventListener('touchstart',function(e){x0=e.touches[0].clientX},{passive:true});st.addEventListener('touchend',function(e){if(x0===null)return;var dx=e.changedTouches[0].clientX-x0;if(Math.abs(dx)>40)go(i+(dx<0?1:-1));x0=null});
+go(0)})();</script>
 </section>
 
 <section id="pricing" style="background: #E4E9EC">
@@ -726,7 +688,7 @@ var io=new IntersectionObserver(function(e){var v=e[0].isIntersecting;if(v&&!run
 <h2 style="margin: 0; font-family: 'Young Serif', serif; font-weight: 400; font-size: clamp(30px, 3.6vw, 44px)">Questions founders ask me</h2>
 </div>
 <div class="reveal faq">
-<details open=""><summary>Can’t I just use ChatGPT for this?</summary><p>ChatGPT can write copy. It can’t call your customers. LLMs trust what real customers say on sites you don’t own: reviews, videos, communities. That part needs a human.</p></details>
+<details open=""><summary>Can’t I just use AI for this?</summary><p>AI can write copy. It can’t call your customers. LLMs trust what real customers say on sites you don’t own: reviews, videos, communities. That part needs a human.</p></details>
 <details><summary>Do my customers have to be on camera?</summary><p>No. Every interview becomes written reviews and stories first. Video is only for customers who want it.</p></details>
 <details><summary>What do you need from me?</summary><p>A 30-min kickoff and intros to 5 to 10 customers who already love you. I handle the rest, and you approve everything before it goes live.</p></details>
 <details><summary>When will I see something?</summary><p>First reviews and videos go live in the first month. Search and LLM visibility builds over the months after.</p></details>
@@ -747,11 +709,12 @@ var io=new IntersectionObserver(function(e){var v=e[0].isIntersecting;if(v&&!run
 </div>
 <div style="display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; gap: 16px; border-top: 1px solid #33485A; padding-top: 24px; font-size: 15px">
 <span style="font-family: 'Young Serif', serif; font-size: 20px; color: #EEF1F2; display: inline-flex; align-items: center; gap: 10px"><img src="ultha-mark-white.svg" alt="" width="30" height="16">ULTHA</span>
-<nav style="display: flex; flex-wrap: wrap; gap: 22px"><a href="#loop" style="color: #C9D3DA; text-decoration: none">How it works</a><a href="#why" style="color: #C9D3DA; text-decoration: none">About</a><a href="#pricing" style="color: #C9D3DA; text-decoration: none">Pricing</a><a href="#faq" style="color: #C9D3DA; text-decoration: none">FAQ</a><a href="/starter-kit" style="color: #C9D3DA; text-decoration: none">Free starter kit</a><a href="/guides" style="color: #C9D3DA; text-decoration: none">Guides</a><a href="https://calendly.com/ultha-ugc/30min" style="color: #C9D3DA; text-decoration: none">Book a call</a></nav>
+<nav style="display: flex; flex-wrap: wrap; gap: 22px"><a href="#loop" style="color: #C9D3DA; text-decoration: none">How it works</a><a href="/about" style="color: #C9D3DA; text-decoration: none">About</a><a href="#pricing" style="color: #C9D3DA; text-decoration: none">Pricing</a><a href="#faq" style="color: #C9D3DA; text-decoration: none">FAQ</a><a href="/starter-kit" style="color: #C9D3DA; text-decoration: none">Free starter kit</a><a href="/guides" style="color: #C9D3DA; text-decoration: none">Guides</a><a href="https://calendly.com/ultha-ugc/30min" style="color: #C9D3DA; text-decoration: none">Book a call</a></nav>
 <span>© 2026 Ultha · Santa Barbara, CA</span>
 </div>
 </div>
 </footer>
 </div>
+<script>(function(){var b=document.querySelector(".stickybar");if(!b)return;var f=function(){b.classList.toggle("scrolled",scrollY>8)};addEventListener("scroll",f,{passive:true});f()})();</script>
 </body>
 </html>
