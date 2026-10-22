@@ -290,7 +290,7 @@ a{color:#1B2A38}a:hover{color:#B8452F}
 .cp-top{display:flex;align-items:center;gap:14px;margin-bottom:18px;font-size:14px;color:#5E7586}
 .cp-top b{display:block;font-size:17px;color:#1B2A38}
 .cp-stars{color:#F2B33D;letter-spacing:3px;font-size:15px}
-.cp-card blockquote{margin:0;font-family:'Young Serif',serif;font-size:clamp(20px,2.2vw,25px);line-height:1.4}
+.cp-card blockquote{margin:0;font-family:'Young Serif',serif;font-size:clamp(18px,1.8vw,21px);line-height:1.5}
 .cp{background:#1B2A38;text-align:left}
 @media (min-width:901px){#clients .cp-in>*{max-width:760px}}
 .cp::before{content:"";position:absolute;top:0;right:0;bottom:0;width:40%;background:linear-gradient(90deg,#1B2A38 0%,rgba(27,42,56,.5) 30%,rgba(27,42,56,.25) 100%),url(proof-bg-photo.jpg) 50% 52%/auto 220% no-repeat;pointer-events:none}
@@ -594,6 +594,49 @@ a{color:#1B2A38}a:hover{color:#B8452F}
 </div>
 </section>
 
+<section id="clients" class="cp">
+<span class="cp-word" aria-hidden="true">proof</span>
+<div class="cp-in">
+<span class="cp-k">What clients say</span>
+<h2>I practice what I preach.<br><span>Here’s my customer proof.</span></h2>
+<div class="cp-stack" aria-live="polite">
+<div class="cp-back b2"></div><div class="cp-back b1"></div>
+<figure class="cp-card on" aria-hidden="false">
+<div class="cp-top"><span class="cp-av">JP</span><span class="cp-who"><b>Jayson Peppar</b>Bizbox Digital</span><span class="cp-stars">★★★★★</span></div>
+<blockquote>“I’ve hired close to 100 people over the years, and I am not easily impressed. Ultha always delivered impressive results, high-quality work, and frankly was one of the best I’ve ever had the pleasure of working with.”</blockquote>
+</figure>
+<figure class="cp-card" aria-hidden="true">
+<div class="cp-top"><span class="cp-av">AS</span><span class="cp-who"><b>Alessandra Sagredo</b>Exhale Marketing</span><span class="cp-stars">★★★★★</span></div>
+<blockquote>“Personable, intelligent, patient and knowledgeable. She expertly helped us set up our system, which our entire company is now running on. We are currently in the process of creating a new position for her.”</blockquote>
+</figure>
+<figure class="cp-card" aria-hidden="true">
+<div class="cp-top"><span class="cp-av">WV</span><span class="cp-who"><b>Wout Van Damme</b>Adsparc</span><span class="cp-stars">★★★★★</span></div>
+<blockquote>“Ultha helped our organisation adopt a new system across all aspects of our business, from lead generation to sales and operations. In the last phase of the project, she trained our internal staff and shared her extensive knowledge with our team.”</blockquote>
+</figure>
+<figure class="cp-card" aria-hidden="true">
+<div class="cp-top"><span class="cp-av">QZ</span><span class="cp-who"><b>Quinn Z.</b>Conversion Crimes</span><span class="cp-stars">★★★★★</span></div>
+<blockquote>“She did what she said she was going to do, explained things thoroughly and helped us strategize how to use our tools well.”</blockquote>
+</figure>
+<figure class="cp-card" aria-hidden="true">
+<div class="cp-top"><span class="cp-av">NS</span><span class="cp-who"><b>Natalia S.</b>Client on Upwork</span><span class="cp-stars">★★★★★</span></div>
+<blockquote>“She knew the platform from the inside out, helped us populate it and guided us through the whole process. Prompt, friendly and overall super to work with. Highly recommended!”</blockquote>
+</figure>
+<figure class="cp-card" aria-hidden="true">
+<div class="cp-top"><span class="cp-av">RN</span><span class="cp-who"><b>Robert Neumann</b>CoreShop Solutions</span><span class="cp-stars">★★★★★</span></div>
+<blockquote>“Excellent. She is a Jedi. Hire her first. Simple.”</blockquote>
+</figure>
+</div>
+<div class="cp-nav"><button class="cp-arrow" data-d="-1" aria-label="Previous review">←</button><div class="cp-dots"><button class="cp-dot on" aria-label="Show review 1"></button><button class="cp-dot" aria-label="Show review 2"></button><button class="cp-dot" aria-label="Show review 3"></button><button class="cp-dot" aria-label="Show review 4"></button><button class="cp-dot" aria-label="Show review 5"></button><button class="cp-dot" aria-label="Show review 6"></button></div><button class="cp-arrow" data-d="1" aria-label="Next review">→</button></div>
+</div>
+<script>(function(){var r=document.getElementById('clients');if(!r)return;var C=r.querySelectorAll('.cp-card'),D=r.querySelectorAll('.cp-dot'),n=C.length,i=0,t,DUR=9000,reduce=matchMedia('(prefers-reduced-motion: reduce)').matches;
+function go(k){i=(k+n)%n;C.forEach(function(e,j){e.classList.toggle('on',j===i);e.setAttribute('aria-hidden',j===i?'false':'true')});D.forEach(function(e,j){e.classList.toggle('on',j===i)});clearTimeout(t);if(!reduce&&!r.classList.contains('hold'))t=setTimeout(function(){go(i+1)},DUR)}
+D.forEach(function(e,j){e.addEventListener('click',function(){go(j)})});
+r.querySelectorAll('.cp-arrow').forEach(function(e){e.addEventListener('click',function(){go(i+ +e.dataset.d)})});
+var st=r.querySelector('.cp-stack');st.addEventListener('mouseenter',function(){r.classList.add('hold');clearTimeout(t)});st.addEventListener('mouseleave',function(){r.classList.remove('hold');go(i)});
+var x0=null;st.addEventListener('touchstart',function(e){x0=e.touches[0].clientX},{passive:true});st.addEventListener('touchend',function(e){if(x0===null)return;var dx=e.changedTouches[0].clientX-x0;if(Math.abs(dx)>40)go(i+(dx<0?1:-1));x0=null});
+go(0)})();</script>
+</section>
+
 <section id="why" class="meet">
 <div class="meet-in reveal">
 <img src="ultha-photo.jpg" alt="Ultha Niraula">
@@ -604,43 +647,6 @@ a{color:#1B2A38}a:hover{color:#B8452F}
 <a class="meet-a" href="/about">Read my story →</a>
 </div>
 </div>
-</section>
-
-
-
-<section id="clients" class="cp">
-<span class="cp-word" aria-hidden="true">proof</span>
-<div class="cp-in">
-<span class="cp-k">What clients say</span>
-<h2>I practice what I preach.<br><span>Here’s my customer proof.</span></h2>
-<div class="cp-stack" aria-live="polite">
-<div class="cp-back b2"></div><div class="cp-back b1"></div>
-<figure class="cp-card on" aria-hidden="false">
-<div class="cp-top"><span class="cp-av">JP</span><span class="cp-who"><b>Jayson Peppar</b>Bizbox Digital</span><span class="cp-stars">★★★★★</span></div>
-<blockquote>“I’ve hired close to 100 people and I am not easily impressed. An outstanding A&#8209;Player.”</blockquote>
-</figure>
-<figure class="cp-card" aria-hidden="true">
-<div class="cp-top"><span class="cp-av">AS</span><span class="cp-who"><b>Alessandra Sagredo</b>Exhale Marketing</span><span class="cp-stars">★★★★★</span></div>
-<blockquote>“She expertly helped us set up our systems, which our entire company is now running on.”</blockquote>
-</figure>
-<figure class="cp-card" aria-hidden="true">
-<div class="cp-top"><span class="cp-av">WV</span><span class="cp-who"><b>Wout Van Damme</b>Adsparc</span><span class="cp-stars">★★★★★</span></div>
-<blockquote>“She trained our internal staff and shared her extensive knowledge with our team.”</blockquote>
-</figure>
-<figure class="cp-card" aria-hidden="true">
-<div class="cp-top"><span class="cp-av">RN</span><span class="cp-who"><b>Robert Neumann</b>CoreShop Solutions</span><span class="cp-stars">★★★★★</span></div>
-<blockquote>“She is a Jedi. Hire her first. Simple.”</blockquote>
-</figure>
-</div>
-<div class="cp-nav"><button class="cp-arrow" data-d="-1" aria-label="Previous review">←</button><div class="cp-dots"><button class="cp-dot on" aria-label="Show review 1"></button><button class="cp-dot" aria-label="Show review 2"></button><button class="cp-dot" aria-label="Show review 3"></button><button class="cp-dot" aria-label="Show review 4"></button></div><button class="cp-arrow" data-d="1" aria-label="Next review">→</button></div>
-</div>
-<script>(function(){var r=document.getElementById('clients');if(!r)return;var C=r.querySelectorAll('.cp-card'),D=r.querySelectorAll('.cp-dot'),n=C.length,i=0,t,DUR=6500,reduce=matchMedia('(prefers-reduced-motion: reduce)').matches;
-function go(k){i=(k+n)%n;C.forEach(function(e,j){e.classList.toggle('on',j===i);e.setAttribute('aria-hidden',j===i?'false':'true')});D.forEach(function(e,j){e.classList.toggle('on',j===i)});clearTimeout(t);if(!reduce&&!r.classList.contains('hold'))t=setTimeout(function(){go(i+1)},DUR)}
-D.forEach(function(e,j){e.addEventListener('click',function(){go(j)})});
-r.querySelectorAll('.cp-arrow').forEach(function(e){e.addEventListener('click',function(){go(i+ +e.dataset.d)})});
-var st=r.querySelector('.cp-stack');st.addEventListener('mouseenter',function(){r.classList.add('hold');clearTimeout(t)});st.addEventListener('mouseleave',function(){r.classList.remove('hold');go(i)});
-var x0=null;st.addEventListener('touchstart',function(e){x0=e.touches[0].clientX},{passive:true});st.addEventListener('touchend',function(e){if(x0===null)return;var dx=e.changedTouches[0].clientX-x0;if(Math.abs(dx)>40)go(i+(dx<0?1:-1));x0=null});
-go(0)})();</script>
 </section>
 
 <section id="pricing" style="background: #E4E9EC">
