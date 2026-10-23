@@ -61,3 +61,14 @@ Everything from `site-v3-wip` was merged to main and deployed:
 Proof Sprint $5,000 one-time, 30 days · 90-Day Proof Engine $6,000/mo · Keep it running $3,500/mo (only after Engine).
 Add-ons (no prices): customer interviews, case studies, short-form videos, website optimization for AI search,
 webinar or panel cut into shorts. Custom box: "Need something custom? Let's build it around you."
+
+## Light redesign (Oct 23, 2026) — LIVE
+- Whole site switched to white + cobalt (#1F4FD8) with ink text (#14213D). Third color: slate navy #586A7C
+  (footer + closing CTA band, featured pricing card, numbered badges, Caveat urgency line).
+- Section tones: #F9F9FA / #EEF2F6 alternate; waves recolored.
+- Hero art redrawn (tools/hero_light.py, navysky palette): layered translucent hills, shaded cliffs, rounded people.
+  Phones: script sets viewBox "296 262 708 324" and CSS scales .hl-cust/.hl-pros 1.3x. Old bridge-build/walker animation removed.
+- How-it-works tree = original navy tree, one shade lighter, white chips (tools/tree_navy_light.py).
+- Color conversion was done with tools/rollout.py (transform()). menu.js recolored too.
+- "Why now" section: "AI is sorting your potential vendors. Here's what it looks at." 3 signals + 83%/69% stats.
+- Case studies research done (PandaDoc, Canvas, Webflow, Notion); homepage section + renamed guides page still TODO.

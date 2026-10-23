@@ -26,6 +26,27 @@
 ]}]}
 </script>
 <link rel="stylesheet" href="/scale.css">
+<style>/* light site: section tones + slate 3rd color */
+footer{background-color:#586A7C!important;color:#E4E9EF!important}
+footer h2,footer b,footer span{color:#FFFFFF!important}
+footer p,footer nav a,footer a:not([href="/contact"]){color:#E4E9EF!important}
+footer a[href="/contact"]{background:#FFFFFF!important;color:#14213D!important}
+footer [style*="border-top"]{border-top-color:rgba(255,255,255,.22)!important}
+footer img[src*="ultha-mark"]{filter:brightness(0) invert(1)}
+.wy-no,#how .hw-num,#how .hw-steps li>span:first-child{border-color:#586A7C!important;color:#586A7C!important}
+.wy-hand{color:#586A7C!important}
+</style>
+<style>/* pricing: slate featured card */
+.pr.hot{background:#586A7C!important;color:#FFFFFF!important;border:1.5px solid #586A7C!important;box-shadow:0 0 0 6px rgba(88,106,124,.14),0 30px 60px rgba(20,33,61,.25)!important}
+.pr.hot h3,.pr.hot .pr-amt,.pr.hot li span{color:#FFFFFF!important}
+.pr.hot .pr-best,.pr.hot .pr-unit,.pr.hot li small{color:#DCE3EA!important}
+.pr.hot .pr-len{background:rgba(255,255,255,.16)!important;color:#FFFFFF!important}
+.pr.hot .pr-prob{color:#FFC94D!important}
+.pr.hot .pr-k,.pr.hot li b{color:#FFC94D!important}
+.pr.hot ul{border-top-color:rgba(255,255,255,.22)!important}
+.pr.hot .pr-btn{background:#FFFFFF!important;border-color:#FFFFFF!important;color:#14213D!important}
+footer nav a{background:none!important;color:#E4E9EF!important;padding:0!important}
+</style>
 </head>
 <body>
 <div class="progress" aria-hidden="true"></div>
@@ -44,26 +65,26 @@
 
 <div class="hero" aria-hidden="true">
 <svg viewBox="0 0 900 380">
-<defs><filter id="b"><feGaussianBlur stdDeviation="18"/></filter><radialGradient id="g"><stop offset="0" stop-color="#FFE29A"/><stop offset="1" stop-color="#F2B33D" stop-opacity="0"/></radialGradient></defs>
-<path d="M0 300 Q220 260 450 290 T900 280 V380 H0Z" fill="#2A4057"/>
-<ellipse cx="450" cy="300" rx="380" ry="40" fill="#C6D3DB" filter="url(#b)" opacity=".12"/>
+<defs><filter id="b"><feGaussianBlur stdDeviation="18"/></filter><radialGradient id="g"><stop offset="0" stop-color="#1F4FD8"/><stop offset="1" stop-color="#FFC94D" stop-opacity="0"/></radialGradient></defs>
+<path d="M0 300 Q220 260 450 290 T900 280 V380 H0Z" fill="#A9B5D2"/>
+<ellipse cx="450" cy="300" rx="380" ry="40" fill="#14213D" filter="url(#b)" opacity=".12"/>
 <!-- left: flat call -->
 <g transform="translate(70 70)">
-<rect x="0" y="0" width="330" height="190" rx="18" fill="#fff" stroke="#1B2A38" stroke-width="2"/>
-<text x="20" y="34" font-family="Figtree,sans-serif" font-size="13" fill="#8FA3B1" letter-spacing="2">THE USUAL CALL</text>
-<rect x="20" y="52" width="210" height="40" rx="20" fill="#1B2A38"/><text x="36" y="78" font-family="Figtree,sans-serif" font-size="16" fill="#fff">How do you like it?</text>
-<rect x="150" y="104" width="160" height="40" rx="20" fill="#EEF1F2"/><text x="166" y="130" font-family="Figtree,sans-serif" font-size="16" fill="#1B2A38">It's great! 🙂</text>
-<text x="20" y="174" font-family="Caveat,cursive" font-size="22" fill="#B8452F">…and that's it.</text>
+<rect x="0" y="0" width="330" height="190" rx="18" fill="#14213D" stroke="#EEF2F6" stroke-width="2"/>
+<text x="20" y="34" font-family="Figtree,sans-serif" font-size="13" fill="#555E75" letter-spacing="2">THE USUAL CALL</text>
+<rect x="20" y="52" width="210" height="40" rx="20" fill="#EEF2F6"/><text x="36" y="78" font-family="Figtree,sans-serif" font-size="16" fill="#14213D">How do you like it?</text>
+<rect x="150" y="104" width="160" height="40" rx="20" fill="#14213D"/><text x="166" y="130" font-family="Figtree,sans-serif" font-size="16" fill="#EEF2F6">It's great! 🙂</text>
+<text x="20" y="174" font-family="Caveat,cursive" font-size="22" fill="#E9604B">…and that's it.</text>
 </g>
 <!-- right: story call -->
 <g transform="translate(500 40)">
 <circle cx="300" cy="40" r="70" fill="url(#g)"/>
-<rect x="0" y="0" width="330" height="250" rx="18" fill="#fff" stroke="#1B2A38" stroke-width="2"/>
-<text x="20" y="34" font-family="Figtree,sans-serif" font-size="13" fill="#8FA3B1" letter-spacing="2">THE BETTER CALL</text>
-<rect x="20" y="52" width="250" height="40" rx="20" fill="#1B2A38"/><text x="36" y="78" font-family="Figtree,sans-serif" font-size="16" fill="#fff">What used to drive you crazy?</text>
-<rect x="40" y="104" width="270" height="110" rx="20" fill="#FFF6DD"/>
-<g stroke="#C9A24A" stroke-width="5" stroke-linecap="round"><line x1="60" y1="128" x2="290" y2="128"/><line x1="60" y1="148" x2="270" y2="148"/><line x1="60" y1="168" x2="290" y2="168"/><line x1="60" y1="188" x2="210" y2="188"/></g>
-<text x="20" y="240" font-family="Caveat,cursive" font-size="22" fill="#5E7586">…a 20-minute story 🎉</text>
+<rect x="0" y="0" width="330" height="250" rx="18" fill="#14213D" stroke="#EEF2F6" stroke-width="2"/>
+<text x="20" y="34" font-family="Figtree,sans-serif" font-size="13" fill="#555E75" letter-spacing="2">THE BETTER CALL</text>
+<rect x="20" y="52" width="250" height="40" rx="20" fill="#EEF2F6"/><text x="36" y="78" font-family="Figtree,sans-serif" font-size="16" fill="#14213D">What used to drive you crazy?</text>
+<rect x="40" y="104" width="270" height="110" rx="20" fill="#1F4FD8"/>
+<g stroke="#FFC94D" stroke-width="5" stroke-linecap="round"><line x1="60" y1="128" x2="290" y2="128"/><line x1="60" y1="148" x2="270" y2="148"/><line x1="60" y1="168" x2="290" y2="168"/><line x1="60" y1="188" x2="210" y2="188"/></g>
+<text x="20" y="240" font-family="Caveat,cursive" font-size="22" fill="#7E88A1">…a 20-minute story 🎉</text>
 </g>
 </svg>
 </div>

@@ -16,7 +16,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Young+Serif&amp;family=Figtree:wght@400;500;700&amp;family=Caveat:wght@600&amp;display=swap">
 <style>
-:root{--bg:#1B2A38;--ink:#EEF1F2;--muted:#B5C3CD;--soft:#22354A;--line:#3A5169;--amber:#F2B33D;--sun:#FFE29A;--coral:#F08A74;--slate:#A9BAC5;--night:#111C27;--card:#22354A}
+:root{--bg:#EEF2F6;--ink:#14213D;--muted:#14213D;--soft:#F5F5F5;--line:#99A5C3;--amber:#FFC94D;--sun:#1F4FD8;--coral:#E9604B;--slate:#424A5E;--night:#F9F9FA;--card:#F5F5F5}
 *{box-sizing:border-box}
 html{scroll-behavior:smooth}
 body{margin:0;background:var(--bg);color:var(--ink);font-family:Figtree,system-ui,sans-serif;font-size:17px;line-height:1.6}
@@ -24,45 +24,66 @@ a{color:var(--ink)}a:hover{color:var(--coral)}
 .wrap{max-width:760px;margin:0 auto;padding:0 20px}
 header{max-width:1180px;margin:0 auto;padding:22px 24px;display:flex;justify-content:space-between;align-items:center}
 .logo{font-family:'Young Serif',serif;font-size:22px;letter-spacing:.02em;text-decoration:none}
-.btn{display:inline-block;text-decoration:none;background:var(--night);color:#EEF1F2;border-radius:999px;padding:11px 20px;font-weight:500}
-.btn:hover{color:#1B2A38;background:#FFF0C2}
+.btn{display:inline-block;text-decoration:none;background:var(--night);color:#14213D;border-radius:999px;padding:11px 20px;font-weight:500}
+.btn:hover{color:#EEF2F6;background:#FFF0C2}
 .hero{text-align:center;padding:40px 0 28px}
-.welcome{margin:8px 0 0;background:#22354A;border:1.5px solid #3A5169;border-radius:14px;padding:12px 16px;text-align:center;font-weight:500;box-shadow:0 0 0 4px rgba(255,226,154,.7)}
-.kicker{font-size:13px;letter-spacing:.14em;text-transform:uppercase;color:#A9BAC5}
+.welcome{margin:8px 0 0;background:#F5F5F5;border:1.5px solid #99A5C3;border-radius:14px;padding:12px 16px;text-align:center;font-weight:500;box-shadow:0 0 0 4px rgba(31,79,216,.7)}
+.kicker{font-size:13px;letter-spacing:.14em;text-transform:uppercase;color:#424A5E}
 h1{font-family:'Young Serif',serif;font-weight:400;font-size:clamp(32px,4.4vw,48px);line-height:1.15;margin:10px 0 12px;text-wrap:balance}
 .lede{font-size:19px;color:var(--muted);max-width:34em;margin:0 auto}
 .hand{font-family:Caveat,cursive;color:var(--coral);font-size:22px}
 .toc{display:flex;flex-wrap:wrap;justify-content:center;gap:8px;margin:24px 0 0}
-.toc a{background:#22354A;border:1.5px solid #3A5169;border-radius:999px;padding:6px 14px;font-size:14px;text-decoration:none}
-.step{background:#22354A;border:1.5px solid #3A5169;border-radius:22px;padding:28px 28px 24px;margin:22px 0;position:relative}
+.toc a{background:#F5F5F5;border:1.5px solid #99A5C3;border-radius:999px;padding:6px 14px;font-size:14px;text-decoration:none}
+.step{background:#F5F5F5;border:1.5px solid #99A5C3;border-radius:22px;padding:28px 28px 24px;margin:22px 0;position:relative}
 .num{position:absolute;top:-16px;left:24px;background:var(--night);color:var(--sun);font-family:'Young Serif',serif;border-radius:999px;padding:3px 14px;font-size:15px}
 h2{font-family:'Young Serif',serif;font-weight:400;font-size:26px;line-height:1.25;margin:6px 0 6px}
 .why{color:var(--muted);margin:0 0 14px}
 ul.check{list-style:none;padding:0;margin:0;display:flex;flex-direction:column;gap:10px}
 ul.check li{position:relative;padding-left:34px}
-ul.check li::before{content:"";position:absolute;left:0;top:3px;width:20px;height:20px;border:2px solid #3A5169;border-radius:6px;background:#22354A}
+ul.check li::before{content:"";position:absolute;left:0;top:3px;width:20px;height:20px;border:2px solid #99A5C3;border-radius:6px;background:#F5F5F5}
 ol.q{margin:0;padding-left:22px;display:flex;flex-direction:column;gap:8px}
 ol.q li::marker{color:var(--coral);font-weight:700}
 .tpl{position:relative;background:var(--soft);border-radius:14px;padding:44px 20px 18px;font-size:15.5px;white-space:pre-wrap;margin:6px 0 0}
-.copy{position:absolute;top:10px;right:10px;border:1.5px solid #3A5169;background:#22354A;border-radius:999px;padding:4px 12px;font:500 13px Figtree,sans-serif;cursor:pointer}
+.copy{position:absolute;top:10px;right:10px;border:1.5px solid #99A5C3;background:#F5F5F5;border-radius:999px;padding:4px 12px;font:500 13px Figtree,sans-serif;cursor:pointer}
 .grid{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}
 .mini{background:var(--soft);border-radius:14px;padding:14px 16px}
 .mini b{display:block;font-family:'Young Serif',serif;font-weight:400;font-size:18px;margin-bottom:2px}
 .mini span{font-size:14.5px;color:var(--muted)}
 .tip{margin:14px 0 0;font-size:15px;color:var(--muted)}
 .tip::before{content:"✦ ";color:var(--amber)}
-.cta{background:var(--night);color:#C9D3DA;border-radius:26px;padding:34px 30px;margin:40px 0 64px;text-align:center}
-.cta h2{color:#EEF1F2}
-.cta .btn{background:var(--sun);color:#1B2A38;margin-top:14px}
+.cta{background:var(--night);color:#14213D;border-radius:26px;padding:34px 30px;margin:40px 0 64px;text-align:center}
+.cta h2{color:#14213D}
+.cta .btn{background:var(--sun);color:#EEF2F6;margin-top:14px}
 .print{background:none;border:0;font:500 15px Figtree,sans-serif;text-decoration:underline;text-underline-offset:4px;cursor:pointer;color:var(--ink);margin-top:14px}
 footer{text-align:center;font-size:14px;color:var(--muted);padding:0 0 40px}
 @media (max-width:640px){body{font-size:16px}.step{padding:24px 18px 20px}.grid{grid-template-columns:1fr}.header-call{padding:9px 16px;font-size:15px}h2{font-size:23px}}
-@media print{header,.toc,.copy,.cta,.print,footer{display:none}.step{break-inside:avoid;border-color:#999}body{background:#22354A}}
+@media print{header,.toc,.copy,.cta,.print,footer{display:none}.step{break-inside:avoid;border-color:#999999}body{background:#F5F5F5}}
 </style>
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"HowTo","name":"Customer Proof Starter Kit: turn customer calls into reviews and testimonials","author":{"@type":"Person","name":"Ultha Niraula","url":"https://ultha.co/"},"step":[{"@type":"HowToStep","name":"Pick 5 customers to ask"},{"@type":"HowToStep","name":"Ask for a feedback call"},{"@type":"HowToStep","name":"Run a 20-minute call with 10 questions"},{"@type":"HowToStep","name":"Turn one call into three assets"},{"@type":"HowToStep","name":"Post it where prospects and LLMs look"},{"@type":"HowToStep","name":"Make it a weekly habit"}]}</script>
 <style>h1 span{color:var(--sun)!important}.lantern{opacity:.6}</style>
 <style>svg .fogA,svg .fogB{display:none}</style>
 <link rel="stylesheet" href="/scale.css">
+<style>/* light site: section tones + slate 3rd color */
+footer{background-color:#586A7C!important;color:#E4E9EF!important}
+footer h2,footer b,footer span{color:#FFFFFF!important}
+footer p,footer nav a,footer a:not([href="/contact"]){color:#E4E9EF!important}
+footer a[href="/contact"]{background:#FFFFFF!important;color:#14213D!important}
+footer [style*="border-top"]{border-top-color:rgba(255,255,255,.22)!important}
+footer img[src*="ultha-mark"]{filter:brightness(0) invert(1)}
+.wy-no,#how .hw-num,#how .hw-steps li>span:first-child{border-color:#586A7C!important;color:#586A7C!important}
+.wy-hand{color:#586A7C!important}
+</style>
+<style>/* pricing: slate featured card */
+.pr.hot{background:#586A7C!important;color:#FFFFFF!important;border:1.5px solid #586A7C!important;box-shadow:0 0 0 6px rgba(88,106,124,.14),0 30px 60px rgba(20,33,61,.25)!important}
+.pr.hot h3,.pr.hot .pr-amt,.pr.hot li span{color:#FFFFFF!important}
+.pr.hot .pr-best,.pr.hot .pr-unit,.pr.hot li small{color:#DCE3EA!important}
+.pr.hot .pr-len{background:rgba(255,255,255,.16)!important;color:#FFFFFF!important}
+.pr.hot .pr-prob{color:#FFC94D!important}
+.pr.hot .pr-k,.pr.hot li b{color:#FFC94D!important}
+.pr.hot ul{border-top-color:rgba(255,255,255,.22)!important}
+.pr.hot .pr-btn{background:#FFFFFF!important;border-color:#FFFFFF!important;color:#14213D!important}
+footer nav a{background:none!important;color:#E4E9EF!important;padding:0!important}
+</style>
 </head>
 <body>
 <header>
@@ -184,7 +205,7 @@ Thank you,
 <h2>Rather have someone do this for you?</h2>
 <p>That's literally my job. I run the calls, write the reviews, testimonials and case studies, make the videos, and put them where your prospects look.</p>
 <a class="btn" href="/contact">Let’s talk</a>
-<p style="margin:12px 0 0"><a href="/" style="color:#C9D3DA">← Back to ultha.co</a></p>
+<p style="margin:12px 0 0"><a href="/" style="color:#14213D">← Back to ultha.co</a></p>
 </section>
 </main>
 <footer>© 2026 Ultha · Santa Barbara, CA</footer>

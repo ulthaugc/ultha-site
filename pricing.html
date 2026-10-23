@@ -17,94 +17,94 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Young+Serif&amp;family=Figtree:wght@400;500;600;700;800&amp;family=Caveat:wght@600&amp;display=swap">
 <style>/* pricing v2 */
-#pricing{background:#111C27!important}
+#pricing{background:#F9F9FA!important}
 .pr-wrap{max-width:1180px;margin:0 auto;padding:104px 24px 96px}
 .pr-head{display:flex;flex-direction:column;align-items:center;text-align:center;gap:10px;margin-bottom:48px}
-.pr-head h2{margin:0;font-family:'Young Serif',serif;font-weight:400;font-size:clamp(30px,3.6vw,44px);color:#fff}
-.pr-lede{margin:4px 0 0;font-family:'Young Serif',serif;font-size:clamp(19px,1.8vw,23px);color:#EEF1F2;max-width:30em}
-.pr-lede em{font-style:normal;color:#FFE29A}
-.pr-sub{margin:0;font-size:16px;color:#A9BAC5}
+.pr-head h2{margin:0;font-family:'Young Serif',serif;font-weight:400;font-size:clamp(30px,3.6vw,44px);color:#14213D}
+.pr-lede{margin:4px 0 0;font-family:'Young Serif',serif;font-size:clamp(19px,1.8vw,23px);color:#14213D;max-width:30em}
+.pr-lede em{font-style:normal;color:#1F4FD8}
+.pr-sub{margin:0;font-size:16px;color:#424A5E}
 .pr-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;align-items:stretch}
-.pr{font-family:Figtree,system-ui,sans-serif;position:relative;display:flex;flex-direction:column;background:#F7F9FA;color:#1B2A38;border-radius:26px;padding:30px 28px 28px;box-shadow:0 18px 40px rgba(0,0,0,.35)}
+.pr{font-family:Figtree,system-ui,sans-serif;position:relative;display:flex;flex-direction:column;background:#14213D;color:#EEF2F6;border-radius:26px;padding:30px 28px 28px;box-shadow:0 18px 40px rgba(0,0,0,.35)}
 .pr header h3{margin:0;font-family:'Young Serif',serif;font-weight:400;font-size:25px;line-height:1.2}
-.pr-best{margin:6px 0 0;font-size:14.5px;line-height:1.45;color:#5A6B79;min-height:42px}
+.pr-best{margin:6px 0 0;font-size:14.5px;line-height:1.45;color:#8A92A5;min-height:42px}
 .pr-price{display:flex;align-items:baseline;gap:8px;margin:20px 0 8px}
 .pr-amt{font-family:Figtree,system-ui,sans-serif;font-weight:700;font-size:44px;line-height:1;letter-spacing:-.02em}
-.pr-unit{font-size:15px;color:#5A6B79}
-.pr-len{align-self:flex-start;font-size:12px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:#1B2A38;background:#E4E9EC;border-radius:999px;padding:5px 12px}
-.pr-prob{margin:18px 0 20px;font-family:Caveat,cursive;font-size:23px;line-height:1.2;color:#B8452F}
-.pr-k{display:block;font-size:11.5px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:#8A6410;margin-bottom:10px}
-.pr ul{list-style:none;margin:0 0 22px;padding:16px 0 0;border-top:1px solid #DCE3E7;display:flex;flex-direction:column;gap:11px;flex:1}
+.pr-unit{font-size:15px;color:#8A92A5}
+.pr-len{align-self:flex-start;font-size:12px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:#EEF2F6;background:#14213D;border-radius:999px;padding:5px 12px}
+.pr-prob{margin:18px 0 20px;font-family:Caveat,cursive;font-size:23px;line-height:1.2;color:#E9604B}
+.pr-k{display:block;font-size:11.5px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:#FFC94D;margin-bottom:10px}
+.pr ul{list-style:none;margin:0 0 22px;padding:16px 0 0;border-top:1px solid #14213D;display:flex;flex-direction:column;gap:11px;flex:1}
 .pr li{display:grid;grid-template-columns:34px 1fr;align-items:baseline;gap:8px}
-.pr li b{font-family:Figtree,system-ui,sans-serif;font-weight:700;font-size:19px;line-height:1;color:#1B2A38;text-align:center}
+.pr li b{font-family:Figtree,system-ui,sans-serif;font-weight:700;font-size:19px;line-height:1;color:#EEF2F6;text-align:center}
 .pr li span{font-size:15px;line-height:1.4}
-.pr li small{display:block;font-size:13px;color:#6F8494;margin-top:2px}
-.pr-note{margin:-6px 0 16px;font-size:13px;line-height:1.45;color:#5A6B79;background:#EEF1F2;border-radius:12px;padding:10px 12px}
-.pr-btn{display:block;text-align:center;text-decoration:none;border-radius:999px;padding:13px 20px;font-weight:500;font-size:15px;border:1.5px solid #1B2A38;color:#1B2A38!important}
-.pr-btn:hover{background:#1B2A38;color:#fff!important}
-.pr.hot{background:#1B2A38;color:#EEF1F2;border:1.5px solid #FFE29A;box-shadow:0 0 0 6px rgba(255,226,154,.10),0 30px 60px rgba(0,0,0,.5);transform:translateY(-10px)}
-.pr.hot .pr-best,.pr.hot .pr-unit{color:#A9BAC5}
-.pr.hot .pr-len{background:rgba(255,226,154,.14);color:#FFE29A}
-.pr.hot .pr-prob{color:#FFE29A}
-.pr.hot .pr-k{color:#FFE29A}
-.pr.hot ul{border-top-color:#2C4157}
-.pr.hot li b{color:#FFE29A}
-.pr.hot li small{color:#93A6B4}
-.pr.hot .pr-btn{background:#FFE29A;border-color:#FFE29A;color:#1B2A38!important}
-.pr.hot .pr-btn:hover{background:#fff;border-color:#fff}
-.pr-badge{position:absolute;top:-13px;right:24px;background:#E36F5A;color:#fff;border-radius:999px;padding:4px 12px;font-size:12.5px;font-weight:700}
+.pr li small{display:block;font-size:13px;color:#717A92;margin-top:2px}
+.pr-note{margin:-6px 0 16px;font-size:13px;line-height:1.45;color:#8A92A5;background:#14213D;border-radius:12px;padding:10px 12px}
+.pr-btn{display:block;text-align:center;text-decoration:none;border-radius:999px;padding:13px 20px;font-weight:500;font-size:15px;border:1.5px solid #EEF2F6;color:#EEF2F6!important}
+.pr-btn:hover{background:#EEF2F6;color:#14213D!important}
+.pr.hot{background:#EEF2F6;color:#14213D;border:1.5px solid #1F4FD8;box-shadow:0 0 0 6px rgba(31,79,216,.10),0 30px 60px rgba(0,0,0,.5);transform:translateY(-10px)}
+.pr.hot .pr-best,.pr.hot .pr-unit{color:#424A5E}
+.pr.hot .pr-len{background:rgba(31,79,216,.14);color:#1F4FD8}
+.pr.hot .pr-prob{color:#1F4FD8}
+.pr.hot .pr-k{color:#1F4FD8}
+.pr.hot ul{border-top-color:#A9B4D0}
+.pr.hot li b{color:#1F4FD8}
+.pr.hot li small{color:#525B72}
+.pr.hot .pr-btn{background:#1F4FD8;border-color:#1F4FD8;color:#EEF2F6!important}
+.pr.hot .pr-btn:hover{background:#14213D;border-color:#14213D}
+.pr-badge{position:absolute;top:-13px;right:24px;background:#E9604B;color:#14213D;border-radius:999px;padding:4px 12px;font-size:12.5px;font-weight:700}
 .pr-more{display:grid;grid-template-columns:1fr 1fr;gap:22px;margin-top:34px}
-.pr-team,.pr-extras{border:1px solid #2C4157;border-radius:24px;padding:26px 28px;background:rgba(34,53,74,.45)}
-.pr-team .pr-k,.pr-extras .pr-k{color:#FFE29A}
-.pr-team h3{margin:0 0 8px;font-family:'Young Serif',serif;font-weight:400;font-size:24px;color:#fff}
-.pr-team h3 span{color:#FFE29A}
-.pr-team p{margin:0 0 14px;font-size:15px;line-height:1.5;color:#C6D3DB}
-.pr-from{font-size:15px;color:#A9BAC5;display:flex;align-items:baseline;gap:6px;flex-wrap:wrap}
-.pr-from b{font-family:'Young Serif',serif;font-weight:400;font-size:24px;color:#fff}
-.pr-from a{margin-left:0;font-size:16px;color:#FFE29A!important;font-weight:500;text-underline-offset:4px}
+.pr-team,.pr-extras{border:1px solid #A9B4D0;border-radius:24px;padding:26px 28px;background:rgba(245,245,245,.45)}
+.pr-team .pr-k,.pr-extras .pr-k{color:#1F4FD8}
+.pr-team h3{margin:0 0 8px;font-family:'Young Serif',serif;font-weight:400;font-size:24px;color:#14213D}
+.pr-team h3 span{color:#1F4FD8}
+.pr-team p{margin:0 0 14px;font-size:15px;line-height:1.5;color:#14213D}
+.pr-from{font-size:15px;color:#424A5E;display:flex;align-items:baseline;gap:6px;flex-wrap:wrap}
+.pr-from b{font-family:'Young Serif',serif;font-weight:400;font-size:24px;color:#14213D}
+.pr-from a{margin-left:0;font-size:16px;color:#1F4FD8!important;font-weight:500;text-underline-offset:4px}
 .pr-extras ul{list-style:none;margin:0;padding:0;display:flex;flex-direction:column}
-.pr-extras li::before{content:'+';color:#FFE29A;font-weight:700;margin-right:10px}.pr-extras li{display:flex;justify-content:flex-start;gap:12px;padding:9px 0;border-bottom:1px dashed #2C4157;font-size:15px;color:#EEF1F2}
+.pr-extras li::before{content:'+';color:#1F4FD8;font-weight:700;margin-right:10px}.pr-extras li{display:flex;justify-content:flex-start;gap:12px;padding:9px 0;border-bottom:1px dashed #A9B4D0;font-size:15px;color:#14213D}
 .pr-extras li:last-child{border-bottom:0}
-.pr-extras li b{font-weight:500;color:#FFE29A;white-space:nowrap}
+.pr-extras li b{font-weight:500;color:#1F4FD8;white-space:nowrap}
 @media (max-width:900px){.pr-grid,.pr-more{grid-template-columns:1fr}.pr.hot{transform:none;order:-1}.pr-best{min-height:0}.pr-wrap{padding:64px 18px}}
 </style>
 <style>
-.stickybar{position:sticky;top:0;z-index:50;background:rgba(17,28,39,.88);-webkit-backdrop-filter:blur(12px);backdrop-filter:blur(12px);transition:box-shadow .3s}
+.stickybar{position:sticky;top:0;z-index:50;background:rgba(249,249,250,.88);-webkit-backdrop-filter:blur(12px);backdrop-filter:blur(12px);transition:box-shadow .3s}
 .stickybar.scrolled{box-shadow:0 1px 0 rgba(0,0,0,.2),0 8px 24px rgba(0,0,0,.25)}
 .stickybar .topbar{padding-top:14px!important;padding-bottom:14px!important}
-.topbar nav a[aria-current]{color:#FFE29A}
+.topbar nav a[aria-current]{color:#1F4FD8}
 html{scroll-behavior:smooth;scroll-padding-top:80px}
-body{margin:0;background:#111C27;overflow-x:clip}
-a{color:#EEF1F2}a:hover{color:#F08A74}
+body{margin:0;background:#F9F9FA;overflow-x:clip}
+a{color:#14213D}a:hover{color:#E9604B}
 @keyframes rise{from{opacity:0;transform:translateY(44px)}to{opacity:1;transform:none}}
 @supports (animation-timeline:view()){.reveal{animation:rise linear both;animation-timeline:view();animation-range:entry 0% entry 70%}}
-.wn-kick,.pr-head>span{display:inline-flex;align-items:center;gap:8px;border:1px solid rgba(255,226,154,.45);color:#FFE29A!important;border-radius:999px;padding:5px 14px 5px 12px;font-size:13px;letter-spacing:.14em;text-transform:uppercase;width:max-content;margin:0 auto}
-.wn-kick::before,.pr-head>span::before{content:"";width:6px;height:6px;border-radius:50%;background:#FFE29A}
+.wn-kick,.pr-head>span{display:inline-flex;align-items:center;gap:8px;border:1px solid rgba(31,79,216,.45);color:#1F4FD8!important;border-radius:999px;padding:5px 14px 5px 12px;font-size:13px;letter-spacing:.14em;text-transform:uppercase;width:max-content;margin:0 auto}
+.wn-kick::before,.pr-head>span::before{content:"";width:6px;height:6px;border-radius:50%;background:#1F4FD8}
 .pr-wrap{padding-top:64px}
-.pr-lede{max-width:36em}.pr-head h1{margin:0;font-family:'Young Serif',serif;font-weight:400;font-size:clamp(34px,4vw,52px);line-height:1.1;color:#fff}
-.gk{background:url("data:image/svg+xml,%3Csvg%20xmlns%3D%27http%3A//www.w3.org/2000/svg%27%20viewBox%3D%270%200%201440%2070%27%20preserveAspectRatio%3D%27none%27%3E%3Cpath%20d%3D%27M0%200H1440V30C1200%2070%20960%2010%20720%2034S240%2064%200%2026Z%27%20fill%3D%27%23111C27%27/%3E%3C/svg%3E") top/100% 70px no-repeat,#1B2A38}
+.pr-lede{max-width:36em}.pr-head h1{margin:0;font-family:'Young Serif',serif;font-weight:400;font-size:clamp(34px,4vw,52px);line-height:1.1;color:#14213D}
+.gk{background:url("data:image/svg+xml,%3Csvg%20xmlns%3D%27http%3A//www.w3.org/2000/svg%27%20viewBox%3D%270%200%201440%2070%27%20preserveAspectRatio%3D%27none%27%3E%3Cpath%20d%3D%27M0%200H1440V30C1200%2070%20960%2010%20720%2034S240%2064%200%2026Z%27%20fill%3D%27%23F9F9FA%27/%3E%3C/svg%3E") top/100% 70px no-repeat,#EEF2F6}
 .gk-in{max-width:1180px;margin:0 auto;padding:104px 24px 88px}
 .gk-head{text-align:center;display:flex;flex-direction:column;align-items:center;gap:10px;margin-bottom:36px}
-.gk-head h2{margin:0;font-family:'Young Serif',serif;font-weight:400;font-size:clamp(26px,2.9vw,38px);line-height:1.15;color:#fff}.gk-head h2 span{color:#FFE29A}
+.gk-head h2{margin:0;font-family:'Young Serif',serif;font-weight:400;font-size:clamp(26px,2.9vw,38px);line-height:1.15;color:#14213D}.gk-head h2 span{color:#1F4FD8}
 .gk-grid{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
-.gk-grid li{background:#F7F9FA;color:#1B2A38;border-radius:22px;padding:22px 24px;box-shadow:0 14px 30px rgba(0,0,0,.3);display:flex;flex-direction:column;gap:6px}
-.gk-k{font-size:11.5px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:#8A6410}
+.gk-grid li{background:#14213D;color:#EEF2F6;border-radius:22px;padding:22px 24px;box-shadow:0 14px 30px rgba(0,0,0,.3);display:flex;flex-direction:column;gap:6px}
+.gk-k{font-size:11.5px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:#FFC94D}
 .gk-grid b{font-family:'Young Serif',serif;font-weight:400;font-size:20px;line-height:1.25}
-.gk-grid p{margin:0;font-size:15px;line-height:1.5;color:#4C5E6C}
-footer{background:url("data:image/svg+xml,%3Csvg%20xmlns%3D%27http%3A//www.w3.org/2000/svg%27%20viewBox%3D%270%200%201440%2070%27%20preserveAspectRatio%3D%27none%27%3E%3Cpath%20d%3D%27M0%200H1440V30C1200%2070%20960%2010%20720%2034S240%2064%200%2026Z%27%20fill%3D%27%231B2A38%27/%3E%3C/svg%3E") top/100% 70px no-repeat,#111C27!important;padding-top:40px}
-/* dark cards: no stark white */
-.pr{background:#22354A;color:#EEF1F2;border:1px solid rgba(198,211,219,.14);border-top-color:rgba(255,255,255,.2);box-shadow:0 18px 40px rgba(0,0,0,.35)}
-.pr-best,.pr-unit,.pr-note{color:#A9BAC5}
-.pr-len{background:rgba(198,211,219,.12);color:#DCE4E9}
+.gk-grid p{margin:0;font-size:15px;line-height:1.5;color:#969EB3}
+footer{background:url("data:image/svg+xml,%3Csvg%20xmlns%3D%27http%3A//www.w3.org/2000/svg%27%20viewBox%3D%270%200%201440%2070%27%20preserveAspectRatio%3D%27none%27%3E%3Cpath%20d%3D%27M0%200H1440V30C1200%2070%20960%2010%20720%2034S240%2064%200%2026Z%27%20fill%3D%27%23EEF2F6%27/%3E%3C/svg%3E") top/100% 70px no-repeat,#586A7C!important;padding-top:40px}
+/* dark cards: no stark #14213D */
+.pr{background:#F5F5F5;color:#14213D;border:1px solid rgba(20,33,61,.14);border-top-color:rgba(20,33,61,.2);box-shadow:0 18px 40px rgba(0,0,0,.35)}
+.pr-best,.pr-unit,.pr-note{color:#424A5E}
+.pr-len{background:rgba(20,33,61,.12);color:#14213D}
 .pr-prob{color:#F4A08E}
-.pr-k{color:#C6D3DB}
-.pr ul{border-top-color:#3A5169}
-.pr li b{color:#fff}.pr li small{color:#93A6B4}
-.pr-note{background:rgba(17,28,39,.5)}
-.pr-btn{border-color:rgba(238,241,242,.55);color:#EEF1F2!important}.pr-btn:hover{background:#EEF1F2;color:#1B2A38!important}
-.pr.hot{background:#2A4057;border:1.5px solid #FFE29A}
-.gk-grid li{background:#22354A;color:#EEF1F2;border:1px solid rgba(198,211,219,.14);border-top-color:rgba(255,255,255,.2)}
-.gk-k{color:#FFE29A}.gk-grid p{color:#A9BAC5}
+.pr-k{color:#14213D}
+.pr ul{border-top-color:#99A5C3}
+.pr li b{color:#14213D}.pr li small{color:#525B72}
+.pr-note{background:rgba(249,249,250,.5)}
+.pr-btn{border-color:rgba(20,33,61,.55);color:#14213D!important}.pr-btn:hover{background:#14213D;color:#EEF2F6!important}
+.pr.hot{background:#A9B5D2;border:1.5px solid #1F4FD8}
+.gk-grid li{background:#F5F5F5;color:#14213D;border:1px solid rgba(20,33,61,.14);border-top-color:rgba(20,33,61,.2)}
+.gk-k{color:#1F4FD8}.gk-grid p{color:#424A5E}
 @media (max-width:900px){.gk-grid{grid-template-columns:1fr 1fr}}
 @media (max-width:760px){
 .topbar nav a:not(:last-child){display:none}
@@ -121,9 +121,30 @@ footer>div{padding-top:56px!important}
 </style>
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"Service","name":"Customer proof for startups","provider":{"@type":"Person","name":"Ultha Niraula","url":"https://ultha.co"},"url":"https://ultha.co/pricing","offers":[{"@type":"Offer","name":"Proof Sprint","price":"5000","priceCurrency":"USD","description":"30 days: 4 customer interviews, 4 testimonials, 4 pieces of content, 2 case studies, G2 and Capterra profiles, landing page optimized for AI search."},{"@type":"Offer","name":"90-Day Proof Engine","price":"6000","priceCurrency":"USD","priceSpecification":{"@type":"UnitPriceSpecification","price":"6000","priceCurrency":"USD","unitText":"MONTH"},"description":"90 days: up to 15 interviews, up to 12 testimonials, 6 pieces of content a month, up to 5 case studies, AI search optimization and monthly check."},{"@type":"Offer","name":"Keep it running","price":"3500","priceCurrency":"USD","priceSpecification":{"@type":"UnitPriceSpecification","price":"3500","priceCurrency":"USD","unitText":"MONTH"},"description":"Monthly, after the 90-Day Proof Engine: 2 interviews, 4 pieces of content and 1 case study a month."}]}</script>
 <link rel="stylesheet" href="/scale.css">
+<style>/* light site: section tones + slate 3rd color */
+footer{background-color:#586A7C!important;color:#E4E9EF!important}
+footer h2,footer b,footer span{color:#FFFFFF!important}
+footer p,footer nav a,footer a:not([href="/contact"]){color:#E4E9EF!important}
+footer a[href="/contact"]{background:#FFFFFF!important;color:#14213D!important}
+footer [style*="border-top"]{border-top-color:rgba(255,255,255,.22)!important}
+footer img[src*="ultha-mark"]{filter:brightness(0) invert(1)}
+.wy-no,#how .hw-num,#how .hw-steps li>span:first-child{border-color:#586A7C!important;color:#586A7C!important}
+.wy-hand{color:#586A7C!important}
+</style>
+<style>/* pricing: slate featured card */
+.pr.hot{background:#586A7C!important;color:#FFFFFF!important;border:1.5px solid #586A7C!important;box-shadow:0 0 0 6px rgba(88,106,124,.14),0 30px 60px rgba(20,33,61,.25)!important}
+.pr.hot h3,.pr.hot .pr-amt,.pr.hot li span{color:#FFFFFF!important}
+.pr.hot .pr-best,.pr.hot .pr-unit,.pr.hot li small{color:#DCE3EA!important}
+.pr.hot .pr-len{background:rgba(255,255,255,.16)!important;color:#FFFFFF!important}
+.pr.hot .pr-prob{color:#FFC94D!important}
+.pr.hot .pr-k,.pr.hot li b{color:#FFC94D!important}
+.pr.hot ul{border-top-color:rgba(255,255,255,.22)!important}
+.pr.hot .pr-btn{background:#FFFFFF!important;border-color:#FFFFFF!important;color:#14213D!important}
+footer nav a{background:none!important;color:#E4E9EF!important;padding:0!important}
+</style>
 </head>
 <body>
-<div style="font-family: 'Figtree', system-ui, sans-serif; color: #EEF1F2; background: #111C27; font-size: 17px; line-height: 1.6">
+<div style="font-family: 'Figtree', system-ui, sans-serif; color: #14213D; background: #F9F9FA; font-size: 17px; line-height: 1.6">
 <div class="stickybar"><header class="topbar" style="position: relative; z-index: 2; max-width: 1180px; margin: 0 auto; box-sizing: border-box; padding: 22px 24px; display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 12px">
 <a href="/" style="text-decoration:none;color:inherit;font-family: 'Young Serif', serif; font-size: 22px; letter-spacing: 0.02em; display: inline-flex; align-items: center; gap: 10px"><img src="ultha-mark-white.svg" alt="" width="34" height="18">ULTHA</a>
 <nav style="display: flex; flex-wrap: wrap; align-items: center; gap: 26px; font-size: 15px">
@@ -131,13 +152,13 @@ footer>div{padding-top:56px!important}
 <a href="/about" style="text-decoration: none">About</a>
 <a href="/pricing" aria-current="page" style="text-decoration: none">Pricing</a>
 <a href="/guides" style="text-decoration: none">Guides</a>
-<a href="/contact" style="text-decoration: none; background: #FFE29A; color: #1B2A38; border-radius: 999px; padding: 9px 18px">Let’s talk</a>
+<a href="/contact" style="text-decoration: none; background: #1F4FD8; color: #EEF2F6; border-radius: 999px; padding: 9px 18px">Let’s talk</a>
 </nav>
 </header></div>
 <section id="pricing">
 <div class="pr-wrap">
 <div class="pr-head">
-<span style="font-size: 13px; letter-spacing: 0.14em; text-transform: uppercase; color: #A9BAC5">Pricing</span>
+<span style="font-size: 13px; letter-spacing: 0.14em; text-transform: uppercase; color: #424A5E">Pricing</span>
 <h1>Clear scope. Clear price.</h1>
 <p class="pr-lede">Your customers already love you. <em>Your buyers just can’t see it yet.</em></p>
 <p class="pr-sub">Pick how fast you want to fix that. No open-ended retainers.</p>
@@ -180,18 +201,18 @@ footer>div{padding-top:56px!important}
 </div>
 </section>
 
-<footer style="background: #111C27; color: #C9D3DA">
+<footer style="background: #F9F9FA; color: #14213D">
 <div style="max-width: 1180px; margin: 0 auto; padding: 72px 24px 32px; display: flex; flex-direction: column; gap: 48px">
 <div style="display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; gap: 24px">
 <div class="ft-note"><img class="ft-photo" src="img/cta-me.jpg" alt="Ultha" width="104" height="130"><div style="display: flex; flex-direction: column; gap: 8px; max-width: 520px">
-<h2 style="margin: 0; font-family: 'Young Serif', serif; font-weight: 400; font-size: clamp(26px, 3vw, 36px); color: #EEF1F2">Curious where you stand?</h2>
+<h2 style="margin: 0; font-family: 'Young Serif', serif; font-weight: 400; font-size: clamp(26px, 3vw, 36px); color: #14213D">Curious where you stand?</h2>
 <p style="margin: 0">Share a bit about your startup. I’ll map out the proof you could have in 30 days.</p><span class="ft-sig">— Ultha</span>
 </div></div>
-<div style="display: flex; flex-direction: column; align-items: flex-start; gap: 10px"><a href="/contact" style="text-decoration: none; background: #FFE29A; color: #1B2A38; border-radius: 999px; padding: 14px 26px; font-weight: 500">Let’s talk</a><a href="/starter-kit" style="color: #C9D3DA; font-size: 15px; text-underline-offset: 4px">or get the free playbook →</a></div>
+<div style="display: flex; flex-direction: column; align-items: flex-start; gap: 10px"><a href="/contact" style="text-decoration: none; background: #1F4FD8; color: #EEF2F6; border-radius: 999px; padding: 14px 26px; font-weight: 500">Let’s talk</a><a href="/starter-kit" style="color: #14213D; font-size: 15px; text-underline-offset: 4px">or get the free playbook →</a></div>
 </div>
-<div style="display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; gap: 16px; border-top: 1px solid #3A5169; padding-top: 24px; font-size: 15px">
-<span style="font-family: 'Young Serif', serif; font-size: 20px; color: #EEF1F2; display: inline-flex; align-items: center; gap: 10px"><img src="ultha-mark-white.svg" alt="" width="30" height="16">ULTHA</span>
-<nav style="display: flex; flex-wrap: wrap; gap: 22px"><a href="/#how" style="color: #C9D3DA; text-decoration: none">How it works</a><a href="/about" style="color: #C9D3DA; text-decoration: none">About</a><a href="/pricing" style="color: #C9D3DA; text-decoration: none">Pricing</a><a href="/#faq" style="color: #C9D3DA; text-decoration: none">FAQ</a><a href="/starter-kit" style="color: #C9D3DA; text-decoration: none">Free playbook</a><a href="/guides" style="color: #C9D3DA; text-decoration: none">Guides</a><a href="/contact" style="color: #C9D3DA; text-decoration: none">Let’s talk</a></nav>
+<div style="display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; gap: 16px; border-top: 1px solid #99A5C3; padding-top: 24px; font-size: 15px">
+<span style="font-family: 'Young Serif', serif; font-size: 20px; color: #14213D; display: inline-flex; align-items: center; gap: 10px"><img src="ultha-mark-white.svg" alt="" width="30" height="16">ULTHA</span>
+<nav style="display: flex; flex-wrap: wrap; gap: 22px"><a href="/#how" style="color: #14213D; text-decoration: none">How it works</a><a href="/about" style="color: #14213D; text-decoration: none">About</a><a href="/pricing" style="color: #14213D; text-decoration: none">Pricing</a><a href="/#faq" style="color: #14213D; text-decoration: none">FAQ</a><a href="/starter-kit" style="color: #14213D; text-decoration: none">Free playbook</a><a href="/guides" style="color: #14213D; text-decoration: none">Guides</a><a href="/contact" style="color: #14213D; text-decoration: none">Let’s talk</a></nav>
 <span>© 2026 Ultha · Santa Barbara, CA</span>
 </div>
 </div>
