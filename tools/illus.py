@@ -162,3 +162,107 @@ def tree_svg(mobile=False):
         s.append(f'<text x="{(l+pad+dr*2+gap+l+cw-pad)/2:.1f}" y="{y+fs*.36:.1f}" text-anchor="middle" font-family="Figtree, sans-serif" font-size="{fs}" font-weight="600" fill="{NAVY}">{lab}</text>')
     s.append('</svg>')
     return ''.join(s)
+
+# ---------------- services tree, v2: side-by-side, calm palette, animated ----------------
+# Animation hooks (CSS in index.html "tree v2"): .tv-crown (sway), .tv-back/.tv-front (pointer parallax via --px/--py),
+# .tv-fruit (bob + glow, --d delay), .tv-sap (sap flowing up each root), .tv-fly (fireflies), .tv-chip[data-i] / .tv-root[data-i] (hover link).
+def tree_v2_svg(mobile=False):
+    rnd=random.Random(11)
+    if not mobile:
+        W,H=640,600; tx=320; ground=352; ccx,ccy,R=320,168,112
+        fs,chip_h,pad,dr,gap=14.5,42,12,4,7
+        cw=(W-2*12)/3; cxs=[12+cw/2,12+cw*1.5,12+cw*2.5]
+        chips=[(x,452) for x in cxs]+[(x,514) for x in cxs]; cws=[cw-6]*6
+    else:
+        W,H=390,600; tx=195; ground=300; ccx,ccy,R=195,150,92
+        fs,chip_h,pad,dr,gap=13,40,12,4,8
+        cw=(W-16)/2; cxs=[8+cw/2,8+cw*1.5]
+        chips=[(cxs[i%2],396+60*(i//2)) for i in range(6)]; cws=[cw-10]*6
+    p='tv'+('m' if mobile else 'd')
+    s=[f'<svg class="tv-art {"tv-m" if mobile else "tv-d"}" viewBox="0 0 {W} {H}" role="img" aria-label="A tree: services as roots, trust as the trunk, revenue as the fruit">']
+    grads=''.join(f'<radialGradient id="{p}g{i}" cx=".38" cy=".32" r=".75"><stop offset="0" stop-color="{a}"/><stop offset=".6" stop-color="{b}"/><stop offset="1" stop-color="{c}"/></radialGradient>'
+                  for i,(a,b,c) in enumerate([('#4F6880','#2E445B','#22354A'),('#5E7891','#3A5169','#2A4057'),('#6E87A0','#4A627A','#344B62')]))
+    s.append(f'<defs>{dots(p,.24)}{grads}'
+             f'<radialGradient id="{p}sh"><stop offset="0" stop-color="#000" stop-opacity=".45"/><stop offset="1" stop-color="#000" stop-opacity="0"/></radialGradient>'
+             f'<radialGradient id="{p}fg"><stop offset="0" stop-color="{SUN}" stop-opacity=".55"/><stop offset="1" stop-color="{SUN}" stop-opacity="0"/></radialGradient>'
+             f'<linearGradient id="{p}tr" x1="0" x2="1"><stop offset="0" stop-color="#2C4157"/><stop offset=".45" stop-color="#3B526A"/><stop offset="1" stop-color="#2A3E54"/></linearGradient>'
+             f'<linearGradient id="{p}fx" x1="0" x2="1"><stop offset="0" stop-color="#000"/><stop offset=".14" stop-color="#fff"/><stop offset=".86" stop-color="#fff"/><stop offset="1" stop-color="#000"/></linearGradient>'
+             f'<linearGradient id="{p}fy" gradientUnits="userSpaceOnUse" x1="0" y1="{ground}" x2="0" y2="{ground+90}"><stop offset="0" stop-color="#fff"/><stop offset="1" stop-color="#000"/></linearGradient>'
+             f'<mask id="{p}m" maskUnits="userSpaceOnUse" x="0" y="0" width="{W}" height="{H}"><rect width="{W}" height="{H}" fill="url(#{p}fx)"/></mask>'
+             f'<mask id="{p}my" maskUnits="userSpaceOnUse" x="0" y="0" width="{W}" height="{H}"><rect width="{W}" height="{H}" fill="url(#{p}fy)"/></mask></defs>')
+    top=f'M0 {ground+14} C{W*.22} {ground-4} {W*.4} {ground+4} {W*.5} {ground} C{W*.62} {ground-4} {W*.8} {ground+6} {W} {ground+12}'
+    s.append(f'<g mask="url(#{p}m)"><g mask="url(#{p}my)"><path d="{top} V{ground+90} H0Z" fill="url(#{p})"/></g><path d="{top}" fill="none" stroke="{G3}" stroke-width="2"/></g>')
+    s.append(f'<ellipse class="tv-shadow" cx="{tx}" cy="{ground+6}" rx="{R*1.15:.0f}" ry="{R*.16:.0f}" fill="url(#{p}sh)"/>')
+    # roots: base line, then a dashed "sap" line flowing up toward the trunk
+    for i,(x,y) in enumerate(chips):
+        t=y-chip_h/2; mid=(ground+t)/2
+        d=f'M{tx} {ground+4} C{tx} {mid} {x} {mid-8} {x} {t}'
+        s.append(f'<path class="tv-root" data-i="{i}" d="{d}" fill="none" stroke="#3A5169" stroke-width="{4 if not mobile else 3}" stroke-linecap="round"/>')
+        s.append(f'<path class="tv-sap" data-i="{i}" style="--d:{i*.45:.2f}s" d="{d}" fill="none" stroke="{SUN}" stroke-width="{2.2 if not mobile else 1.8}" stroke-linecap="round" stroke-dasharray="4 22" opacity=".7"/>')
+    g=['<g class="tv-grow">']
+    k=R/112  # scale: 1 desktop, ~.82 mobile
+    tw=24*k
+    trunk_top=ccy+70*k
+    # trunk: tapered, with a slight lean and root flare
+    g.append(f'<path d="M{tx-tw*1.5} {ground+6} C{tx-tw*.6} {ground-20} {tx-tw*.7} {trunk_top+40*k} {tx-tw*.45} {trunk_top} L{tx+tw*.5} {trunk_top} C{tx+tw*.75} {trunk_top+40*k} {tx+tw*.6} {ground-20} {tx+tw*1.5} {ground+6}Z" fill="url(#{p}tr)"/>')
+    g.append(f'<path d="M{tx+tw*.15} {ground-4} C{tx+tw*.05} {ground-50*k} {tx+tw*.25} {trunk_top+50*k} {tx+tw*.1} {trunk_top+8}" stroke="#22354A" stroke-width="{2.5*k:.1f}" fill="none" opacity=".7"/>')
+    # branches: recursive, tapering; tips collect leaf clumps
+    br=[]; tips=[]
+    def branch(x,y,ang,L,w,d):
+        ex=x+L*math.sin(ang); ey=y-L*math.cos(ang)
+        bend=rnd.uniform(-.25,.25)
+        mx=x+L*.5*math.sin(ang+bend); my=y-L*.5*math.cos(ang+bend)
+        br.append(f'<path d="M{x:.1f} {y:.1f} Q{mx:.1f} {my:.1f} {ex:.1f} {ey:.1f}" stroke="#34495F" stroke-width="{w:.1f}" stroke-linecap="round" fill="none"/>')
+        if d==0:
+            tips.append((ex,ey)); return
+        kids=[-1,1] if d!=2 else [-1,0,1]
+        for c in kids:
+            a2=ang+c*rnd.uniform(.32,.6)+rnd.uniform(-.08,.08)
+            branch(ex,ey,a2,L*rnd.uniform(.66,.78),w*.64,d-1)
+    for a0,L0 in [(-.62,62),(-.12,74),(.5,64)]:
+        branch(tx+a0*6*k,trunk_top+6,a0,L0*k,tw*.78,3)
+    lf='M0 -6 C3.6 -3 3.6 3 0 6 C-3.6 3 -3.6 -3 0 -6Z'
+    def clump(tips,n,rad,cols,hi,sc):
+        groups={}
+        for (x,y) in tips:
+            for _ in range(n):
+                a=rnd.uniform(0,2*math.pi); d=rad*math.sqrt(rnd.uniform(0,1))
+                lx=x+d*math.cos(a)*1.15; ly=y+d*math.sin(a)*.9
+                # light from the upper left
+                col=hi if (math.cos(a)<-.2 and math.sin(a)<-.1 and rnd.random()<.7) else rnd.choice(cols)
+                groups.setdefault(col,[]).append(f'<use href="#{p}lf" transform="translate({lx:.0f} {ly:.0f})rotate({rnd.uniform(0,360):.0f})scale({rnd.uniform(.8,1.35)*sc:.1f})"/>')
+        return ''.join(f'<g fill="{c}">{"".join(v)}</g>' for c,v in groups.items())
+    g.append(f'<defs><path id="{p}lf" d="{lf}"/></defs>')
+    g.append('<g class="tv-crown">')
+    g.append(f'<g class="tv-back">{clump(tips,40,34*k,["#22354A","#263B52","#2A4057"],"#33495F",1.5*k)}</g>')
+    g.append(''.join(br))
+    g.append(f'<g class="tv-front">{clump(tips,26,27*k,["#33495F","#3A5169","#344B62"],"#5E7891",1.35*k)}')
+    for (x,y) in rnd.sample(tips,min(len(tips),7 if not mobile else 6)):
+        x+=rnd.uniform(-10,10)*k; y+=rnd.uniform(-6,10)*k
+        g.append(f'<g class="tv-fruit" style="--d:{rnd.uniform(0,3):.2f}s"><circle cx="{x:.1f}" cy="{y:.1f}" r="{18*k:.1f}" fill="url(#{p}fg)" class="tv-halo"/><circle cx="{x:.1f}" cy="{y:.1f}" r="{7.5*k:.1f}" fill="{SUN}"/><circle cx="{x-2.4*k:.1f}" cy="{y-2.4*k:.1f}" r="{2.4*k:.1f}" fill="#FFF6D6"/></g>')
+    g.append('</g></g>')
+    # a few leaves drifting down
+    for j in range(3):
+        x,y=rnd.choice(tips)
+        g.append(f'<use class="tv-fall" style="--d:{j*3.1:.1f}s" href="#{p}lf" transform="translate({x:.1f} {y+10:.1f}) scale({1.4*k:.2f})" fill="#5E7891"/>')
+    for i in range(6):
+        a=rnd.uniform(0,2*math.pi); dd=R*rnd.uniform(.9,1.35)
+        g.append(f'<circle class="tv-fly f{i%3}" style="--d:{-i*1.3:.1f}s" cx="{ccx+dd*math.cos(a)*1.2:.1f}" cy="{ccy+dd*math.sin(a)*.8:.1f}" r="2.2" fill="{SUN}"/>')
+    g.append('</g>')
+    s+=g
+    f=26 if not mobile else 21
+    s.append(f'<text x="{tx}" y="{ground-30}" text-anchor="middle" font-family="Caveat, cursive" font-size="{f}" font-weight="600" fill="{LIGHT}">trust</text>')
+    if not mobile:
+        s.append(f'<text x="{W-8}" y="{ccy-R*1.0}" text-anchor="end" font-family="Caveat, cursive" font-size="27" font-weight="600" fill="{SUN}">more revenue</text>')
+        s.append(f'<path d="M{W-60} {ccy-R*.92} C{W-64} {ccy-R*.6} {W-80} {ccy-R*.5} {ccx+R*1.2} {ccy-R*.48}" fill="none" stroke="{SUN}" stroke-width="2" stroke-linecap="round"/><path d="M{ccx+R*1.2+9} {ccy-R*.48-7} l-9 7 l11 3" fill="none" stroke="{SUN}" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>')
+        s.append(f'<text x="8" y="{ground-60}" font-family="Caveat, cursive" font-size="23" font-weight="600" fill="{MIST}">deals close faster</text>')
+        s.append(f'<path d="M150 {ground-68} C190 {ground-84} {tx-tw*2} {ground-84} {tx-tw*1.0} {ground-92}" fill="none" stroke="{MIST}" stroke-width="1.8" stroke-linecap="round"/>')
+    else:
+        s.append(f'<text x="{W-10}" y="{ccy-R*.95}" text-anchor="end" font-family="Caveat, cursive" font-size="21" font-weight="600" fill="{SUN}">more revenue</text>')
+    for i,((x,y),w,lab) in enumerate(zip(chips,cws,SERVICES)):
+        l=x-w/2
+        s.append(f'<g class="tv-chip" data-i="{i}" tabindex="0"><rect x="{l:.1f}" y="{y-chip_h/2}" width="{w:.1f}" height="{chip_h}" rx="{chip_h/2}" fill="#1B2A38" stroke="rgba(198,211,219,.38)" stroke-width="1.5"/>'
+                 f'<circle class="tv-dot" cx="{l+pad+dr:.1f}" cy="{y}" r="{dr}" fill="{SUN}"/>'
+                 f'<text x="{(l+pad+dr*2+gap+l+w-pad)/2:.1f}" y="{y+fs*.36:.1f}" text-anchor="middle" font-family="Figtree, sans-serif" font-size="{fs}" font-weight="600" fill="#EEF1F2">{lab}</text></g>')
+    s.append('</svg>')
+    return ''.join(s)

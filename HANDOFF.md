@@ -18,13 +18,30 @@ Everything from `site-v3-wip` was merged to main and deployed:
 - About: all 6 testimonials as boxes (#reviews), nav → /#how and /pricing, CTA now "Ask me a question →" + playbook link
 - api/contact.js sends via Google Workspace SMTP (nodemailer) when GMAIL_USER + GMAIL_APP_PASSWORD are set, else Resend.
 
+## Round 2 (on site-v3-wip, awaiting her OK to merge)
+- Stat section compact (83% beside the text, ~half a screen); #services merged into #how under the title
+  "Every piece builds trust. Trust grows revenue." with a Caveat bridge line into the tree
+- About testimonial boxes and all pricing / Good to know cards switched from white to navy (#22354A); Engine card keeps yellow outline
+- impact.com removed from About timeline; starter kit reframed as "Get the playbook I use, free." (kit, contact, footers, llms.txt)
+- pricing.html is now regenerated with dark-card overrides (build script lives in the session scratchpad; edit pricing.html directly if needed)
+
+## Round 3 (on site-v3-wip, awaiting her OK)
+- #how is "option C": numbered text steps on the left, animated tree on the right (stacked on phones)
+- Tree is tools/illus.py tree_v2_svg(): real branching trunk + leaf clumps, calm navy palette, yellow fruit only.
+  Motion (CSS "tree v2" block + small script in index.html): grow-in on scroll, sway, pointer parallax, fruit glow,
+  sap flowing up roots, fireflies, falling leaves, hover a service chip to light its root. All off with reduced motion.
+  Regenerate by calling tree_v2_svg(False)+tree_v2_svg(True) into <div class="hw-tree tv">.
+
+## Hero story (live with round 3)
+- On load: far half of the bridge builds (SMIL on the clipPath rects + .plank2), one prospect walks across
+  (.hs-walker animateMotion), turns customer-colored and gets a heart. Phones: bridge build only. Reduced motion: end state.
+- Desktop art viewBox zoomed to "140 240 1000 360"; back hills parallax via --hx/--hy/--hs set on .hn.
+
 ## Still open
 1. Ultha: in Vercel → ultha-site → Settings → Environment Variables add GMAIL_USER=ultha@ultha.co and
    GMAIL_APP_PASSWORD=<Google app password> (myaccount.google.com/apppasswords, needs 2-Step Verification), redeploy,
    then send a test from ultha.co/contact. Until then leads only land in Vercel logs.
-2. About road timeline still says "product at impact.com" (she removed impact.com from the bio; timeline unanswered).
 3. Swap in the real video for the "Watch me explain it" pill when recorded.
-4. Starter-kit headline "Get your first 5 customer reviews this month": she said close it; left as is.
 
 ## Pricing (live at /pricing)
 Proof Sprint $5,000 one-time, 30 days · 90-Day Proof Engine $6,000/mo · Keep it running $3,500/mo (only after Engine).

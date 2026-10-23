@@ -12,4 +12,4 @@ About: Former product manager and co-founder of a marketing agency that worked w
 - [Home](https://ultha.co/): Services and how it works.
 - [Pricing](https://ultha.co/pricing): Proof Sprint ($5,000, 30 days), 90-Day Proof Engine ($6,000/month), Keep it running ($3,500/month, after the Engine). Custom and one-off work available.
 - [About](https://ultha.co/about): Ultha's story and client testimonials.
-- [Free starter kit](https://ultha.co/starter-kit): Get your first 5 customer reviews this month.
+- [Free starter kit](https://ultha.co/starter-kit): The playbook I use with startups: who to ask, the email to send, 10 call questions and where to post the proof.
