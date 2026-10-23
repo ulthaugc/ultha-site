@@ -16,8 +16,8 @@ def person(x, base, body, shade, s=1.0, arm=None, phone=False, op=1):
     o += f'<circle cx="{x-2.2*s:.1f}" cy="{base-29.2*s:.1f}" r="{r*.36:.1f}" fill="#FFFFFF" opacity=".3"/>'
     return o + '</g>'
 
-def heart(x, y, s=1.4):
-    return f'<path transform="translate({x} {y}) scale({s})" d="M0 0c-6-4-6-9-2-10 2 0 2 1 2 2 0-1 0-2 2-2 4 1 4 6-2 10z" fill="#E9604B"/>'
+def heart(x, y, s=1.4, d=0):
+    return f'<g transform="translate({x} {y}) scale({s})"><path class="heart" style="--d:{d}s" d="M0 0c-6-4-6-9-2-10 2 0 2 1 2 2 0-1 0-2 2-2 4 1 4 6-2 10z" fill="#E9604B"/></g>'
 
 def hero_svg(P):
     deep, mid, light, wash, ink = P['deep'], P['mid'], P['light'], P['wash'], P['ink']
@@ -31,9 +31,9 @@ def hero_svg(P):
 <radialGradient id="sun"><stop offset="0" stop-color="#FFD66B" stop-opacity=".55"/><stop offset="1" stop-color="#FFD66B" stop-opacity="0"/></radialGradient>
 <filter id="soft" x="-10%" y="-30%" width="120%" height="160%"><feGaussianBlur stdDeviation="6"/></filter>
 </defs>
-<circle cx="600" cy="372" r="80" fill="url(#sun)" opacity=".8"/>
-<path d="M140 372 C260 330 360 318 470 336 C600 356 700 300 820 306 C940 312 1040 340 1140 324 V600 H140Z" fill="url(#hl1)"/>
-<path d="M140 400 C250 362 360 350 460 362 C580 376 690 340 800 344 C920 348 1030 372 1140 360 V600 H140Z" fill="url(#hl2)"/>
+<circle class="hl-sun" cx="600" cy="372" r="80" fill="url(#sun)" opacity=".8"/>
+<path class="hl-back1" d="M140 372 C260 330 360 318 470 336 C600 356 700 300 820 306 C940 312 1040 340 1140 324 V600 H140Z" fill="url(#hl1)"/>
+<path class="hl-back2" d="M140 400 C250 362 360 350 460 362 C580 376 690 340 800 344 C920 348 1030 372 1140 360 V600 H140Z" fill="url(#hl2)"/>
 <!-- left cliff -->
 <path d="M140 412 C230 398 330 396 420 402 L468 416 L446 600 H140Z" fill="url(#cl)"/>
 <path d="M468 416 L446 600 H412 L436 428Z" fill="url(#cs)"/>
@@ -58,7 +58,7 @@ def hero_svg(P):
         y = (1-t)**2*418 + 2*(1-t)*t*474 + t**2*420
         dy = 2*(1-t)*(474-418) + 2*t*(420-474)
         ang = math.degrees(math.atan2(dy, 840-452))
-        planks += f'<g transform="translate({x:.1f} {y:.1f}) rotate({ang:.1f})"><rect x="-7" y="-1" width="14" height="6" rx="1.5" fill="#B88A3E" opacity=".35"/><rect x="-7" y="-3.5" width="14" height="6" rx="1.5" fill="#FFC94D"/></g>'
+        planks += f'<g transform="translate({x:.1f} {y:.1f}) rotate({ang:.1f})"><g class="plank" style="--d:{.35+i*.07:.2f}s"><rect x="-7" y="-1" width="14" height="6" rx="1.5" fill="#B88A3E" opacity=".35"/><rect x="-7" y="-3.5" width="14" height="6" rx="1.5" fill="#FFC94D"/></g></g>'
     hangers = ''
     for i in range(1, 11):
         t = i/11
@@ -74,14 +74,22 @@ def hero_svg(P):
     cust = [(246, 'up2'), (280, None), (314, 'up'), (348, None)]
     for x, a in cust:
         g += person(x, 404, deep, ink, 1.0, a)
-    g += heart(266, 352) + heart(298, 346) + heart(330, 352)
+    g += heart(266, 352, d=0) + heart(298, 346, d=1.2) + heart(330, 352, d=2.4)
     g += f'<text x="296" y="316" text-anchor="middle" font-family="Caveat, cursive" font-size="22" font-weight="600" fill="{ink}">your customers</text></g><g class="hl-pros">'
     # prospects
     pros = [(930, False), (962, True), (994, False), (1026, True), (1058, False)]
     for x, ph in pros:
+        if x == 994:
+            g += '<g class="hs-gone">' + person(x, 408, mid, ink, .95, None, ph, .75) + '</g>'
+            continue
         g += person(x, 408, mid, ink, .95, None, ph, .75)
-    g += f'<g font-family="Caveat, cursive" font-size="22" font-weight="600" fill="{mid}" text-anchor="middle"><text x="946" y="352">?</text><text x="1010" y="344">?</text><text x="1060" y="352">?</text></g>'
+    g += f'<g class="ghost" font-family="Caveat, cursive" font-size="22" font-weight="600" fill="{mid}" text-anchor="middle"><text x="946" y="352">?</text><text x="1010" y="344">?</text><text x="1060" y="352">?</text></g>'
     g += f'<text x="994" y="316" text-anchor="middle" font-family="Caveat, cursive" font-size="22" font-weight="600" fill="{ink}">your prospects, searching</text></g>'
+    g += (f'<g class="hs-walker" aria-hidden="true" opacity="0"><set attributeName="opacity" to="1" begin="3.2s" fill="freeze"/>'
+          '<animateMotion begin="3.2s" dur="4.6s" fill="freeze" calcMode="spline" keyPoints="0;1" keyTimes="0;1" keySplines=".45 0 .55 1" path="M994 408 L846 416 Q645 470 446 414 L386 404"/>'
+          '<g class="hs-bob"><g><animate attributeName="opacity" to="0" begin="6.4s" dur=".7s" fill="freeze"/>' + person(0, 0, mid, ink, .95) + '</g>'
+          '<g opacity="0"><animate attributeName="opacity" to="1" begin="6.4s" dur=".7s" fill="freeze"/>' + person(0, 0, deep, ink, 1.0) + '</g></g>'
+          '<g transform="translate(0 -46) scale(1.4)"><path class="hs-heart" d="M0 0c-6-4-6-9-2-10 2 0 2 1 2 2 0-1 0-2 2-2 4 1 4 6-2 10z" fill="#E9604B" opacity="0"><set attributeName="opacity" to="1" begin="7.6s" fill="freeze"/></path></g></g>')
     g += f'<g class="svgcap" font-family="Caveat, cursive" font-size="20" fill="{deep}" text-anchor="middle"><text x="645" y="504">↑</text><text x="645" y="526">Your customers trust you. Your prospects don’t, yet.</text><text x="645" y="548">I build the bridge.</text></g>'
     g += '</svg>'
     return g
