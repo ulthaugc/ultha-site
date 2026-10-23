@@ -828,7 +828,7 @@ go(0)})();</script>
 (function(){
   var svg=document.querySelector('.herosvg'); if(!svg) return;
   var mq=window.matchMedia('(max-width:760px)'), done=false, VB=svg.getAttribute('viewBox'), PA=svg.getAttribute('preserveAspectRatio');
-  var SHIFT=126, BR=.42, PS=1.35;
+  var SHIFT=126, BR=.42, PS=1.35, PSL=1.05;
   function apply(){
     var kids=[].slice.call(svg.children).filter(function(e){return e.tagName!=='defs'});
     if(mq.matches&&!done){
@@ -837,11 +837,11 @@ go(0)})();</script>
         var cx=b.x+b.width/2, w=b.width, cls=(e.getAttribute('class')||'');
         if(w>=900||cls.indexOf('svgcap')>-1) return;
         if(/fogA/.test(cls)) return;
-        if(e.tagName==='text'){ if(/mlabel/.test(cls)){ e.dataset.ox=e.getAttribute('x'); e.dataset.oy=e.getAttribute('y'); e.setAttribute('x', cx<645?420:874); e.setAttribute('y',300); e.dataset.mt='1'; } return; }
+        if(e.tagName==='text'){ if(/mlabel/.test(cls)){ e.dataset.ox=e.getAttribute('x'); e.dataset.oy=e.getAttribute('y'); e.setAttribute('x', cx<645?420:874); e.setAttribute('y', cx<645?322:300); e.dataset.mt='1'; } return; }
         if(/fogB/.test(cls)&&w>400) return;
         var t='';
         var big=(e.tagName==='path'&&w>40);
-        if(cx<425){ t=big?'translate('+SHIFT+'px,0)':'translate('+SHIFT+'px,0) translate(294px,385px) scale('+PS+') translate(-294px,-385px)'; }
+        if(cx<425){ t=big?'translate('+SHIFT+'px,0)':'translate('+SHIFT+'px,0) translate(294px,385px) scale('+PSL+') translate(-294px,-385px)'; }
         else if(cx>865){ t=big?'translate(-'+SHIFT+'px,0)':'translate(-'+SHIFT+'px,0) translate(1000px,385px) scale('+PS+') translate(-1000px,-385px)'; }
         else { t='translate(645px,412px) scale('+BR+') translate(-645px,-412px)'; }
         e.dataset.mt='1'; e.style.transform=t;
