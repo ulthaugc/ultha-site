@@ -40,7 +40,7 @@ Everything from `site-v3-wip` was merged to main and deployed:
 ## v4 (preview branch site-v4-preview)
 - Smaller, proportional type: homepage "v4" CSS block; inner pages load /scale.css last (shared heading sizes + footer note styles)
 - Her photos live in /img (face, me-smile, video-poster-me, ask-me, cta-me, garden-me), cropped from her uploads
-- Face moments: hero "Hi, I'm Ultha" badge, agency table "With me" column, video card poster, FAQ "Still wondering?" card,
+- Face moments (hero badge + proof-panel circle removed at her request): agency table "With me" column, video card poster, FAQ "Still wondering?" card,
   closing note with photo + "— Ultha" (homepage, About, Pricing), contact page avatar
 - Agency vs me is a compact 3-row table; About's duplicate CTA section removed
 - Video card still says "Video coming soon": swap in her real video when she sends it
