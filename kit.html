@@ -16,7 +16,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Young+Serif&amp;family=Figtree:wght@400;500;700&amp;family=Caveat:wght@600&amp;display=swap">
 <style>
-:root{--bg:#EEF1F2;--ink:#1B2A38;--muted:#46596A;--soft:#E4E9EC;--line:#C6D0D6;--amber:#F2B33D;--sun:#FFE29A;--coral:#B8452F}
+:root{--bg:#1B2A38;--ink:#EEF1F2;--muted:#B5C3CD;--soft:#22354A;--line:#3A5169;--amber:#F2B33D;--sun:#FFE29A;--coral:#F08A74;--slate:#A9BAC5;--night:#111C27;--card:#22354A}
 *{box-sizing:border-box}
 html{scroll-behavior:smooth}
 body{margin:0;background:var(--bg);color:var(--ink);font-family:Figtree,system-ui,sans-serif;font-size:17px;line-height:1.6}
@@ -24,7 +24,7 @@ a{color:var(--ink)}a:hover{color:var(--coral)}
 .wrap{max-width:760px;margin:0 auto;padding:0 20px}
 header{max-width:1180px;margin:0 auto;padding:22px 24px;display:flex;justify-content:space-between;align-items:center}
 .logo{font-family:'Young Serif',serif;font-size:22px;letter-spacing:.02em;text-decoration:none}
-.btn{display:inline-block;text-decoration:none;background:var(--ink);color:#EEF1F2;border-radius:999px;padding:11px 20px;font-weight:500}
+.btn{display:inline-block;text-decoration:none;background:var(--night);color:#EEF1F2;border-radius:999px;padding:11px 20px;font-weight:500}
 .btn:hover{color:var(--sun)}
 .hero{text-align:center;padding:40px 0 28px}
 .welcome{margin:8px 0 0;background:#22354A;border:1.5px solid #3A5169;border-radius:14px;padding:12px 16px;text-align:center;font-weight:500;box-shadow:0 0 0 4px rgba(255,226,154,.7)}
@@ -35,7 +35,7 @@ h1{font-family:'Young Serif',serif;font-weight:400;font-size:clamp(32px,4.4vw,48
 .toc{display:flex;flex-wrap:wrap;justify-content:center;gap:8px;margin:24px 0 0}
 .toc a{background:#22354A;border:1.5px solid #3A5169;border-radius:999px;padding:6px 14px;font-size:14px;text-decoration:none}
 .step{background:#22354A;border:1.5px solid #3A5169;border-radius:22px;padding:28px 28px 24px;margin:22px 0;position:relative}
-.num{position:absolute;top:-16px;left:24px;background:var(--ink);color:var(--sun);font-family:'Young Serif',serif;border-radius:999px;padding:3px 14px;font-size:15px}
+.num{position:absolute;top:-16px;left:24px;background:var(--night);color:var(--sun);font-family:'Young Serif',serif;border-radius:999px;padding:3px 14px;font-size:15px}
 h2{font-family:'Young Serif',serif;font-weight:400;font-size:26px;line-height:1.25;margin:6px 0 6px}
 .why{color:var(--muted);margin:0 0 14px}
 ul.check{list-style:none;padding:0;margin:0;display:flex;flex-direction:column;gap:10px}
@@ -51,15 +51,16 @@ ol.q li::marker{color:var(--coral);font-weight:700}
 .mini span{font-size:14.5px;color:var(--muted)}
 .tip{margin:14px 0 0;font-size:15px;color:var(--muted)}
 .tip::before{content:"✦ ";color:var(--amber)}
-.cta{background:var(--ink);color:#C9D3DA;border-radius:26px;padding:34px 30px;margin:40px 0 64px;text-align:center}
+.cta{background:var(--night);color:#C9D3DA;border-radius:26px;padding:34px 30px;margin:40px 0 64px;text-align:center}
 .cta h2{color:#EEF1F2}
-.cta .btn{background:var(--sun);color:var(--ink);margin-top:14px}
+.cta .btn{background:var(--sun);color:#1B2A38;margin-top:14px}
 .print{background:none;border:0;font:500 15px Figtree,sans-serif;text-decoration:underline;text-underline-offset:4px;cursor:pointer;color:var(--ink);margin-top:14px}
 footer{text-align:center;font-size:14px;color:var(--muted);padding:0 0 40px}
 @media (max-width:640px){body{font-size:16px}.step{padding:24px 18px 20px}.grid{grid-template-columns:1fr}.header-call{padding:9px 16px;font-size:15px}h2{font-size:23px}}
 @media print{header,.toc,.copy,.cta,.print,footer{display:none}.step{break-inside:avoid;border-color:#999}body{background:#22354A}}
 </style>
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"HowTo","name":"Customer Proof Starter Kit: get your first 5 reviews and testimonials","author":{"@type":"Person","name":"Ultha Niraula","url":"https://ultha.co/"},"step":[{"@type":"HowToStep","name":"Pick 5 customers to ask"},{"@type":"HowToStep","name":"Ask for a feedback call"},{"@type":"HowToStep","name":"Run a 20-minute call with 10 questions"},{"@type":"HowToStep","name":"Turn one call into three assets"},{"@type":"HowToStep","name":"Post it where prospects and LLMs look"},{"@type":"HowToStep","name":"Make it a weekly habit"}]}</script>
+<style>h1 span{color:var(--sun)!important}.lantern{opacity:.6}</style>
 </head>
 <body>
 <header>

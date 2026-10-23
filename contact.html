@@ -15,7 +15,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Young+Serif&amp;family=Figtree:wght@400;500;700&amp;family=Caveat:wght@600&amp;display=swap">
 <style>
-:root{--bg:#EEF1F2;--ink:#1B2A38;--muted:#46596A;--soft:#E4E9EC;--line:#C6D0D6;--amber:#F2B33D;--sun:#FFE29A;--coral:#B8452F}
+:root{--bg:#1B2A38;--ink:#EEF1F2;--muted:#B5C3CD;--soft:#22354A;--line:#3A5169;--amber:#F2B33D;--sun:#FFE29A;--coral:#F08A74;--slate:#A9BAC5;--night:#111C27;--card:#22354A}
 *{box-sizing:border-box}
 body{margin:0;background:var(--bg);color:var(--ink);font-family:Figtree,system-ui,sans-serif;font-size:17px;line-height:1.6;overflow-x:hidden}
 a{color:var(--ink)}a:hover{color:var(--coral)}
@@ -36,7 +36,7 @@ h1 span{color:#93A6B4}
 .lede{font-size:19px;color:var(--muted);margin:0 0 28px;max-width:28em}
 .steps{list-style:none;margin:0 0 30px;padding:0;display:flex;flex-direction:column;gap:14px}
 .steps li{display:flex;gap:14px;align-items:flex-start}
-.steps .n{flex:none;width:32px;height:32px;border-radius:50%;background:var(--ink);color:var(--sun);display:flex;align-items:center;justify-content:center;font-weight:700;font-size:15px}
+.steps .n{flex:none;width:32px;height:32px;border-radius:50%;background:var(--night);color:var(--sun);display:flex;align-items:center;justify-content:center;font-weight:700;font-size:15px}
 .steps b{display:block;font-weight:500}
 .steps span{font-size:15px;color:var(--muted)}
 .me{display:flex;gap:16px;align-items:center;background:#22354A;border:1.5px solid #3A5169;border-radius:20px;padding:16px 18px;max-width:420px;position:relative}
@@ -57,11 +57,11 @@ input:focus,textarea:focus{outline:none;border-color:var(--ink);background:#2235
 .chips input{position:absolute;opacity:0;pointer-events:none}
 .chips label{cursor:pointer;font-size:15px;font-weight:500;color:var(--ink);border:1.5px solid var(--line);background:var(--bg);border-radius:999px;padding:8px 14px;transition:all .15s;user-select:none}
 .chips label:hover{border-color:var(--ink)}
-.chips input:checked+label{background:var(--ink);border-color:var(--ink);color:var(--sun)}
+.chips input:checked+label{background:var(--night);border-color:var(--ink);color:var(--sun)}
 .chips input:focus-visible+label{box-shadow:0 0 0 4px rgba(255,226,154,.7)}
 .groups{display:flex;flex-direction:column;gap:12px}.grp{background:var(--bg);border-radius:16px;padding:12px 14px 14px}.gh{font-size:14px;font-weight:700;margin-bottom:8px;display:flex;gap:6px;align-items:center}.gh em{font-style:normal;font-weight:400;color:#93A6B4}.grp .chips label{background:#22354A}
 .hp{position:absolute;left:-9999px;width:1px;height:1px;opacity:0}
-button[type=submit]{width:100%;font:500 17px Figtree,sans-serif;background:var(--ink);color:#EEF1F2;border:0;border-radius:999px;padding:15px 22px;cursor:pointer;transition:transform .15s}
+button[type=submit]{width:100%;font:500 17px Figtree,sans-serif;background:var(--sun);color:#1B2A38;border:0;border-radius:999px;padding:15px 22px;cursor:pointer;transition:transform .15s}
 button[type=submit]:hover{transform:translateY(-2px);color:var(--sun)}
 button[disabled]{opacity:.7;cursor:wait}
 .fine{margin:12px 2px 0;font-size:13px;color:#A9BAC5;text-align:center}
@@ -74,15 +74,16 @@ footer{position:relative;z-index:1;text-align:center;font-size:14px;color:var(--
 @media (max-width:900px){.wrap{grid-template-columns:1fr;gap:40px}.lantern{display:none}}
 @media (max-width:560px){body{font-size:16px}.wrap{padding:8px 16px 64px}form{padding:20px}.grid2{grid-template-columns:1fr;gap:0}}
 </style>
+<style>h1 span{color:var(--sun)!important}.lantern{opacity:.6}</style>
 </head>
 <body>
 <div class="fogwrap">
 <svg class="fogsvg" viewBox="0 0 1200 900" preserveAspectRatio="none" aria-hidden="true">
 <defs><filter id="fb" x="-20%" y="-60%" width="140%" height="220%"><feGaussianBlur stdDeviation="22"/></filter></defs>
-<path d="M0 760 C200 720 380 740 600 760 C820 780 1000 740 1200 748 V900 H0Z" fill="#DCE3E7"/>
-<path d="M0 820 C240 800 480 828 720 836 C900 842 1060 826 1200 824 V900 H0Z" fill="#CDD7DD"/>
-<g class="fogA" filter="url(#fb)" fill="#FFFFFF" opacity="0.85"><ellipse cx="200" cy="760" rx="300" ry="40"/><ellipse cx="1000" cy="800" rx="320" ry="40"/></g>
-<g class="fogB" filter="url(#fb)" fill="#FFFFFF" opacity="0.7"><ellipse cx="700" cy="140" rx="300" ry="30"/><ellipse cx="160" cy="300" rx="220" ry="26"/></g>
+<path d="M0 760 C200 720 380 740 600 760 C820 780 1000 740 1200 748 V900 H0Z" fill="#22354A"/>
+<path d="M0 820 C240 800 480 828 720 836 C900 842 1060 826 1200 824 V900 H0Z" fill="#1E3043"/>
+<g class="fogA" filter="url(#fb)" fill="#C6D3DB" opacity="0.10"><ellipse cx="200" cy="760" rx="300" ry="40"/><ellipse cx="1000" cy="800" rx="320" ry="40"/></g>
+<g class="fogB" filter="url(#fb)" fill="#C6D3DB" opacity="0.08"><ellipse cx="700" cy="140" rx="300" ry="30"/><ellipse cx="160" cy="300" rx="220" ry="26"/></g>
 </svg>
 <header>
 <a class="logo" href="/" style="display:inline-flex;align-items:center;gap:10px"><img src="ultha-mark.svg" alt="" width="34" height="18">ULTHA</a>

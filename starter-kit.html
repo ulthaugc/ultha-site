@@ -15,7 +15,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Young+Serif&amp;family=Figtree:wght@400;500;700&amp;family=Caveat:wght@600&amp;display=swap">
 <style>
-:root{--bg:#EEF1F2;--ink:#1B2A38;--muted:#46596A;--soft:#E4E9EC;--line:#C6D0D6;--amber:#F2B33D;--sun:#FFE29A;--coral:#B8452F}
+:root{--bg:#1B2A38;--ink:#EEF1F2;--muted:#B5C3CD;--soft:#22354A;--line:#3A5169;--amber:#F2B33D;--sun:#FFE29A;--coral:#F08A74;--slate:#A9BAC5;--night:#111C27;--card:#22354A}
 *{box-sizing:border-box}
 body{margin:0;background:var(--bg);color:var(--ink);font-family:Figtree,system-ui,sans-serif;font-size:17px;line-height:1.6;overflow-x:hidden}
 a{color:var(--ink)}a:hover{color:var(--coral)}
@@ -39,7 +39,7 @@ label{font-size:13px;font-weight:500;color:#D7E1E7}
 input[type=text],input[type=email]{width:100%;font:inherit;font-size:16px;padding:13px 15px;border:1.5px solid var(--line);border-radius:12px;background:var(--bg);color:var(--ink)}
 input:focus{outline:none;border-color:var(--ink);background:#22354A;box-shadow:0 0 0 4px rgba(255,226,154,.7)}
 .hp{position:absolute;left:-9999px;width:1px;height:1px;opacity:0}
-button[type=submit]{margin-top:6px;width:100%;font:500 17px Figtree,sans-serif;background:var(--ink);color:#EEF1F2;border:0;border-radius:999px;padding:15px 22px;cursor:pointer;transition:transform .15s}
+button[type=submit]{margin-top:6px;width:100%;font:500 17px Figtree,sans-serif;background:var(--sun);color:#1B2A38;border:0;border-radius:999px;padding:15px 22px;cursor:pointer;transition:transform .15s}
 button[type=submit]:hover{transform:translateY(-2px);color:var(--sun)}
 button[disabled]{opacity:.7;cursor:wait}
 .fine{margin:10px 2px 0;font-size:13px;color:#A9BAC5;text-align:center}
@@ -48,7 +48,7 @@ button[disabled]{opacity:.7;cursor:wait}
 .sheet{position:relative;background:#22354A;border:1.5px solid #3A5169;border-radius:18px;padding:12px;box-shadow:0 30px 60px rgba(0,0,0,.18);overflow:hidden}
 .sheet img{display:block;width:100%;height:auto;border-radius:10px;filter:blur(3.5px) saturate(.9);transform:scale(1.02)}
 .sheet::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(34,53,74,0) 30%,rgba(27,42,56,.85) 100%)}
-.lock{position:absolute;z-index:2;left:50%;top:50%;transform:translate(-50%,-50%);background:var(--ink);color:var(--sun);border-radius:999px;padding:10px 18px;font-weight:500;font-size:15px;white-space:nowrap;box-shadow:0 10px 24px rgba(0,0,0,.3)}
+.lock{position:absolute;z-index:2;left:50%;top:50%;transform:translate(-50%,-50%);background:var(--night);color:var(--sun);border-radius:999px;padding:10px 18px;font-weight:500;font-size:15px;white-space:nowrap;box-shadow:0 10px 24px rgba(0,0,0,.3)}
 .tape{position:absolute;z-index:3;top:-12px;left:50%;width:96px;height:26px;margin-left:-48px;background:rgba(201,162,122,.6);transform:rotate(-3deg)}
 .note{position:absolute;z-index:3;right:-6px;bottom:-30px;font-family:Caveat,cursive;font-size:22px;color:var(--coral);transform:rotate(-3deg)}
 section{max-width:1060px;margin:0 auto;padding:72px 24px}
@@ -84,15 +84,16 @@ footer{text-align:center;font-size:14px;color:var(--muted);padding:8px 0 40px}
 @media (max-width:860px){.hero{grid-template-columns:1fr;gap:56px;padding-bottom:56px}.preview{max-width:440px;margin:0 auto}.inside{grid-template-columns:1fr 1fr}.who{grid-template-columns:1fr}section{padding:56px 20px}}
 @media (max-width:560px){body{font-size:16px}.hero{padding:8px 20px 48px}.inside{grid-template-columns:1fr}.me{flex-direction:column;text-align:center}form{padding:18px}}
 </style>
+<style>h1 span{color:var(--sun)!important}.lantern{opacity:.6}</style>
 </head>
 <body>
 <div class="fogwrap">
 <svg class="fogsvg" viewBox="0 0 1200 700" preserveAspectRatio="none" aria-hidden="true">
 <defs><filter id="fb" x="-20%" y="-60%" width="140%" height="220%"><feGaussianBlur stdDeviation="22"/></filter></defs>
-<path d="M0 560 C200 520 380 540 600 560 C820 580 1000 540 1200 548 V700 H0Z" fill="#DCE3E7"/>
-<path d="M0 620 C240 600 480 628 720 636 C900 642 1060 626 1200 624 V700 H0Z" fill="#CDD7DD"/>
-<g class="fogA" filter="url(#fb)" fill="#FFFFFF" opacity="0.85"><ellipse cx="200" cy="560" rx="300" ry="40"/><ellipse cx="1000" cy="600" rx="320" ry="40"/></g>
-<g class="fogB" filter="url(#fb)" fill="#FFFFFF" opacity="0.7"><ellipse cx="700" cy="140" rx="300" ry="30"/><ellipse cx="160" cy="260" rx="220" ry="26"/></g>
+<path d="M0 560 C200 520 380 540 600 560 C820 580 1000 540 1200 548 V700 H0Z" fill="#22354A"/>
+<path d="M0 620 C240 600 480 628 720 636 C900 642 1060 626 1200 624 V700 H0Z" fill="#1E3043"/>
+<g class="fogA" filter="url(#fb)" fill="#C6D3DB" opacity="0.10"><ellipse cx="200" cy="560" rx="300" ry="40"/><ellipse cx="1000" cy="600" rx="320" ry="40"/></g>
+<g class="fogB" filter="url(#fb)" fill="#C6D3DB" opacity="0.08"><ellipse cx="700" cy="140" rx="300" ry="30"/><ellipse cx="160" cy="260" rx="220" ry="26"/></g>
 </svg>
 <header>
 <a class="logo" href="/" style="display:inline-flex;align-items:center;gap:10px"><img src="ultha-mark.svg" alt="" width="34" height="18">ULTHA</a>
