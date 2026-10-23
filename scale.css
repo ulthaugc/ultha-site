@@ -1,0 +1,21 @@
+/* Shared type scale (v4): smaller, proportional headings across inner pages. Loaded last so it wins. */
+h1:not(.herohl){font-size:clamp(30px,3.2vw,42px)!important;line-height:1.15!important}
+h2{font-size:clamp(24px,2.3vw,32px)!important;line-height:1.2!important}
+p[style*="font-size: 19px"],p[style*="font-size:19px"],p[style*="font-size: 18px"],p[style*="font-size:18px"]{font-size:16.5px!important}
+.lede{font-size:16.5px!important}
+.pr-amt{font-size:38px!important}.pr header h3{font-size:22px!important}
+.pr-lede{font-size:clamp(17px,1.5vw,20px)!important}
+.gk-grid b{font-size:18px!important}
+.tg-card blockquote{font-size:15.5px!important}
+.faq summary{font-size:17px!important}
+@media (max-width:760px){
+h1:not(.herohl){font-size:28px!important}
+h2{font-size:23px!important}
+.pr-amt{font-size:34px!important}
+}
+
+/* closing note with her photo (footer) */
+.ft-note{display:flex;align-items:center;gap:22px}
+.ft-photo{width:104px;height:130px;border-radius:18px;object-fit:cover;object-position:50% 25%;box-shadow:0 0 0 3px rgba(255,226,154,.55),0 16px 30px rgba(0,0,0,.4);flex:none;transform:rotate(-3deg)}
+.ft-sig{font-family:Caveat,cursive;font-size:24px;color:#FFE29A;line-height:1}
+@media (max-width:760px){.ft-note{gap:16px;align-items:flex-start}.ft-photo{width:76px;height:96px;border-radius:14px}}

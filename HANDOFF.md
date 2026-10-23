@@ -37,6 +37,14 @@ Everything from `site-v3-wip` was merged to main and deployed:
   (.hs-walker animateMotion), turns customer-colored and gets a heart. Phones: bridge build only. Reduced motion: end state.
 - Desktop art viewBox zoomed to "140 240 1000 360"; back hills parallax via --hx/--hy/--hs set on .hn.
 
+## v4 (preview branch site-v4-preview)
+- Smaller, proportional type: homepage "v4" CSS block; inner pages load /scale.css last (shared heading sizes + footer note styles)
+- Her photos live in /img (face, me-smile, video-poster-me, ask-me, cta-me, garden-me), cropped from her uploads
+- Face moments: hero "Hi, I'm Ultha" badge, agency table "With me" column, video card poster, FAQ "Still wondering?" card,
+  closing note with photo + "— Ultha" (homepage, About, Pricing), contact page avatar
+- Agency vs me is a compact 3-row table; About's duplicate CTA section removed
+- Video card still says "Video coming soon": swap in her real video when she sends it
+
 ## Still open
 1. Ultha: in Vercel → ultha-site → Settings → Environment Variables add GMAIL_USER=ultha@ultha.co and
    GMAIL_APP_PASSWORD=<Google app password> (myaccount.google.com/apppasswords, needs 2-Step Verification), redeploy,
