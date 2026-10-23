@@ -36,7 +36,7 @@
   var cta = links[links.length - 1];
   var items = links.slice(0, -1).map(function (a) { return { href: a.getAttribute('href'), text: a.textContent.trim() }; });
   if (!items.some(function (i) { return /starter-kit/.test(i.href); })) items.push({ href: '/starter-kit', text: 'Free playbook' });
-  if (!items.some(function (i) { return /guides/.test(i.href); })) items.push({ href: '/guides', text: 'Guides' });
+  if (!items.some(function (i) { return /guides/.test(i.href); })) items.push({ href: '/guides', text: 'Case studies & guides' });
 
   var panel = document.createElement('nav');
   panel.className = 'mnav-panel';
