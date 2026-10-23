@@ -153,7 +153,7 @@ def table(head, rows, hi_col=None):
     tr = ''
     for r in rows:
         hi = ' class="hi"'
-        cells = f'<th scope="row">{r[0]}</th>' + ''.join(f'<td{hi if hi_col == i + 1 else ""}>{c}</td>' for i, c in enumerate(r[1:]))
+        cells = f'<th scope="row">{r[0]}</th>' + ''.join(f'<td data-h="{head[i + 1]}"{hi if hi_col == i + 1 else ""}>{c}</td>' for i, c in enumerate(r[1:]))
         tr += f'<tr>{cells}</tr>'
     return f'<div class="cmpw"><table class="cmp"><thead><tr>{th}</tr></thead><tbody>{tr}</tbody></table></div>'
 
