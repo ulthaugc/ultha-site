@@ -6,7 +6,7 @@
   var root = document.documentElement;
 
   var css =
-    '.mnav-btn{display:none}' +
+    '.mnav-btn,.mnav-panel,.mnav-shade{display:none}' +
     '@media (max-width:760px){' +
     'header nav,header .nav{margin-left:auto}' +
     '.mnav-btn{display:inline-flex;align-items:center;justify-content:center;flex:none;width:44px;height:44px;margin-left:10px;border-radius:999px;border:1px solid rgba(198,211,219,.32);background:transparent;cursor:pointer;padding:0;position:relative;z-index:61}' +
@@ -17,7 +17,7 @@
     '.mnav-open .mnav-btn span{background:transparent}' +
     '.mnav-open .mnav-btn span::before{top:0;transform:rotate(45deg)}' +
     '.mnav-open .mnav-btn span::after{top:0;transform:rotate(-45deg)}' +
-    '.mnav-panel{position:fixed;left:10px;right:10px;z-index:60;background:#111C27;border:1px solid rgba(198,211,219,.16);border-radius:22px;padding:8px;box-shadow:0 24px 50px rgba(0,0,0,.55);opacity:0;transform:translateY(-8px);pointer-events:none;transition:opacity .2s,transform .2s}' +
+    '.mnav-panel{display:block;position:fixed;left:10px;right:10px;z-index:60;background:#111C27;border:1px solid rgba(198,211,219,.16);border-radius:22px;padding:8px;box-shadow:0 24px 50px rgba(0,0,0,.55);opacity:0;transform:translateY(-8px);pointer-events:none;transition:opacity .2s,transform .2s}' +
     '.mnav-open .mnav-panel{opacity:1;transform:none;pointer-events:auto}' +
     '.mnav-panel a{display:flex;justify-content:space-between;align-items:center;padding:14px 16px;font:500 17px Figtree,system-ui,sans-serif;color:#EEF1F2!important;text-decoration:none;border-radius:14px}' +
     '.mnav-panel a:active,.mnav-panel a:hover{background:#1B2A38}' +
@@ -25,7 +25,7 @@
     '.mnav-panel a+a{border-top:1px solid rgba(198,211,219,.08)}' +
     '.mnav-panel a.mnav-cta{margin-top:8px;border-top:0;background:#FFE29A;color:#1B2A38!important;justify-content:center;font-weight:600}' +
     '.mnav-panel a.mnav-cta::after{content:""}' +
-    '.mnav-shade{position:fixed;inset:0;z-index:59;background:rgba(8,13,19,.5);opacity:0;pointer-events:none;transition:opacity .2s}' +
+    '.mnav-shade{display:block;position:fixed;inset:0;z-index:59;background:rgba(8,13,19,.5);opacity:0;pointer-events:none;transition:opacity .2s}' +
     '.mnav-open .mnav-shade{opacity:1;pointer-events:auto}' +
     '}';
   var st = document.createElement('style');

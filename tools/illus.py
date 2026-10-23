@@ -93,31 +93,46 @@ def fruits(cx, cy, R, rnd, n=9):
         s+=f'<circle cx="{x:.1f}" cy="{y:.1f}" r="9" fill="{SUN}"/><circle cx="{x-3:.1f}" cy="{y-3:.1f}" r="3" fill="#FFF6D6"/>'
     return s
 
+# label widths measured in the browser (Figtree 600): 16px desktop, 13px mobile
+LABEL_W={16:[92,93,165,145,128,116],13:[75,76,134,118,104,95]}
+
 def tree_svg(mobile=False):
     rnd=random.Random(7)
     if not mobile:
-        W,H=1200,640; tx=600; ground=380; ccx,ccy,R=600,170,150
-        chip_w,chip_h,fs=196,46,16
-        xs=[110,305,500,700,895,1090]; ys=[560,520,580,580,520,560]
-        chips=list(zip(xs,ys))
+        W,H=1200,690; tx=600; ground=380; ccx,ccy,R=600,170,150
+        chip_h,fs,pad,dr,gap=46,16,18,5,10
+        ws=[w+pad*2+dr*2+gap for w in LABEL_W[16]]
+        # middle pair sits side by side around the trunk, with a gap
+        xs=[110,305,600-9-ws[2]/2,600+9+ws[3]/2,895,1090]; ys=[560,520,580,580,520,560]
+        chips=list(zip(xs,ys)); cws=ws
+        cap_y=652
     else:
-        W,H=390,700; tx=195; ground=290; ccx,ccy,R=195,140,92
-        chip_w,chip_h,fs=168,44,14
-        chips=[(95,410),(295,410),(95,505),(295,505),(95,600),(295,600)]
+        W,H=390,690; tx=195; ground=290; ccx,ccy,R=195,140,92
+        chip_h,fs,pad,dr,gap=44,13,14,4,8
+        cw=max(LABEL_W[13])+pad*2+dr*2+gap
+        chips=[(96,410),(294,410),(96,505),(294,505),(96,600),(294,600)]; cws=[cw]*6
+        cap_y=664
     pid='trd'+('m' if mobile else 'd')
     s=[f'<svg class="tree-art {"tree-m" if mobile else "tree-d"}" viewBox="0 0 {W} {H}" role="img" aria-label="A tree: services as roots, trust as the trunk, revenue as the fruit">',
-       f'<defs>{dots(pid,.28)}<linearGradient id="{pid}s" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="{G1}"/><stop offset="1" stop-color="{DEEP}"/></linearGradient></defs>']
+       f'<defs>{dots(pid,.28)}<linearGradient id="{pid}s" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="{G1}"/><stop offset="1" stop-color="{DEEP}"/></linearGradient>'
+       # soft edges: fade soil out at left/right and bottom, dots fade out below the ground line
+       f'<linearGradient id="{pid}fx" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#000"/><stop offset=".12" stop-color="#fff"/><stop offset=".88" stop-color="#fff"/><stop offset="1" stop-color="#000"/></linearGradient>'
+       f'<linearGradient id="{pid}fy" gradientUnits="userSpaceOnUse" x1="0" y1="{ground}" x2="0" y2="{H}"><stop offset="0" stop-color="#fff"/><stop offset=".55" stop-color="#fff"/><stop offset="1" stop-color="#000"/></linearGradient>'
+       f'<linearGradient id="{pid}fd" gradientUnits="userSpaceOnUse" x1="0" y1="{ground}" x2="0" y2="{ground+70}"><stop offset="0" stop-color="#fff"/><stop offset="1" stop-color="#000"/></linearGradient>'
+       f'<mask id="{pid}mx" maskUnits="userSpaceOnUse" x="0" y="0" width="{W}" height="{H}"><rect width="{W}" height="{H}" fill="url(#{pid}fx)"/></mask>'
+       f'<mask id="{pid}my" maskUnits="userSpaceOnUse" x="0" y="0" width="{W}" height="{H}"><rect width="{W}" height="{H}" fill="url(#{pid}fy)"/></mask>'
+       f'<mask id="{pid}md" maskUnits="userSpaceOnUse" x="0" y="0" width="{W}" height="{H}"><rect width="{W}" height="{H}" fill="url(#{pid}fd)"/></mask></defs>']
     # soil
-    gp=f'M0 {ground+18} C{W*.2} {ground-6} {W*.4} {ground+4} {W*.5} {ground} C{W*.62} {ground-4} {W*.82} {ground+8} {W} {ground+14} V{H} H0Z'
-    s.append(f'<path d="{gp}" fill="url(#{pid}s)"/>')
-    s.append(f'<path d="M0 {ground+18} C{W*.2} {ground-6} {W*.4} {ground+4} {W*.5} {ground} C{W*.62} {ground-4} {W*.82} {ground+8} {W} {ground+14} V{ground+60} H0Z" fill="url(#{pid})"/>')
-    s.append(f'<path d="M0 {ground+18} C{W*.2} {ground-6} {W*.4} {ground+4} {W*.5} {ground} C{W*.62} {ground-4} {W*.82} {ground+8} {W} {ground+14}" fill="none" stroke="{G3}" stroke-width="2"/>')
+    top=f'M0 {ground+18} C{W*.2} {ground-6} {W*.4} {ground+4} {W*.5} {ground} C{W*.62} {ground-4} {W*.82} {ground+8} {W} {ground+14}'
+    s.append(f'<g mask="url(#{pid}mx)"><g mask="url(#{pid}my)"><path d="{top} V{H} H0Z" fill="url(#{pid}s)"/></g>')
+    s.append(f'<g mask="url(#{pid}md)"><path d="{top} V{ground+70} H0Z" fill="url(#{pid})"/></g>')
+    s.append(f'<path d="{top}" fill="none" stroke="{G3}" stroke-width="2"/></g>')
     # roots to chips
     for (x,y) in chips:
-        top=y-chip_h/2
-        mid=(ground+top)/2
-        s.append(f'<path d="M{tx} {ground+6} C{tx} {mid} {x} {mid-10} {x} {top}" fill="none" stroke="#7A6450" stroke-width="{6 if not mobile else 4}" stroke-linecap="round" opacity=".9"/>')
-        s.append(f'<path d="M{tx} {ground+6} C{tx} {mid} {x} {mid-10} {x} {top}" fill="none" stroke="#C9A27A" stroke-width="{2.2 if not mobile else 1.6}" stroke-linecap="round" opacity=".55"/>')
+        top_y=y-chip_h/2
+        mid=(ground+top_y)/2
+        s.append(f'<path d="M{tx} {ground+6} C{tx} {mid} {x} {mid-10} {x} {top_y}" fill="none" stroke="#7A6450" stroke-width="{6 if not mobile else 4}" stroke-linecap="round" opacity=".9"/>')
+        s.append(f'<path d="M{tx} {ground+6} C{tx} {mid} {x} {mid-10} {x} {top_y}" fill="none" stroke="#C9A27A" stroke-width="{2.2 if not mobile else 1.6}" stroke-linecap="round" opacity=".55"/>')
     # trunk + branches
     tw=34 if not mobile else 22
     s.append(f'<path d="M{tx-tw*1.4} {ground+8} C{tx-tw*.7} {ground-30} {tx-tw*.55} {ccy+70} {tx-tw*.5} {ccy+30} L{tx+tw*.5} {ccy+30} C{tx+tw*.55} {ccy+70} {tx+tw*.7} {ground-30} {tx+tw*1.4} {ground+8}Z" fill="#9C7B5E"/>')
@@ -134,14 +149,16 @@ def tree_svg(mobile=False):
         s.append(f'<path d="M{ccx+R*1.5+20} {ccy-50} C{ccx+R*1.45} {ccy-20} {ccx+R*1.3} {ccy-10} {ccx+R*1.12} {ccy-14}" fill="none" stroke="{SUN}" stroke-width="2.5" stroke-linecap="round"/><path d="M{ccx+R*1.12+10} {ccy-22} l-10 8 l12 4" fill="none" stroke="{SUN}" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>')
         s.append(f'<text x="{ccx-R*1.55}" y="{ground-34}" text-anchor="end" font-family="Caveat, cursive" font-size="26" font-weight="600" fill="{MIST}">deals close faster</text>')
         s.append(f'<path d="M{ccx-R*1.55+6} {ground-44} C{ccx-R*1.2} {ground-60} {tx-tw*2.2} {ground-60} {tx-tw*1.1} {ground-70}" fill="none" stroke="{MIST}" stroke-width="2" stroke-linecap="round"/>')
-        s.append(f'<text x="{tx}" y="{ground+52}" text-anchor="middle" font-family="Caveat, cursive" font-size="24" font-weight="600" fill="{SLATE}">grown from real customer conversations</text>')
+        s.append(f'<text x="{tx}" y="{cap_y}" text-anchor="middle" font-family="Caveat, cursive" font-size="26" font-weight="600" fill="{SLATE}">grown from real customer conversations</text>')
     else:
         s.append(f'<text x="{tx}" y="{ground-24}" text-anchor="middle" font-family="Caveat, cursive" font-size="22" font-weight="600" fill="{LIGHT}">trust</text>')
         s.append(f'<text x="{W-12}" y="{ccy-R*.9}" text-anchor="end" font-family="Caveat, cursive" font-size="22" font-weight="600" fill="{SUN}">more revenue</text>')
-        s.append(f'<text x="{tx}" y="{ground+44}" text-anchor="middle" font-family="Caveat, cursive" font-size="18" font-weight="600" fill="{SLATE}">grown from real customer conversations</text>')
-    for (x,y),lab in zip(chips,SERVICES):
-        s.append(f'<rect x="{x-chip_w/2}" y="{y-chip_h/2}" width="{chip_w}" height="{chip_h}" rx="{chip_h/2}" fill="{CARD}"/>')
-        s.append(f'<circle cx="{x-chip_w/2+20}" cy="{y}" r="5" fill="{AMBER}"/>')
-        s.append(f'<text x="{x+8}" y="{y+fs*.36:.1f}" text-anchor="middle" font-family="Figtree, sans-serif" font-size="{fs}" font-weight="600" fill="{NAVY}">{lab}</text>')
+        s.append(f'<text x="{tx}" y="{cap_y}" text-anchor="middle" font-family="Caveat, cursive" font-size="20" font-weight="600" fill="{SLATE}">grown from real customer conversations</text>')
+    for (x,y),cw,lab in zip(chips,cws,SERVICES):
+        l=x-cw/2
+        s.append(f'<rect x="{l:.1f}" y="{y-chip_h/2}" width="{cw:.1f}" height="{chip_h}" rx="{chip_h/2}" fill="{CARD}"/>')
+        s.append(f'<circle cx="{l+pad+dr:.1f}" cy="{y}" r="{dr}" fill="{AMBER}"/>')
+        # center the label in the space right of the dot
+        s.append(f'<text x="{(l+pad+dr*2+gap+l+cw-pad)/2:.1f}" y="{y+fs*.36:.1f}" text-anchor="middle" font-family="Figtree, sans-serif" font-size="{fs}" font-weight="600" fill="{NAVY}">{lab}</text>')
     s.append('</svg>')
     return ''.join(s)

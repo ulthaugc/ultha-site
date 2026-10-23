@@ -9,5 +9,7 @@ About: Former product manager and co-founder of a marketing agency that worked w
 - [Your best sales pitch is buried in a Zoom recording](https://ultha.co/guides/your-best-sales-pitch-is-buried-in-a-zoom-recording): How to turn one 15-minute customer call into a 60-second video, short social clips, a written customer story and a sales one-pager, with customer approval.
 
 ## Pages
-- [Home](https://ultha.co/): Services, process and pricing.
+- [Home](https://ultha.co/): Services and how it works.
+- [Pricing](https://ultha.co/pricing): Proof Sprint ($5,000, 30 days), 90-Day Proof Engine ($6,000/month), Keep it running ($3,500/month, after the Engine). Custom and one-off work available.
+- [About](https://ultha.co/about): Ultha's story and client testimonials.
 - [Free starter kit](https://ultha.co/starter-kit): Get your first 5 customer reviews this month.
