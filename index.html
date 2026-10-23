@@ -1064,6 +1064,28 @@ footer nav a[href]{background:none!important;color:#E4E9EF!important;padding:0!i
 .wz-bridge span{color:#1F4FD8;font-family:Figtree,sans-serif;font-size:19px}
 @media (max-width:760px){.wz{grid-template-columns:1fr;border-radius:22px}.wz-stat{padding:24px 22px}.wz-n{font-size:60px}.wz-stat p{font-size:18px}.wz-list{padding:6px 20px}.wz-list li{font-size:17px;padding:13px 0}.wz-bridge{font-size:20px}}
 </style>
+<style>/* why me proof + case cards */
+.ag-proof{margin:22px auto 0;max-width:900px;display:flex;flex-direction:column;gap:16px}
+.ag-nums{display:grid;grid-template-columns:repeat(4,1fr);background:#fff;border:1px solid #D5DFF8;border-radius:20px;box-shadow:0 18px 40px -26px rgba(31,79,216,.35)}
+.ag-nums div{padding:18px 16px;text-align:center;display:flex;flex-direction:column;gap:4px}
+.ag-nums div+div{border-left:1px solid #E4EAF8}
+.ag-nums b{font-family:Figtree,sans-serif;font-weight:800;font-size:32px;line-height:1;letter-spacing:-.02em;color:#1F4FD8}
+.ag-nums span{font-size:13.5px;line-height:1.35;color:#424A5E}
+.ag-logos{display:flex;flex-wrap:wrap;justify-content:center;align-items:center;gap:8px 22px;font-family:'Young Serif',serif;font-size:17px;color:#586A7C}
+.ag-logos .ag-lk,.ag-logos .ag-ugc{font-family:Figtree,sans-serif;font-size:11.5px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:#1F4FD8}
+.ag-logos .ag-ugc{margin-left:6px}
+.po-in{max-width:1060px!important;padding:10px 24px 48px!important}
+.po-head{display:flex;justify-content:space-between;align-items:baseline;margin-bottom:14px}
+.po-head .st-ck{text-align:left;flex:none;margin:0}
+.po-all{color:#1F4FD8!important;font-weight:600;font-size:14.5px;text-decoration:none}
+.po-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+.po-card{display:flex;flex-direction:column;gap:6px;text-decoration:none;background:#fff;border:1px solid #D5DFF8;border-radius:20px;padding:20px 22px;box-shadow:0 18px 40px -28px rgba(31,79,216,.4);transition:transform .2s,border-color .2s}
+.po-card:hover{transform:translateY(-3px);border-color:#1F4FD8}
+.po-card b{font-family:Figtree,sans-serif;font-weight:800;font-size:34px;line-height:1;letter-spacing:-.02em;color:#1F4FD8}
+.po-card span{font-family:'Young Serif',serif;font-size:17px;line-height:1.35;color:#14213D}
+.po-card em{margin-top:auto;padding-top:8px;font-style:normal;font-size:13px;font-weight:600;color:#586A7C}
+@media (max-width:760px){.ag-nums{grid-template-columns:1fr 1fr}.ag-nums div:nth-child(3){border-left:0}.ag-nums div:nth-child(n+3){border-top:1px solid #E4EAF8}.ag-logos{font-size:15px;gap:6px 14px}.ag-logos .ag-ugc{margin-left:0;padding-left:0;border-left:0;flex-basis:100%;text-align:center}.ag-logos .ag-lk{flex-basis:100%;text-align:center}.po-grid{grid-template-columns:1fr}.po-head{flex-direction:column;gap:4px}}
+</style>
 </head>
 <body>
 <div style="font-family: 'Figtree', system-ui, sans-serif; color: #14213D; background: #F9F9FA; font-size: 17px; line-height: 1.6">
@@ -1150,6 +1172,10 @@ footer nav a[href]{background:none!important;color:#E4E9EF!important;padding:0!i
 <div class="ag-row ag-top"><span></span><span class="ag-th"><span class="ag-team" aria-hidden="true"><i></i><i></i><i></i></span>Typical agency</span><span class="ag-th ag-me"><img src="img/me-smile.jpg" alt="Ultha" width="36" height="36">With me</span></div>
 <div class="ag-row"><span class="ag-k">Who you work with</span><span class="ag-old">A non-technical agency team</span><span class="ag-new">A former product manager and marketer who gets your product</span></div><div class="ag-row"><span class="ag-k">What you get</span><span class="ag-old">Virality that doesn’t last</span><span class="ag-new">Proof that builds lasting trust</span></div><div class="ag-row"><span class="ag-k">How it’s scoped</span><span class="ag-old">Retainers with no end date</span><span class="ag-new">Clear timeline, clear deliverables</span></div>
 </div>
+<div class="ag-proof reveal">
+<div class="ag-nums"><div><b>40+</b><span>brands consulted</span></div><div><b>7</b><span>countries</span></div><div><b>25+</b><span>major feature launches</span></div><div><b>3×</b><span>Exhale Marketing hired me again</span></div></div>
+<div class="ag-logos"><span class="ag-lk">Worked with</span><span>Bizbox Digital</span><span>Exhale Marketing</span><span>Adsparc</span><span>CoreShop Solutions</span><span>Conversion Crimes</span><span class="ag-ugc">UGC for</span><span>Lovable</span><span>Cantina</span></div>
+</div>
 <p class="ag-foot reveal">A viral post lasts a week. <b>A customer story lasts years.</b></p>
 </div>
 </section>
@@ -1173,12 +1199,13 @@ t.addEventListener('scroll',upd,{passive:true});addEventListener('resize',upd);u
 function restart(){clearInterval(timer);if(!reduce)timer=setInterval(function(){go(1)},6000)}
 t.addEventListener('mouseenter',function(){clearInterval(timer)});t.addEventListener('mouseleave',restart);t.addEventListener('touchstart',function(){clearInterval(timer)},{passive:true});restart()})();</script>
 </section>
-<section id="proof-out" class="po"><div class="po-in reveal"><div class="st-cases"><span class="st-ck">It’s working for others too</span>
-<a href="/case-studies/the-year-buyers-stopped-googling"><b>29% → 51%</b> of buyers now start in AI</a>
-<a href="/case-studies/salesloft-reviews-pipeline"><b>$1.82M</b> pipeline from reviews at Salesloft</a>
-<a href="/case-studies/memoryblue-always-on-reviews"><b>$800K</b> in a month at memoryBlue</a>
-<a class="st-all" href="/guides#case-studies">All case studies →</a></div>
-</div></section>
+<section id="proof-out" class="po"><div class="po-in reveal">
+<div class="po-head"><span class="st-ck">It’s working for others too</span><a class="po-all" href="/guides#case-studies">All case studies →</a></div>
+<div class="po-grid">
+<a class="po-card" href="/case-studies/salesloft-reviews-pipeline"><b>$1.82M</b><span>in pipeline from customer reviews</span><em>Salesloft · case study →</em></a>
+<a class="po-card" href="/case-studies/memoryblue-always-on-reviews"><b>$800K</b><span>in pipeline in one month from a steady review habit</span><em>memoryBlue · case study →</em></a>
+<a class="po-card" href="/case-studies/the-year-buyers-stopped-googling"><b>29% → 51%</b><span>of buyers now start their research in AI</span><em>The year buyers stopped Googling →</em></a>
+</div></div></section>
 
 
 
