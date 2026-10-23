@@ -1123,6 +1123,12 @@ footer nav a[href]{background:none!important;color:#E4E9EF!important;padding:0!i
 @media (min-width:1250px) and (prefers-reduced-motion:reduce){.ag-pop{transform:none;transition:none}}
 </style>
 <style>@media (min-width:1250px){.ag-pop img{height:auto!important;bottom:auto!important}}</style>
+<style>/* testimonials photo at the signature */
+.rv-head{padding-right:0!important;min-height:0!important}.rv-bar{margin-left:auto}
+.rv-sig{position:relative;padding-left:140px;min-height:70px;overflow:visible}
+.rv-me2{position:absolute;left:0;bottom:-50px;width:120px!important;height:auto!important;border-radius:0!important;box-shadow:none!important;object-fit:contain!important;filter:drop-shadow(0 12px 18px rgba(31,79,216,.25))}
+@media (max-width:760px){.rv-sig{padding-left:110px}.rv-me2{width:96px!important;bottom:-22px}}
+</style>
 </head>
 <body>
 <div style="font-family: 'Figtree', system-ui, sans-serif; color: #14213D; background: #F9F9FA; font-size: 17px; line-height: 1.6">
@@ -1221,11 +1227,11 @@ footer nav a[href]{background:none!important;color:#E4E9EF!important;padding:0!i
 <div class="rv-in">
 <div class="rv-head reveal">
 <div><span class="cp-k">What clients say</span><h2>I practice what I preach. <span>Here’s my customer proof.</span></h2></div>
-<img class="rv-me" src="img/me-sweater.webp" alt="Ultha smiling"><div class="rv-arrows"><button class="rv-arrow" data-d="-1" aria-label="Previous reviews">←</button><button class="rv-arrow" data-d="1" aria-label="Next reviews">→</button></div>
+<div class="rv-arrows"><button class="rv-arrow" data-d="-1" aria-label="Previous reviews">←</button><button class="rv-arrow" data-d="1" aria-label="Next reviews">→</button></div>
 </div>
 <div class="rv-track" tabindex="0" aria-label="Client reviews"><figure class="rv-card"><div class="rv-stars" aria-label="5 stars">★★★★★</div><blockquote>“I’ve hired close to 100 people over the years, and I am not easily impressed. Ultha always delivered impressive results, high-quality work, and frankly was one of the best I’ve ever had the pleasure of working with.”</blockquote><figcaption><span class="rv-av">JP</span><span><b>Jayson Peppar</b>Bizbox Digital</span></figcaption></figure><figure class="rv-card"><div class="rv-stars" aria-label="5 stars">★★★★★</div><blockquote>“Personable, intelligent, patient and knowledgeable. She expertly helped us set up our system, which our entire company is now running on. We are currently in the process of creating a new position for her.”</blockquote><figcaption><span class="rv-av">AS</span><span><b>Alessandra Sagredo</b>Exhale Marketing</span></figcaption></figure><figure class="rv-card"><div class="rv-stars" aria-label="5 stars">★★★★★</div><blockquote>“Ultha helped our organisation adopt a new system across all aspects of our business, from lead generation to sales and operations. In the last phase of the project, she trained our internal staff and shared her extensive knowledge with our team.”</blockquote><figcaption><span class="rv-av">WV</span><span><b>Wout Van Damme</b>Adsparc</span></figcaption></figure><figure class="rv-card"><div class="rv-stars" aria-label="5 stars">★★★★★</div><blockquote>“She did what she said she was going to do, explained things thoroughly and helped us strategize how to use our tools well.”</blockquote><figcaption><span class="rv-av">QZ</span><span><b>Quinn Z.</b>Conversion Crimes</span></figcaption></figure><figure class="rv-card"><div class="rv-stars" aria-label="5 stars">★★★★★</div><blockquote>“She knew the platform from the inside out, helped us populate it and guided us through the whole process. Prompt, friendly and overall super to work with. Highly recommended!”</blockquote><figcaption><span class="rv-av">NS</span><span><b>Natalia S.</b>Client on Upwork</span></figcaption></figure><figure class="rv-card"><div class="rv-stars" aria-label="5 stars">★★★★★</div><blockquote>“Excellent. She is a Jedi. Hire her first. Simple.”</blockquote><figcaption><span class="rv-av">RN</span><span><b>Robert Neumann</b>CoreShop Solutions</span></figcaption></figure></div>
 <div class="rv-bar" aria-hidden="true"><span></span></div>
-<div class="rv-sig reveal"><div><b>Hi, I’m Ultha.</b><span>Product brain, marketer’s instincts, creator’s eye.</span></div><a href="/about">Read my story →</a></div>
+<div class="rv-sig reveal"><img class="rv-me2" src="img/me-sweater.webp" alt="Ultha smiling"><div><b>Hi, I’m Ultha.</b><span>Product brain, marketer’s instincts, creator’s eye.</span></div><a href="/about">Read my story →</a></div>
 </div>
 <script>(function(){var r=document.getElementById('clients');if(!r)return;var t=r.querySelector('.rv-track'),bar=r.querySelector('.rv-bar span'),timer,reduce=matchMedia('(prefers-reduced-motion: reduce)').matches;
 function step(){var c=t.querySelector('.rv-card');return c?c.getBoundingClientRect().width+20:300}
