@@ -116,3 +116,6 @@ footer{text-align:center;font-size:14px;color:var(--muted);padding:40px 0}
 .nextl{display:block;text-decoration:none;border-top:1px solid var(--line);margin:36px 0 0;padding:18px 0 0;font-family:'Young Serif',serif;font-size:20px;line-height:1.35}
 .nextl span{display:block;font-family:Figtree,sans-serif;font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:var(--slate);margin-bottom:4px}
 @media (max-width:640px){.endcta{flex-direction:column;align-items:stretch;text-align:center}}
+/* chapter tags */
+.kicker{display:inline-flex;align-items:center;gap:8px;border:1px solid rgba(255,226,154,.45);color:#FFE29A!important;border-radius:999px;padding:5px 14px 5px 12px;width:max-content}
+.kicker::before{content:"";width:6px;height:6px;border-radius:50%;background:#FFE29A}
