@@ -25,7 +25,7 @@
 .stickybar.scrolled{box-shadow:0 1px 0 rgba(255,255,255,.06),0 8px 24px rgba(0,0,0,.25)}
 .stickybar a{color:#EEF1F2!important}
 .stickybar nav a:last-child{background:#FFE29A!important;color:#1B2A38!important}
-.hn{background:radial-gradient(ellipse at 50% 30%,#26394D 0%,#1B2A38 60%,#16222F 100%);color:#EEF1F2}
+.hn{background:radial-gradient(ellipse at 50% 30%,#26394D 0%,#1B2A38 60%,#1B2A38 100%);color:#EEF1F2}
 .hn-sky{position:absolute;inset:0;z-index:1;pointer-events:none;overflow:hidden}
 .hn-mist{position:absolute;border-radius:50%;background:radial-gradient(ellipse,rgba(198,211,219,.13),rgba(198,211,219,.05) 45%,rgba(198,211,219,0) 72%);filter:blur(40px)}
 .hn-mist.m1{width:1500px;height:380px;left:-25%;top:18%}
@@ -260,7 +260,8 @@ a{color:#EEF1F2}a:hover{color:#F08A74}
 }
 @media (max-width:760px){
 .topbar nav a:not(:last-child){display:none}
-.herosvg{height:300px!important;margin-top:-86px!important}#top{padding-bottom:24px!important}
+.herosvg{height:auto!important;aspect-ratio:680/365;margin-top:-40px!important}#top{padding-bottom:20px!important}
+.hn .tipbtn.btn3d{padding:10px 18px;font-size:14px;box-shadow:0 0 0 4px rgba(255,226,154,.12),0 0 20px rgba(255,226,154,.25)!important}.hn .herosvg circle.gb{display:none}
 .dlabel{display:none}.mlabel{display:inline}
 .roadwrap,.roadhint{display:none!important}.roadm{display:block}
 [style*="padding: 104px 24px"],[style*="padding: 96px 24px"],[style*="padding: 88px 24px"]{padding-top:64px!important;padding-bottom:64px!important}
@@ -820,5 +821,37 @@ go(0)})();</script>
 </footer>
 </div>
 <script>(function(){var b=document.querySelector(".stickybar");if(!b)return;var f=function(){b.classList.toggle("scrolled",scrollY>8)};addEventListener("scroll",f,{passive:true});f()})();</script>
+<script>
+/* mobile hero: pull the two cliffs together, shrink the bridge, zoom in */
+(function(){
+  var svg=document.querySelector('.herosvg'); if(!svg) return;
+  var mq=window.matchMedia('(max-width:760px)'), done=false, VB=svg.getAttribute('viewBox'), PA=svg.getAttribute('preserveAspectRatio');
+  var SHIFT=126, BR=.42, PS=1.35;
+  function apply(){
+    var kids=[].slice.call(svg.children).filter(function(e){return e.tagName!=='defs'});
+    if(mq.matches&&!done){
+      kids.forEach(function(e){
+        var b; try{b=e.getBBox()}catch(x){return}
+        var cx=b.x+b.width/2, w=b.width, cls=(e.getAttribute('class')||'');
+        if(w>=900||cls.indexOf('svgcap')>-1) return;
+        if(/fogA/.test(cls)) return;
+        if(e.tagName==='text'){ if(/mlabel/.test(cls)){ e.dataset.ox=e.getAttribute('x'); e.dataset.oy=e.getAttribute('y'); e.setAttribute('x', cx<645?420:874); e.setAttribute('y',300); e.dataset.mt='1'; } return; }
+        if(/fogB/.test(cls)&&w>400) return;
+        var t='';
+        var big=(e.tagName==='path'&&w>40);
+        if(cx<425){ t=big?'translate('+SHIFT+'px,0)':'translate('+SHIFT+'px,0) translate(294px,385px) scale('+PS+') translate(-294px,-385px)'; }
+        else if(cx>865){ t=big?'translate(-'+SHIFT+'px,0)':'translate(-'+SHIFT+'px,0) translate(1000px,385px) scale('+PS+') translate(-1000px,-385px)'; }
+        else { t='translate(645px,412px) scale('+BR+') translate(-645px,-412px)'; }
+        e.dataset.mt='1'; e.style.transform=t;
+      });
+      svg.setAttribute('viewBox','305 200 680 365'); svg.setAttribute('preserveAspectRatio','xMidYMax slice'); done=true;
+    } else if(!mq.matches&&done){
+      kids.forEach(function(e){ if(e.dataset.mt){e.style.transform=''; if(e.dataset.ox){e.setAttribute('x',e.dataset.ox);e.setAttribute('y',e.dataset.oy);delete e.dataset.ox;delete e.dataset.oy} delete e.dataset.mt} });
+      svg.setAttribute('viewBox',VB); svg.setAttribute('preserveAspectRatio',PA); done=false;
+    }
+  }
+  apply(); mq.addEventListener?mq.addEventListener('change',apply):mq.addListener(apply);
+})();
+</script>
 </body>
 </html>
