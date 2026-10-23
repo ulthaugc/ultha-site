@@ -32,6 +32,11 @@ Everything from `site-v3-wip` was merged to main and deployed:
   sap flowing up roots, fireflies, falling leaves, hover a service chip to light its root. All off with reduced motion.
   Regenerate by calling tree_v2_svg(False)+tree_v2_svg(True) into <div class="hw-tree tv">.
 
+## Hero story (live with round 3)
+- On load: far half of the bridge builds (SMIL on the clipPath rects + .plank2), one prospect walks across
+  (.hs-walker animateMotion), turns customer-colored and gets a heart. Phones: bridge build only. Reduced motion: end state.
+- Desktop art viewBox zoomed to "140 240 1000 360"; back hills parallax via --hx/--hy/--hs set on .hn.
+
 ## Still open
 1. Ultha: in Vercel → ultha-site → Settings → Environment Variables add GMAIL_USER=ultha@ultha.co and
    GMAIL_APP_PASSWORD=<Google app password> (myaccount.google.com/apppasswords, needs 2-Step Verification), redeploy,
