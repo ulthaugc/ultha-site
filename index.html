@@ -886,6 +886,23 @@ footer>div{padding-top:40px!important;gap:32px!important}
 }
 </style>
 <style>.tipbtn::after,.tipbtn::before{display:none!important}.faq summary{color:#EEF1F2!important}.faq p{color:#A9BAC5}.fq{color:#EEF1F2}</style>
+<style>/* why now v2 */
+.wy{max-width:1060px;margin:0 auto;padding:84px 24px 64px;display:flex;flex-direction:column;align-items:center;text-align:center}
+.wy-h{margin:14px 0 34px;font-family:'Young Serif',serif;font-weight:400;line-height:1.2;color:#fff;max-width:22em}
+.wy-h span{display:block;color:#FFE29A}
+.wy-grid{display:grid;grid-template-columns:1fr 1fr;gap:20px;width:100%;text-align:left}
+.wy-card{background:#1B2A38;border:1px solid #2C4157;border-top-color:rgba(255,255,255,.14);border-radius:26px;padding:28px 30px 22px;display:flex;flex-direction:column;box-shadow:0 24px 50px -24px rgba(0,0,0,.7)}
+.wy-n{font-family:Figtree,system-ui,sans-serif;font-weight:800;font-size:clamp(56px,6vw,76px);line-height:.95;letter-spacing:-.035em;color:#FFE29A}
+.wy-t{margin:12px 0 6px;font-family:'Young Serif',serif;font-size:clamp(19px,1.8vw,23px);line-height:1.3;color:#fff}
+.wy-t em{font-style:normal;color:#FFE29A}
+.wy-s{margin:0 0 14px;font-size:15px;line-height:1.5;color:#A9BAC5}
+.wy-bar{display:flex;gap:4px;height:10px;margin:4px 0 14px}.wy-bar span:first-child{flex:83;background:#FFE29A;border-radius:999px 0 0 999px}.wy-bar span:last-child{flex:17;background:#5E7586;border-radius:0 999px 999px 0}
+.wy-card cite{margin-top:auto;font-style:normal;font-size:12px;color:#6F8494}
+.wy-top{display:flex;align-items:center;justify-content:space-between;gap:16px}
+.wy-art{width:230px;max-width:62%;height:auto;flex:none}
+.wy-hand{margin:30px 0 0;font-family:Caveat,cursive;font-size:clamp(23px,2.2vw,28px);line-height:1.25;color:#FFE29A;max-width:42em;transform:rotate(-1deg)}
+@media (max-width:760px){.wy{padding:60px 16px 48px}.wy-h{margin-bottom:24px}.wy-grid{grid-template-columns:1fr;gap:14px}.wy-card{padding:22px 20px 18px;border-radius:22px}.wy-n{font-size:54px}.wy-t{font-size:19px}.wy-art{width:190px}.wy-hand{font-size:22px}}
+</style>
 </head>
 <body>
 <div style="font-family: 'Figtree', system-ui, sans-serif; color: #EEF1F2; background: #111C27; font-size: 17px; line-height: 1.6">
@@ -954,10 +971,33 @@ footer>div{padding-top:40px!important;gap:32px!important}
 </section>
 
 <section id="whynow" class="wn">
-<div class="wn-in st reveal">
-<span class="wn-kick">Why this matters now</span>
-<div class="st-row"><span class="st-n">83%</span><div class="st-r"><p class="st-t">of the buyer’s journey, they’re <em>researching on their own.</em></p><p class="st-s">Reading reviews, comparing options, asking AI. Only <b>17%</b> of the time is spent talking to your sales team.</p><div class="st-bar" role="img" aria-label="83% researching on their own, 17% talking to sales"><span class="b2"></span><span class="b1"></span></div><div class="st-ends"><span>83% researching on their own</span><span>17% talking to sales</span></div></div></div>
-<cite>Source: Gartner</cite>
+<div class="wy reveal">
+<span class="wn-kick">Why now</span>
+<h2 class="wy-h">AI is writing your buyers’ shortlist. <span>It reads your customers, not your website.</span></h2>
+<div class="wy-grid">
+<div class="wy-card">
+<span class="wy-n">83%</span>
+<p class="wy-t">of the buyer’s journey, they’re <em>researching on their own.</em></p>
+<p class="wy-s">Reading reviews, comparing options, asking AI. Only 17% is spent talking to your sales team.</p>
+<div class="wy-bar" aria-hidden="true"><span></span><span></span></div>
+<cite>Gartner</cite>
+</div>
+<div class="wy-card wy-ai">
+<div class="wy-top"><span class="wy-n">69%</span><svg class="wy-art" viewBox="0 0 260 150" aria-hidden="true">
+<rect x="6" y="6" width="248" height="138" rx="18" fill="#111C27" stroke="#3A5169" stroke-width="1.5"/>
+<rect x="96" y="20" width="146" height="30" rx="15" fill="#3A5169"/><text x="169" y="40" text-anchor="middle" font-family="Figtree,sans-serif" font-size="12.5" fill="#EEF1F2">best tool for my team?</text>
+<path d="M30 70 l3 8 8 3 -8 3 -3 8 -3 -8 -8 -3 8 -3z" fill="#FFE29A"/>
+<rect x="48" y="62" width="196" height="68" rx="16" fill="#F7F9FA"/>
+<text x="62" y="84" font-family="Figtree,sans-serif" font-size="12" fill="#5A6B79">Reviewers on G2 recommend</text>
+<rect x="62" y="94" width="104" height="24" rx="8" fill="#FFE29A"/><text x="114" y="111" text-anchor="middle" font-family="Figtree,sans-serif" font-size="13" font-weight="700" fill="#1B2A38">Competitor X</text>
+<text x="176" y="111" font-family="Figtree,sans-serif" font-size="12" fill="#5A6B79">not you.</text>
+</svg></div>
+<p class="wy-t">of buyers <em>switched vendors</em> because AI recommended someone else.</p>
+<p class="wy-s">And 1 in 3 bought from a company they’d never heard of before asking AI.</p>
+<cite>G2 Answer Economy report, 2026</cite>
+</div>
+</div>
+<p class="wy-hand">The window is open now. In a year, your competitors’ customers will be the ones AI quotes.</p>
 </div>
 </section>
 
