@@ -25,6 +25,13 @@ Everything from `site-v3-wip` was merged to main and deployed:
 - impact.com removed from About timeline; starter kit reframed as "Get the playbook I use, free." (kit, contact, footers, llms.txt)
 - pricing.html is now regenerated with dark-card overrides (build script lives in the session scratchpad; edit pricing.html directly if needed)
 
+## Round 3 (on site-v3-wip, awaiting her OK)
+- #how is "option C": numbered text steps on the left, animated tree on the right (stacked on phones)
+- Tree is tools/illus.py tree_v2_svg(): real branching trunk + leaf clumps, calm navy palette, yellow fruit only.
+  Motion (CSS "tree v2" block + small script in index.html): grow-in on scroll, sway, pointer parallax, fruit glow,
+  sap flowing up roots, fireflies, falling leaves, hover a service chip to light its root. All off with reduced motion.
+  Regenerate by calling tree_v2_svg(False)+tree_v2_svg(True) into <div class="hw-tree tv">.
+
 ## Still open
 1. Ultha: in Vercel → ultha-site → Settings → Environment Variables add GMAIL_USER=ultha@ultha.co and
    GMAIL_APP_PASSWORD=<Google app password> (myaccount.google.com/apppasswords, needs 2-Step Verification), redeploy,
