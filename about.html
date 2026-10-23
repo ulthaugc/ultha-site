@@ -406,6 +406,21 @@ section span[style*="text-transform: uppercase"]::before,section span[style*="te
 @media (max-width:760px){.tg-grid{grid-template-columns:1fr;gap:12px}}
 </style>
 <link rel="stylesheet" href="/scale.css">
+<style>/* v5: intro + photo panel fit one laptop screen; tighter rhythm */
+@media (min-width:901px){
+body section:first-of-type>div{padding-top:40px!important;padding-bottom:24px!important}
+#why.about{margin-top:8px!important}
+.aboutphoto{min-height:0!important;height:clamp(440px,calc(100vh - 330px),580px)!important;max-height:none!important}
+.aboutcard{margin-top:28px!important;margin-bottom:28px!important}
+}
+@media (min-width:761px){
+#path>div:first-child{padding-top:52px!important}
+.tg-in{padding:80px 24px 56px!important}
+footer{padding-top:30px!important}
+footer>div{padding-top:44px!important;gap:32px!important}
+}
+</style>
+<style>.tipbtn::after,.tipbtn::before{display:none!important}</style>
 </head>
 <body>
 <div style="font-family: 'Figtree', system-ui, sans-serif; color: #EEF1F2; background: #111C27; font-size: 17px; line-height: 1.6">

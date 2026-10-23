@@ -45,6 +45,12 @@ Everything from `site-v3-wip` was merged to main and deployed:
 - Agency vs me is a compact 3-row table; About's duplicate CTA section removed
 - Video card still says "Video coming soon": swap in her real video when she sends it
 
+## v5 (preview branch site-v5-preview)
+- Hero: 3 customers, 6 prospects (2 hidden on phones via .pm-hide; walker's prospect stays on phones)
+- Seam under hero fixed: #whynow plain #111C27, its top glow (.wn::before) removed
+- Tighter desktop spacing ("v5" style blocks in index.html and about.html); How it works untouched
+- About intro + photo panel fit one laptop screen (photo height tied to viewport height)
+
 ## Still open
 1. Ultha: in Vercel → ultha-site → Settings → Environment Variables add GMAIL_USER=ultha@ultha.co and
    GMAIL_APP_PASSWORD=<Google app password> (myaccount.google.com/apppasswords, needs 2-Step Verification), redeploy,
