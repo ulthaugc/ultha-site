@@ -36,12 +36,13 @@ def page(slug, title, meta, dek, kicker, read, hero, body, faq, sources, nxt):
 <script type="application/ld+json">{json.dumps(ld, ensure_ascii=False)}</script>
 <link rel="stylesheet" href="/scale.css">
 <link rel="stylesheet" href="/theme.css">
+<link rel="stylesheet" href="/guides/article.css">
 </head>
 <body>
 <div class="progress" aria-hidden="true"></div>
 <header>
 <a class="logo" href="/"><img src="/ultha-mark.svg" alt="" width="34" height="18">ULTHA</a>
-<nav class="nav"><a href="/guides">{HUB}</a><a href="/starter-kit">Free playbook</a><a class="cta" href="/contact">Let's talk</a></nav>
+<nav class="nav"><a href="/#how">How it works</a><a href="/about">About</a><a href="/pricing">Pricing</a><a href="/guides">{HUB}</a><a class="cta" href="/contact">Let's talk</a></nav>
 </header>
 
 <main>

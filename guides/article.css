@@ -1,0 +1,45 @@
+/* Article layout v2 (guides + case studies): calmer type, jump list, clear sections */
+body{font-size:16.5px!important;line-height:1.65!important}
+.wrap{max-width:700px!important}
+main>.wrap:first-child h1{font-size:clamp(28px,2.8vw,36px)!important;line-height:1.18!important;margin:10px 0 10px!important}
+.dek{font-size:17px!important;line-height:1.55!important;margin-bottom:14px!important}
+h2{font-size:22px!important;line-height:1.3!important;margin:40px 0 10px!important;padding-top:22px;border-top:1px solid #D5DFF8;scroll-margin-top:80px}
+.tldr+h2,.tldr+.story+h2,.note+.tldr+h2{border-top:0;padding-top:0}
+h3{font-size:18px!important}
+p{font-size:16.5px}
+.hero{max-width:760px!important;margin:18px auto 26px!important}
+.hero svg{max-height:300px}
+.tldr{padding:18px 22px!important;margin-bottom:22px!important}
+.tldr ul{font-size:15.5px}
+.stat .n{font-size:36px!important}
+.stat p{font-size:15px!important}
+.story p{font-size:16px!important}
+.q{padding:18px!important}
+.email{font-size:15px!important}
+.nums .n{font-size:28px!important}
+.steps b{font-size:18px!important}
+.now h3{font-size:20px!important}
+.faq summary{font-size:16px!important}
+.endq .eq{font-size:22px!important}
+/* jump list */
+.toc2{margin:0 0 26px;padding:14px 18px;background:#fff;border:1px solid #D5DFF8;border-radius:14px}
+.toc2 b{display:block;font-size:11.5px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:#586A7C;margin-bottom:6px}
+.toc2 ol{margin:0;padding-left:20px;columns:2;column-gap:28px}
+.toc2 li{font-size:14.5px;line-height:1.5;margin:0 0 4px;break-inside:avoid}
+.toc2 a{color:#1F4FD8;text-decoration:none}.toc2 a:hover{text-decoration:underline}
+@media (min-width:1180px){
+  .toc2{position:fixed;left:max(16px,calc(50% - 350px - 250px));top:120px;width:210px;margin:0;padding:14px 16px;z-index:4}
+  .toc2 ol{columns:1;padding-left:18px}
+  .toc2 li{font-size:13.5px}
+  .toc2 a.on{font-weight:700}
+}
+@media (max-width:640px){
+  body{font-size:16px!important}
+  main>.wrap:first-child h1{font-size:26px!important}
+  h2{font-size:20px!important;margin-top:32px!important;padding-top:18px}
+  .toc2 ol{columns:1}
+}
+@media (max-width:640px){
+.toc2{padding:12px 14px}.toc2 li{font-size:14px;margin-bottom:2px}
+.tldr ul{font-size:15px!important;line-height:1.5}.tldr li{margin-bottom:6px}
+}
