@@ -100,6 +100,10 @@ footer [style*="border-top"]{border-top-color:rgba(255,255,255,.22)!important}
 footer nav a[href]{background:none!important;color:#E4E9EF!important;padding:0!important}
 </style>
 <link rel="stylesheet" href="/theme.css">
+<style>.req{color:#E9604B;font-weight:700}.reqnote{margin:0 2px 8px;font-size:12.5px;color:#525B72}
+input.bad,textarea.bad{border-color:#E9604B!important;box-shadow:0 0 0 3px rgba(233,96,75,.15)!important}
+.field.bad .chips label,.field.bad .grp{border-color:#E9604B!important}
+form input:focus{outline:none}</style>
 </head>
 <body>
 <div class="fogwrap">
@@ -136,19 +140,22 @@ footer nav a[href]{background:none!important;color:#E4E9EF!important;padding:0!i
 <svg class="lantern" viewBox="0 0 120 220" aria-hidden="true"><defs><radialGradient id="lg"><stop offset="0" stop-color="#1F4FD8"/><stop offset=".5" stop-color="#FFC94D" stop-opacity=".4"/><stop offset="1" stop-color="#FFC94D" stop-opacity="0"/></radialGradient></defs><circle class="lglow" cx="60" cy="150" r="60" fill="url(#lg)"/><path d="M60 74 V110" stroke="#EEF2F6" stroke-width="2"/><rect x="44" y="110" width="32" height="8" rx="2" fill="#A7B1CA"/><path d="M46 118 H74 L78 170 H42Z" fill="#1F4FD8" stroke="#EEF2F6" stroke-width="2"/><path d="M60 128 C53 140 53 152 60 160 C67 152 67 140 60 128Z" fill="#FFC94D"/><rect x="39" y="170" width="42" height="8" rx="2" fill="#A7B1CA"/></svg>
 <div class="formbody">
 <div class="grid2">
-<div class="field"><label for="name">Your name</label><input id="name" name="name" type="text" autocomplete="name" placeholder="Alex Rivera" required></div>
-<div class="field"><label for="email">Email</label><input id="email" name="email" type="email" autocomplete="email" placeholder="alex@yourstartup.com" required></div>
+<div class="field"><label for="name">Your name <span class="req" aria-hidden="true">*</span></label><input id="name" name="name" type="text" autocomplete="name" placeholder="Alex Rivera" required></div>
+<div class="field"><label for="email">Email <span class="req" aria-hidden="true">*</span></label><input id="email" name="email" type="email" autocomplete="email" placeholder="alex@yourstartup.com" required></div>
 </div>
-<div class="field"><label for="site">Company website</label><input id="site" name="website" type="text" autocomplete="url" placeholder="yourstartup.com"></div>
-<div class="field"><span class="lab">Stage</span>
-<div class="chips" role="radiogroup">
+<div class="grid2">
+<div class="field"><label for="org">Company <span class="req" aria-hidden="true">*</span></label><input id="org" name="org" type="text" autocomplete="organization" placeholder="Your startup" required></div>
+<div class="field"><label for="site">Company website <span class="req" aria-hidden="true">*</span></label><input id="site" name="website" type="text" autocomplete="url" placeholder="yourstartup.com" required></div>
+</div>
+<div class="field" id="f-stage"><span class="lab">Stage <span class="req" aria-hidden="true">*</span></span>
+<div class="chips" role="radiogroup" aria-required="true">
 <input type="radio" name="stage" id="st1" value="Pre-seed"><label for="st1">Pre-seed</label>
 <input type="radio" name="stage" id="st2" value="Seed"><label for="st2">Seed</label>
 <input type="radio" name="stage" id="st3" value="Series A"><label for="st3">Series A</label>
 <input type="radio" name="stage" id="st4" value="Series B+"><label for="st4">Series B+</label>
 <input type="radio" name="stage" id="st5" value="Bootstrapped"><label for="st5">Bootstrapped</label>
 </div></div>
-<div class="field"><span class="lab">What would help most? <span class="opt">(pick any)</span></span>
+<div class="field" id="f-needs"><span class="lab">What would help most? <span class="req" aria-hidden="true">*</span> <span class="opt">(pick at least one, or "Not sure yet" below)</span></span>
 <div class="groups">
 <div class="grp"><div class="gh"><span>⭐</span> Customer proof <em>· capture</em></div><div class="chips">
 <input type="checkbox" name="needs" id="nd1" value="Customer testimonials"><label for="nd1">Customer testimonials</label>
@@ -177,6 +184,7 @@ footer nav a[href]{background:none!important;color:#E4E9EF!important;padding:0!i
 <div class="field"><div class="chips"><input type="checkbox" name="needs" id="nd12" value="Not sure yet"><label for="nd12">🤷 Not sure yet, help me figure it out</label></div></div>
 <div class="field"><label for="msg">Anything else? <span class="opt">(optional)</span></label><textarea id="msg" name="message" placeholder="e.g. We have 30 customers who love us but zero reviews online."></textarea></div>
 <input class="hp" name="company" type="text" tabindex="-1" autocomplete="off" aria-hidden="true">
+<p class="reqnote"><span class="req">*</span> Required</p>
 <p class="err" role="alert"></p>
 <button type="submit">Send it to Ultha →</button>
 <p class="fine">I'll reply within 1 business day. Your info stays with me.</p>
@@ -195,15 +203,23 @@ footer nav a[href]{background:none!important;color:#E4E9EF!important;padding:0!i
 (function(){
 var f=document.querySelector('form'),err=f.querySelector('.err'),btn=f.querySelector('button');
 function show(m){err.textContent=m;err.style.display='block'}
+f.addEventListener('input',function(e){var b=e.target.closest('.bad')||(e.target.classList.contains('bad')?e.target:null);if(b)b.classList.remove('bad');var c=e.target.closest('.field.bad');if(c)c.classList.remove('bad')});
+f.addEventListener('change',function(e){var c=e.target.closest('.field.bad');if(c)c.classList.remove('bad')});
 f.addEventListener('submit',function(ev){
   ev.preventDefault();
-  var name=f.elements['name'].value.trim(),email=f.elements['email'].value.trim();
-  if(!name){show('Please add your name.');f.elements['name'].focus();return}
-  if(!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)){show('Please enter a valid email.');f.elements['email'].focus();return}
+  var name=f.elements['name'].value.trim(),email=f.elements['email'].value.trim(),org=f.elements['org'].value.trim(),site=f.elements['website'].value.trim();
+  [].forEach.call(f.querySelectorAll('.bad'),function(x){x.classList.remove('bad')});
+  function need(el,m){el.classList.add('bad');show(m);(el.focus?el:el.querySelector('input')).focus();el.scrollIntoView({behavior:'smooth',block:'center'})}
+  if(!name){return need(f.elements['name'],'Please add your name.')}
+  if(!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)){return need(f.elements['email'],'Please enter a valid email.')}
+  if(!org){return need(f.elements['org'],'Please add your company name.')}
+  if(!/^\S+\.\S{2,}$/.test(site.replace(/^https?:\/\//,''))){return need(f.elements['website'],'Please add your company website, like yourstartup.com.')}
+  if(!f.querySelector('input[name=stage]:checked')){return need(document.getElementById('f-stage'),'Please pick your stage.')}
+  if(!f.querySelector('input[name=needs]:checked')){return need(document.getElementById('f-needs'),'Please pick at least one thing you need help with, or "Not sure yet".')}
   err.style.display='none';btn.disabled=true;btn.textContent='Sending…';
   var needs=[].slice.call(f.querySelectorAll('input[name=needs]:checked')).map(function(i){return i.value});
   var st=f.querySelector('input[name=stage]:checked'),tr=f.querySelector('input[name=tier]:checked');
-  var data={name:name,email:email,website:f.elements['website'].value.trim(),stage:st?st.value:'',tier:tr?tr.value:'',needs:needs,message:f.elements['message'].value.trim(),company:f.elements['company'].value};
+  var data={name:name,email:email,org:org,website:site,stage:st?st.value:'',tier:tr?tr.value:'',needs:needs,message:f.elements['message'].value.trim(),company:f.elements['company'].value};
   fetch('/api/contact',{method:'POST',headers:{'Content-Type':'application/json','Accept':'application/json'},body:JSON.stringify(data)})
     .then(function(r){return r.json().catch(function(){return {ok:r.ok}})})
     .then(function(d){if(d&&d.ok){document.body.classList.add('sent');f.scrollIntoView({behavior:'smooth',block:'center'})}else{throw new Error(d&&d.error||'x')}})
