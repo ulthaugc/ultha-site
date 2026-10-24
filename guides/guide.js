@@ -27,3 +27,9 @@
 var map={};links.forEach(function(a){map[a.getAttribute('href').slice(1)]=a});
 var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){links.forEach(function(l){l.classList.remove('on')});var a=map[e.target.id];if(a)a.classList.add('on')}})},{rootMargin:'0px 0px -70% 0px'});
 Object.keys(map).forEach(function(id){var h=document.getElementById(id);if(h)io.observe(h)})})();
+// show digits in the body font wherever the headline serif is used (its numerals are old-style)
+(function(){
+  var w=document.createTreeWalker(document.body,NodeFilter.SHOW_TEXT,null),n,todo=[];
+  while((n=w.nextNode())){ if(/\d/.test(n.nodeValue)&&n.parentNode&&!n.parentNode.closest('script,style,svg,.nf')&&/Young Serif/i.test(getComputedStyle(n.parentNode).fontFamily)) todo.push(n); }
+  todo.forEach(function(t){var f=document.createDocumentFragment();t.nodeValue.split(/(\d[\d.,%$→:]*)/).forEach(function(p,i){if(!p)return;if(i%2){var s=document.createElement('span');s.className='nf';s.textContent=p;f.appendChild(s)}else f.appendChild(document.createTextNode(p))});t.parentNode.replaceChild(f,t)});
+})();

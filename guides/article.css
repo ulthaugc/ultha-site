@@ -43,3 +43,16 @@ p{font-size:16.5px}
 .toc2{padding:12px 14px}.toc2 li{font-size:14px;margin-bottom:2px}
 .tldr ul{font-size:15px!important;line-height:1.5}.tldr li{margin-bottom:6px}
 }
+/* calmer question cards: two tones only */
+.q{background:#fff!important;border:1px solid #D5DFF8!important}
+.cell.bad{background:#fff!important;border:1px solid #E4E9F2}
+.bad .lab{color:#7A859C!important}
+.bad .gets{color:#7A859C!important}
+.cell.good{background:#F3F6FE!important;border:1px solid #D5DFF8}
+.good .lab{color:#1F4FD8!important}
+.answer{background:#fff!important;border:1px solid #E4E9F2;border-left:3px solid #1F4FD8!important;font-family:Figtree,system-ui,sans-serif!important;font-size:16.5px!important;font-weight:500;line-height:1.55!important;font-style:italic}
+.answer .ex{font-style:normal;background:#F3F6FE!important;border-color:#D5DFF8!important;color:#1F4FD8}
+.copy{background:#fff!important;border:1px solid #D5DFF8!important;color:#1F4FD8!important}
+.copy:hover{background:#1F4FD8!important;color:#fff!important}
+/* modern numbers inside headline-font text */
+.nf{font-family:Figtree,system-ui,sans-serif;font-weight:700;letter-spacing:-.01em}
