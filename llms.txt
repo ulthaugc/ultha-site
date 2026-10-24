@@ -10,6 +10,7 @@ About: Former product manager and co-founder of a marketing agency that worked w
 - [memoryBlue: $800K in pipeline from a steady review habit](https://ultha.co/case-studies/memoryblue-always-on-reviews): Milestone-based review asks, always-on campaigns, 8 quarters as a G2 Leader.
 
 ## Guides
+- [How to ask customers for reviews (without it being awkward)](https://ultha.co/guides/how-to-ask-customers-for-reviews): When to ask, who should send it, and 3 copy-paste review request emails for B2B customers.
 - [Stop asking customers "How do you like our product?"](https://ultha.co/guides/stop-asking-how-do-you-like-our-product): 5 interview questions that get customers to tell real, specific stories instead of polite praise.
 - [Your best sales pitch is buried in a Zoom recording](https://ultha.co/guides/your-best-sales-pitch-is-buried-in-a-zoom-recording): How to turn one 15-minute customer call into a 60-second video, short social clips, a written customer story and a sales one-pager, with customer approval.
 
