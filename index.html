@@ -1129,6 +1129,16 @@ footer nav a[href]{background:none!important;color:#E4E9EF!important;padding:0!i
 .rv-me2{position:absolute;left:0;bottom:-50px;width:120px!important;height:auto!important;border-radius:0!important;box-shadow:none!important;object-fit:contain!important;filter:drop-shadow(0 12px 18px rgba(31,79,216,.25))}
 @media (max-width:760px){.rv-sig{padding-left:110px}.rv-me2{width:96px!important;bottom:-22px}}
 </style>
+<style>/* feedback fixes: hero links + audience line, proof notes */
+.hn-links{display:inline-flex;flex-wrap:wrap;gap:6px 10px;align-items:center;justify-content:center;font-size:15.5px}
+.hn-links a{text-underline-offset:5px}
+.hn-links>span{color:#99A5C3}
+.hn-for{margin:-6px auto 0;max-width:34em;font-size:15px;line-height:1.5;color:#424A5E}
+.rv-head h2{margin-bottom:0!important}.rv-note{margin:8px 0 0;font-size:14px;color:#586A7C}
+.po-note{margin:4px 0 0;font-size:13.5px;color:#586A7C}
+.po-head{align-items:flex-end!important;gap:16px}
+@media (max-width:760px){.hn-links{font-size:14px}.hn-for{font-size:13.5px;margin-top:-2px}.po-head{flex-direction:column;align-items:flex-start!important}}
+</style>
 </head>
 <body>
 <div style="font-family: 'Figtree', system-ui, sans-serif; color: #14213D; background: #F9F9FA; font-size: 17px; line-height: 1.6">
@@ -1149,9 +1159,10 @@ footer nav a[href]{background:none!important;color:#E4E9EF!important;padding:0!i
 <h1 class="fade herohl" style="--d: 0.15s"><span class="l1">Your customers love your product.</span> <span class="l2">Your prospects have <span class="noidea">no idea.</span></span></h1>
 <p class="fade hn-sub" style="--d: 0.3s; margin: -6px 0 0; font-family: 'Young Serif', serif; font-size: clamp(20px, 1.8vw, 26px)">Let’s change that.</p>
 <div class="fade" style="--d: 0.45s; display: flex; flex-wrap: wrap; justify-content: center; gap: 12px 22px; align-items: center; margin-top: 6px">
-<a href="/contact" class="tipbtn btn3d">Ask me a question →</a>
-<a href="/starter-kit" class="hn-link" style="text-underline-offset: 5px; display: inline-flex; align-items: center; gap: 8px">or get the playbook I use, free</a>
+<a href="/contact" class="tipbtn btn3d">Get your 30-day proof plan →</a>
+<span class="hn-links"><a href="/contact" class="hn-link">or ask me a question</a><span aria-hidden="true">·</span><a href="/starter-kit" class="hn-link">get the free playbook</a></span>
 </div>
+<p class="fade hn-for" style="--d: 0.55s">For growing software teams with customers who love them, no marketer yet, and buyers who research before they ever talk to sales.</p>
 </div>
 <svg class="herosvg" viewBox="140 240 1000 360" preserveAspectRatio="xMidYMax slice" style="position:relative;z-index:0;display:block;width:100%;height:clamp(280px,32vw,460px);margin-top:clamp(-40px,-2vw,-10px)" aria-hidden="true">
 <defs>
@@ -1217,7 +1228,7 @@ footer nav a[href]{background:none!important;color:#E4E9EF!important;padding:0!i
 </div>
 </div>
 <div class="ag-proof reveal">
-<div class="ag-nums"><div><b>40+</b><span>clients consulted</span></div><div><b>7</b><span>countries</span></div><div><b>25+</b><span>major feature launches</span></div><div><b class="ag-stars">★★★★★</b><span>client reviews</span></div></div>
+<div class="ag-nums"><div><b>10</b><span>years in product and marketing</span></div><div><b>40+</b><span>brands worked with</span></div><div><b>7</b><span>countries</span></div><div><b>25+</b><span>major feature launches</span></div></div>
 </div>
 <p class="ag-foot reveal">A viral post lasts a week. <b>A customer story lasts years.</b></p>
 </div>
@@ -1226,7 +1237,7 @@ footer nav a[href]{background:none!important;color:#E4E9EF!important;padding:0!i
 <section id="clients" class="rv">
 <div class="rv-in">
 <div class="rv-head reveal">
-<div><span class="cp-k">What clients say</span><h2>I practice what I preach. <span>Here’s my customer proof.</span></h2></div>
+<div><span class="cp-k">What clients say</span><h2>I practice what I preach. <span>Here’s my customer proof.</span></h2><p class="rv-note">From clients I’ve worked with on product, marketing and systems projects.</p></div>
 <div class="rv-arrows"><button class="rv-arrow" data-d="-1" aria-label="Previous reviews">←</button><button class="rv-arrow" data-d="1" aria-label="Next reviews">→</button></div>
 </div>
 <div class="rv-track" tabindex="0" aria-label="Client reviews"><figure class="rv-card"><div class="rv-stars" aria-label="5 stars">★★★★★</div><blockquote>“I’ve hired close to 100 people over the years, and I am not easily impressed. Ultha always delivered impressive results, high-quality work, and frankly was one of the best I’ve ever had the pleasure of working with.”</blockquote><figcaption><span class="rv-av">JP</span><span><b>Jayson Peppar</b>Bizbox Digital</span></figcaption></figure><figure class="rv-card"><div class="rv-stars" aria-label="5 stars">★★★★★</div><blockquote>“Personable, intelligent, patient and knowledgeable. She expertly helped us set up our system, which our entire company is now running on. We are currently in the process of creating a new position for her.”</blockquote><figcaption><span class="rv-av">AS</span><span><b>Alessandra Sagredo</b>Exhale Marketing</span></figcaption></figure><figure class="rv-card"><div class="rv-stars" aria-label="5 stars">★★★★★</div><blockquote>“Ultha helped our organisation adopt a new system across all aspects of our business, from lead generation to sales and operations. In the last phase of the project, she trained our internal staff and shared her extensive knowledge with our team.”</blockquote><figcaption><span class="rv-av">WV</span><span><b>Wout Van Damme</b>Adsparc</span></figcaption></figure><figure class="rv-card"><div class="rv-stars" aria-label="5 stars">★★★★★</div><blockquote>“She did what she said she was going to do, explained things thoroughly and helped us strategize how to use our tools well.”</blockquote><figcaption><span class="rv-av">QZ</span><span><b>Quinn Z.</b>Conversion Crimes</span></figcaption></figure><figure class="rv-card"><div class="rv-stars" aria-label="5 stars">★★★★★</div><blockquote>“She knew the platform from the inside out, helped us populate it and guided us through the whole process. Prompt, friendly and overall super to work with. Highly recommended!”</blockquote><figcaption><span class="rv-av">NS</span><span><b>Natalia S.</b>Client on Upwork</span></figcaption></figure><figure class="rv-card"><div class="rv-stars" aria-label="5 stars">★★★★★</div><blockquote>“Excellent. She is a Jedi. Hire her first. Simple.”</blockquote><figcaption><span class="rv-av">RN</span><span><b>Robert Neumann</b>CoreShop Solutions</span></figcaption></figure></div>
@@ -1243,7 +1254,7 @@ function restart(){clearInterval(timer);if(!reduce)timer=setInterval(function(){
 t.addEventListener('mouseenter',function(){clearInterval(timer)});t.addEventListener('mouseleave',restart);t.addEventListener('touchstart',function(){clearInterval(timer)},{passive:true});restart()})();</script>
 </section>
 <section id="proof-out" class="po"><div class="po-in reveal">
-<div class="po-head"><span class="st-ck">It’s working for others too</span><a class="po-all" href="/guides#case-studies">All case studies →</a></div>
+<div class="po-head"><div><span class="st-ck">Proof works. Here’s the data.</span><p class="po-note">Public results from other companies, not my client work. Every number links to its source.</p></div><a class="po-all" href="/guides#case-studies">All case studies →</a></div>
 <div class="po-grid">
 <a class="po-card" href="/case-studies/salesloft-reviews-pipeline"><b>$1.82M</b><span>in pipeline from customer reviews</span><em>Salesloft · case study →</em></a>
 <a class="po-card" href="/case-studies/memoryblue-always-on-reviews"><b>$800K</b><span>in pipeline in one month from a steady review habit</span><em>memoryBlue · case study →</em></a>
@@ -1265,7 +1276,7 @@ t.addEventListener('mouseenter',function(){clearInterval(timer)});t.addEventList
 <span style="font-size: 13px; letter-spacing: 0.14em; text-transform: uppercase; color: #424A5E">FAQ</span>
 <h2 style="margin: 0; font-family: 'Young Serif', serif; font-weight: 400; font-size: clamp(30px, 3.6vw, 44px)">Questions founders ask me</h2>
 </div>
-<div class="fq-grid"><aside class="fq-me reveal"><img src="img/ask-me.jpg" alt="Ultha holding a microphone"><div><b>Still wondering?</b><span>Ask me directly. I usually reply within 2–3 business days.</span><a href="/contact">Ask me a question →</a></div></aside>
+<div class="fq-grid"><aside class="fq-me reveal"><img src="img/ask-me.jpg" alt="Ultha holding a microphone"><div><b>Still wondering?</b><span>Ask me directly. I reply within 1 business day.</span><a href="/contact">Ask me a question →</a></div></aside>
 <div class="reveal faq">
 <details open=""><summary>Can’t I just use AI for this?</summary><p>AI can write copy. It can’t call your customers. LLMs trust what real customers say on sites you don’t own: reviews, videos, communities. That part needs a human.</p></details>
 <details><summary>Do my customers have to be on camera?</summary><p>No. Every interview becomes written reviews and stories first. Video is only for customers who want it.</p></details>
