@@ -64,9 +64,7 @@ Everything from `site-v3-wip` was merged to main and deployed:
   It's linked last in each page's <head>; tools/build_cases.py includes it too.
 
 ## Still open
-1. Ultha: in Vercel → ultha-site → Settings → Environment Variables add GMAIL_USER=ultha@ultha.co and
-   GMAIL_APP_PASSWORD=<Google app password> (myaccount.google.com/apppasswords, needs 2-Step Verification), redeploy,
-   then send a test from ultha.co/contact. Until then leads only land in Vercel logs.
+1. DONE (Oct 23, 2026): contact form email verified. GMAIL_USER + GMAIL_APP_PASSWORD set in Vercel (Settings → Environments → Production); test lead arrived at ultha@ultha.co.
 3. Swap in the real video for the "Watch me explain it" pill when recorded.
 
 ## Pricing (live at /pricing)
