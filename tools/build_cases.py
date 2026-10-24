@@ -10,8 +10,8 @@ def page(slug, title, meta, dek, kicker, read, hero, body, faq, sources, nxt):
     ld = {"@context": "https://schema.org", "@graph": [
         {"@type": "Article", "headline": html.unescape(title), "description": meta, "datePublished": "2026-10-23", "dateModified": "2026-10-23",
          "image": "https://ultha.co/og.jpg", "mainEntityOfPage": url,
-         "author": {"@type": "Person", "name": "Ultha Niraula", "url": "https://ultha.co/about"},
-         "publisher": {"@type": "Person", "name": "Ultha Niraula", "url": "https://ultha.co"}},
+         "author": {"@type": "Person", "name": "Ultha Moktan", "url": "https://ultha.co/about"},
+         "publisher": {"@type": "Person", "name": "Ultha Moktan", "url": "https://ultha.co"}},
         {"@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": q, "acceptedAnswer": {"@type": "Answer", "text": a}} for q, a in faq]}]}
     faq_html = ''.join(f'<details><summary>{q}</summary><p>{a}</p></details>' for q, a in faq)
     src_html = ''.join(f'<li><a href="{u}">{t}</a>{d}</li>' for t, u, d in sources)
@@ -57,7 +57,7 @@ def page(slug, title, meta, dek, kicker, read, hero, body, faq, sources, nxt):
 <a class="kicker" href="/guides#case-studies">Case study · {kicker}</a>
 <h1>{title}</h1>
 <p class="dek">{dek}</p>
-<div class="byline"><img src="/img/face.jpg" alt="Ultha Niraula"><span><b>Ultha Niraula</b> · Oct 2026 · {read} min read</span></div>
+<div class="byline"><img src="/img/face.jpg" alt="Ultha Moktan"><span><b>Ultha Moktan</b> · Oct 2026 · {read} min read</span></div>
 </div>
 
 <div class="hero" aria-hidden="true">{hero}</div>
@@ -84,8 +84,8 @@ def page(slug, title, meta, dek, kicker, read, hero, body, faq, sources, nxt):
 </section>
 
 <div class="author">
-<img src="/img/face.jpg" alt="Ultha Niraula">
-<p><b>Written by Ultha Niraula</b><br>Former product manager and co-founder of a marketing agency that worked with 40+ brands, before going solo. I help startups turn what their customers already say into proof buyers and AI search trust.</p>
+<img src="/img/face.jpg" alt="Ultha Moktan">
+<p><b>Written by Ultha Moktan</b><br>Former product manager and co-founder of a marketing agency that worked with 40+ brands, before going solo. I help startups turn what their customers already say into proof buyers and AI search trust.</p>
 </div>
 
 <div class="sources"><b>Sources</b>
