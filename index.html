@@ -1145,6 +1145,21 @@ footer nav a[href]{background:none!important;color:#E4E9EF!important;padding:0!i
 .ag-headl,.ag-body{animation:none!important;transform:none!important}
 .ag-pop{transform:none!important;transition:none!important}
 </style>
+<style>/* FAQ in two columns, ask-me strip below */
+.fq{max-width:1120px!important}
+.fq-cols{display:grid;grid-template-columns:1fr 1fr;gap:12px 18px;align-items:start}
+.fq-col{display:flex;flex-direction:column;gap:12px}
+.fq .fq-me{position:static!important;display:flex!important;align-items:center;gap:18px;max-width:760px;width:100%;margin:6px auto 0;border-radius:20px;padding:12px 14px}
+.fq .fq-me img{width:64px!important;height:64px!important;aspect-ratio:auto!important;border-radius:50%;flex:none;object-position:50% 30%}
+.fq .fq-me div{padding:0!important;flex-direction:row!important;flex-wrap:wrap;align-items:center;gap:4px 14px;flex:1}
+.fq .fq-me b{font-size:18px}
+.fq .fq-me span{flex:1;min-width:220px}
+.fq .fq-me a{margin:0!important;white-space:nowrap}
+#faq{padding-left:max(24px,calc(50% - 540px))!important;padding-right:max(24px,calc(50% - 540px))!important}
+.fq-cols{width:100%;box-sizing:border-box}
+.fq .fq-me{box-sizing:border-box;max-width:none!important}
+@media (max-width:760px){.fq-cols{grid-template-columns:1fr}.fq-col,.fq-cols{gap:8px!important}.fq details{padding:11px 16px!important;border-radius:12px!important}.fq summary{font-size:15.5px!important;line-height:1.35}.fq .fq-me{align-items:flex-start}.fq .fq-me div{flex-direction:column!important;align-items:flex-start}}
+</style>
 </head>
 <body>
 <div style="font-family: 'Figtree', system-ui, sans-serif; color: #14213D; background: #F9F9FA; font-size: 17px; line-height: 1.6">
@@ -1281,15 +1296,8 @@ t.addEventListener('mouseenter',function(){clearInterval(timer)});t.addEventList
 <span style="font-size: 13px; letter-spacing: 0.14em; text-transform: uppercase; color: #424A5E">FAQ</span>
 <h2 style="margin: 0; font-family: 'Young Serif', serif; font-weight: 400; font-size: clamp(30px, 3.6vw, 44px)">Questions founders ask me</h2>
 </div>
-<div class="fq-grid"><aside class="fq-me reveal"><img src="img/ask-me.jpg" alt="Ultha holding a microphone"><div><b>Still wondering?</b><span>Ask me directly. I reply within 1 business day.</span><a href="/contact">Ask me a question →</a></div></aside>
-<div class="reveal faq">
-<details open=""><summary>Can’t I just use AI for this?</summary><p>AI can write copy. It can’t call your customers. LLMs trust what real customers say on sites you don’t own: reviews, videos, communities. That part needs a human.</p></details>
-<details><summary>Do my customers have to be on camera?</summary><p>No. Every interview becomes written reviews and stories first. Video is only for customers who want it.</p></details>
-<details><summary>What do you need from me?</summary><p>A 30-min kickoff and intros to 5 to 10 customers who already love you. I handle the rest, and you approve everything before it goes live.</p></details>
-<details><summary>When will I see something?</summary><p>First reviews and videos go live in the first month. Search and LLM visibility builds over the months after.</p></details>
-<details><summary>Who is this for?</summary><p>Growing software teams with customers who love them, no marketer yet, and buyers who research before they ever talk to sales.</p></details><details><summary>How is this different from hiring an agency?</summary><p>You work with me directly, start to finish. No account managers, no hand-offs, no retainer with no end date. Every plan has a clear scope and timeline.</p></details><details><summary>What if my customers say no?</summary><p>Most say yes when it's a short, friendly chat about their work, not a testimonial request. If someone isn't comfortable, nothing is published. We only use what they're happy with.</p></details><details><summary>Do you only do testimonial videos?</summary><p>No. Every customer call becomes written testimonials, case studies, reviews and short-form content. Video is one format, not the whole thing.</p></details><details><summary>Can you make UGC-style videos for ads too?</summary><p>Yes. I make creator-style short videos for ads and social as well, alongside the real customer stories.</p></details><details><summary>Will this help us show up in AI search?</summary><p>That's a big part of it. AI tools lean on reviews, case studies and content on sites you don't own. I build that proof and optimize your pages so AI has real things to cite.</p></details><details><summary>Can I book just one thing, like a case study?</summary><p>Yes. Case studies, short-form videos, customer interviews and AI search optimization can all be booked on their own. See the add-ons on the pricing page.</p></details><details><summary>How soon can we start?</summary><p>Usually within a week. We do a 30-minute kickoff, you send a few customer intros, and the first interviews happen right after.</p></details>
-</div>
-</div>
+<div class="fq-cols reveal faq"><div class="fq-col"><details open=""><summary>Can’t I just use AI for this?</summary><p>AI can write copy. It can’t call your customers. LLMs trust what real customers say on sites you don’t own: reviews, videos, communities. That part needs a human.</p></details><details><summary>Do my customers have to be on camera?</summary><p>No. Every interview becomes written reviews and stories first. Video is only for customers who want it.</p></details><details><summary>What do you need from me?</summary><p>A 30-min kickoff and intros to 5 to 10 customers who already love you. I handle the rest, and you approve everything before it goes live.</p></details><details><summary>When will I see something?</summary><p>First reviews and videos go live in the first month. Search and LLM visibility builds over the months after.</p></details><details><summary>Who is this for?</summary><p>Growing software teams with customers who love them, no marketer yet, and buyers who research before they ever talk to sales.</p></details><details><summary>How is this different from hiring an agency?</summary><p>You work with me directly, start to finish. No account managers, no hand-offs, no retainer with no end date. Every plan has a clear scope and timeline.</p></details></div><div class="fq-col"><details><summary>What if my customers say no?</summary><p>Most say yes when it's a short, friendly chat about their work, not a testimonial request. If someone isn't comfortable, nothing is published. We only use what they're happy with.</p></details><details><summary>Do you only do testimonial videos?</summary><p>No. Every customer call becomes written testimonials, case studies, reviews and short-form content. Video is one format, not the whole thing.</p></details><details><summary>Can you make UGC-style videos for ads too?</summary><p>Yes. I make creator-style short videos for ads and social as well, alongside the real customer stories.</p></details><details><summary>Will this help us show up in AI search?</summary><p>That's a big part of it. AI tools lean on reviews, case studies and content on sites you don't own. I build that proof and optimize your pages so AI has real things to cite.</p></details><details><summary>Can I book just one thing, like a case study?</summary><p>Yes. Case studies, short-form videos, customer interviews and AI search optimization can all be booked on their own. See the add-ons on the pricing page.</p></details><details><summary>How soon can we start?</summary><p>Usually within a week. We do a 30-minute kickoff, you send a few customer intros, and the first interviews happen right after.</p></details></div></div>
+<aside class="fq-me reveal"><img src="img/ask-me.jpg" alt="Ultha holding a microphone"><div><b>Still wondering?</b><span>Ask me directly. I reply within 1 business day.</span><a href="/contact">Ask me a question →</a></div></aside>
 </section>
 
 
