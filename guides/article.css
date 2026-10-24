@@ -50,7 +50,7 @@ p{font-size:16.5px}
 .bad .gets{color:#7A859C!important}
 .cell.good{background:#F3F6FE!important;border:1px solid #D5DFF8}
 .good .lab{color:#1F4FD8!important}
-.answer{background:#fff!important;border:1px solid #E4E9F2;border-left:3px solid #1F4FD8!important;font-family:Figtree,system-ui,sans-serif!important;font-size:16.5px!important;font-weight:500;line-height:1.55!important;font-style:italic}
+.answer{background:#fff!important;border:1px solid #E4E9F2;border-left:4px solid #FFC94D!important;font-family:Figtree,system-ui,sans-serif!important;font-size:16.5px!important;font-weight:500;line-height:1.55!important;font-style:italic}
 .answer .ex{font-style:normal;background:#F3F6FE!important;border-color:#D5DFF8!important;color:#1F4FD8}
 .copy{background:#fff!important;border:1px solid #D5DFF8!important;color:#1F4FD8!important}
 .copy:hover{background:#1F4FD8!important;color:#fff!important}
