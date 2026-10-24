@@ -1,0 +1,49 @@
+/* Shared theme (matches the homepage): soft blue washes, white cards with blue-tinted edges, cobalt accents.
+   Loaded last on inner pages so it wins over each page's older inline styles. */
+:root{--th-wash:radial-gradient(ellipse 60% 50% at 12% 0%,rgba(124,156,240,.16),rgba(124,156,240,0) 70%),radial-gradient(ellipse 55% 45% at 90% 20%,rgba(201,215,251,.55),rgba(201,215,251,0) 70%);--th-edge:#D5DFF8;--th-shadow:0 22px 44px -26px rgba(31,79,216,.38);--th-card:linear-gradient(180deg,#FFFFFF 0%,#F7F9FF 100%)}
+body{background:var(--th-wash),#F7F9FF!important;background-attachment:scroll}
+
+/* cards */
+.pr,.gk-grid li,.tg-card,.pr-team,.pr-extras,
+.card,.tldr,.stat,.q,.faq details,.author,.endcta,.nums div,.cmpw,.note,
+.inside li,.me,.sheet,.step,.tpl,.mini,.welcome,.toc a,
+form,.aboutcard{background:var(--th-card)!important;border-color:var(--th-edge)!important;box-shadow:var(--th-shadow)!important}
+.tldr{box-shadow:6px 6px 0 #1F4FD8,var(--th-shadow)!important}
+.cmp thead th{background:#EEF3FE!important}
+.cmp .hi{background:linear-gradient(90deg,#E8EFFD,#F4F7FE)!important}
+.card svg{background:linear-gradient(180deg,#F3F6FE,#E8EFFD)!important}
+
+/* pricing: featured card in cobalt, like the homepage pricing band */
+.pr.hot{background:linear-gradient(160deg,#1F4FD8 0%,#3D6BE6 60%,#5F86EC 100%)!important;color:#fff!important;border:0!important;box-shadow:0 0 0 6px rgba(31,79,216,.12),0 30px 60px -24px rgba(31,79,216,.55)!important}
+.pr.hot .pr-best,.pr.hot .pr-unit,.pr.hot li small{color:rgba(255,255,255,.82)!important}
+.pr.hot .pr-len{background:rgba(255,255,255,.18)!important;color:#fff!important}
+.pr.hot .pr-prob,.pr.hot .pr-k,.pr.hot li b{color:#FFE29A!important}
+.pr.hot ul{border-top-color:rgba(255,255,255,.25)!important}
+.pr.hot .pr-btn{background:#fff!important;color:#1F4FD8!important;border-color:#fff!important}
+.pr.hot .pr-btn:hover{background:#FFC94D!important;color:#14213D!important;border-color:#FFC94D!important}
+.pr-badge{background:#FFC94D!important;color:#14213D!important}
+
+/* section bands that were flat grey */
+.gk,.tg,.band,#path{background-color:transparent!important}
+.gk,.tg{background-image:var(--th-wash)!important}
+.band{background:linear-gradient(180deg,#EEF3FE,#F8FAFF)!important;border-color:var(--th-edge)!important}
+
+/* small accents */
+.steps .n,.num{background:#1F4FD8!important;color:#fff!important;border-color:#1F4FD8!important}
+input,textarea{border-color:var(--th-edge)!important;background:#fff!important}
+input:focus,textarea:focus{border-color:#1F4FD8!important;box-shadow:0 0 0 3px rgba(31,79,216,.15)!important}
+.chips label{background:#fff!important;border-color:var(--th-edge)!important}
+.chips input:checked+label{background:#1F4FD8!important;color:#fff!important;border-color:#1F4FD8!important}
+
+/* playbook + contact pages: no grey hill strip, calm panel shadow */
+.fogsvg path[fill]{fill:transparent!important}
+.fogsvg g{display:none!important}
+.band{background:var(--th-wash),linear-gradient(180deg,#FFFFFF,#F3F6FE)!important;border:1px solid var(--th-edge)!important;box-shadow:var(--th-shadow)!important}
+.grp{background:#F3F6FE!important;border-color:var(--th-edge)!important}
+.tpl,.mini{box-shadow:none!important}
+/* case study "why now" box uses the homepage cobalt band */
+.now{background:linear-gradient(120deg,#1F4FD8 0%,#3D6BE6 60%,#5F86EC 100%)!important;box-shadow:var(--th-shadow)}
+.now small{color:rgba(255,255,255,.75)!important}
+/* About: photo panel's empty side gets the soft wash */
+#why.about{background:var(--th-wash),linear-gradient(180deg,#EEF3FE,#F8FAFF)!important;border-color:var(--th-edge)!important}
+.hero svg{background:linear-gradient(180deg,#F3F6FE,#E8EFFD)!important}

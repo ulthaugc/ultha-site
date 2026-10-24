@@ -58,6 +58,11 @@ Everything from `site-v3-wip` was merged to main and deployed:
   Every number links to its source; pages say Ultha didn't work with these companies.
 - Homepage "Why now" has "See it play out" links to all three.
 
+## Shared theme (Oct 23, 2026)
+- /theme.css carries the homepage look to every inner page (about, pricing, contact, starter-kit, kit, guides, case studies):
+  blue washes, white cards with #D5DFF8 edges + blue shadow, cobalt featured pricing card, cobalt "why now" box.
+  It's linked last in each page's <head>; tools/build_cases.py includes it too.
+
 ## Still open
 1. Ultha: in Vercel → ultha-site → Settings → Environment Variables add GMAIL_USER=ultha@ultha.co and
    GMAIL_APP_PASSWORD=<Google app password> (myaccount.google.com/apppasswords, needs 2-Step Verification), redeploy,

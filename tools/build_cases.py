@@ -35,6 +35,7 @@ def page(slug, title, meta, dek, kicker, read, hero, body, faq, sources, nxt):
 <link rel="stylesheet" href="/case-studies/case.css">
 <script type="application/ld+json">{json.dumps(ld, ensure_ascii=False)}</script>
 <link rel="stylesheet" href="/scale.css">
+<link rel="stylesheet" href="/theme.css">
 </head>
 <body>
 <div class="progress" aria-hidden="true"></div>
