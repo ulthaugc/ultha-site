@@ -1,0 +1,22 @@
+/* Shared site header + footer for guide and case study pages (same as pricing/about). */
+.stickybar{position:sticky;top:0;z-index:50;background:rgba(249,249,250,.88);-webkit-backdrop-filter:blur(12px);backdrop-filter:blur(12px);transition:box-shadow .3s}
+.stickybar.scrolled{box-shadow:0 1px 0 rgba(20,33,61,.06),0 8px 24px rgba(20,33,61,.08)}
+.stickybar .topbar{padding-top:14px!important;padding-bottom:14px!important}
+.stickybar a{color:#14213D;font-family:Figtree,system-ui,sans-serif}
+.stickybar .topbar>a:first-child{font-family:'Young Serif',serif!important}
+.topbar nav a[aria-current]{color:#1F4FD8}
+.topbar nav a[href="/contact"]{color:#EEF2F6!important}
+footer{background:url("data:image/svg+xml,%3Csvg%20xmlns%3D%27http%3A//www.w3.org/2000/svg%27%20viewBox%3D%270%200%201440%2070%27%20preserveAspectRatio%3D%27none%27%3E%3Cpath%20d%3D%27M0%200H1440V30C1200%2070%20960%2010%20720%2034S240%2064%200%2026Z%27%20fill%3D%27%23EEF2F6%27/%3E%3C/svg%3E") top/100% 70px no-repeat,#586A7C!important;padding-top:40px}
+footer{background-color:#586A7C!important;color:#E4E9EF!important;text-align:left!important;padding-bottom:0!important;font-family:Figtree,system-ui,sans-serif;font-size:17px!important;line-height:1.6!important}
+footer *{font-size:inherit}
+footer nav,footer [style*="border-top"]{font-size:15px!important}
+footer h2{font-size:clamp(26px,3vw,36px)!important;font-family:'Young Serif',serif!important;font-weight:400;font-size:clamp(24px,2.3vw,32px)!important;line-height:1.2!important;margin:0!important;padding:0!important;border:0!important;color:#fff!important}
+footer h2,footer b,footer span{color:#FFFFFF!important}
+footer p{margin:0;font-size:17px!important;color:#E4E9EF!important}
+footer nav a,footer a:not([href="/contact"]){color:#E4E9EF!important}
+footer a[href="/contact"]{background:#FFFFFF!important;color:#14213D!important}
+footer [style*="border-top"]{border-top-color:rgba(255,255,255,.22)!important}
+footer nav a[href]{background:none!important;color:#E4E9EF!important;padding:0!important}
+.ft-sig{font-family:Caveat,cursive;font-size:24px!important;color:#FFFFFF!important;line-height:1}
+@media (max-width:760px){.topbar nav a:not(:last-child){display:none}}
+footer>div{box-sizing:content-box!important}

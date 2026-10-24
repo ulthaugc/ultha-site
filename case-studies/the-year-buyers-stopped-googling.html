@@ -20,13 +20,20 @@
 <link rel="stylesheet" href="/scale.css">
 <link rel="stylesheet" href="/theme.css">
 <link rel="stylesheet" href="/guides/article.css">
+<link rel="stylesheet" href="/site-chrome.css">
 </head>
 <body>
 <div class="progress" aria-hidden="true"></div>
-<header>
-<a class="logo" href="/"><img src="/ultha-mark.svg" alt="" width="34" height="18">ULTHA</a>
-<nav class="nav"><a href="/#how">How it works</a><a href="/about">About</a><a href="/pricing">Pricing</a><a href="/guides">Case studies &amp; guides</a><a class="cta" href="/contact">Let's talk</a></nav>
-</header>
+<div class="stickybar"><header class="topbar" style="position: relative; z-index: 2; max-width: 1180px; margin: 0 auto; box-sizing: border-box; padding: 22px 24px; display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 12px">
+<a href="/" style="text-decoration:none;color:inherit;font-family: 'Young Serif', serif; font-size: 22px; letter-spacing: 0.02em; display: inline-flex; align-items: center; gap: 10px"><img src="/ultha-mark.svg" alt="" width="34" height="18">ULTHA</a>
+<nav style="display: flex; flex-wrap: wrap; align-items: center; gap: 26px; font-size: 15px">
+<a href="/#how" style="text-decoration: none">How it works</a>
+<a href="/about" style="text-decoration: none">About</a>
+<a href="/pricing" style="text-decoration: none">Pricing</a>
+<a href="/guides" style="text-decoration: none">Case studies &amp; guides</a>
+<a href="/contact" style="text-decoration: none; background: #1F4FD8; color: #EEF2F6; border-radius: 999px; padding: 9px 18px">Let’s talk</a>
+</nav>
+</header></div>
 
 <main>
 <div class="wrap">
@@ -124,8 +131,24 @@
 <p style="margin-top:8px">I didn't work on the companies named here. Company results are as reported in the published case studies linked above.</p></div>
 </div>
 </main>
-<footer><a href="/guides">← All Case studies &amp; guides</a> · © 2026 Ultha · Santa Barbara, CA</footer>
+<footer style="background: #F9F9FA; color: #14213D">
+<div style="max-width: 1180px; margin: 0 auto; padding: 72px 24px 32px; display: flex; flex-direction: column; gap: 48px">
+<div style="display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; gap: 24px">
+<div class="ft-note"><div style="display: flex; flex-direction: column; gap: 8px; max-width: 520px">
+<h2 style="margin: 0; font-family: 'Young Serif', serif; font-weight: 400; font-size: clamp(26px, 3vw, 36px); color: #14213D">Curious where you stand?</h2>
+<p style="margin: 0">Share a bit about your startup. I’ll map out the proof you could have in 30 days.</p><span class="ft-sig">— Ultha</span>
+</div></div>
+<div style="display: flex; flex-direction: column; align-items: flex-start; gap: 10px"><a href="/contact" style="text-decoration: none; background: #1F4FD8; color: #EEF2F6; border-radius: 999px; padding: 14px 26px; font-weight: 500">Let’s talk</a><a href="/starter-kit" style="color: #14213D; font-size: 15px; text-underline-offset: 4px">or get the free playbook →</a></div>
+</div>
+<div style="display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; gap: 16px; border-top: 1px solid #99A5C3; padding-top: 24px; font-size: 15px">
+<span style="font-family: 'Young Serif', serif; font-size: 20px; color: #14213D; display: inline-flex; align-items: center; gap: 10px"><img src="/ultha-mark-white.svg" alt="" width="30" height="16">ULTHA</span>
+<nav style="display: flex; flex-wrap: wrap; gap: 22px"><a href="/#how" style="color: #14213D; text-decoration: none">How it works</a><a href="/about" style="color: #14213D; text-decoration: none">About</a><a href="/pricing" style="color: #14213D; text-decoration: none">Pricing</a><a href="/testimonial-videos" style="color: #14213D; text-decoration: none">Testimonial videos</a><a href="/#faq" style="color: #14213D; text-decoration: none">FAQ</a><a href="/starter-kit" style="color: #14213D; text-decoration: none">Free playbook</a><a href="/guides" style="color: #14213D; text-decoration: none">Case studies &amp; guides</a><a href="/contact" style="color: #14213D; text-decoration: none">Let’s talk</a></nav>
+<span>© 2026 Ultha · Santa Barbara, CA</span>
+</div>
+</div>
+</footer>
 <script src="/guides/guide.js"></script>
+<script>(function(){var b=document.querySelector(".stickybar");if(!b)return;var f=function(){b.classList.toggle("scrolled",scrollY>8)};addEventListener("scroll",f,{passive:true});f()})();</script>
 <script src="/menu.js" defer></script>
 </body>
 </html>
