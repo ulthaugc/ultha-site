@@ -56,3 +56,7 @@ p{font-size:16.5px}
 .copy:hover{background:#1F4FD8!important;color:#fff!important}
 /* modern numbers inside headline-font text */
 .nf{font-family:Figtree,system-ui,sans-serif;font-weight:700;letter-spacing:-.01em}
+/* category pill above the title: tighter pill, clear gap before the headline */
+main>.wrap:first-child .kicker{font-size:12px!important;letter-spacing:.1em!important;padding:4px 12px 4px 10px!important;gap:7px!important;margin:6px 0 18px!important;line-height:1.4}
+main>.wrap:first-child .kicker::before{width:5px;height:5px}
+main>.wrap:first-child h1{margin-top:0!important}
