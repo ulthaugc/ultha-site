@@ -1176,6 +1176,43 @@ footer nav a[href]{background:none!important;color:#E4E9EF!important;padding:0!i
 @keyframes scue{50%{transform:translateY(4px)}}
 @media (prefers-reduced-motion:reduce){.hn .heroband::after{animation:none}}
 </style>
+<style>/* case studies: tabs with their result + how I'd do it */
+.cx-in{max-width:1080px;margin:0 auto;padding:56px 24px 40px;text-align:left}
+.cx .wn-kick{display:inline-flex;align-items:center;gap:8px;border:1px solid #9DB4F5;color:#1F4FD8!important;border-radius:999px;padding:5px 14px 5px 12px;font-size:12.5px;letter-spacing:.14em;text-transform:uppercase;margin:0!important;align-self:flex-start!important}
+.cx .wn-kick::before{content:"";width:6px;height:6px;border-radius:50%;background:#1F4FD8}
+.cx h2{margin:12px 0 8px;font-family:'Young Serif',serif;font-weight:400;color:#14213D;line-height:1.2}.cx h2 span{color:#1F4FD8}
+.cx-sub{margin:0 0 22px;font-size:16px;color:#424A5E;max-width:40em}
+.cx-tabs{display:flex;gap:8px;flex-wrap:wrap;align-items:center;margin:0 0 14px}
+.cx-tab{font:600 14px Figtree,sans-serif;border:1px solid #D5DFF8;background:#fff;color:#424A5E;border-radius:999px;padding:9px 15px;cursor:pointer;transition:all .2s}
+.cx-tab:hover{border-color:#1F4FD8;color:#1F4FD8}
+.cx-tab.on{background:#1F4FD8;border-color:#1F4FD8;color:#fff}
+.cx-all{margin-left:auto;font-size:14.5px;font-weight:600;color:#1F4FD8!important;text-decoration:none}
+.cx-card{background:#fff;border:1px solid #D5DFF8;border-radius:22px;overflow:hidden;box-shadow:0 22px 44px -28px rgba(31,79,216,.4)}
+.cx-panel{display:none;grid-template-columns:270px 1fr 1fr}
+.cx-panel.on{display:grid}
+.cx-big{background:linear-gradient(160deg,#1F4FD8,#3D6BE6 60%,#7C9CF0);color:#fff;padding:28px;display:flex;flex-direction:column;justify-content:space-between;gap:16px}
+.cx-n{display:block;font-family:Figtree,sans-serif;font-weight:800;font-size:52px;line-height:1;letter-spacing:-.02em;white-space:nowrap}
+.cx-big p{margin:10px 0 0;font-size:15px;line-height:1.4;opacity:.95}
+.cx-big small{font-size:12.5px;opacity:.8}
+#cx-ai .cx-n{font-size:36px}
+.cx-col{padding:26px}
+.cx-col b{display:block;font-size:12px;letter-spacing:.12em;text-transform:uppercase;color:#1F4FD8;margin-bottom:10px}
+.cx-col ul{padding-left:18px;margin:0 0 14px}
+.cx-col li{font-size:15px;line-height:1.5;margin:0 0 8px;color:#14213D}
+.cx-col a{font-size:14.5px;font-weight:600;color:#1F4FD8!important;text-decoration:none}
+.cx-me{background:#F7F9FF;border-left:1px solid #E4EAF8}
+@media (max-width:760px){
+.cx-in{padding:44px 16px 28px}
+.cx-tabs{flex-wrap:nowrap;overflow-x:auto;scrollbar-width:none;margin:0 -16px 14px;padding:0 16px}
+.cx-tabs::-webkit-scrollbar{display:none}
+.cx-tab{flex:none;font-size:13.5px}
+.cx-all{flex:none;margin-left:6px;font-size:13.5px}
+.cx-panel.on{grid-template-columns:1fr}
+.cx-big{padding:22px}.cx-n{font-size:42px}
+.cx-col{padding:20px}
+.cx-me{border-left:0;border-top:1px solid #E4EAF8}
+}
+</style>
 </head>
 <body>
 <div style="font-family: 'Figtree', system-ui, sans-serif; color: #14213D; background: #F9F9FA; font-size: 17px; line-height: 1.6">
@@ -1289,13 +1326,27 @@ t.addEventListener('scroll',upd,{passive:true});addEventListener('resize',upd);u
 function restart(){clearInterval(timer);if(!reduce)timer=setInterval(function(){go(1)},6000)}
 t.addEventListener('mouseenter',function(){clearInterval(timer)});t.addEventListener('mouseleave',restart);t.addEventListener('touchstart',function(){clearInterval(timer)},{passive:true});restart()})();</script>
 </section>
-<section id="proof-out" class="po"><div class="po-in reveal">
-<div class="po-head"><div><span class="st-ck">Proof works. Here’s the data.</span></div><a class="po-all" href="/guides#case-studies">All case studies →</a></div>
-<div class="po-grid">
-<a class="po-card" href="/case-studies/salesloft-reviews-pipeline"><b>$1.82M</b><span>in pipeline from customer reviews</span><em>Salesloft · case study →</em></a>
-<a class="po-card" href="/case-studies/memoryblue-always-on-reviews"><b>$800K</b><span>in pipeline in one month from a steady review habit</span><em>memoryBlue · case study →</em></a>
-<a class="po-card" href="/case-studies/the-year-buyers-stopped-googling"><b>29% → 51%</b><span>of buyers now start their research in AI</span><em>The year buyers stopped Googling →</em></a>
-</div></div></section>
+<section id="proof-out" class="cx"><div class="cx-in reveal">
+<span class="wn-kick">Case studies</span>
+<h2>Real results. <span>And how I'd do it for you.</span></h2>
+<p class="cx-sub">Real customer stories drove real revenue. Here's what that looks like for your startup.</p>
+<div class="cx-tabs" role="tablist" aria-label="Case studies"><button class="cx-tab on" role="tab" aria-selected="true" aria-controls="cx-sl" id="cxt-sl">Salesloft · Reviews</button><button class="cx-tab" role="tab" aria-selected="false" aria-controls="cx-mb" id="cxt-mb">memoryBlue · Review habit</button><button class="cx-tab" role="tab" aria-selected="false" aria-controls="cx-ai" id="cxt-ai">AI search shift</button><a class="cx-all" href="/guides#case-studies">All case studies →</a></div>
+<div class="cx-card"><div class="cx-panel on" role="tabpanel" id="cx-sl" aria-labelledby="cxt-sl">
+<div class="cx-big"><div><span class="cx-n">$1.82M</span><p>in pipeline tied to customer reviews</p></div><small>Source: G2 case study, 2022</small></div>
+<div class="cx-col"><b>What they did</b><ul><li>Asked happy customers for reviews on a schedule</li><li>Thanked every reviewer, good or bad</li><li>Turned reviews into a sales "story flipbook"</li></ul><a href="/case-studies/salesloft-reviews-pipeline">Read the breakdown →</a></div>
+<div class="cx-col cx-me"><b>For your startup</b><ul><li>I interview 4 of your happiest customers</li><li>Their words become reviews, 2 case studies and short videos</li><li>Your sales team gets a proof bank to send</li></ul><a href="/pricing">See the plans →</a></div>
+</div><div class="cx-panel" role="tabpanel" id="cx-mb" aria-labelledby="cxt-mb" hidden>
+<div class="cx-big"><div><span class="cx-n">$800K</span><p>in influenced pipeline in one month</p></div><small>Source: G2 case study</small></div>
+<div class="cx-col"><b>What they did</b><ul><li>Asked for reviews at customer milestones</li><li>Paired asks with their quarterly survey</li><li>Kept one review campaign always running</li></ul><a href="/case-studies/memoryblue-always-on-reviews">Read the breakdown →</a></div>
+<div class="cx-col cx-me"><b>For your startup</b><ul><li>We set up a simple monthly review rhythm</li><li>Asks go out right after customer wins</li><li>Fresh reviews and stories keep coming, every month</li></ul><a href="/pricing">See the plans →</a></div>
+</div><div class="cx-panel" role="tabpanel" id="cx-ai" aria-labelledby="cxt-ai" hidden>
+<div class="cx-big"><div><span class="cx-n">29% → 51%</span><p>of software buyers now start research in an AI chatbot</p></div><small>Source: G2 buyer surveys, 2025 vs 2026</small></div>
+<div class="cx-col"><b>What happened</b><ul><li>69% picked a different vendor because of a chatbot answer</li><li>1 in 3 bought from a vendor they had never heard of</li><li>AI answers lean on reviews and real customer stories</li></ul><a href="/case-studies/the-year-buyers-stopped-googling">Read the breakdown →</a></div>
+<div class="cx-col cx-me"><b>For your startup</b><ul><li>Reviews on G2 and Capterra that AI tools read</li><li>Case studies AI can quote when buyers ask</li><li>Landing and comparison pages optimized for AI search</li></ul><a href="/pricing">See the plans →</a></div>
+</div></div>
+</div>
+<script>(function(){var r=document.getElementById('proof-out');if(!r)return;var tabs=r.querySelectorAll('.cx-tab');tabs.forEach(function(t){t.addEventListener('click',function(){tabs.forEach(function(x){x.classList.remove('on');x.setAttribute('aria-selected','false');var p=document.getElementById(x.getAttribute('aria-controls'));p.classList.remove('on');p.hidden=true});t.classList.add('on');t.setAttribute('aria-selected','true');var p=document.getElementById(t.getAttribute('aria-controls'));p.classList.add('on');p.hidden=false})})})();</script>
+</section>
 
 
 
