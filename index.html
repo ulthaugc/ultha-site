@@ -1164,6 +1164,18 @@ footer nav a[href]{background:none!important;color:#E4E9EF!important;padding:0!i
 .fq .fq-me{box-sizing:border-box;max-width:none!important}
 @media (max-width:760px){.fq-cols{grid-template-columns:1fr}.fq-col,.fq-cols{gap:8px!important}.fq details{padding:11px 16px!important;border-radius:12px!important}.fq summary{font-size:15.5px!important;line-height:1.35}.fq .fq-me{align-items:flex-start}.fq .fq-me div{flex-direction:column!important;align-items:flex-start}}
 </style>
+<style>/* phones: hero fills one screen, quiet header button */
+@media (max-width:760px){
+.hn{min-height:calc(100svh - 72px);display:flex;flex-direction:column}
+.hn #top{flex:1 0 auto;justify-content:center;padding-top:28px!important;padding-bottom:8px!important}
+.hn .herosvg,.hn .heroband{flex:none}
+.hn .heroband{padding-bottom:6px}
+.hn .heroband::after{content:"\2193";display:block;text-align:center;font-size:18px;color:#1F4FD8;opacity:.6;margin-top:2px;animation:scue 1.8s ease-in-out infinite}
+.stickybar .topbar nav a[href="/contact"]{background:transparent!important;color:#14213D!important;border:1px solid rgba(20,33,61,.25)!important;box-shadow:none!important}
+}
+@keyframes scue{50%{transform:translateY(4px)}}
+@media (prefers-reduced-motion:reduce){.hn .heroband::after{animation:none}}
+</style>
 </head>
 <body>
 <div style="font-family: 'Figtree', system-ui, sans-serif; color: #14213D; background: #F9F9FA; font-size: 17px; line-height: 1.6">
