@@ -1,21 +1,29 @@
 # Ultha (ultha.co)
 
-> Ultha Moktan helps early-stage tech startups turn what their customers already say into proof that buyers and AI search trust: customer interviews, reviews, testimonials, case studies, short videos, and placement on review sites and communities.
+> Ultha Moktan is a customer voice partner for SaaS startups. She runs 30-minute calls with a startup's customers as a neutral third party. What customers love becomes proof buyers and AI search trust: testimonials, case studies, customer story videos, UGC and tutorial videos. What customers would change becomes a one-page Insights brief the product and engineering team can act on. Fully remote, one person, start to finish.
 
-About: Former product manager and co-founder of a marketing agency that worked with 40+ brands, before going solo. M.S. in Technology Management from UCSB. Based in Santa Barbara, CA.
+About: Former product manager (25+ major launches) and marketer who co-founded a marketing agency that worked with 40+ brands. M.S. in Technology Management from UCSB. Based in Santa Barbara, CA.
+
+## Services
+- [Voice of customer insights](https://ultha.co/voice-of-customer): Customer calls, a one-page Insights brief for product and engineering, win-loss studies and churn interviews.
+- [Customer stories](https://ultha.co/customer-stories): Testimonials approved by customers, case studies, customer story videos recorded remotely, UGC and tutorial videos, posts and carousels.
+- [AI search optimization](https://ultha.co/ai-search): Customer proof set up on the startup's site so AI tools like ChatGPT and Google's AI answers can find and cite it. Also called generative engine optimization.
+
+## Pricing
+- [Pricing](https://ultha.co/pricing): Customer Voice Sprint ($5,000, 30 days), 90-Day Customer Voice Engine ($6,000/month), Keep it running retainer ($3,500/month). Every plan includes customer calls, an Insights brief, customer proof and content. Add-ons: customer calls with an insights brief, customer calls with testimonials, case studies and content, customer story videos, UGC and tutorial videos, win-loss studies, churn interviews.
 
 ## Case studies
 - [The year buyers stopped Googling software first](https://ultha.co/case-studies/the-year-buyers-stopped-googling): In one year, B2B software buyers who start research in an AI chatbot rose from 29% to 51% (G2); 69% switched vendors because of a chatbot answer.
 - [How Salesloft turned customer reviews into $1.8M in pipeline](https://ultha.co/case-studies/salesloft-reviews-pipeline): A scheduled review program and a sales "story flipbook"; $1.82M pipeline and $781K revenue reported by G2.
-- [memoryBlue: $800K in pipeline from a steady review habit](https://ultha.co/case-studies/memoryblue-always-on-reviews): Milestone-based review asks, always-on campaigns, 8 quarters as a G2 Leader.
+- [memoryBlue: $800K in pipeline from a steady review habit](https://ultha.co/case-studies/memoryblue-always-on-reviews): Milestone-based review asks and always-on campaigns.
 
 ## Guides
-- [How to ask customers for reviews (without it being awkward)](https://ultha.co/guides/how-to-ask-customers-for-reviews): When to ask, who should send it, and 3 copy-paste review request emails for B2B customers.
+- [How to ask customers for reviews (without it being awkward)](https://ultha.co/guides/how-to-ask-customers-for-reviews): When to ask, who should send it, and 3 copy-paste request emails for B2B customers.
 - [Stop asking customers "How do you like our product?"](https://ultha.co/guides/stop-asking-how-do-you-like-our-product): 5 interview questions that get customers to tell real, specific stories instead of polite praise.
-- [Your best sales pitch is buried in a Zoom recording](https://ultha.co/guides/your-best-sales-pitch-is-buried-in-a-zoom-recording): How to turn one 15-minute customer call into a 60-second video, short social clips, a written customer story and a sales one-pager, with customer approval.
+- [Your best sales pitch is buried in a Zoom recording](https://ultha.co/guides/your-best-sales-pitch-is-buried-in-a-zoom-recording): How to turn one 30-minute customer call into a short video, social clips, a written customer story and a sales one-pager, with customer approval.
 
 ## Pages
-- [Home](https://ultha.co/): Services and how it works.
-- [Pricing](https://ultha.co/pricing): Proof Sprint ($5,000, 30 days), 90-Day Proof Engine ($6,000/month), Keep it running ($3,500/month, after the Engine). Custom and one-off work available.
-- [About](https://ultha.co/about): Ultha's story and client testimonials.
-- [Free starter kit](https://ultha.co/starter-kit): The playbook I use with startups: who to ask, the email to send, 10 call questions and where to post the proof.
+- [Home](https://ultha.co/): How one customer call pays off twice: proof for buyers, feedback for the product.
+- [About](https://ultha.co/about): Ultha's story, from product manager and marketer to ultha.co, plus client testimonials.
+- [Free starter kit](https://ultha.co/starter-kit): The playbook used with startups: who to ask, the email to send, 10 call questions and where to post the proof.
+- [Contact](https://ultha.co/contact): Tell Ultha about your startup; reply within 1 business day.
