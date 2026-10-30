@@ -175,6 +175,14 @@ footer nav a[href]{background:none!important;color:#E4E9EF!important;padding:0!i
 .tv-ph img{width:100%;height:100%;object-fit:cover}
 .tv-ph span{position:absolute;left:8px;right:8px;bottom:10px;background:rgba(20,33,61,.78);color:#DCE4F5;font-size:11.5px;line-height:1.35;border-radius:10px;padding:8px 10px}.tv-ph span b{display:block;color:#fff;font-size:12.5px;margin-bottom:2px}.tv-ph em{position:absolute;top:10px;left:10px;font-style:normal;font:700 11px Figtree,sans-serif;color:#14213D;background:#FFC94D;border-radius:999px;padding:3px 8px}.tv-phnote{grid-column:2;text-align:center;font-size:13px;color:#586A7C;margin:6px 0 0}.tv-hero>div:last-child{display:flex;flex-direction:column;align-items:center}
 .tv-ph:nth-child(2){transform:translateY(-24px)}
+.tv-ph.tv-ph1{width:300px;border-radius:34px;border-width:6px;box-shadow:0 40px 80px -30px rgba(31,79,216,.55)}
+.tv-ph1 video{width:100%;height:100%;object-fit:cover;display:block;background:#14213D}
+.tv-play{position:absolute;left:50%;top:76%;width:76px;height:76px;margin:-38px 0 0 -38px;border:0;border-radius:50%;background:#1F4FD8;box-shadow:0 14px 34px rgba(31,79,216,.45),0 0 0 8px rgba(255,255,255,.55);display:grid;place-items:center;cursor:pointer;padding:0 0 0 4px;transition:transform .2s}
+.tv-play:hover{transform:scale(1.06)}
+.tv-ph1.playing .tv-play,.tv-ph1.playing em{display:none}
+.tv-phcap{font-family:'Young Serif',serif;font-size:19px;color:#14213D;margin:18px 0 0;text-align:center}
+.tv-phcap+.tv-phnote{margin-top:4px}
+@media (max-width:900px){.tv-ph.tv-ph1{width:240px;border-width:5px;border-radius:28px}.tv-phcap{font-size:17px}}
 .tv-k{display:inline-flex;align-items:center;gap:8px;border:1px solid #9DB4F5;color:#1F4FD8;border-radius:999px;padding:5px 14px 5px 12px;font-size:13px;letter-spacing:.14em;text-transform:uppercase}
 .tv-k::before{content:"";width:6px;height:6px;border-radius:50%;background:#1F4FD8}
 .tv-sec{max-width:1120px;margin:0 auto;padding:40px 24px}
@@ -202,10 +210,8 @@ footer nav a[href]{background:none!important;color:#E4E9EF!important;padding:0!i
 <p>Customer video testimonials your buyers actually watch. I interview your happiest customers, shoot and edit the videos myself, and cut them for your site, sales decks, LinkedIn and ads.</p>
 <div class="tv-btns"><a class="tv-b1" href="/contact">Get your 30-day plan →</a><a class="tv-b2" href="/pricing">See pricing</a></div></div>
 <div><div class="tv-phones">
-<div class="tv-ph"><img src="img/video-poster-me.jpg" alt="Ultha"><em>▶ 60s</em><span><b>What I ask your customers</b>The 5 questions that turn "it's great" into a real story.</span></div>
-<div class="tv-ph"><img src="img/ask-me.jpg" alt="Ultha holding a microphone"><em>▶ 45s</em><span><b>One call, five clips</b>How a 15-minute chat becomes a month of video.</span></div>
-<div class="tv-ph"><img src="img/me-smile.jpg" alt="Ultha smiling"><em>▶ 30s</em><span><b>Your customer's OK</b>How approval works before anything goes live.</span></div>
-</div><p class="tv-phnote">Short videos from me about how it works. Your customers star in theirs.</p></div></div></section>
+<div class="tv-ph tv-ph1"><video id="tvVid" src="video/5-questions.mp4" poster="video/5-questions-poster.jpg" playsinline preload="metadata"></video><button class="tv-play" type="button" aria-label="Play: the 5 questions I ask your customers"><svg viewBox="0 0 24 24" width="30" height="30" aria-hidden="true"><path d="M8 5.5v13l11-6.5z" fill="#fff"/></svg></button><em>▶ 1:24</em></div>
+</div><p class="tv-phcap">The 5 questions I ask your customers</p><p class="tv-phnote">A short video from me about how it works. Your customers star in theirs.</p></div></div></section>
 <section class="tv-sec"><span class="tv-k" style="display:table;margin:0 auto">What you get</span><h2>One customer call. A month of video.</h2><p class="tv-why" style="margin:6px auto 0;max-width:34em;text-align:center;color:#525B72">Every video starts with why they chose you, not just “it’s great.”</p>
 <div class="tv-grid">
 <div><i>🎙️</i><b>A 15-minute interview</b><p>Remote and easy. No studio, no script, no prep for your customer.</p></div>
@@ -234,6 +240,7 @@ footer nav a[href]{background:none!important;color:#E4E9EF!important;padding:0!i
 </footer>
 </div>
 <script>(function(){var b=document.querySelector(".stickybar");if(!b)return;var f=function(){b.classList.toggle("scrolled",scrollY>8)};addEventListener("scroll",f,{passive:true});f()})();</script>
+<script>(function(){var v=document.getElementById("tvVid");if(!v)return;var w=v.parentNode,b=w.querySelector(".tv-play");b.addEventListener("click",function(){v.controls=true;v.play();});v.addEventListener("play",function(){w.classList.add("playing");v.controls=true;});v.addEventListener("ended",function(){w.classList.remove("playing");v.controls=false;v.load();});})();</script>
 <script src="/menu.js" defer></script>
 </body>
 </html>
