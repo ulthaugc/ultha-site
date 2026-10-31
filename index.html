@@ -1813,6 +1813,11 @@
 
   .form-err { grid-column: 1 / -1; margin: 0; color: #B3261E; font-size: 0.9rem; }
   .form-err:empty { display: none; }
+  /* Phones: kicker stays narrower than the headline; no quote bubbles over the photo */
+  @media (max-width: 560px) {
+    .hero--cbelow .hero-for { font-size: 0.66rem; letter-spacing: 0.03em; }
+    .hero--cbelow .below-stage .chip { display: none !important; }
+  }
   /* Textures go last so the base background rules above don't reset them */
   body { background-image: var(--tex); background-size: var(--tex-size); }
 </style>
@@ -1856,7 +1861,7 @@
     <div class="wrap">
       <div class="hero-copy center strip-copy">
         
-        <span class="kicker hero-for">For founder-led B2B AI startups</span>
+        <span class="kicker hero-for">Customer interviews for B2B AI startups</span>
         <h1 id="heroH1">Stop <mark>guessing</mark> why customers buy, stall or leave.</h1>
         
         <p class="lead sub-v sub-a"><span class="sl">Polite with you. Honest with me.</span> <span class="sl">So you know who to target and what to say.</span></p>
@@ -1864,7 +1869,7 @@
         
         
         <div class="hero-ctas">
-          <a class="btn" href="#review">Free review</a>
+          <a class="btn" href="#review">Free homepage review</a>
           <a class="btn ghost not-min" href="#how">See how it works</a>
         </div>
         
@@ -2025,7 +2030,7 @@
           <span><em class="fl">You get a video</em><em class="fs">You get a video</em></span>
         </div>
         <a class="btn td-btn-new" href="#review">Free review</a>
-        <p class="td-share">Free reviews may be shared on my socials.</p>
+        <p class="td-share">Free reviews are shared on my socials.</p>
       </div>
       <div class="say-card" aria-label="Example of what a free review finds">
         <div class="say-row">
@@ -2209,9 +2214,9 @@
     <label>Work email<input name="email" type="email" autocomplete="email" required></label>
     <label>Your homepage<input name="site" type="text" inputmode="url" autocomplete="url" placeholder="yourstartup.com" required></label>
     <button class="btn" type="submit">Send it to Ultha</button>
-    <p class="form-foot">I reply within two working days. Free reviews may be shared on my socials.</p>
+    <p class="form-foot">Your review video arrives within a week. By sending this, you agree I can share the review on my socials.</p>
   </form>
-  <div class="thanks" id="tdThanks" hidden>Got it. I'll send your homepage review within two working days.</div>
+  <div class="thanks" id="tdThanks" hidden>Got it. I'll send your review video within a week.</div>
 </dialog>
 
 <footer>
