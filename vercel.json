@@ -1,3 +1,12 @@
 {
-  "cleanUrls": true
+  "cleanUrls": true,
+  "redirects": [
+    { "source": "/pricing", "destination": "/#prices", "permanent": false },
+    { "source": "/about", "destination": "/#about", "permanent": false },
+    { "source": "/contact", "destination": "/#start", "permanent": false },
+    { "source": "/starter-kit", "destination": "/", "permanent": false },
+    { "source": "/kit", "destination": "/", "permanent": false },
+    { "source": "/testimonial-videos", "destination": "/", "permanent": false },
+    { "source": "/guides", "destination": "/", "permanent": false }
+  ]
 }

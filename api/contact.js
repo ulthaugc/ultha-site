@@ -13,31 +13,28 @@ export default async function handler(req, res) {
   const b = typeof req.body === 'string' ? JSON.parse(req.body || '{}') : (req.body || {});
   if (b.company) return res.json({ ok: true }); // honeypot
 
+  const kind = b.form === 'review' ? 'review' : 'work';
   const name = String(b.name || '').trim().slice(0, 100);
   const email = String(b.email || '').trim().toLowerCase().slice(0, 200);
-  const org = String(b.org || '').trim().slice(0, 120);
-  const website = String(b.website || '').trim().slice(0, 200);
-  const stage = String(b.stage || '').slice(0, 40);
-  const tier = String(b.tier || '').slice(0, 60);
-  const needs = (Array.isArray(b.needs) ? b.needs : []).map((n) => String(n).slice(0, 60)).slice(0, 15);
-  const message = String(b.message || '').trim().slice(0, 4000);
+  const site = String(b.site || '').trim().slice(0, 200);
+  const OPTIONS = { starter: 'Starter check ($2,500)', founding: 'Why They Buy, founding ($5,000)', sprint: 'Why They Buy sprint ($9,500)', wll: 'Won, Lost, Left ($3,000/month)', unsure: 'Not sure yet' };
+  const option = kind === 'work' ? (OPTIONS[b.option] || OPTIONS.unsure) : '';
+  const note = String(b.note || '').trim().slice(0, 4000);
 
   if (!name) return res.status(400).json({ ok: false, error: 'Please add your name.' });
   if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) return res.status(400).json({ ok: false, error: 'Please enter a valid email.' });
-  if (!org) return res.status(400).json({ ok: false, error: 'Please add your company name.' });
-  if (!/^\S+\.\S{2,}$/.test(website.replace(/^https?:\/\//, ''))) return res.status(400).json({ ok: false, error: 'Please add your company website, like yourstartup.com.' });
-  if (!stage) return res.status(400).json({ ok: false, error: 'Please pick your stage.' });
-  if (!needs.length) return res.status(400).json({ ok: false, error: 'Please pick at least one thing you need help with.' });
+  if (!/^\S+\.\S{2,}$/.test(site.replace(/^https?:\/\//, ''))) return res.status(400).json({ ok: false, error: 'Please add your website, like yourstartup.com.' });
 
-  const lead = { name, email, org, website, stage, tier, needs, message, at: new Date().toISOString() };
+  const lead = { kind, name, email, site, option, note, at: new Date().toISOString() };
   console.log('contact lead', JSON.stringify(lead));
 
-  const rows = [['Name', name], ['Email', email], ['Company', org], ['Website', website], ['Stage', stage], ['Interested in', needs.join(', ')], ['Plan', tier]]
+  const rows = [['Name', name], ['Email', email], ['Website', site], ['Interested in', option]]
     .filter(([, v]) => v)
     .map(([k, v]) => `<tr><td style="padding:4px 12px 4px 0;color:#5A6B79">${k}</td><td style="padding:4px 0"><b>${esc(v)}</b></td></tr>`).join('');
-  const html = `<div style="font-family:Arial,sans-serif;color:#1B2A38"><h2 style="margin:0 0 12px">New lead from ultha.co 🏮</h2><table>${rows}</table>${message ? `<p style="margin-top:16px;padding:12px;background:#EEF1F2;border-radius:8px;white-space:pre-wrap">${esc(message)}</p>` : ''}<p style="color:#5A6B79;font-size:13px">Hit Reply to answer ${esc(name)} directly.</p></div>`;
+  const heading = kind === 'review' ? 'Free homepage review request' : 'New lead from ultha.co';
+  const html = `<div style="font-family:Arial,sans-serif;color:#1B2A38"><h2 style="margin:0 0 12px">${heading}</h2><table>${rows}</table>${note ? `<p style="margin-top:16px;padding:12px;background:#EEF1F2;border-radius:8px;white-space:pre-wrap">${esc(note)}</p>` : ''}<p style="color:#5A6B79;font-size:13px">Hit Reply to answer ${esc(name)} directly.</p></div>`;
   const to = process.env.CONTACT_TO || 'ultha@ultha.co';
-  const subject = `New lead: ${name} · ${org}`;
+  const subject = kind === 'review' ? `Homepage review: ${name} · ${site}` : `New lead: ${name} · ${site}`;
 
   const gUser = process.env.GMAIL_USER;
   const gPass = process.env.GMAIL_APP_PASSWORD;

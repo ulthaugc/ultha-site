@@ -1,4 +1,23 @@
-# Handoff: ultha.co site (updated Oct 25, 2026)
+# Handoff: ultha.co site (updated Oct 31, 2026)
+
+## Current state (Oct 31): new research-first homepage is live
+- index.html is built from the approved mockup (Claude artifact "ultha.co Background Options", https://claude.ai/artifact/PYDb3qTgTQPXcTU6BHF9h3) with
+  the hidden design variants, review marks, mockup ribbon and options panel removed. Offer: Why They Buy sprint ($9,500, $5,000 founding),
+  Starter check ($2,500), Won, Lost, Left ($3,000/month). Positioning, prices and wording: ~/Claude/ultha-strategy-brief.md (section 5).
+- The page is one self-contained HTML file (all CSS inline). Build script and parser live in the session scratchpad, not the repo, so edit
+  index.html directly from now on. Images used: img/me-sweater.png, img/ultha-photo.jpg (flipped by CSS), img/garden-me.jpg, img/form-me3.jpg.
+- Head has the chosen title/description, Open Graph tags, and JSON-LD (ProfessionalService with the 3 offers, Person, FAQPage built from the FAQ).
+- Both forms (Work with me, free homepage review pop-up at /#review) POST JSON to /api/contact. Every lead is logged in Vercel Logs; it is also
+  emailed only if GMAIL_USER + GMAIL_APP_PASSWORD or RESEND_API_KEY are set in Vercel. On failure the form asks people to email ultha@ultha.co.
+- Old-offer pages redirect (vercel.json, temporary): /pricing, /about, /contact, /starter-kit, /kit, /testimonial-videos, /guides → homepage.
+  Old guides and case studies still load at their URLs but are unlisted (removed from sitemap.xml and llms.txt); retire or rewrite them.
+- llms.txt and sitemap.xml rewritten for the new offer; og.jpg tagline updated.
+- Still open: real next sprint start date (removed from the price section until known), USPTO check for "Why They Buy", submit the sitemap in
+  Google Search Console and Bing Webmaster Tools, confirm the email env vars in Vercel.
+
+---
+
+## Previous state (Oct 25, 2026)
 
 **Start here tomorrow.** Repo: ulthaugc/ultha-site. Pushing `main` deploys ultha.co via Vercel.
 Local copy: ~/Claude/ultha-site. Commit as nibeshmoktan with the noreply email (personal project, never the Redwood account/email).
