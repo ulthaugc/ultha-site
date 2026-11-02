@@ -8,6 +8,7 @@
   me?" on the Work with me form (api/contact.js puts it in the lead email as "Heard about you via"). Sample page is in sitemap.xml and llms.txt.
 - NOT live yet (waiting on MailerLite): teardown signup page (preview: https://claude.ai/artifact/7M4uNPhTAmaeXiR9uNoinx, file teardowns.html
   in that preview) and its homepage button "Not ready yet? Get one teardown a week" + footer link "Weekly teardowns".
+- Prices (commit f3671a0): "Now booking January sprints · Founding spots close December 18"; founding = 5 spots (was 3), $5,000 if booked by Dec 18. "Why They Buy" stays as a description, Ultha is the brand (common phrase; not trademarking). Lead email env vars are set (Ultha, Nov 1).
 - Testimonial was tried under the hero and in 3 other spots; Ultha said skip it (the testimonials section covers it).
 - "Make SaaS human again" version = branch `nibesh-website-version` on GitHub (commit 5d1e21d; never merged) + copy at
   ~/Claude/ultha-site-versions/.
@@ -18,11 +19,9 @@
       (and MAILERLITE_GROUP_ID) in Vercel env vars.
 - [ ] Create teardowns@ultha.co in Google Workspace (alias) and verify ultha.co in MailerLite.
 - [ ] Pick a newsletter name (avoid anything like PMM Zero's "Homepage BBQ").
-- [ ] Rename "Why They Buy" or clear it (clash with Katelyn Bourgoin's "Why We Buy", ~63K readers); USPTO check.
-- [ ] Real next sprint start date.
 - [ ] Attio sample page headline: keep option A or swap (options A-D are in the Attio doc / chat).
-- [ ] Lead emails: set GMAIL_USER + GMAIL_APP_PASSWORD or RESEND_API_KEY in Vercel, then send a test through the site.
-- [ ] Submit the sitemap in Google Search Console and Bing Webmaster Tools.
+- [ ] Submit the sitemap in Google Search Console and Bing Webmaster Tools (she asked what this is on Nov 1; explained).
+- [ ] Nov-Dec: fill the 5 founding spots (outreach, free reviews, LinkedIn, Starter checks); set up signed clients before Dec 18 for January calls.
 - [ ] LinkedIn: 2-3 posts a week; review the two new banners and finish About, Founder entry, skills, services, Featured (socials work).
 - [ ] Film the Attio teardown video (5-minute script in the Attio doc https://claude.ai/artifact/9JFChmMAM9BUG5pp8vk9ci).
 
