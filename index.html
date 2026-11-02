@@ -1820,6 +1820,31 @@
     .hero--cbelow #heroH1 { font-size: 2.55rem; }
     .hero--cbelow .sub-a { font-size: 1rem !important; }
   }
+  /* Page in four parts: 1 the hook, 2 how (two steps), 3 why me, 4 how it works and prices. Bands keep alternating. */
+  #approach { background: color-mix(in srgb, var(--accent) 8%, #fff); }
+  .ap-sub { font-size: 1.15rem; color: var(--ink-2); }
+  .ap-steps { display: grid; grid-template-columns: minmax(0, 1fr) auto minmax(0, 1fr); gap: clamp(14px, 2vw, 24px); align-items: stretch; max-width: 1040px; margin: 0 auto; }
+  .ap-step { background: var(--card); border-radius: 20px; padding: clamp(24px, 3vw, 34px); display: grid; gap: 12px; align-content: start; box-shadow: 0 1px 0 var(--line), 0 14px 30px -26px color-mix(in srgb, var(--ink) 50%, transparent); }
+  .ap-num { width: 40px; height: 40px; border-radius: 50%; display: grid; place-items: center; font-family: var(--serif); font-size: 1.15rem; color: var(--accent); background: var(--paper); box-shadow: inset 0 0 0 1.5px color-mix(in srgb, var(--accent) 45%, var(--paper)); }
+  .ap-step h3 { font-size: clamp(1.3rem, 2vw, 1.55rem); line-height: 1.2; margin: 4px 0 0; }
+  .ap-step p { color: var(--ink-2); margin: 0; }
+  .ap-step ul { list-style: none; margin: 6px 0 0; padding: 14px 0 0; border-top: 1px solid var(--line); display: grid; gap: 8px; }
+  .ap-step li { position: relative; padding-left: 18px; color: var(--ink-2); font-size: 0.97rem; }
+  .ap-step li::before { content: ""; position: absolute; left: 0; top: 0.62em; width: 7px; height: 7px; border-radius: 50%; background: var(--accent); }
+  .ap-arrow { align-self: center; font-size: 1.6rem; line-height: 1; color: var(--accent); }
+  @media (max-width: 760px) { .ap-steps { grid-template-columns: 1fr; } .ap-arrow { justify-self: center; transform: rotate(90deg); } }
+  #familiar-new.fam-new { background-color: var(--paper); }
+  :root[data-s2l="one"] #familiar-new.fam-new .fam-grid { box-shadow: 0 0 0 1px var(--line), 0 14px 30px -24px color-mix(in srgb, var(--ink) 45%, transparent); }
+  #about { background: color-mix(in srgb, var(--accent) 8%, #fff); }
+  :root[data-tmc="blue"] #tm-a.tm-sec { background: var(--paper); --tm-ini-bg: color-mix(in srgb, var(--accent) 9%, #fff); --tm-rule: var(--line); }
+  :root[data-order="not-first"] #why-now-2.why-now-sec { background: color-mix(in srgb, var(--accent) 8%, #fff); }
+
+  /* Why me: the Mastercard-style tagline leads part 3 */
+  #familiar-new .section-head:has(.wm-tag) { max-width: 54rem; }
+  .wm-tag { text-wrap: balance; }
+  .wm-tag span { display: block; color: var(--accent); }
+  .wm-sub { font-size: 1.1rem; color: var(--ink-2); max-width: 44rem; text-wrap: balance; }
+
   /* Textures go last so the base background rules above don't reset them */
   body { background-image: var(--tex); background-size: var(--tex-size); }
 </style>
@@ -1830,8 +1855,8 @@
   <div class="wrap nav">
     <a class="brand" href="#top" aria-label="Ultha home"><svg class="mark" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" viewBox="8 36 84 44"><path d="M10.02 76.6A40 40 0 0 1 13.38 61.92L28.03 68.35A24 24 0 0 0 26.01 77.16Z" class="m1"/><path d="M14.59 59.39A40 40 0 0 1 23.98 47.62L34.39 59.77A24 24 0 0 0 28.75 66.84Z" class="m2"/><path d="M26.17 45.87A40 40 0 0 1 39.74 39.34L43.84 54.8A24 24 0 0 0 35.7 58.72Z" class="m3"/><path d="M42.47 38.72A40 40 0 0 1 57.53 38.72L54.52 54.43A24 24 0 0 0 45.48 54.43Z" class="m4"/><path d="M60.26 39.34A40 40 0 0 1 73.83 45.87L64.3 58.72A24 24 0 0 0 56.16 54.8Z" class="m3"/><path d="M76.02 47.62A40 40 0 0 1 85.41 59.39L71.25 66.84A24 24 0 0 0 65.61 59.77Z" class="m2"/><path d="M86.62 61.92A40 40 0 0 1 89.98 76.6L73.99 77.16A24 24 0 0 0 71.97 68.35Z" class="m1"/></svg><span>Ultha</span></a>
     <nav class="nav-links" aria-label="Main">
-      <a href="#how">How it works</a>
-      <a href="#about">About</a>
+      <a href="#approach">How</a>
+      <a href="#familiar-new">Why me</a>
       <a href="#prices">Prices</a>
       <a href="#faq">FAQ</a>
       <a class="btn small" href="#review">Free review</a>
@@ -1871,7 +1896,7 @@
         
         <div class="hero-ctas">
           <a class="btn" href="#review">Free homepage review</a>
-          <a class="btn ghost not-min" href="#how">See how it works</a>
+          <a class="btn ghost not-min" href="#approach">See how</a>
         </div>
         
         
@@ -1897,11 +1922,44 @@
   <!-- WHY NOW -->
   
 
+  <section id="approach">
+    <div class="wrap">
+      <div class="section-head center-head">
+        <span class="kicker">How</span>
+        <h2>Real connection, in two steps.</h2>
+        <p class="ap-sub">From what your customers say to what your prospects hear.</p>
+      </div>
+      <div class="ap-steps">
+        <article class="ap-step">
+          <span class="ap-num">1</span>
+          <h3>Understand your customers as people</h3>
+          <p>Not a survey or a feature interview. A real conversation about their work, their goals and what changed when they found you.</p>
+          <ul>
+            <li>What was happening when they started looking</li>
+            <li>What they care about beyond the task and the tech</li>
+            <li>Why some stalled or left</li>
+          </ul>
+        </article>
+        <div class="ap-arrow" aria-hidden="true">→</div>
+        <article class="ap-step">
+          <span class="ap-num">2</span>
+          <h3>Reach your prospects where they are</h3>
+          <p>Prospects don't care about your jargon either. I turn what customers said into short, clear words and find where your prospects spend their time.</p>
+          <ul>
+            <li>Words your buyers already use</li>
+            <li>Who to target first</li>
+            <li>Where to reach them, and with what</li>
+          </ul>
+        </article>
+      </div>
+    </div>
+  </section>
   <section class="fam-new" id="familiar-new">
     <div class="wrap">
       <div class="section-head center-head">
-        <span class="kicker">Why not just ask them yourself?</span>
-        <h2>You can. Here's why it rarely works.</h2>
+        <span class="kicker">Why me</span>
+        <h2 class="wm-tag">Most things can be automated. <span>For the few that shouldn't be, there's Ultha.</span></h2>
+        <p class="wm-sub">Why not just ask your customers yourself? You can. Here's why it rarely works.</p>
       </div>
       <div class="fam-grid why-grid">
         <div class="fam why"><b>They're polite with you</b><p>Customers soften the truth for the person who built the product. With an outsider, they're honest.</p></div>
@@ -1920,40 +1978,61 @@
       
     </div>
   </section>
-
-  <!-- FOUNDER PHRASES -->
-  
-
-  <!-- NEUTRAL OUTSIDER -->
-  
-
-  <!-- HOW IT WORKS -->
-  <!-- WHY NOW -->
-  <section class="why-now-sec" id="why-now-2">
-    <div class="wrap">
-      <div class="section-head center-head">
-        <span class="kicker">Why now</span>
-        <h2>Find out why customers buy while there's still runway to act.</h2>
+  <section id="about">
+    <div class="wrap about-grid">
+      <div class="video">
+        
+        
+        <img class="abp abp-garden" src="img/garden-me.jpg" alt="Ultha smiling in a garden">
+        
+        
+        
       </div>
-      <div class="wn wn-a">
-        <div class="wn-stat">
-          <b class="stat-big">43%</b>
-          <p>of startups that shut down since 2023 cited poor product-market fit. Running out of cash was the last step, not the cause.</p>
-          <small class="src">Source: CB Insights, 385 venture-backed shutdowns with known causes, March 2026</small>
+      <div class="about-copy">
+        <span class="kicker">About me</span>
+        <h2>My name means translation.</h2>
+        <div class="about-new">
+          
+          <p class="ab-meaning">Ultha (उल्था) is Nepali for translation.</p>
+          <p class="lead">Growing up, I translated for my family. Later I did it inside companies, as a product manager <span>at impact.com</span> listening to users and the co-founder of a marketing agency. Now I translate what your customers mean into words your next buyers understand.</p>
+          <div class="ab-stats">
+            <div><b>+34%</b><span>feature adoption after research I ran</span></div>
+            <div><b>+17%</b><span>adoption after onboarding tests</span></div>
+            <div><b>40+</b><span>brands served by my agency</span></div>
+            <div><b>8 teams</b><span>and 6 systems I traced churn through</span></div>
+          </div>
+          <p class="ab-edu">M.S. in Technology Management, UC Santa Barbara</p>
+          <p class="ab-sign">Ultha</p>
         </div>
-        <div class="wn-when">
-          <h3>The best time to do this</h3>
-          <ul class="wn-list"><li>You just raised, or you're about to</li><li>Demos keep stalling</li><li>Churn is creeping up</li><li>You're rewriting your homepage or pitch</li><li>A new marketing lead just started</li></ul>
-          <p class="wn-raise">About to raise? Ask about the <a href="#prices">pre-raise evidence pack</a>.</p>
+        
+        
+        
+        
+      </div>
+    </div>
+    <div class="wrap">
+      
+      
+    </div>
+  </section>
+  <section class="tm-sec" id="tm-a">
+    <div class="wrap">
+      <div class="tm-head"><span class="kicker">What clients say</span><p>About working with me on past projects.</p></div>
+      <div class="tm-grid tm-five">
+        <figure class="tm-feature"><blockquote>I’ve hired close to 100 people over the years, and I am not easily impressed. Ultha always delivered impressive results, high-quality work, and frankly was one of the best I’ve ever had the pleasure of working with.</blockquote><figcaption><span class="ini">JP</span><span class="who-t"><b>Jayson Peppar</b><small>Bizbox Digital</small></span></figcaption></figure>
+        <div class="tm-quad">
+          <figure class="tm-small"><blockquote>She did what she said she was going to do, explained things thoroughly and helped us strategize how to use our tools well.</blockquote><figcaption><span class="ini">QZ</span><span class="who-t"><b>Quinn Z.</b><small>Conversion Crimes</small></span></figcaption></figure>
+          <figure class="tm-small"><blockquote>Personable, intelligent, patient and knowledgeable. She expertly helped us set up our system, which our entire company is now running on.</blockquote><figcaption><span class="ini">AS</span><span class="who-t"><b>Alessandra Sagredo</b><small>Exhale Marketing</small></span></figcaption></figure>
+          <figure class="tm-small"><blockquote>Excellent. She is a Jedi. Hire her first. Simple.</blockquote><figcaption><span class="ini">RN</span><span class="who-t"><b>Robert Neumann</b><small>CoreShop Solutions</small></span></figcaption></figure>
+          <figure class="tm-small"><blockquote>In the last phase of the project, she trained our internal staff and shared her extensive knowledge with our team.</blockquote><figcaption><span class="ini">WV</span><span class="who-t"><b>Wout Van Damme</b><small>Adsparc</small></span></figcaption></figure>
         </div>
       </div>
     </div>
   </section>
-
   <section id="how">
     <div class="wrap">
       <div class="section-head center-head">
-        <span class="kicker">How it works</span>
+        <span class="kicker">How the sprint works</span>
         <h2>Four weeks. <span class="h2-keep">About 3 hours of your time.</span></h2>
         <p class="how-sub">Real customers, real calls. I run every call, the scheduling and the analysis.</p>
       </div>
@@ -1992,8 +2071,6 @@
       </div>
     </div>
   </section>
-
-  <!-- WHAT YOU GET -->
   <section id="get">
     <div class="wrap get-grid">
       <div>
@@ -2015,8 +2092,26 @@
       </div>
     </div>
   </section>
-
-  <!-- FREE TEARDOWN -->
+  <section class="why-now-sec" id="why-now-2">
+    <div class="wrap">
+      <div class="section-head center-head">
+        <span class="kicker">Why now</span>
+        <h2>Find out why customers buy while there's still runway to act.</h2>
+      </div>
+      <div class="wn wn-a">
+        <div class="wn-stat">
+          <b class="stat-big">43%</b>
+          <p>of startups that shut down since 2023 cited poor product-market fit. Running out of cash was the last step, not the cause.</p>
+          <small class="src">Source: CB Insights, 385 venture-backed shutdowns with known causes, March 2026</small>
+        </div>
+        <div class="wn-when">
+          <h3>The best time to do this</h3>
+          <ul class="wn-list"><li>You just raised, or you're about to</li><li>Demos keep stalling</li><li>Churn is creeping up</li><li>You're rewriting your homepage or pitch</li><li>A new marketing lead just started</li></ul>
+          <p class="wn-raise">About to raise? Ask about the <a href="#prices">pre-raise evidence pack</a>.</p>
+        </div>
+      </div>
+    </div>
+  </section>
   <section class="teardown" id="teardown">
     <div class="wrap td-grid">
       <div>
@@ -2047,69 +2142,11 @@
           <small>Try this headline</small>
           <p class="say-new">Cut your support backlog in half, without hiring.</p>
         </div>
-        <p class="say-note">An example of what a review finds.</p>
+        <p class="say-note">An example of what a review finds. <a href="/sample-review">See a full sample review →</a></p>
         <p class="say-stat">Why it matters: only 13% of B2B SaaS homepages say who they’re for, and only 14% name the problem they solve. <small>Pinwheel Media, review of 100 B2B SaaS homepages, 2026</small></p>
       </div>
     </div>
   </section>
-
-  <!-- ABOUT -->
-  <section id="about">
-    <div class="wrap about-grid">
-      <div class="video">
-        
-        
-        <img class="abp abp-garden" src="img/garden-me.jpg" alt="Ultha smiling in a garden">
-        
-        
-        
-      </div>
-      <div class="about-copy">
-        <span class="kicker">About me</span>
-        <h2>My name means translation.</h2>
-        <div class="about-new">
-          
-          <p class="ab-meaning">Ultha (उल्था) is Nepali for translation.</p>
-          <p class="lead">Growing up, I translated for my family. Later I did it inside companies, as a product manager <span>at impact.com</span> listening to users and the co-founder of a marketing agency. Now I translate what your customers mean into words your next buyers understand.</p>
-          <div class="ab-stats">
-            <div><b>+34%</b><span>feature adoption after research I ran</span></div>
-            <div><b>+17%</b><span>adoption after onboarding tests</span></div>
-            <div><b>40+</b><span>brands served by my agency</span></div>
-            <div><b>8 teams</b><span>and 6 systems I traced churn through</span></div>
-          </div>
-          <p class="ab-edu">M.S. in Technology Management, UC Santa Barbara</p>
-          <p class="ab-sign">Ultha</p>
-        </div>
-        
-        
-        
-        
-      </div>
-    </div>
-    <div class="wrap">
-      
-      
-    </div>
-  </section>
-
-  <!-- TESTIMONIALS -->
-  <section class="tm-sec" id="tm-a">
-    <div class="wrap">
-      <div class="tm-head"><span class="kicker">What clients say</span><p>About working with me on past projects.</p></div>
-      <div class="tm-grid tm-five">
-        <figure class="tm-feature"><blockquote>I’ve hired close to 100 people over the years, and I am not easily impressed. Ultha always delivered impressive results, high-quality work, and frankly was one of the best I’ve ever had the pleasure of working with.</blockquote><figcaption><span class="ini">JP</span><span class="who-t"><b>Jayson Peppar</b><small>Bizbox Digital</small></span></figcaption></figure>
-        <div class="tm-quad">
-          <figure class="tm-small"><blockquote>She did what she said she was going to do, explained things thoroughly and helped us strategize how to use our tools well.</blockquote><figcaption><span class="ini">QZ</span><span class="who-t"><b>Quinn Z.</b><small>Conversion Crimes</small></span></figcaption></figure>
-          <figure class="tm-small"><blockquote>Personable, intelligent, patient and knowledgeable. She expertly helped us set up our system, which our entire company is now running on.</blockquote><figcaption><span class="ini">AS</span><span class="who-t"><b>Alessandra Sagredo</b><small>Exhale Marketing</small></span></figcaption></figure>
-          <figure class="tm-small"><blockquote>Excellent. She is a Jedi. Hire her first. Simple.</blockquote><figcaption><span class="ini">RN</span><span class="who-t"><b>Robert Neumann</b><small>CoreShop Solutions</small></span></figcaption></figure>
-          <figure class="tm-small"><blockquote>In the last phase of the project, she trained our internal staff and shared her extensive knowledge with our team.</blockquote><figcaption><span class="ini">WV</span><span class="who-t"><b>Wout Van Damme</b><small>Adsparc</small></span></figcaption></figure>
-        </div>
-      </div>
-    </div>
-  </section>
-
-
-  <!-- PRICES -->
   <section class="band" id="prices">
     <div class="wrap">
       <div class="section-head">
@@ -2174,8 +2211,6 @@
       <p class="price-note">I recommend thanking your customers with a small gift for their time, like a gift card.</p>
     </div>
   </section>
-
-  <!-- START -->
   <section class="band" id="start">
     <div class="wrap start-grid">
       <img src="img/form-me3.jpg" alt="Ultha holding her notebook, smiling at the camera">
@@ -2203,6 +2238,29 @@
       </div>
     </div>
   </section>
+
+  <!-- FOUNDER PHRASES -->
+  
+
+  <!-- NEUTRAL OUTSIDER -->
+  
+
+  <!-- HOW IT WORKS -->
+  <!-- WHY NOW -->
+
+
+  <!-- WHAT YOU GET -->
+
+  <!-- FREE TEARDOWN -->
+
+  <!-- ABOUT -->
+
+  <!-- TESTIMONIALS -->
+
+
+  <!-- PRICES -->
+
+  <!-- START -->
 </main>
 
 <dialog class="review-pop" id="reviewPop" aria-labelledby="reviewPopTitle">
