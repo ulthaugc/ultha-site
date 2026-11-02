@@ -1486,7 +1486,7 @@
   #askForm { grid-template-columns: 1fr 1fr; gap: 12px 14px; margin-top: 22px; max-width: 38rem; }
   #askForm label { font-size: 0.88rem; gap: 5px; }
   #askForm input, #askForm select, #askForm textarea { padding: 10px 12px; border-radius: 9px; }
-  #askForm label:nth-of-type(5), #askForm .ask-send { grid-column: 1 / -1; }
+  #askForm label:nth-of-type(5), #askForm label:nth-of-type(6), #askForm .ask-send { grid-column: 1 / -1; }
   #askForm .ask-send { display: flex; flex-wrap: wrap; align-items: center; gap: 10px 18px; margin-top: 4px; }
   #start .start-grid { align-items: stretch; }
   #start .start-grid img { aspect-ratio: auto; height: 100%; min-height: 420px; max-height: 620px; align-self: center; }
@@ -1818,6 +1818,8 @@
     .hero--cbelow .hero-for { font-size: 0.66rem; letter-spacing: 0.03em; }
     .hero--cbelow .below-stage .chip { display: none !important; }
   }
+  .sl-br { display: none; }
+  @media (max-width: 560px) { .sl-br { display: inline; } }
   /* Textures go last so the base background rules above don't reset them */
   body { background-image: var(--tex); background-size: var(--tex-size); }
 </style>
@@ -1864,7 +1866,7 @@
         <span class="kicker hero-for">Customer interviews for B2B AI startups</span>
         <h1 id="heroH1">Stop <mark>guessing</mark> why customers buy, stall or leave.</h1>
         
-        <p class="lead sub-v sub-a"><span class="sl">Polite with you. Honest with me.</span> <span class="sl">So you know who to target and what to say.</span></p>
+        <p class="lead sub-v sub-a"><span class="sl">Customers are polite with you.<br class="sl-br"> Honest with me.</span> <span class="sl">So you know who to target and what to say.</span></p>
         
         
         
@@ -2046,7 +2048,7 @@
           <small>Try this headline</small>
           <p class="say-new">Cut your support backlog in half, without hiring.</p>
         </div>
-        <p class="say-note">An example of what a review finds.</p>
+        <p class="say-note">An example of what a review finds. <a href="/sample-review">See a full sample review →</a></p>
         <p class="say-stat">Why it matters: only 13% of B2B SaaS homepages say who they’re for, and only 14% name the problem they solve. <small>Pinwheel Media, review of 100 B2B SaaS homepages, 2026</small></p>
       </div>
     </div>
@@ -2158,7 +2160,7 @@
           <a class="btn ghost" href="#start" data-want="wll">Ask about it</a>
         </div>
       </div>
-      <p class="p3-terms"><span>Paid upfront, with a full refund if you cancel before kickoff</span></p>
+      <p class="p3-terms"><span>Paid upfront, with a full refund if you cancel before kickoff</span> · <span>If fewer than 6 calls happen, you get half your money back</span></p>
       
       <div class="p3-addons">
         <h3>Add-ons</h3>
@@ -2196,6 +2198,7 @@
             </select>
           </label>
           <label><span>What do you want to know about your customers? <span class="opt">(optional)</span></span><textarea name="note" rows="2"></textarea></label>
+          <label>How did you hear about me?<select name="heard"><option value="" selected>Choose one</option><option>LinkedIn</option><option>Instagram</option><option>A friend or colleague</option><option>Google</option><option>ChatGPT or another AI tool</option><option>Other</option></select></label>
           <div class="ask-send"><button class="btn" type="submit">Send it to Ultha</button><p class="form-foot"><span>Your work stays confidential: anything I share is anonymized, unless you take a founding spot.</span></p></div>
         </form>
         <div class="thanks" id="askThanks" hidden>Thanks. I'll reply within two working days to find a time to talk.</div>

@@ -20,15 +20,16 @@ export default async function handler(req, res) {
   const OPTIONS = { starter: 'Starter check ($2,500)', founding: 'Why They Buy, founding ($5,000)', sprint: 'Why They Buy sprint ($9,500)', wll: 'Won, Lost, Left ($3,000/month)', unsure: 'Not sure yet' };
   const option = kind === 'work' ? (OPTIONS[b.option] || OPTIONS.unsure) : '';
   const note = String(b.note || '').trim().slice(0, 4000);
+  const heard = String(b.heard || '').trim().slice(0, 60);
 
   if (!name) return res.status(400).json({ ok: false, error: 'Please add your name.' });
   if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) return res.status(400).json({ ok: false, error: 'Please enter a valid email.' });
   if (!/^\S+\.\S{2,}$/.test(site.replace(/^https?:\/\//, ''))) return res.status(400).json({ ok: false, error: 'Please add your website, like yourstartup.com.' });
 
-  const lead = { kind, name, email, site, option, note, at: new Date().toISOString() };
+  const lead = { kind, name, email, site, option, heard, note, at: new Date().toISOString() };
   console.log('contact lead', JSON.stringify(lead));
 
-  const rows = [['Name', name], ['Email', email], ['Website', site], ['Interested in', option]]
+  const rows = [['Name', name], ['Email', email], ['Website', site], ['Interested in', option], ['Heard about you via', heard]]
     .filter(([, v]) => v)
     .map(([k, v]) => `<tr><td style="padding:4px 12px 4px 0;color:#5A6B79">${k}</td><td style="padding:4px 0"><b>${esc(v)}</b></td></tr>`).join('');
   const heading = kind === 'review' ? 'Free homepage review request' : 'New lead from ultha.co';
