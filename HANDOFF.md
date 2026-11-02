@@ -1,6 +1,38 @@
-# Handoff: ultha.co site (updated Oct 31, 2026)
+# Handoff: ultha.co site (updated Nov 1, 2026)
 
-## Current state (Oct 31): new research-first homepage is live
+## Status Nov 1: live site = the Oct 31 version
+- Live (commit eda3409): "Customer interviews for B2B AI startups" / "Stop guessing why customers buy, stall or leave." / "Polite with you. Honest
+  with me." On Nov 1 we tried "Make SaaS human again" + a four-part page; Ultha reverted it the same day.
+- That version is saved as "Nibesh's website version": local git branch `nibesh-website-version` (commit 5d1e21d; NOT on GitHub, pushing it
+  was blocked) plus a viewable copy at ~/Claude/ultha-site-versions/nibesh-website-version.html (with img/ and nibesh-sample-review.html).
+  It also holds the Attio sample review page (sample-review.html, img/sample/), not yet live.
+- Research behind the next changes: Claude Doc "Competitor and ICP Scan: 100+ Companies" https://claude.ai/artifact/WzywGay4L1GGchq6aEJt2D
+  (110 firms; section "How the live ultha.co compares").
+- Proposed homepage changes, NOT live, in a private preview: https://claude.ai/artifact/7M4uNPhTAmaeXiR9uNoinx
+  (proof line under the hero buttons, sample review link, button to a teardown signup page, guarantee next to prices, "How did you hear about
+  me?" on the form) plus a new signup page "One homepage teardown a week" meant for ultha.co/teardowns. Ultha hasn't picked which go live.
+
+## To do (Ultha)
+- [ ] Tomorrow: create a MailerLite account for the teardown newsletter. Free plan = 250 subscribers and 2,500 emails/month (paid "Comfort"
+      from $12/month). Then add MAILERLITE_API_KEY (and MAILERLITE_GROUP_ID for the list) in Vercel env vars; Claude wires the page and tests.
+- [ ] Create the sender address teardowns@ultha.co in Google Workspace (an alias is enough) and verify the ultha.co domain in MailerLite.
+- [ ] Pick a newsletter name (avoid anything like PMM Zero's "Homepage BBQ").
+- [ ] Decide which preview changes go live (see the preview link above).
+- [ ] Rename "Why They Buy" or clear it: Katelyn Bourgoin's "Why We Buy" (~63K newsletter readers) is one word away. USPTO check still open.
+- [ ] Real next sprint start date.
+- [ ] Confirm lead emails arrive: set GMAIL_USER + GMAIL_APP_PASSWORD or RESEND_API_KEY in Vercel, then send a test from the site.
+- [ ] Submit the sitemap in Google Search Console and Bing Webmaster Tools.
+- [ ] LinkedIn: 2-3 posts a week (teardowns, free-review findings, monthly recaps); new banners are ready in the socials work.
+
+## To do (Claude, once unblocked)
+- Wire the teardown signup page to /api/subscribe (MailerLite) and add it at /teardowns; put the homepage button and footer link live.
+- Publish the Attio sample review page (from the nibesh-website-version branch) so the homepage link works; add it to sitemap.xml and llms.txt.
+- Never use Hunter.io for the newsletter (cold outreach only); never send the newsletter from plain Gmail.
+
+---
+
+
+## Earlier on Oct 31: new research-first homepage went live
 - index.html is built from the approved mockup (Claude artifact "ultha.co Background Options", https://claude.ai/artifact/PYDb3qTgTQPXcTU6BHF9h3) with
   the hidden design variants, review marks, mockup ribbon and options panel removed. Offer: Why They Buy sprint ($9,500, $5,000 founding),
   Starter check ($2,500), Won, Lost, Left ($3,000/month). Positioning, prices and wording: ~/Claude/ultha-strategy-brief.md (section 5).
