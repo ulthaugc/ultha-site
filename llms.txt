@@ -20,3 +20,4 @@ Customer interviews, win-loss interviews, churn interviews, jobs-to-be-done (swi
 ## Pages
 - [Home](https://ultha.co/): the offer, how it works, prices, FAQ and the contact form.
 - [Sample review: why customers buy Attio](https://ultha.co/sample-review): what Attio's homepage says vs. what public reviews say, where they don't match, and what to test. Built from public reviews, not client work.
+- [Q1 planning](https://ultha.co/q1): start a Why They Buy sprint by November 16 for findings before the holidays, a one-week $2,500 Starter check, or book a January sprint. Founding rate ends November 25, 2026.

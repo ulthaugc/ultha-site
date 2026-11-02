@@ -1,0 +1,161 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Go into Q1 knowing why customers buy · Ultha</title>
+<meta name="description" content="Start a sprint by November 16 for findings before the holidays, take the one-week Starter check, or book a January sprint. Founding rate ends November 25.">
+<link rel="canonical" href="https://ultha.co/q1">
+<meta property="og:title" content="Go into Q1 knowing why customers buy · Ultha">
+<meta property="og:description" content="Start a sprint by November 16 for findings before the holidays, or book a January sprint. Founding rate ends November 25.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://ultha.co/q1">
+<meta property="og:image" content="https://ultha.co/og.jpg">
+<link rel="icon" href="/favicon.ico" sizes="48x48">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600&family=Inter:wght@400;500;600&display=swap">
+<style>
+  :root {
+    --paper: #FCFCFA; --blue: color-mix(in srgb, #1F4FD8 8%, #fff); --card: #FFFFFF; --line: #E4E2DC;
+    --ink: #14213D; --ink-2: #424A5E; --ink-3: #6B7386; --accent: #1F4FD8; --accent-dark: #173DAA; --dark: #14213D;
+    --serif: "Fraunces", Georgia, serif; --sans: "Inter", system-ui, -apple-system, "Segoe UI", sans-serif;
+  }
+  * { box-sizing: border-box; }
+  body { margin: 0; background: var(--paper); color: var(--ink); font-family: var(--sans); font-size: 17px; line-height: 1.6; -webkit-font-smoothing: antialiased; }
+  img { max-width: 100%; }
+  a { color: var(--accent); }
+  .wrap { max-width: 1040px; margin: 0 auto; padding-left: max(20px, env(safe-area-inset-left, 0px)); padding-right: max(20px, env(safe-area-inset-right, 0px)); }
+  header.top { border-bottom: 1px solid var(--line); }
+  header.top .wrap { display: flex; align-items: center; justify-content: space-between; height: 64px; }
+  .logo { text-decoration: none; color: var(--ink); font-family: var(--serif); font-size: 1.3rem; font-weight: 600; }
+  .btn { display: inline-block; background: var(--accent); color: #fff; text-decoration: none; font-weight: 600; border-radius: 10px; padding: 13px 20px; font-size: 0.97rem; }
+  .btn:hover { background: var(--accent-dark); }
+  .btn.ghost { background: transparent; color: var(--ink); box-shadow: inset 0 0 0 1.5px var(--ink); }
+  .btn.sm { padding: 9px 14px; font-size: 0.88rem; }
+  .kicker { font-size: 0.78rem; font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase; color: var(--accent); }
+  h1, h2, h3 { font-family: var(--serif); font-weight: 600; line-height: 1.12; margin: 0; text-wrap: balance; }
+  h1 { font-size: clamp(2.2rem, 5.2vw, 3.6rem); margin-top: 12px; }
+  h2 { font-size: clamp(1.6rem, 3.2vw, 2.2rem); }
+  h3 { font-size: 1.25rem; }
+  p { margin: 0; }
+  section { padding-block: clamp(44px, 6vw, 76px); }
+  .hero { text-align: center; padding-block: clamp(48px, 8vw, 96px) clamp(36px, 5vw, 60px); }
+  .hero .lead { font-size: 1.15rem; color: var(--ink-2); margin: 18px auto 0; max-width: 38rem; }
+  .ctas { display: flex; gap: 12px; justify-content: center; flex-wrap: wrap; margin-top: 28px; }
+  .deadline { margin-top: 16px; font-size: 0.92rem; color: var(--ink-3); }
+  .deadline b { color: var(--ink); }
+  .band { background: var(--blue); }
+  .head { text-align: center; max-width: 40rem; margin: 0 auto 30px; }
+  .head p { margin-top: 10px; color: var(--ink-2); }
+  .ladder { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 18px; align-items: stretch; }
+  .step { background: var(--card); border-radius: 20px; padding: 26px 24px; display: grid; gap: 10px; align-content: start; box-shadow: 0 1px 0 var(--line), 0 14px 30px -26px color-mix(in srgb, var(--ink) 50%, transparent); }
+  .step.core { box-shadow: inset 0 0 0 2px var(--accent), 0 20px 40px -26px color-mix(in srgb, var(--accent) 60%, transparent); }
+  .step small { font-size: 0.75rem; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; color: var(--ink-3); }
+  .step .price { font-family: var(--serif); font-size: 1.9rem; font-weight: 600; }
+  .step .price s { font-family: var(--sans); font-size: 1rem; color: var(--ink-3); font-weight: 400; margin-left: 6px; }
+  .step p { color: var(--ink-2); font-size: 0.97rem; }
+  .step ul { list-style: none; margin: 4px 0 0; padding: 12px 0 0; border-top: 1px solid var(--line); display: grid; gap: 7px; }
+  .step li { position: relative; padding-left: 18px; color: var(--ink-2); font-size: 0.95rem; }
+  .step li::before { content: ""; position: absolute; left: 0; top: 0.6em; width: 7px; height: 7px; border-radius: 50%; background: var(--accent); }
+  .step .btn { justify-self: start; margin-top: 8px; }
+  .when { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 0; margin-top: 8px; }
+  .when div { padding: 18px 18px 0 0; border-top: 2px solid color-mix(in srgb, var(--accent) 30%, #fff); }
+  .when div:first-child { border-top-color: var(--accent); }
+  .when b { display: block; font-size: 0.8rem; letter-spacing: 0.06em; text-transform: uppercase; color: var(--accent); }
+  .when h3 { margin-top: 6px; font-size: 1.1rem; }
+  .when p { margin-top: 6px; color: var(--ink-2); font-size: 0.95rem; }
+  .faq { max-width: 44rem; margin: 0 auto; display: grid; gap: 14px; }
+  .faq details { background: var(--card); border-radius: 14px; padding: 16px 20px; box-shadow: 0 0 0 1px var(--line); }
+  .faq summary { cursor: pointer; font-weight: 600; }
+  .faq p { margin-top: 10px; color: var(--ink-2); }
+  .end { background: var(--dark); color: #F3F6FD; text-align: center; }
+  .end h2 { color: #fff; }
+  .end p { color: #B9C4DC; margin: 12px auto 0; max-width: 34rem; }
+  .end .btn { background: #fff; color: var(--accent); }
+  .end .btn.ghost { background: transparent; color: #fff; box-shadow: inset 0 0 0 1.5px #fff; }
+  footer { padding-block: 24px; font-size: 0.85rem; color: var(--ink-3); }
+  @media (max-width: 860px) { .ladder { grid-template-columns: 1fr; } .when { grid-template-columns: 1fr 1fr; row-gap: 22px; } }
+  @media (max-width: 520px) { .when { grid-template-columns: 1fr; } }
+</style>
+</head>
+<body>
+<header class="top"><div class="wrap"><a class="logo" href="/">Ultha</a><a class="btn sm" href="/#review">Free homepage review</a></div></header>
+<main>
+  <section class="hero">
+    <div class="wrap">
+      <span class="kicker">Q1 planning</span>
+      <h1>Go into Q1 knowing why customers buy.</h1>
+      <p class="lead">Most Q1 plans are built on guesses. Start a sprint by November 16 and have your findings before the holidays. Short on time? The one-week Starter check fits any time before December 11.</p>
+      <div class="ctas"><a class="btn" href="/#review">Get a free homepage review</a><a class="btn ghost" href="/#start">Book a 20-minute call</a></div>
+      <p class="deadline"><b>Founding rate ends November 25 · 4 of 5 spots remaining</b></p>
+    </div>
+  </section>
+
+  <section class="band">
+    <div class="wrap">
+      <div class="head"><span class="kicker">Three ways to start</span><h2 style="margin-top:10px">Pick the one that fits before the holidays.</h2></div>
+      <div class="ladder">
+        <article class="step">
+          <small>Not sure yet</small>
+          <h3>Free homepage review</h3>
+          <div class="price">Free</div>
+          <p>A video comparing what your homepage says with what your customers say in public.</p>
+          <ul><li>Arrives within a week</li><li>No call needed</li></ul>
+          <a class="btn ghost sm" href="/#review">Send your homepage</a>
+        </article>
+        <article class="step">
+          <small>Before the holidays</small>
+          <h3>Starter check</h3>
+          <div class="price">$2,500</div>
+          <p>A quick first look, done in one week, in time for your Q1 plan.</p>
+          <ul><li>3 customer calls</li><li>A homepage and pitch review</li><li>Credited if you book a sprint</li></ul>
+          <a class="btn ghost sm" href="/#start">Start small</a>
+        </article>
+        <article class="step core">
+          <small>For January</small>
+          <h3>Founding sprint</h3>
+          <div class="price">$5,000<s>$9,500</s></div>
+          <p>The full Why They Buy sprint. Start by November 16 for findings before the holidays, or book now for January.</p>
+          <ul><li>10–15 interviews with won, lost and churned customers</li><li>Findings, positioning and messaging fix sheet</li><li>Founding rate if you book by November 25</li></ul>
+          <a class="btn sm" href="/#start">Ask about a founding spot</a>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="wrap">
+      <div class="head"><span class="kicker">How the timing works</span><h2 style="margin-top:10px">Two ways to time it.</h2></div>
+      <div class="when">
+        <div><b>Before the holidays</b><h3>Start by Nov 16</h3><p>Kickoff, customer calls and the decision workshop, all finished by mid-December. In time for your Q1 plan.</p></div>
+        <div><b>Fast option</b><h3>Starter check</h3><p>One week, 3 customer calls and a homepage review. Book by December 11.</p></div>
+        <div><b>January</b><h3>Book by Nov 25</h3><p>Kickoff and intros in December, calls in January, findings by the end of the month. Founding rate if you book by November 25.</p></div>
+        <div><b>Either way</b><h3>Decide together</h3><p>A one-hour workshop turns what I found into decisions you can act on.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="band">
+    <div class="wrap">
+      <div class="faq">
+        <details><summary>Why start now instead of January?</summary><p>So your Q1 plan rests on what customers said, not on guesses. Start by November 16 and the findings arrive by mid-December.</p></details>
+        <details><summary>What if my customers are away in December?</summary><p>That's the point of the timing. December is setup; the calls happen in January, when people are back.</p></details>
+        <details><summary>What if not enough calls happen?</summary><p>If fewer than 6 calls happen, you get half your money back.</p></details>
+      </div>
+    </div>
+  </section>
+
+  <section class="end">
+    <div class="wrap">
+      <h2>Go into Q1 with answers, not guesses.</h2>
+      <p>Start by November 16 for findings before the holidays. Founding rate ends November 25.</p>
+      <div class="ctas"><a class="btn" href="/#start">Ask about a founding spot</a><a class="btn ghost" href="/#review">Free homepage review</a></div>
+    </div>
+  </section>
+</main>
+<footer><div class="wrap">© 2026 Ultha Moktan · <a href="/">ultha.co</a></div></footer>
+</body>
+</html>
