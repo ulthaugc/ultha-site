@@ -3,3 +3,5 @@
 Homepage for Ultha: customer proof for seed to Series A startups.
 
 Static site: `index.html` + assets. Deploy the repo root (no build step).
+
+The project handoff now lives in the private ultha-context repo.
