@@ -3,8 +3,8 @@
 ## Status Nov 1: live site = the Oct 31 version
 - Live (commit eda3409): "Customer interviews for B2B AI startups" / "Stop guessing why customers buy, stall or leave." / "Polite with you. Honest
   with me." On Nov 1 we tried "Make SaaS human again" + a four-part page; Ultha reverted it the same day.
-- That version is saved as "Nibesh's website version": local git branch `nibesh-website-version` (commit 5d1e21d; NOT on GitHub, pushing it
-  was blocked) plus a viewable copy at ~/Claude/ultha-site-versions/nibesh-website-version.html (with img/ and nibesh-sample-review.html).
+- That version is saved as "Nibesh's website version": git branch `nibesh-website-version` on GitHub (commit 5d1e21d; never merged to main,
+  so not on ultha.co; check it out to look or to restore) plus a viewable copy at ~/Claude/ultha-site-versions/nibesh-website-version.html (with img/ and nibesh-sample-review.html).
   It also holds the Attio sample review page (sample-review.html, img/sample/), not yet live.
 - Research behind the next changes: Claude Doc "Competitor and ICP Scan: 100+ Companies" https://claude.ai/artifact/WzywGay4L1GGchq6aEJt2D
   (110 firms; section "How the live ultha.co compares").
