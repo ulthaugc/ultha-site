@@ -1,7 +1,6 @@
 {
   "cleanUrls": true,
   "redirects": [
-    { "source": "/pricing", "destination": "/#prices", "permanent": false },
     { "source": "/about", "destination": "/#about", "permanent": false },
     { "source": "/contact", "destination": "/#start", "permanent": false },
     { "source": "/starter-kit", "destination": "/", "permanent": false },
