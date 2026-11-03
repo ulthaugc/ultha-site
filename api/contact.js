@@ -17,7 +17,7 @@ export default async function handler(req, res) {
   const name = String(b.name || '').trim().slice(0, 100);
   const email = String(b.email || '').trim().toLowerCase().slice(0, 200);
   const site = String(b.site || '').trim().slice(0, 200);
-  const OPTIONS = { starter: 'Starter check ($2,500)', founding: 'Why They Buy, founding ($5,000)', sprint: 'Why They Buy sprint ($9,500)', wll: 'Won, Lost, Left ($3,000/month)', unsure: 'Not sure yet' };
+  const OPTIONS = { starter: 'Starter check ($2,500)', founding: 'Why They Buy, founding ($5,000)', sprint: 'Why They Buy sprint ($9,500)', wll: 'Won, Lost, Left ($3,000/month)', custom: 'Something custom', unsure: 'Not sure yet' };
   const option = kind === 'work' ? (OPTIONS[b.option] || OPTIONS.unsure) : '';
   const note = String(b.note || '').trim().slice(0, 4000);
   const heard = String(b.heard || '').trim().slice(0, 60);
