@@ -1867,6 +1867,11 @@
   @media (max-width: 700px) { .p3-custom { flex-direction: column; align-items: flex-start; } }
   #start { background-color: var(--paper) !important; }
   #start.start-blue { background-color: color-mix(in srgb, var(--accent) 8%, #fff) !important; }
+  #why-now-2 .iy-quotes { grid-template-columns: repeat(3, minmax(0, 1fr)); max-width: 1020px; margin: 8px auto 0; gap: 14px; text-align: left; }
+  #why-now-2 .iy-quotes .fam { padding: 18px 20px 20px; }
+  #why-now-2 .iy-quotes blockquote { font-size: 1.12rem; line-height: 1.35; }
+  @media (max-width: 900px) { #why-now-2 .iy-quotes { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+  @media (max-width: 560px) { #why-now-2 .iy-quotes { grid-template-columns: 1fr; } }
   .iy-tiles { list-style: none; margin: 8px auto 0; padding: 0; max-width: 980px; display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 14px; }
   .iy-tiles li { background: var(--card); border-radius: 14px; padding: 18px 20px; font-size: 1.05rem; font-weight: 500; line-height: 1.45; color: var(--ink); text-align: left; box-shadow: 0 1px 0 var(--line), 0 12px 26px -22px color-mix(in srgb, var(--ink) 45%, transparent); border-top: 3px solid var(--accent); }
   .iy-stat2 { display: flex; gap: 22px; align-items: center; justify-content: center; max-width: 760px; margin: 36px auto 0; text-align: left; }
@@ -1984,14 +1989,14 @@
       <div class="section-head center-head">
         <h2>Is this you?</h2>
       </div>
-      <ul class="iy-tiles">
-        <li>We just raised. Now we need to know we're heading the right way.</li>
-        <li>Investors keep asking how well we know our customers.</li>
-        <li>Demos go great. Then nothing.</li>
-        <li>Churn is up, and we're not sure why.</li>
-        <li>We've rewritten the homepage three times.</li>
-        <li>We're raising soon and need proof customers actually want this.</li>
-      </ul>
+      <div class="fam-grid iy-quotes">
+        <figure class="fam"><blockquote>We just raised. Now we need to know we're heading the right way.</blockquote></figure>
+        <figure class="fam"><blockquote>Investors keep asking how well we know our customers.</blockquote></figure>
+        <figure class="fam"><blockquote>Demos go great. Then nothing.</blockquote></figure>
+        <figure class="fam"><blockquote>Churn is up, and we're not sure why.</blockquote></figure>
+        <figure class="fam"><blockquote>We've rewritten the homepage three times.</blockquote></figure>
+        <figure class="fam"><blockquote>We're raising soon and need proof customers actually want this.</blockquote></figure>
+      </div>
       <div class="iy-stat2">
         <b class="stat-big">43%</b>
         <div>
