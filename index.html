@@ -1845,6 +1845,7 @@
   }
   .wd-grid { display: grid; grid-template-columns: minmax(0, 1.1fr) minmax(0, 0.9fr); gap: clamp(28px, 5vw, 64px); align-items: center; }
   .wd-cards { display: grid; gap: 14px; }
+  .wd-intro { margin: 14px 0 0; font-size: 1.12rem; line-height: 1.55; color: var(--ink-2); max-width: 32rem; }
   .wd-card { display: grid; grid-template-columns: 44px 1fr; gap: 16px; align-items: start; background: var(--card); border-radius: 16px; padding: 20px 22px; box-shadow: 0 1px 0 var(--line), 0 14px 30px -24px color-mix(in srgb, var(--ink) 45%, transparent); border-left: 4px solid var(--accent); }
   .wd-n { width: 44px; height: 44px; border-radius: 50%; background: var(--soft); color: var(--accent); display: grid; place-items: center; font-family: var(--serif); font-size: 1.25rem; line-height: 1; }
   .wd-card h3 { margin: 0 0 4px; font-size: 1.25rem; }
@@ -1867,10 +1868,10 @@
   #start { background-color: var(--paper) !important; }
   #start.start-blue { background-color: color-mix(in srgb, var(--accent) 8%, #fff) !important; }
   .iy-card { display: grid; grid-template-columns: minmax(0, 1.35fr) minmax(0, 1fr); max-width: 980px; margin: 8px auto 0; background: var(--card); border-radius: 20px; overflow: hidden; box-shadow: 0 1px 0 var(--line), 0 18px 40px -30px color-mix(in srgb, var(--ink) 50%, transparent); text-align: left; }
-  .iy-list { list-style: none; margin: 0; padding: 14px 32px; }
-  .iy-list li { display: flex; gap: 14px; align-items: flex-start; padding: 14px 0; border-bottom: 1px solid var(--line); font-size: 1.02rem; line-height: 1.45; color: var(--ink); }
+  .iy-list { list-style: none; margin: 0; padding: 18px 36px; }
+  .iy-list li { display: flex; gap: 14px; align-items: flex-start; padding: 18px 0; border-bottom: 1px solid var(--line); font-family: var(--serif); font-weight: 500; font-size: 1.22rem; line-height: 1.35; color: var(--ink); }
   .iy-list li:last-child { border-bottom: 0; }
-  .iy-list li::before { content: ""; flex: none; width: 20px; height: 20px; margin-top: 1px; border-radius: 50%; background: color-mix(in srgb, var(--accent) 12%, #fff) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20'%3E%3Cpath d='M6 10.5l2.6 2.6L14 7.6' fill='none' stroke='%231F4FD8' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E") center/100% no-repeat; }
+  .iy-list li::before { content: ""; flex: none; width: 26px; height: 26px; margin-top: 0; border-radius: 50%; background: color-mix(in srgb, var(--accent) 12%, #fff) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20'%3E%3Cpath d='M6 10.5l2.6 2.6L14 7.6' fill='none' stroke='%231F4FD8' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E") center/100% no-repeat; }
   .iy-stat { display: grid; gap: 10px; align-content: center; padding: 34px 34px; background: color-mix(in srgb, var(--accent) 8%, #fff); }
   .iy-stat .stat-big { font-size: 3.6rem; line-height: 1; }
   .iy-stat p { margin: 0; color: var(--ink); font-size: 1.05rem; line-height: 1.5; }
@@ -2001,12 +2002,13 @@
       <div class="wd-copy">
         <div class="section-head" style="margin-bottom:26px">
           <span class="kicker">What I do</span>
-          <h2>I talk to your customers. You get three clear answers.</h2>
+          <h2>I find the patterns. You make the big calls.</h2>
+          <p class="wd-intro">I talk to your customers and bring back concrete patterns, so you can decide:</p>
         </div>
         <div class="wd-cards">
-          <div class="wd-card"><span class="wd-n">1</span><div><h3>Positioning</h3><p>Find the words your customers already use to describe why you’re worth it.</p></div></div>
-          <div class="wd-card"><span class="wd-n">2</span><div><h3>Sales</h3><p>Learn what makes buyers say yes, and what quietly stops them before they do.</p></div></div>
-          <div class="wd-card"><span class="wd-n">3</span><div><h3>Retention</h3><p>Hear why customers stay, why they leave, and what would have kept them.</p></div></div>
+          <div class="wd-card"><span class="wd-n">1</span><div><h3>Your direction</h3><p>What to double down on, and what to stop doing.</p></div></div>
+          <div class="wd-card"><span class="wd-n">2</span><div><h3>Your target market</h3><p>Which customers get the most value, and which ones to stop chasing.</p></div></div>
+          <div class="wd-card"><span class="wd-n">3</span><div><h3>How to package it</h3><p>How to describe and offer what you sell, so those buyers say yes.</p></div></div>
         </div>
       </div>
       <figure class="wd-fig"><img src="img/ultha-photo.jpg" alt="Ultha on a customer call at her laptop"><figcaption>Every answer backed by your customers’ own words</figcaption></figure>
