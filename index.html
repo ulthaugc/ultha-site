@@ -1867,6 +1867,14 @@
   @media (max-width: 700px) { .p3-custom { flex-direction: column; align-items: flex-start; } }
   #start { background-color: var(--paper) !important; }
   #start.start-blue { background-color: color-mix(in srgb, var(--accent) 8%, #fff) !important; }
+  .iy-tiles { list-style: none; margin: 8px auto 0; padding: 0; max-width: 980px; display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 14px; }
+  .iy-tiles li { background: var(--card); border-radius: 14px; padding: 18px 20px; font-size: 1.05rem; font-weight: 500; line-height: 1.45; color: var(--ink); text-align: left; box-shadow: 0 1px 0 var(--line), 0 12px 26px -22px color-mix(in srgb, var(--ink) 45%, transparent); border-top: 3px solid var(--accent); }
+  .iy-stat2 { display: flex; gap: 22px; align-items: center; justify-content: center; max-width: 760px; margin: 36px auto 0; text-align: left; }
+  .iy-stat2 .stat-big { font-size: 3rem; line-height: 1; }
+  .iy-stat2 p { margin: 0 0 4px; color: var(--ink-2); line-height: 1.5; }
+  .iy-stat2 .src { font-size: 0.75rem; color: var(--ink-3); }
+  @media (max-width: 900px) { .iy-tiles { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+  @media (max-width: 560px) { .iy-tiles { grid-template-columns: 1fr; gap: 10px; } .iy-stat2 { flex-direction: column; align-items: flex-start; gap: 8px; } }
   .iy-card { display: grid; grid-template-columns: minmax(0, 1.35fr) minmax(0, 1fr); max-width: 980px; margin: 8px auto 0; background: var(--card); border-radius: 20px; overflow: hidden; box-shadow: 0 1px 0 var(--line), 0 18px 40px -30px color-mix(in srgb, var(--ink) 50%, transparent); text-align: left; }
   .iy-list { list-style: none; margin: 0; padding: 18px 36px; }
   .iy-list li { display: flex; gap: 14px; align-items: flex-start; padding: 18px 0; border-bottom: 1px solid var(--line); font-family: var(--serif); font-weight: 500; font-size: 1.22rem; line-height: 1.35; color: var(--ink); }
@@ -1976,8 +1984,7 @@
       <div class="section-head center-head">
         <h2>Is this you?</h2>
       </div>
-      <div class="iy-card">
-      <ul class="iy-list">
+      <ul class="iy-tiles">
         <li>We just raised. Now we need to know we're heading the right way.</li>
         <li>Investors keep asking how well we know our customers.</li>
         <li>Demos go great. Then nothing.</li>
@@ -1985,13 +1992,12 @@
         <li>We've rewritten the homepage three times.</li>
         <li>We're raising soon and need proof customers actually want this.</li>
       </ul>
-      <div class="iy-stat">
+      <div class="iy-stat2">
         <b class="stat-big">43%</b>
         <div>
           <p>of startups that shut down since 2023 cited poor product-market fit. Running out of cash was the last step, not the cause.</p>
           <small class="src">Source: CB Insights, 385 venture-backed shutdowns with known causes, March 2026</small>
         </div>
-      </div>
       </div>
       <p class="wn-raise iy-raise">About to raise? The <a href="/pricing#custom">pre-raise evidence pack</a> gives investors real proof: why customers chose you, in their own words.</p>
     </div>
@@ -2008,7 +2014,7 @@
         <div class="wd-cards">
           <div class="wd-card"><span class="wd-n">1</span><div><h3>Your direction</h3><p>What to double down on, and what to stop doing.</p></div></div>
           <div class="wd-card"><span class="wd-n">2</span><div><h3>Your target market</h3><p>Which customers get the most value, and which ones to stop chasing.</p></div></div>
-          <div class="wd-card"><span class="wd-n">3</span><div><h3>How to package it</h3><p>How to describe and offer what you sell, so those buyers say yes.</p></div></div>
+          <div class="wd-card"><span class="wd-n">3</span><div><h3>What to say to them</h3><p>The words and messages that make those buyers say yes.</p></div></div>
         </div>
       </div>
       <figure class="wd-fig"><img src="img/ultha-photo.jpg" alt="Ultha on a customer call at her laptop"><figcaption>Every answer backed by your customers’ own words</figcaption></figure>
