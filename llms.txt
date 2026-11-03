@@ -1,14 +1,13 @@
 # Ultha (ultha.co)
 
-> Ultha Moktan runs customer interviews and win-loss research for founder-led B2B AI startups. In a 4-week "Why They Buy" sprint she interviews a startup's won, lost and churned customers and turns what they say into positioning and messaging the founder can use: who to target and what to say.
+> Ultha Moktan does customer research for founder-led B2B AI startups. AI research gives everyone the same answers; she talks to a startup's customers (won, stalled and lost) and finds the patterns, so founders get a clear direction for sales and marketing: what to focus on, who to target and what to say.
 
 About: Former product manager and co-founder of a marketing agency that worked with 40+ brands. Customer research she ran led to +34% and +17% feature adoption. Based in Santa Barbara, CA. Contact: ultha@ultha.co.
 
 ## Services and prices
-- Starter check, $2,500, one week: 3 customer calls and a homepage and pitch review. Credited if you book a sprint.
-- Why They Buy sprint, $9,500, 4 weeks (founding rate $5,000 for the first five clients who book by November 25, 2026; start by November 16 for findings before the holidays, or book a January start): 10-15 customer interviews with won, lost and churned customers; findings report and one-page summary; positioning and messaging fix sheet; quote bank; 1-hour decision workshop. About 3 hours of the founder's time. If fewer than 6 calls happen, half the fee is refunded.
+- Why They Buy sprint, $9,500, 4 weeks (founding rate $5,000 for the first five clients who book by November 25, 2026; start by November 16 for findings before the holidays, or book a January start): 10-15 interviews with won, stalled and lost buyers; findings report and one-page summary; positioning and messaging fix sheet; quote bank; 1-hour decision workshop. About 3 hours of the founder's time.
 - Won, Lost, Left, $3,000/month after a sprint: ongoing win-loss and churn interviews, 4 a month, with a one-page memo each month. 3-month minimum.
-- Add-ons: done-with-you ($2,500), written case studies and testimonials, pre-raise evidence pack, homepage rewrite (from $3,000).
+- Something custom (for example a homepage rewrite or a different mix of calls): scoped on request. https://ultha.co/pricing#custom
 - Free homepage review: send a homepage, get a short review video. https://ultha.co/#review
 
 ## Who it's for
@@ -18,6 +17,7 @@ Founder-led B2B software startups, mostly AI, with real customers (about 40 peop
 Customer interviews, win-loss interviews, churn interviews, jobs-to-be-done (switch) questions, voice-of-customer research, building an ideal customer profile (ICP) from best customers. Calls are confidential; quotes are anonymized unless a customer agrees.
 
 ## Pages
-- [Home](https://ultha.co/): the offer, how it works, prices, FAQ and the contact form.
+- [Home](https://ultha.co/): what she does, how it works, about, FAQ and the contact form.
+- [Pricing](https://ultha.co/pricing): the Why They Buy sprint, Won, Lost, Left, and custom work.
 - [Sample review: why customers buy Attio](https://ultha.co/sample-review): what Attio's homepage says vs. what public reviews say, where they don't match, and what to test. Built from public reviews, not client work.
-- [Q1 planning](https://ultha.co/q1): start a Why They Buy sprint by November 16 for findings before the holidays, a one-week $2,500 Starter check, or book a January sprint. Founding rate ends November 25, 2026.
+- [Q1 planning](https://ultha.co/q1): start a Why They Buy sprint by November 16 for findings before the holidays, or book a January sprint. Founding rate ends November 25, 2026.
