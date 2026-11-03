@@ -1874,6 +1874,11 @@
   #why-now-2 .iy-quotes blockquote { font-size: 1.12rem; line-height: 1.35; }
   @media (max-width: 900px) { #why-now-2 .iy-quotes { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
   @media (max-width: 560px) { #why-now-2 .iy-quotes { grid-template-columns: 1fr; } }
+  #why-now-2 .iy-statcard { grid-column: 1 / -1; display: flex; gap: 22px; align-items: center; background: var(--card); border-radius: 16px; padding: 20px 26px; box-shadow: 0 1px 0 var(--line), 0 14px 30px -24px color-mix(in srgb, var(--ink) 45%, transparent); }
+  #why-now-2 .iy-statcard .stat-big { font-size: 2.6rem; line-height: 1; flex: none; }
+  #why-now-2 .iy-statcard p { margin: 0 0 4px; color: var(--ink); line-height: 1.5; }
+  #why-now-2 .iy-statcard .src { font-size: 0.75rem; color: var(--ink-3); }
+  @media (max-width: 560px) { #why-now-2 .iy-statcard { flex-direction: column; align-items: flex-start; gap: 8px; } }
   .iy-tiles { list-style: none; margin: 8px auto 0; padding: 0; max-width: 980px; display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 14px; }
   .iy-tiles li { background: var(--card); border-radius: 14px; padding: 18px 20px; font-size: 1.05rem; font-weight: 500; line-height: 1.45; color: var(--ink); text-align: left; box-shadow: 0 1px 0 var(--line), 0 12px 26px -22px color-mix(in srgb, var(--ink) 45%, transparent); border-top: 3px solid var(--accent); }
   .iy-stat2 { display: flex; gap: 22px; align-items: center; justify-content: center; max-width: 760px; margin: 36px auto 0; text-align: left; }
@@ -1998,15 +2003,14 @@
         <figure class="fam"><blockquote>Churn is up, and we're not sure why.</blockquote></figure>
         <figure class="fam"><blockquote>We've rewritten the homepage three times.</blockquote></figure>
         <figure class="fam"><blockquote>We're raising soon and need proof customers actually want this.</blockquote></figure>
-      </div>
-      <div class="iy-stat2">
-        <b class="stat-big">43%</b>
-        <div>
-          <p>of startups that shut down since 2023 cited poor product-market fit. Running out of cash was the last step, not the cause.</p>
-          <small class="src">Source: CB Insights, 385 venture-backed shutdowns with known causes, March 2026</small>
+        <div class="iy-statcard">
+          <b class="stat-big">43%</b>
+          <div>
+            <p>of startups that shut down since 2023 cited poor product-market fit. Running out of cash was the last step, not the cause.</p>
+            <small class="src">Source: CB Insights, 385 venture-backed shutdowns with known causes, March 2026</small>
+          </div>
         </div>
       </div>
-      <p class="wn-raise iy-raise">About to raise? The <a href="/pricing#custom">pre-raise evidence pack</a> gives investors real proof: why customers chose you, in their own words.</p>
     </div>
   </section>
 
