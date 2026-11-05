@@ -8,7 +8,7 @@ About: Former product manager and co-founder of a marketing agency that worked w
 - Why They Buy sprint, $9,500, 4 weeks (founding rate $5,000 for the first five clients who book by November 25, 2026; start by November 16 for findings before the holidays, or book a January start): 10-15 interviews with won, stalled and lost buyers; findings report and one-page summary; positioning and messaging fix sheet; quote bank; 1-hour decision workshop. About 3 hours of the founder's time.
 - Won, Lost, Left, $3,000/month after a sprint: ongoing win-loss and churn interviews, 4 a month, with a one-page memo each month. 3-month minimum.
 - Something custom (for example a homepage rewrite or a different mix of calls): scoped on request. https://ultha.co/pricing#custom
-- Free homepage review: send a homepage, get a short review video. https://ultha.co/#review
+- Free homepage review: send a homepage, get a short review post. https://ultha.co/#review
 
 ## Who it's for
 Founder-led B2B software startups, mostly AI, with real customers (about 40 people who decided in the last six months) and nobody owning customer research yet. Common problems: "everyone said yes and nobody bought", "we sound like every other AI tool", lost deals that give polite excuses, churned customers who don't reply.
