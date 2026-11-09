@@ -5,8 +5,8 @@
 About: Former product manager and co-founder of a marketing agency that worked with 40+ brands. Customer research she ran led to +34% and +17% feature adoption. Based in Santa Barbara, CA. Contact: ultha@ultha.co.
 
 ## Services and prices
-- Why They Buy sprint, $9,500, 4 weeks (founding rate $5,000 for the first five clients who book by November 25, 2026; start by November 16 for findings before the holidays, or book a January start): 10-15 interviews with won, stalled and lost buyers; findings report and one-page summary; positioning and messaging fix sheet; quote bank; 1-hour decision workshop. About 3 hours of the founder's time.
-- Won, Lost, Left, $3,000/month after a sprint: ongoing win-loss and churn interviews, 4 a month, with a one-page memo each month. 3-month minimum.
+- Why They Buy sprint, $9,500, 4 weeks (founding rate $5,500 for the first 5 clients, in exchange for a named case study): 10-15 interviews with won, stalled and lost buyers; findings report and one-page summary; positioning and messaging fix sheet; quote bank; 1-hour decision workshop; check-ins at 30, 60 and 90 days. The founder makes warm intros; Ultha handles scheduling, interviews and analysis.
+- Won, Lost, Left, $3,000/month (founding: $2,500/month for the first 3 months): 4 interviews a month with customers who bought, stalled or left, a monthly working session, and updated direction on ICP, priorities and messaging. 3-month minimum.
 - Something custom (for example a homepage rewrite or a different mix of calls): scoped on request. https://ultha.co/pricing#custom
 - Free homepage review: send a homepage, get a short review post. https://ultha.co/#review
 
@@ -20,4 +20,4 @@ Customer interviews, win-loss interviews, churn interviews, jobs-to-be-done (swi
 - [Home](https://ultha.co/): what she does, how it works, about, FAQ and the contact form.
 - [Pricing](https://ultha.co/pricing): the Why They Buy sprint, Won, Lost, Left, and custom work.
 - [Sample review: why customers buy Attio](https://ultha.co/sample-review): what Attio's homepage says vs. what public reviews say, where they don't match, and what to test. Built from public reviews, not client work.
-- [Q1 planning](https://ultha.co/q1): start a Why They Buy sprint by November 16 for findings before the holidays, or book a January sprint. Founding rate ends November 25, 2026.
+- [Q1 planning](https://ultha.co/q1): go into Q1 knowing why customers buy. Founding rate for the first 5 clients.
