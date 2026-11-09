@@ -195,6 +195,7 @@
         if (!res.ok) throw new Error((res.j && res.j.error) || '');
         form.hidden = true;
         if (thanks) thanks.hidden = false;
+        if (res.j && res.j.kit && thanks) { var d = document.createElement('p'); d.style.cssText = 'font:12px monospace;color:#586A7C;margin-top:8px'; d.textContent = 'Preview check: ' + res.j.kit.join(', '); thanks.appendChild(d); }
       })
       .catch(function (x) {
         var err = document.getElementById('emailErr');

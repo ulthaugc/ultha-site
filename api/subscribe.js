@@ -13,10 +13,13 @@ export default async function handler(req, res) {
   const name = String(body.name || '').trim().slice(0, 80);
   const company = String(body.company || '');
   const wantsJson = (req.headers['accept'] || '').includes('application/json');
-  const thanks = '/field-notes?welcome=1';
+  const isPreview = process.env.VERCEL_ENV === 'preview';
+  const dbg = [];
+  const thanksBase = '/field-notes?welcome=1';
+  const thanksUrl = () => isPreview && dbg.length ? `${thanksBase}&kit=${encodeURIComponent(dbg.join(','))}` : thanksBase;
   const failEmail = '/field-notes?error=email';
 
-  if (company) return wantsJson ? res.json({ ok: true }) : res.redirect(303, thanks); // honeypot
+  if (company) return wantsJson ? res.json({ ok: true, ...(isPreview ? { kit: dbg } : {}) }) : res.redirect(303, thanksUrl()); // honeypot
   if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email) || email.length > 200) {
     return wantsJson ? res.status(400).json({ ok: false, error: 'Please enter a valid email.' }) : res.redirect(303, failEmail);
   }
@@ -24,9 +27,10 @@ export default async function handler(req, res) {
   console.log('field-notes signup', JSON.stringify({ email, name, at: new Date().toISOString() }));
 
   const key = process.env.KIT_API_KEY;
+  dbg.push('key:' + (key ? 'yes' : 'no'), 'form:' + (process.env.KIT_FORM_ID ? 'yes' : 'no'));
   if (!key) {
     console.warn('KIT_API_KEY not set; signup logged only');
-    return wantsJson ? res.json({ ok: true }) : res.redirect(303, thanks);
+    return wantsJson ? res.json({ ok: true, ...(isPreview ? { kit: dbg } : {}) }) : res.redirect(303, thanksUrl());
   }
 
   const headers = {
@@ -48,10 +52,11 @@ export default async function handler(req, res) {
     let createJson = null;
     try { createJson = createText ? JSON.parse(createText) : null; } catch (_) {}
 
+    dbg.push('create:' + createRes.status + (createJson && createJson.subscriber ? ':' + createJson.subscriber.state : ''));
     if (!createRes.ok) {
       console.error('kit create subscriber error', createRes.status, createText);
       // Still return ok so the visitor gets a friendly thanks; signup is logged above.
-      return wantsJson ? res.json({ ok: true }) : res.redirect(303, thanks);
+      return wantsJson ? res.json({ ok: true, ...(isPreview ? { kit: dbg } : {}) }) : res.redirect(303, thanksUrl());
     }
 
     const subscriberId = createJson && createJson.subscriber && createJson.subscriber.id;
@@ -65,6 +70,7 @@ export default async function handler(req, res) {
           headers,
           body: JSON.stringify({ referrer }),
         });
+        dbg.push('addform:' + fr.status);
         if (!fr.ok) console.error('kit add to form error', fr.status, await fr.text());
       } catch (e) {
         console.error('kit add to form failed', e);
@@ -86,7 +92,8 @@ export default async function handler(req, res) {
     }
   } catch (e) {
     console.error('kit request failed', e);
+    dbg.push('error:' + String(e && e.message || e).slice(0, 60));
   }
 
-  return wantsJson ? res.json({ ok: true }) : res.redirect(303, thanks);
+  return wantsJson ? res.json({ ok: true, ...(isPreview ? { kit: dbg } : {}) }) : res.redirect(303, thanksUrl());
 }
