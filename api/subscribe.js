@@ -53,6 +53,22 @@ export default async function handler(req, res) {
     try { createJson = createText ? JSON.parse(createText) : null; } catch (_) {}
 
     dbg.push('create:' + createRes.status + (createJson && createJson.subscriber ? ':' + createJson.subscriber.state : ''));
+    if (createRes.status === 401 && process.env.KIT_FORM_ID) {
+      // Key may be an older v3 key: v3 subscribes straight to a form with api_key in the body.
+      try {
+        const v3 = await fetch(`https://api.convertkit.com/v3/forms/${encodeURIComponent(process.env.KIT_FORM_ID)}/subscribe`, {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json', Accept: 'application/json' },
+          body: JSON.stringify({ api_key: key, email, ...(name ? { first_name: name } : {}) }),
+        });
+        dbg.push('v3:' + v3.status);
+        if (!v3.ok) console.error('kit v3 subscribe error', v3.status, await v3.text());
+      } catch (e) {
+        console.error('kit v3 subscribe failed', e);
+        dbg.push('v3:error');
+      }
+      return wantsJson ? res.json({ ok: true, ...(isPreview ? { kit: dbg } : {}) }) : res.redirect(303, thanksUrl());
+    }
     if (!createRes.ok) {
       console.error('kit create subscriber error', createRes.status, createText);
       // Still return ok so the visitor gets a friendly thanks; signup is logged above.
