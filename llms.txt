@@ -18,6 +18,7 @@ Customer interviews, win-loss interviews, churn interviews, jobs-to-be-done (swi
 
 ## Pages
 - [Home](https://ultha.co/): what she does, how it works, about, FAQ and the contact form.
+- [Field Notes](https://ultha.co/field-notes): free newsletter with detailed reviews of how AI startups explain themselves, from homepages to positioning to strategy.
 - [Pricing](https://ultha.co/pricing): the Why They Buy sprint, Won, Lost, Left, and custom work.
 - [Sample review: why customers buy Attio](https://ultha.co/sample-review): what Attio's homepage says vs. what public reviews say, where they don't match, and what to test. Built from public reviews, not client work.
 - [Q1 planning](https://ultha.co/q1): go into Q1 knowing why customers buy. Founding rate for the first 5 clients.
