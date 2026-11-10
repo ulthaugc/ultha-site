@@ -52,8 +52,11 @@
   .hero .lead { font-size: 1.12rem; color: var(--ink-2); margin: 18px auto 0; max-width: 38rem; }
   .signup { margin: 32px auto 0; max-width: 440px; text-align: left; background: var(--card); border: 1px solid var(--line); border-radius: 18px; padding: 22px 22px 18px; box-shadow: 0 18px 40px -30px color-mix(in srgb, var(--ink) 45%, transparent); }
   .signup label { display: grid; gap: 6px; font-size: 0.9rem; font-weight: 500; color: var(--ink); margin-bottom: 12px; }
-  .signup input { font: inherit; padding: 12px 14px; border-radius: 10px; border: 1.5px solid #D5DFF8; background: #fff; color: var(--ink); }
-  .signup input:focus { outline: 2px solid color-mix(in srgb, var(--accent) 35%, transparent); border-color: var(--accent); }
+  .signup input, .signup select { font: inherit; width: 100%; padding: 12px 14px; border-radius: 10px; border: 1.5px solid #D5DFF8; background: #fff; color: var(--ink); }
+  .signup input:focus, .signup select:focus { outline: 2px solid color-mix(in srgb, var(--accent) 35%, transparent); border-color: var(--accent); }
+  .signup select { appearance: none; -webkit-appearance: none; background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'%3E%3Cpath fill='none' stroke='%2314213D' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round' d='M1.5 1.5 L6 6 L10.5 1.5'/%3E%3C/svg%3E"); background-repeat: no-repeat; background-position: right 14px center; background-size: 12px 8px; padding-right: 40px; cursor: pointer; }
+  .signup select:has(option[value=""]:checked) { color: var(--ink-3); }
+  .signup select option { color: var(--ink); }
   .signup .row { display: grid; gap: 12px; }
   .signup .btn { width: 100%; text-align: center; margin-top: 4px; }
   .signup .hint { margin-top: 12px; font-size: 0.85rem; color: var(--ink-3); text-align: center; }
@@ -111,10 +114,20 @@
       <div class="err" id="emailErr" hidden>Please enter a valid email.</div>
 
       <form class="signup" id="fnForm" action="/api/subscribe" method="post">
-        <input name="company" tabindex="-1" autocomplete="off" aria-hidden="true" style="position:absolute;left:-9999px">
+        <input name="website" tabindex="-1" autocomplete="off" aria-hidden="true" style="position:absolute;left:-9999px">
         <div class="row">
-          <label>Name <span class="opt">(optional)</span><input name="name" autocomplete="name" placeholder="Your name"></label>
+          <label>Name<input name="name" autocomplete="name" required placeholder="Your name"></label>
           <label>Email<input name="email" type="email" autocomplete="email" required placeholder="you@company.com"></label>
+          <label>What's your role? <span class="opt">(optional)</span>
+            <select name="role">
+              <option value="">Choose one</option>
+              <option value="Founder or CEO">Founder or CEO</option>
+              <option value="Marketing or growth">Marketing or growth</option>
+              <option value="Product">Product</option>
+              <option value="Sales">Sales</option>
+              <option value="Something else">Something else</option>
+            </select>
+          </label>
         </div>
         <button class="btn" type="submit">Subscribe to Field Notes</button>
         <p class="hint">Free. No spam. Unsubscribe any time.</p>
@@ -175,6 +188,10 @@
   if (/[?&]error=email\b/.test(q)) {
     var e = document.getElementById('emailErr');
     if (e) e.hidden = false;
+  }
+  if (/[?&]error=name\b/.test(q)) {
+    var n = document.getElementById('emailErr');
+    if (n) { n.hidden = false; n.textContent = 'Please enter your name.'; }
   }
   var form = document.getElementById('fnForm');
   var thanks = document.getElementById('fnThanks');

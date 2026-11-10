@@ -11,20 +11,27 @@ export default async function handler(req, res) {
   const body = typeof req.body === 'string' ? Object.fromEntries(new URLSearchParams(req.body)) : (req.body || {});
   const email = String(body.email || '').trim().toLowerCase();
   const name = String(body.name || '').trim().slice(0, 80);
-  const company = String(body.company || '');
+  const website = String(body.website || '');
+  const allowedRoles = ['Founder or CEO', 'Marketing or growth', 'Product', 'Sales', 'Something else'];
+  const roleRaw = String(body.role || '').trim();
+  const role = allowedRoles.includes(roleRaw) ? roleRaw : '';
   const wantsJson = (req.headers['accept'] || '').includes('application/json');
   const isPreview = process.env.VERCEL_ENV === 'preview';
   const dbg = [];
   const thanksBase = '/field-notes?welcome=1';
   const thanksUrl = () => isPreview && dbg.length ? `${thanksBase}&kit=${encodeURIComponent(dbg.join(','))}` : thanksBase;
   const failEmail = '/field-notes?error=email';
+  const failName = '/field-notes?error=name';
 
-  if (company) return wantsJson ? res.json({ ok: true, ...(isPreview ? { kit: dbg } : {}) }) : res.redirect(303, thanksUrl()); // honeypot
+  if (website) return wantsJson ? res.json({ ok: true, ...(isPreview ? { kit: dbg } : {}) }) : res.redirect(303, thanksUrl()); // honeypot
+  if (!name) {
+    return wantsJson ? res.status(400).json({ ok: false, error: 'Please enter your name.' }) : res.redirect(303, failName);
+  }
   if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email) || email.length > 200) {
     return wantsJson ? res.status(400).json({ ok: false, error: 'Please enter a valid email.' }) : res.redirect(303, failEmail);
   }
 
-  console.log('field-notes signup', JSON.stringify({ email, name, at: new Date().toISOString() }));
+  console.log('field-notes signup', JSON.stringify({ email, name, role, at: new Date().toISOString() }));
 
   const key = process.env.KIT_API_KEY;
   dbg.push('key:' + (key ? 'yes' : 'no'), 'form:' + (process.env.KIT_FORM_ID ? 'yes' : 'no'));
@@ -45,7 +52,8 @@ export default async function handler(req, res) {
       headers,
       body: JSON.stringify({
         email_address: email,
-        ...(name ? { first_name: name } : {}),
+        first_name: name,
+        ...(role ? { fields: { role } } : {}),
       }),
     });
     const createText = await createRes.text();
@@ -59,7 +67,7 @@ export default async function handler(req, res) {
         const v3 = await fetch(`https://api.convertkit.com/v3/forms/${encodeURIComponent(process.env.KIT_FORM_ID)}/subscribe`, {
           method: 'POST',
           headers: { 'Content-Type': 'application/json', Accept: 'application/json' },
-          body: JSON.stringify({ api_key: key, email, ...(name ? { first_name: name } : {}) }),
+          body: JSON.stringify({ api_key: key, email, first_name: name, ...(role ? { fields: { role } } : {}) }),
         });
         dbg.push('v3:' + v3.status);
         if (!v3.ok) console.error('kit v3 subscribe error', v3.status, await v3.text());
