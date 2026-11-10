@@ -1,6 +1,6 @@
 // Field Notes newsletter signups (Kit / ConvertKit API v4).
 // Requires KIT_API_KEY in Vercel. Optionally KIT_FORM_ID and/or KIT_TAG_ID
-// The optional role picks one of the Kit role tags below.
+// The optional free-text role is saved to the Kit custom field "role".
 // to add the subscriber to a Kit form or tag after create/upsert.
 // If KIT_API_KEY is missing, the signup is still logged and we return ok
 // so the form does not break while Kit is being set up.
@@ -13,18 +13,7 @@ export default async function handler(req, res) {
   const email = String(body.email || '').trim().toLowerCase();
   const name = String(body.name || '').trim().slice(0, 80);
   const website = String(body.website || '');
-  const allowedRoles = ['Founder or CEO', 'Marketing or growth', 'Product', 'Sales', 'Something else'];
-  const roleRaw = String(body.role || '').trim();
-  const role = allowedRoles.includes(roleRaw) ? roleRaw : '';
-  // Kit tag IDs for each role (Kit free plan: roles are stored as tags).
-  const ROLE_TAGS = {
-    'Founder or CEO': 25692292,
-    'Marketing or growth': 25692295,
-    'Product': 25692299,
-    'Sales': 25692307,
-    'Something else': 25692310,
-  };
-  const roleTagId = role ? ROLE_TAGS[role] : null;
+  const role = String(body.role || '').trim().slice(0, 80);
   const wantsJson = (req.headers['accept'] || '').includes('application/json');
   const isPreview = process.env.VERCEL_ENV === 'preview';
   const dbg = [];
@@ -63,6 +52,7 @@ export default async function handler(req, res) {
       body: JSON.stringify({
         email_address: email,
         first_name: name,
+        ...(role ? { fields: { role } } : {}),
       }),
     });
     const createText = await createRes.text();
@@ -76,7 +66,7 @@ export default async function handler(req, res) {
         const v3 = await fetch(`https://api.convertkit.com/v3/forms/${encodeURIComponent(process.env.KIT_FORM_ID)}/subscribe`, {
           method: 'POST',
           headers: { 'Content-Type': 'application/json', Accept: 'application/json' },
-          body: JSON.stringify({ api_key: key, email, first_name: name, ...(roleTagId ? { tags: [roleTagId] } : {}) }),
+          body: JSON.stringify({ api_key: key, email, first_name: name, ...(role ? { fields: { role } } : {}) }),
         });
         dbg.push('v3:' + v3.status);
         if (!v3.ok) console.error('kit v3 subscribe error', v3.status, await v3.text());
@@ -110,7 +100,7 @@ export default async function handler(req, res) {
       }
     }
 
-    const tagIds = [process.env.KIT_TAG_ID, roleTagId].filter(Boolean);
+    const tagIds = [process.env.KIT_TAG_ID].filter(Boolean);
     for (const tagId of tagIds) {
       if (!subscriberId) break;
       try {
