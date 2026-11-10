@@ -548,7 +548,11 @@
     .steps { grid-template-columns: 1fr; }
     .facts { grid-template-columns: 1fr; }
     .nav { height: 60px; }
-    .brand span { display: none; }
+    /* Phone: show Young Serif "Ultha" next to the arc mark */
+    .brand { gap: 8px; }
+    .brand span { display: inline; font-size: 1.2rem; color: var(--ink); /* #14213D navy */ }
+    .nav-links { gap: 10px; }
+    .nav-links .mnav-btn { margin-left: 0; }
     .hero-ctas .btn { width: 100%; }
     .report { transform: none; padding: 24px 20px; }
     .palettes { gap: 10px; padding-right: 14px; }
@@ -2353,5 +2357,6 @@
 
 
 
+<script src="/menu.js" defer></script>
 </body>
 </html>
