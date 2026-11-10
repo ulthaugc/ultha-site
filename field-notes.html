@@ -119,14 +119,7 @@
           <label>Name<input name="name" autocomplete="name" required placeholder="Your name"></label>
           <label>Email<input name="email" type="email" autocomplete="email" required placeholder="you@company.com"></label>
           <label>What's your role? <span class="opt">(optional)</span>
-            <select name="role">
-              <option value="">Choose one</option>
-              <option value="Founder or CEO">Founder or CEO</option>
-              <option value="Marketing or growth">Marketing or growth</option>
-              <option value="Product">Product</option>
-              <option value="Sales">Sales</option>
-              <option value="Something else">Something else</option>
-            </select>
+            <input name="role" maxlength="80" autocomplete="organization-title" placeholder="e.g. Founder, Head of Growth">
           </label>
         </div>
         <button class="btn" type="submit">Subscribe to Field Notes</button>

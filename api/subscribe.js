@@ -1,5 +1,6 @@
 // Field Notes newsletter signups (Kit / ConvertKit API v4).
 // Requires KIT_API_KEY in Vercel. Optionally KIT_FORM_ID and/or KIT_TAG_ID
+// The optional free-text role is saved to the Kit custom field "role".
 // to add the subscriber to a Kit form or tag after create/upsert.
 // If KIT_API_KEY is missing, the signup is still logged and we return ok
 // so the form does not break while Kit is being set up.
@@ -12,9 +13,7 @@ export default async function handler(req, res) {
   const email = String(body.email || '').trim().toLowerCase();
   const name = String(body.name || '').trim().slice(0, 80);
   const website = String(body.website || '');
-  const allowedRoles = ['Founder or CEO', 'Marketing or growth', 'Product', 'Sales', 'Something else'];
-  const roleRaw = String(body.role || '').trim();
-  const role = allowedRoles.includes(roleRaw) ? roleRaw : '';
+  const role = String(body.role || '').trim().slice(0, 80);
   const wantsJson = (req.headers['accept'] || '').includes('application/json');
   const isPreview = process.env.VERCEL_ENV === 'preview';
   const dbg = [];
@@ -101,8 +100,9 @@ export default async function handler(req, res) {
       }
     }
 
-    const tagId = process.env.KIT_TAG_ID;
-    if (tagId && subscriberId) {
+    const tagIds = [process.env.KIT_TAG_ID].filter(Boolean);
+    for (const tagId of tagIds) {
+      if (!subscriberId) break;
       try {
         const tr = await fetch(`https://api.kit.com/v4/tags/${encodeURIComponent(tagId)}/subscribers/${subscriberId}`, {
           method: 'POST',
