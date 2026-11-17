@@ -1,6 +1,8 @@
 {
   "cleanUrls": true,
   "redirects": [
+    { "source": "/field-notes/issue-1", "destination": "/field-notes/why-great-demos-dont-close", "statusCode": 301 },
+    { "source": "/field-notes/issue-1.html", "destination": "/field-notes/why-great-demos-dont-close", "statusCode": 301 },
     { "source": "/about", "destination": "/#about", "permanent": false },
     { "source": "/contact", "destination": "/#start", "permanent": false },
     { "source": "/starter-kit", "destination": "/", "permanent": false },
