@@ -43,6 +43,7 @@
   .article h1 { margin: 0 0 10px; }
   .dek { font-size: 1.12rem; line-height: 1.45; color: var(--ink-2); font-weight: 600; margin: 0 0 14px; }
   .hero-img { display: block; width: 100%; max-width: 480px; height: auto; border-radius: 16px; margin: 0 auto 28px; background: var(--blue); }
+  @media (min-width: 721px) { .hero-img { max-width: 680px; margin: 0 0 28px; } }
   .byline { display: flex; align-items: center; gap: 12px; font-size: 0.95rem; color: var(--ink-2); margin: 0 0 18px; }
   .byline img { width: 44px; height: 44px; border-radius: 50%; object-fit: cover; object-position: center; flex: none; box-shadow: 0 0 0 3px rgba(31, 79, 216, 0.25); }
   .article p { margin: 0 0 18px; color: var(--ink); }
@@ -91,12 +92,17 @@
   <h1>They loved the demo. Then the thread went quiet.</h1>
   <p class="dek">We called it timing. The data says otherwise.</p>
   <div class="byline"><img src="/img/face.jpg" alt="Ultha Moktan" width="44" height="44"><span>Ultha Moktan · Nov 16, 2026 · 6 min read</span></div>
-  <img class="hero-img"
-    src="/img/field-notes/issue-1/header-1200.webp"
-    srcset="/img/field-notes/issue-1/header-1200.webp 1200w, /img/field-notes/issue-1/header.webp 2400w"
-    sizes="(max-width: 520px) calc(100vw - 40px), 480px"
-    width="1200" height="900"
-    alt="They loved the demo">
+  <picture>
+    <source media="(min-width: 721px)"
+      srcset="/img/field-notes/issue-1/header-wide-1200.webp 1200w, /img/field-notes/issue-1/header-wide.webp 2400w"
+      sizes="680px" width="1200" height="500">
+    <img class="hero-img"
+      src="/img/field-notes/issue-1/header-1200.webp"
+      srcset="/img/field-notes/issue-1/header-1200.webp 1200w, /img/field-notes/issue-1/header.webp 2400w"
+      sizes="(max-width: 520px) calc(100vw - 40px), 480px"
+      width="1200" height="900"
+      alt="They loved the demo">
+  </picture>
 
   <p>A great demo used to feel like the hard part was over. Someone said they loved it. You sent the recap. The deal was supposed to move.</p>
   <p>That data comes from <a href="https://www.linkedin.com/in/matthewxdixon">Matt Dixon</a> and <a href="https://www.linkedin.com/in/ted-mckenna">Ted McKenna</a>, authors of <em>The JOLT Effect</em>, who studied more than 2.5 million recorded sales conversations. In Harvard Business Review they wrote that "anywhere between 40% and 60% of deals today end up lost to customers who express their intent to purchase, but ultimately fail to act."</p>
