@@ -17,25 +17,27 @@ export default async function handler(req, res) {
   const name = String(b.name || '').trim().slice(0, 100);
   const email = String(b.email || '').trim().toLowerCase().slice(0, 200);
   const site = String(b.site || '').trim().slice(0, 200);
-  const OPTIONS = { starter: 'Starter check ($2,500)', founding: 'Why They Buy, founding ($5,000)', sprint: 'Why They Buy sprint ($9,500)', wll: 'Won, Lost, Left ($3,000/month)', custom: 'Something custom', unsure: 'Not sure yet' };
+  const OPTIONS = { starter: 'Starter check ($2,500)', founding: 'Why They Buy, first 3 clients ($5,500)', sprint: 'Why They Buy sprint ($9,500)', wll: 'Won, Lost, Left ($3,000/month)', custom: 'Something custom', unsure: 'Not sure yet' };
   const option = kind === 'work' ? (OPTIONS[b.option] || OPTIONS.unsure) : '';
   const note = String(b.note || '').trim().slice(0, 4000);
   const heard = String(b.heard || '').trim().slice(0, 60);
+  const SHARE = { private: 'Private (send only to them)', public: 'Public (OK to post on socials with credit)' };
+  const share = kind === 'review' ? (SHARE[b.share] || 'Not stated') : '';
 
   if (!name) return res.status(400).json({ ok: false, error: 'Please add your name.' });
   if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) return res.status(400).json({ ok: false, error: 'Please enter a valid email.' });
   if (!/^\S+\.\S{2,}$/.test(site.replace(/^https?:\/\//, ''))) return res.status(400).json({ ok: false, error: 'Please add your website, like yourstartup.com.' });
 
-  const lead = { kind, name, email, site, option, heard, note, at: new Date().toISOString() };
+  const lead = { kind, name, email, site, option, share, heard, note, at: new Date().toISOString() };
   console.log('contact lead', JSON.stringify(lead));
 
-  const rows = [['Name', name], ['Email', email], ['Website', site], ['Interested in', option], ['Heard about you via', heard]]
+  const rows = [['Name', name], ['Email', email], ['Website', site], ['Interested in', option], ['Review', share], ['Heard about you via', heard]]
     .filter(([, v]) => v)
     .map(([k, v]) => `<tr><td style="padding:4px 12px 4px 0;color:#5A6B79">${k}</td><td style="padding:4px 0"><b>${esc(v)}</b></td></tr>`).join('');
   const heading = kind === 'review' ? 'Free homepage review request' : 'New lead from ultha.co';
   const html = `<div style="font-family:Arial,sans-serif;color:#1B2A38"><h2 style="margin:0 0 12px">${heading}</h2><table>${rows}</table>${note ? `<p style="margin-top:16px;padding:12px;background:#EEF1F2;border-radius:8px;white-space:pre-wrap">${esc(note)}</p>` : ''}<p style="color:#5A6B79;font-size:13px">Hit Reply to answer ${esc(name)} directly.</p></div>`;
   const to = process.env.CONTACT_TO || 'ultha@ultha.co';
-  const subject = kind === 'review' ? `Homepage review: ${name} · ${site}` : `New lead: ${name} · ${site}`;
+  const subject = kind === 'review' ? `Homepage review${b.share === 'private' ? ' (private)' : b.share === 'public' ? ' (public)' : ''}: ${name} · ${site}` : `New lead: ${name} · ${site}`;
 
   const gUser = process.env.GMAIL_USER;
   const gPass = process.env.GMAIL_APP_PASSWORD;
