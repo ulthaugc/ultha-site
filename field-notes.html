@@ -57,6 +57,11 @@
   .signup select { appearance: none; -webkit-appearance: none; background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'%3E%3Cpath fill='none' stroke='%2314213D' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round' d='M1.5 1.5 L6 6 L10.5 1.5'/%3E%3C/svg%3E"); background-repeat: no-repeat; background-position: right 14px center; background-size: 12px 8px; padding-right: 40px; cursor: pointer; }
   .signup select:has(option[value=""]:checked) { color: var(--ink-3); }
   .signup select option { color: var(--ink); }
+  .issue-card { display: grid; grid-template-columns: minmax(0,1fr) minmax(0,1.2fr); gap: 24px; align-items: center; text-decoration: none; color: inherit; max-width: 860px; margin: 0 auto; }
+  .issue-card img { width: 100%; height: auto; border-radius: 12px; display: block; }
+  .issue-card h3 { margin: 6px 0 8px; }
+  .issue-more { color: var(--accent); font-weight: 600; }
+  @media (max-width: 700px) { .issue-card { grid-template-columns: 1fr; } }
   .signup .row { display: grid; gap: 12px; }
   .signup .btn { width: 100%; text-align: center; margin-top: 4px; }
   .signup .hint { margin-top: 12px; font-size: 0.85rem; color: var(--ink-3); text-align: center; }
@@ -126,6 +131,19 @@
         <p class="hint">Free. No spam. Unsubscribe any time.</p>
       </form>
       <div class="thanks" id="fnThanks" hidden>You're in. Watch your inbox for the next Field Notes.</div>
+    </div>
+  </section>
+
+  <section class="band">
+    <div class="wrap">
+      <div class="head">
+        <span class="kicker">Latest issue</span>
+        <h2>Read Issue 1</h2>
+      </div>
+      <a class="card issue-card" href="/field-notes/issue-1">
+        <img src="/img/field-notes/issue-1/header-1200.webp" alt="They loved the demo" width="1200" height="900" loading="lazy">
+        <div><small>Issue 1 · Nov 16, 2026</small><h3>They loved the demo. Then the thread went quiet.</h3><p>We called it timing. The data says otherwise.</p><span class="issue-more">Read the issue &rarr;</span></div>
+      </a>
     </div>
   </section>
 
