@@ -2023,6 +2023,59 @@
   <!-- WHY NOW -->
   
 
+  <section id="why-it-matters">
+    <style>
+      .wim-board { display: grid; grid-template-columns: 1fr 36px 1fr 36px 1.1fr 36px 1fr; align-items: stretch; margin-top: 44px; }
+      .wim-col { display: flex; flex-direction: column; gap: 14px; min-width: 0; }
+      .wim-tag { font-size: 0.75rem; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; color: var(--accent); }
+      .wim-card { flex: 1 1 0; display: flex; flex-direction: column; justify-content: flex-start; gap: 8px; padding: 22px; border-radius: 16px; background: var(--card); box-shadow: 0 1px 0 var(--line), 0 22px 40px -28px rgba(20, 33, 61, 0.35); }
+      .wim-card h3 { font-family: var(--sans); font-size: 1.1rem; font-weight: 700; line-height: 1.3; color: var(--ink); margin: 0; }
+      .wim-card p { font-size: 0.95rem; color: var(--ink-2); margin: 0; }
+      .wim-card.wim-soft { background: var(--soft); box-shadow: none; }
+      .wim-card.wim-key { box-shadow: inset 0 0 0 1.5px var(--accent); }
+      .wim-pair { display: flex; flex-direction: column; gap: 14px; flex: 1 1 0; }
+      .wim-arr { display: flex; align-items: center; justify-content: center; padding-top: 30px; color: var(--accent); }
+      .wim-arr svg { width: 22px; height: 22px; }
+      @media (max-width: 860px) {
+        .wim-board { grid-template-columns: 1fr; gap: 12px; }
+        .wim-arr { padding: 0; height: 28px; }
+        .wim-arr svg { transform: rotate(90deg); }
+        .wim-card { flex: none; }
+      }
+    </style>
+    <div class="wrap">
+      <div class="section-head center-head">
+        <span class="kicker">Why it matters</span>
+        <h2>Two ways to grow from the same insight.</h2>
+        <p class="wd-intro">Your power users show what good adoption looks like. Find out why they stick, then use it two ways.</p>
+      </div>
+      <div class="wim-board">
+        <div class="wim-col">
+          <span class="wim-tag">The base</span>
+          <div class="wim-card wim-soft"><h3>Power users</h3><p>Your best customers, the ones who use you most.</p></div>
+        </div>
+        <div class="wim-arr" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></div>
+        <div class="wim-col">
+          <span class="wim-tag">The insight</span>
+          <div class="wim-card wim-soft"><h3>Why they adopt more</h3><p>Their traits, habits and first wins.</p></div>
+        </div>
+        <div class="wim-arr" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></div>
+        <div class="wim-col">
+          <span class="wim-tag">Two moves</span>
+          <div class="wim-pair">
+            <div class="wim-card wim-key"><h3>Find more like them</h3><p>Target the same buyers.</p></div>
+            <div class="wim-card wim-key"><h3>Help the rest catch up</h3><p>Copy what power users do.</p></div>
+          </div>
+        </div>
+        <div class="wim-arr" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></div>
+        <div class="wim-col">
+          <span class="wim-tag">The payoff</span>
+          <div class="wim-card wim-soft"><h3>More revenue</h3><p>Retention and expansion from customers who stay and use more.</p></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
   <section class="fam-new ask-band" id="familiar-new">
     <div class="wrap">
       <div class="section-head center-head">
@@ -2083,43 +2136,6 @@
   <!-- HOW IT WORKS -->
   <!-- WHY NOW -->
   
-
-  <section id="why-it-matters">
-    <style>
-      .wim-flow { display: flex; align-items: stretch; gap: 14px; margin-top: 8px; }
-      .wim-node { flex: 1 1 0; border-radius: 14px; padding: 18px 16px; background: var(--card); box-shadow: inset 0 0 0 1px var(--line); }
-      .wim-node b { display: block; font-size: 1.05rem; margin-bottom: 4px; color: var(--ink); }
-      .wim-node span { font-size: 0.9rem; color: var(--ink-2); }
-      .wim-a { background: var(--soft); box-shadow: inset 0 0 0 1px var(--line); }
-      .wim-b { box-shadow: inset 0 0 0 1.5px var(--accent); }
-      .wim-arrow { align-self: center; color: var(--accent); font-size: 1.4rem; font-weight: 600; }
-      .wim-split { display: flex; flex-direction: column; gap: 14px; flex: 1 1 0; }
-      @media (max-width: 860px) {
-        .wim-flow { flex-direction: column; }
-        .wim-arrow { transform: rotate(90deg); align-self: center; }
-        .wim-split { width: 100%; }
-      }
-    </style>
-    <div class="wrap">
-      <div class="section-head center-head">
-        <span class="kicker">Why it matters</span>
-        <h2>Two ways to grow from the same insight.</h2>
-        <p class="wd-intro">Your power users show what good adoption looks like. Find out why they stick, then use it two ways.</p>
-      </div>
-      <div class="wim-flow">
-        <div class="wim-node wim-a"><b>Power users</b><span>Your best customers</span></div>
-        <div class="wim-arrow">→</div>
-        <div class="wim-node wim-a"><b>Why they adopt more</b><span>Traits, habits and first wins</span></div>
-        <div class="wim-arrow">→</div>
-        <div class="wim-split">
-          <div class="wim-node wim-b"><b>Find more like them</b><span>Target the same buyers</span></div>
-          <div class="wim-node wim-b"><b>Help the rest catch up</b><span>Copy what power users do</span></div>
-        </div>
-        <div class="wim-arrow">→</div>
-        <div class="wim-node wim-a"><b>More revenue</b><span>Retention and expansion</span></div>
-      </div>
-    </div>
-  </section>
 
   <section id="how">
     <div class="wrap">
