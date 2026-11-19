@@ -2025,28 +2025,29 @@
 
   <section id="why-it-matters">
     <style>
-      .wim-board { margin-top: 44px; display: flex; flex-direction: column; align-items: stretch; }
-      .wim-top, .wim-bottom { background: var(--card); border-radius: 16px; padding: 26px 30px; box-shadow: 0 1px 0 var(--line), 0 22px 40px -28px rgba(20, 33, 61, 0.35); }
-      .wim-top { background: var(--dark); color: var(--on-dark); }
-      .wim-top h3, .wim-bottom h3 { font-family: var(--sans); font-size: 1.25rem; font-weight: 700; color: inherit; margin: 6px 0 4px; }
-      .wim-top p, .wim-bottom p { font-size: 0.98rem; color: var(--on-dark-2); margin: 0; }
-      .wim-bottom { background: var(--soft); box-shadow: none; }
-      .wim-bottom h3 { color: var(--ink); }
-      .wim-bottom p { color: var(--ink-2); }
-      .wim-label { font-size: 0.75rem; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; color: var(--dark-accent); }
-      .wim-bottom .wim-label { color: var(--accent); }
-      .wim-stem { width: 2px; height: 28px; margin: 0 auto; background: var(--line); }
-      .wim-cols { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 16px; }
-      .wim-out { background: var(--card); border-radius: 16px; padding: 26px; box-shadow: 0 1px 0 var(--line), 0 22px 40px -28px rgba(20, 33, 61, 0.35); display: flex; flex-direction: column; gap: 10px; }
-      .wim-out .wim-num { font-family: var(--serif); font-size: 1.6rem; color: var(--accent); line-height: 1; }
-      .wim-out h3 { font-family: var(--sans); font-size: 1.1rem; font-weight: 700; color: var(--ink); margin: 0; }
-      .wim-out h4 { font-size: 0.95rem; font-weight: 600; color: var(--accent); margin: 0; }
-      .wim-out ul { list-style: none; margin: 6px 0 0; padding: 0; display: grid; gap: 8px; }
-      .wim-out li { position: relative; padding-left: 18px; font-size: 0.95rem; color: var(--ink-2); line-height: 1.5; }
-      .wim-out li::before { content: ""; position: absolute; left: 0; top: 0.62em; width: 7px; height: 7px; border-radius: 50%; background: var(--accent); }
+      .wim-board { margin-top: 44px; display: flex; flex-direction: column; align-items: stretch; max-width: 980px; margin-left: auto; margin-right: auto; }
+      .wim-card { background: var(--card); border-radius: 16px; padding: 28px 32px; box-shadow: 0 1px 0 var(--line), 0 22px 40px -28px rgba(20, 33, 61, 0.35); }
+      .wim-start { border-left: 6px solid var(--accent); }
+      .wim-start h3 { font-family: var(--serif); font-weight: 400; font-size: 1.9rem; line-height: 1.15; color: var(--ink); margin: 6px 0 8px; }
+      .wim-start p { font-size: 1.12rem; color: var(--ink-2); margin: 0; line-height: 1.55; }
+      .wim-label { display: block; font-size: 0.8rem; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; color: var(--accent); }
+      .wim-stem { width: 2px; height: 36px; margin: 0 auto; background: var(--accent); opacity: 0.45; }
+      .wim-cols { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 18px; }
+      .wim-out { background: var(--card); border-radius: 16px; padding: 28px 26px; box-shadow: 0 1px 0 var(--line), 0 22px 40px -28px rgba(20, 33, 61, 0.35); display: flex; flex-direction: column; }
+      .wim-head { display: flex; align-items: center; gap: 12px; padding-bottom: 16px; margin-bottom: 4px; border-bottom: 1px solid var(--line); }
+      .wim-num { flex: none; display: grid; place-items: center; width: 34px; height: 34px; border-radius: 50%; background: var(--accent); color: var(--on-accent); font-weight: 700; font-size: 1rem; }
+      .wim-head h3 { font-family: var(--sans); font-size: 1.2rem; font-weight: 700; color: var(--ink); margin: 0; line-height: 1.25; }
+      .wim-out h4 { font-size: 1.02rem; font-weight: 600; color: var(--accent); margin: 14px 0 6px; }
+      .wim-out ul { list-style: none; margin: 0; padding: 0; }
+      .wim-out li { padding: 10px 0 10px 22px; position: relative; font-size: 1.02rem; color: var(--ink); line-height: 1.5; border-top: 1px solid var(--soft); }
+      .wim-out li::before { content: ""; position: absolute; left: 2px; top: 1.05em; width: 8px; height: 8px; border-radius: 50%; background: var(--accent); }
+      .wim-end { background: var(--soft); border-radius: 16px; padding: 28px 32px; }
+      .wim-end h3 { font-family: var(--serif); font-weight: 400; font-size: 1.7rem; color: var(--ink); margin: 6px 0 8px; }
+      .wim-end p { font-size: 1.08rem; color: var(--ink-2); margin: 0; line-height: 1.55; }
       @media (max-width: 860px) {
         .wim-cols { grid-template-columns: 1fr; }
-        .wim-top, .wim-bottom, .wim-out { padding: 22px; }
+        .wim-card, .wim-out, .wim-end { padding: 22px; }
+        .wim-start h3 { font-size: 1.6rem; }
       }
     </style>
     <div class="wrap">
@@ -2056,7 +2057,7 @@
         <p class="wd-intro">Every insight comes from the customers who already use you most, so the plan is built on what works.</p>
       </div>
       <div class="wim-board">
-        <div class="wim-top">
+        <div class="wim-card wim-start">
           <span class="wim-label">Start here</span>
           <h3>Your power users</h3>
           <p>The customers who use you most, and stay.</p>
@@ -2064,8 +2065,7 @@
         <div class="wim-stem" aria-hidden="true"></div>
         <div class="wim-cols">
           <div class="wim-out">
-            <span class="wim-num">1</span>
-            <h3>Qualitative insights</h3>
+            <div class="wim-head"><span class="wim-num">1</span><h3>Qualitative insights</h3></div>
             <h4>Why they stick</h4>
             <ul>
               <li>The habits they built first</li>
@@ -2074,8 +2074,7 @@
             </ul>
           </div>
           <div class="wim-out">
-            <span class="wim-num">2</span>
-            <h3>Messaging</h3>
+            <div class="wim-head"><span class="wim-num">2</span><h3>Messaging</h3></div>
             <h4>How to attract them</h4>
             <ul>
               <li>Who to target next</li>
@@ -2084,8 +2083,7 @@
             </ul>
           </div>
           <div class="wim-out">
-            <span class="wim-num">3</span>
-            <h3>Adoption plan</h3>
+            <div class="wim-head"><span class="wim-num">3</span><h3>Adoption plan</h3></div>
             <h4>How to move the rest</h4>
             <ul>
               <li>Where average users stop</li>
@@ -2095,7 +2093,7 @@
           </div>
         </div>
         <div class="wim-stem" aria-hidden="true"></div>
-        <div class="wim-bottom">
+        <div class="wim-end">
           <span class="wim-label">The result</span>
           <h3>More revenue</h3>
           <p>Customers who stay, use more, and bring in buyers like them.</p>
