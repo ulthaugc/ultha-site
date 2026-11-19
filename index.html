@@ -19,7 +19,24 @@
 <link rel="manifest" href="/site.webmanifest">
 <meta name="theme-color" content="#FCFCFA">
 <script type="application/ld+json">[{"@context": "https://schema.org", "@type": "ProfessionalService", "@id": "https://ultha.co/#business", "name": "Ultha", "url": "https://ultha.co/", "image": "https://ultha.co/og.jpg", "email": "ultha@ultha.co", "description": "I talk to your best customers, find what they have in common, and show you who to go after next. For founder-led B2B AI startups.", "slogan": "Find your next power users.", "knowsAbout": ["customer interviews", "voice-of-customer research", "power user research", "positioning and messaging", "ideal customer profile (ICP)", "adoption and retention"], "areaServed": "Worldwide", "address": {"@type": "PostalAddress", "addressLocality": "Santa Barbara", "addressRegion": "CA", "addressCountry": "US"}, "founder": {"@type": "Person", "@id": "https://ultha.co/#ultha", "name": "Ultha Moktan", "jobTitle": "Customer researcher", "url": "https://ultha.co/", "sameAs": ["https://www.linkedin.com/in/ulthamoktan", "https://www.instagram.com/ultha_co"]}, "sameAs": ["https://www.linkedin.com/in/ulthamoktan", "https://www.instagram.com/ultha_co"], "makesOffer": [{"@type": "Offer", "name": "Find your next power users", "description": "10-15 customer interviews with your power users, insights on who they are and why they stay, a messaging recommendation and an adoption plan. Add-ons: extra interviews, a monthly working session and testimonial videos.", "price": "11500", "priceCurrency": "USD", "url": "https://ultha.co/pricing"}]}, {"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "Can't I just find my power users myself?", "acceptedAnswer": {"@type": "Answer", "text": "You can start, and you should keep listening to your customers. But most founders only talk to the people who already like them, and miss the habits that set power users apart. I read across all of them, so you see what they share. Want to learn to run the calls yourself? That's done-with-you."}}, {"@type": "Question", "name": "Can't AI do this?", "acceptedAnswer": {"@type": "Answer", "text": "AI can run interviews, and I use it for breadth. Getting your best customers to say yes, knowing what their answers mean, and getting your team to act on it are still human jobs. Nielsen Norman Group found AI interviewers “follow the script, not the insight.”"}}, {"@type": "Question", "name": "Will this help us define our ideal customer profile (ICP)?", "acceptedAnswer": {"@type": "Answer", "text": "Yes. Your best customers share patterns: what made them start looking, who pushed for it, and the problem they had. I show you who they are, so you know who to target and who to stop chasing."}}, {"@type": "Question", "name": "How many customers do I need?", "acceptedAnswer": {"@type": "Answer", "text": "About 25 to 30 active customers, at least 10 of them using the product every week. Fewer than that? Tell me, and we’ll scope a smaller set of calls."}}, {"@type": "Question", "name": "How much of my time does it take?", "acceptedAnswer": {"@type": "Answer", "text": "A kickoff call and warm intros to your customers. I handle scheduling, interviews and analysis. The plan takes 30 to 45 days."}}]}]</script>
-<style>body{margin:0}img{max-width:100%}[hidden]{display:none!important}</style>
+<style>body{margin:0}img{max-width:100%}[hidden]{display:none!important}
+  /* Nov 19: How it works = photo + 3 stacked steps; contact form full width */
+  #how .how-two { display: grid; grid-template-columns: minmax(0, 5fr) minmax(0, 7fr); gap: clamp(32px, 5vw, 64px); align-items: center; max-width: 1040px; margin: 36px auto 0; }
+  #how .how-pic { width: 100%; aspect-ratio: 4 / 5; object-fit: cover; object-position: 45% 50%; border-radius: 18px; box-shadow: 0 18px 40px -28px color-mix(in srgb, var(--ink) 55%, transparent); }
+  :root[data-how] #how .how-two .psteps { grid-template-columns: 1fr !important; gap: 0 !important; row-gap: 0 !important; margin: 0; }
+  :root[data-how] #how .how-two .psteps::before { display: none !important; }
+  :root[data-how] #how .how-two .pstep { padding: 24px 0; border-top: 1px solid var(--line); }
+  :root[data-how] #how .how-two .pstep:first-child { border-top: 0; padding-top: 0; }
+  :root[data-how] #how .how-two .pstep:last-child { padding-bottom: 0; }
+  #start .start-grid.solo { display: block; max-width: 760px; margin-inline: auto; }
+  @media (max-width: 860px) {
+    #how .how-two { grid-template-columns: 1fr; }
+    #how .how-pic { aspect-ratio: 16 / 11; max-height: 420px; object-position: 50% 30%; }
+  }
+
+  /* Nov 19: lighter dropdown arrows on the form */
+  form.td select { -webkit-appearance: none; appearance: none; padding-right: 40px; background-color: #fff; background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'%3E%3Cpath d='M1 1.5l5 5 5-5' fill='none' stroke='%237A849C' stroke-width='1.6' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E"); background-repeat: no-repeat; background-position: right 15px center; background-size: 12px 8px; }
+</style>
 <script>window.va=window.va||function(){(window.vaq=window.vaq||[]).push(arguments)};(function(){try{var q=location.search;if(/[?&]me\b/.test(q))localStorage.setItem("ultha-me","1");if(/[?&]notme\b/.test(q))localStorage.removeItem("ultha-me");window.__me=localStorage.getItem("ultha-me")==="1"}catch(e){}if(window.__me)window.va("beforeSend",function(){return null})})();</script>
 <script defer src="/_vercel/insights/script.js"></script>
 <script>window.__me||(function(c,l,a,r,i,t,y){c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);})(window,document,"clarity","script","z8mwo19yvw");</script>
@@ -2040,7 +2057,9 @@
         .wim-out { text-align: center; white-space: normal; }
         .wim-pill, .wim-result { white-space: normal; }
       }
-    </style>
+      form.td select { background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'%3E%3Cpath d='M1 1.5l5 5 5-5' fill='none' stroke='%237A849C' stroke-width='1.6' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E") !important; background-repeat: no-repeat !important; background-position: right 15px center !important; background-size: 12px 8px !important; -webkit-appearance: none !important; appearance: none !important; padding-right: 40px !important; }
+  :root[data-how] #how .how-two .pstep { background: none !important; box-shadow: none !important; border-radius: 0 !important; margin: 0 !important; }
+</style>
     <div class="wrap">
       <div class="section-head center-head">
         <span class="kicker">Why it matters</span>
@@ -2069,6 +2088,8 @@
         <p class="how-sub">You make warm intros, I handle scheduling, interviews and analysis.</p>
       </div>
       
+      <div class="how-two">
+      <img class="how-pic" src="img/form-me3.jpg" alt="Ultha holding her notebook, smiling at the camera" loading="lazy">
       <div class="psteps">
         <div class="pstep">
           <span class="pnum">Step 1</span>
@@ -2085,6 +2106,7 @@
           <h3>I find the patterns</h3>
           <p>What your power users have in common, and who to go get next.</p>
         </div>
+      </div>
       </div>
       <div class="how-cta">
         <a class="btn" href="https://calendly.com/ultha-ultha/30min" target="_blank" rel="noopener" data-cal>Book a 30-minute call →</a>
@@ -2158,8 +2180,7 @@
 
   <!-- TESTIMONIALS -->
   <section class="band" id="start">
-    <div class="wrap start-grid">
-      <img src="img/form-me3.jpg" alt="Ultha holding her notebook, smiling at the camera">
+    <div class="wrap start-grid solo">
       <div>
         <span class="kicker">Work with me</span>
         <h2 style="margin-top:14px">Tell me about your company.</h2>
