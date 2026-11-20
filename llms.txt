@@ -1,6 +1,6 @@
 # Ultha (ultha.co)
 
-> Ultha Moktan helps founder-led B2B AI startups find their next power users. She talks to a startup's best customers, finds what they have in common, and shows the team who to go after next. AI research gives everyone the same answers; real calls don't.
+> Ultha Moktan helps product-led B2B AI startups find their next power users. She talks to a startup's best customers, finds what they have in common, and shows the team who to go after next. AI research gives everyone the same answers; real calls don't.
 
 About: Launched products and ran marketing for 40+ brands as co-founder of a marketing agency. Customer research she ran led to +34% and +17% feature adoption. Based in Santa Barbara, CA. Contact: ultha@ultha.co.
 
@@ -11,7 +11,7 @@ About: Launched products and ran marketing for 40+ brands as co-founder of a mar
 - Book a 30-minute call: https://calendly.com/ultha-ultha/30min
 
 ## Who it's for
-Founder-led B2B software startups, mostly AI, with real customers and nobody owning customer research yet. Common questions: "a few customers use us every day and we don't know why", "who should we go after next", "how do we get average users to use us like our best ones".
+Product-led B2B software startups, mostly AI, with real customers and nobody owning customer research yet. Common questions: "a few customers use us every day and we don't know why", "who should we go after next", "how do we get average users to use us like our best ones".
 
 ## Methods
 Customer interviews, power user research, jobs-to-be-done (switch) questions, voice-of-customer research, building an ideal customer profile (ICP) from best customers. Calls are confidential; quotes are anonymized unless a customer agrees.
