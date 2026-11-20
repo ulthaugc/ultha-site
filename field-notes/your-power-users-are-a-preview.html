@@ -1,0 +1,285 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Your power users are a preview of everyone else. · Field Notes · Ultha</title>
+<meta name="description" content="Cursor's top 10% of users accounted for nearly two-thirds of all tokens. The most engaged also work differently: 86.6% ran agents in parallel, versus 25.2% in the middle band. What that means for Seed to Series A AI startups, and why to study your top users plus a few who slowed down.">
+<link rel="canonical" href="https://ultha.co/field-notes/your-power-users-are-a-preview">
+<meta name="robots" content="noindex">
+<meta property="og:title" content="Your power users are a preview of everyone else.">
+<meta property="og:description" content="Cursor's top 10% of users accounted for nearly two-thirds of all tokens. The most engaged also work differently: 86.6% ran agents in parallel, versus 25.2% in the middle band. What that means for Seed to Series A AI startups, and why to study your top users plus a few who slowed down.">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://ultha.co/field-notes/your-power-users-are-a-preview">
+<meta property="og:image" content="https://ultha.co/img/field-notes/issue-2/og.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Your power users are a preview of everyone else.">
+<meta name="twitter:description" content="Cursor's top 10% of users accounted for nearly two-thirds of all tokens. The most engaged also work differently: 86.6% ran agents in parallel, versus 25.2% in the middle band. What that means for Seed to Series A AI startups, and why to study your top users plus a few who slowed down.">
+<meta name="twitter:image" content="https://ultha.co/img/field-notes/issue-2/og.jpg">
+<link rel="icon" href="/favicon.ico" sizes="48x48">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="icon" href="/favicon-32.png" type="image/png" sizes="32x32">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<link rel="manifest" href="/site.webmanifest">
+<meta name="theme-color" content="#FCFCFA">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Young+Serif&amp;family=Fraunces:opsz,wght@9..144,500;9..144,600&amp;family=Inter:wght@400;500;600&amp;family=Figtree:wght@400;500;700&amp;family=Caveat:wght@600&amp;display=swap">
+<link rel="stylesheet" href="/theme.css">
+<link rel="stylesheet" href="/site-chrome.css">
+<link rel="stylesheet" href="/scale.css">
+<style>
+  :root {
+    --paper: #FCFCFA; --blue: #EEF3FE; --card: #FFFFFF; --line: #D5DFF8;
+    --ink: #14213D; --ink-2: #424A5E; --ink-3: #586A7C; --accent: #1F4FD8;
+    --serif: "Fraunces", Georgia, serif; --sans: "Inter", system-ui, -apple-system, "Segoe UI", sans-serif;
+  }
+  * { box-sizing: border-box; }
+  body { margin: 0; color: var(--ink); font-family: var(--sans); font-size: 17px; line-height: 1.65; -webkit-font-smoothing: antialiased; }
+  img { max-width: 100%; height: auto; }
+  a { color: var(--accent); }
+  .article { max-width: 680px; margin: 0 auto; padding: 20px max(20px, env(safe-area-inset-left, 0px)) 80px max(20px, env(safe-area-inset-right, 0px)); }
+  .kicker { display: inline-block; font-size: 0.78rem; font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase; color: var(--accent); text-decoration: none; margin-bottom: 10px; }
+  .article h1, .article h2, .article h3 { font-family: var(--serif); font-weight: 600; line-height: 1.2; text-wrap: balance; color: var(--ink); }
+  .article h1 { margin: 0 0 10px; }
+  .dek { font-size: 1.12rem; line-height: 1.45; color: var(--ink-2); font-weight: 600; margin: 0 0 14px; }
+  .hero-img { display: block; width: 100%; max-width: 480px; height: auto; border-radius: 16px; margin: 0 auto 28px; background: var(--blue); }
+  @media (min-width: 721px) { .hero-img { max-width: 680px; margin: 0 0 28px; } }
+  .byline { display: flex; align-items: center; gap: 12px; font-size: 0.95rem; color: var(--ink-2); margin: 0 0 18px; }
+  .byline img { width: 44px; height: 44px; border-radius: 50%; object-fit: cover; object-position: center; flex: none; box-shadow: 0 0 0 3px rgba(31, 79, 216, 0.25); }
+  .article p { margin: 0 0 18px; color: var(--ink); }
+  .article h3 { font-size: 1.2rem; margin: 32px 0 12px; }
+  .article h2 { margin: 44px 0 16px; padding-top: 22px; border-top: 1px solid var(--line); }
+  .article ol { margin: 0 0 20px; padding-left: 1.3em; }
+  .article li { margin: 0 0 14px; }
+  .article em { font-style: italic; }
+  .signoff { margin-top: 28px; }
+  .article h3 { margin-bottom: 6px; }
+  .reason-sub { margin: 0 0 16px; color: #424A5E; }
+  .reason-sub em { font-style: italic; }
+  .article-img { display: block; width: 100%; max-width: 600px; height: auto; border-radius: 16px; margin: 24px auto 28px; background: var(--blue); }
+  .img-ph {
+    background: #EEF3FE;
+    border: 1px solid #D5DFF8;
+    border-radius: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 24px;
+    color: #424A5E;
+    font-size: 0.9rem;
+    line-height: 1.45;
+    font-weight: 500;
+  }
+  .hero-img.img-ph { aspect-ratio: 4 / 3; }
+  @media (min-width: 721px) { .hero-img.img-ph { aspect-ratio: 12 / 5; } }
+  .article-img.img-ph { aspect-ratio: 16 / 10; }
+  .signup-block { max-width: 680px; margin: 0 auto 80px; padding: 0 max(20px, env(safe-area-inset-left, 0px)) 0 max(20px, env(safe-area-inset-right, 0px)); }
+  .signup-block .kicker { margin-bottom: 8px; }
+  .signup { margin: 0; max-width: 440px; text-align: left; background: var(--card); border: 1px solid var(--line); border-radius: 18px; padding: 22px 22px 18px; }
+  .signup label { display: grid; gap: 6px; font-size: 0.9rem; font-weight: 500; color: var(--ink); margin-bottom: 12px; }
+  .signup input { font: inherit; width: 100%; padding: 12px 14px; border-radius: 10px; border: 1.5px solid #D5DFF8; background: #fff; color: var(--ink); }
+  .signup input:focus { outline: 2px solid color-mix(in srgb, var(--accent) 35%, transparent); border-color: var(--accent); }
+  .signup .row { display: grid; gap: 12px; }
+  .signup .btn { display: inline-block; width: 100%; text-align: center; margin-top: 4px; background: var(--accent); color: #fff; text-decoration: none; font-weight: 600; border-radius: 10px; padding: 12px 20px; font-size: 0.95rem; border: 0; cursor: pointer; font-family: inherit; }
+  .signup .hint { margin: 12px 0 0; font-size: 0.85rem; color: var(--ink-3); text-align: center; }
+  .signup .opt { color: var(--ink-3); font-weight: 400; }
+  .signup-block .welcome, .signup-block .err { margin: 0 0 18px; max-width: 440px; border-radius: 12px; padding: 12px 14px; font-size: 0.95rem; font-weight: 500; }
+  .signup-block .welcome { background: color-mix(in srgb, var(--accent) 10%, #fff); border: 1px solid color-mix(in srgb, var(--accent) 25%, #fff); color: var(--ink); }
+  .signup-block .err { background: #FFF1EE; border: 1px solid #F3C0B6; color: var(--ink); }
+  .signup-block .thanks { margin-top: 8px; max-width: 440px; padding: 14px; border-radius: 12px; background: color-mix(in srgb, var(--accent) 10%, #fff); font-weight: 500; text-align: center; }
+  @media (max-width: 640px) {
+    body { font-size: 16.5px; }
+    .article { padding-top: 16px; padding-bottom: 64px; }
+    .article h3 { font-size: 1.12rem; margin-top: 28px; }
+    .article h2 { margin-top: 36px; padding-top: 18px; }
+    .dek { font-size: 1.05rem; }
+    .byline { margin-bottom: 14px; }
+    .hero-img { margin-bottom: 22px; }
+    .signup-block { margin-bottom: 64px; }
+  }
+</style>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"Article","headline":"Your power users are a preview of everyone else.","description":"Cursor's top 10% of users accounted for nearly two-thirds of all tokens. The most engaged also work differently: 86.6% ran agents in parallel, versus 25.2% in the middle band. What that means for Seed to Series A AI startups, and why to study your top users plus a few who slowed down.","datePublished":"2026-11-23","dateModified":"2026-11-23","image":"https://ultha.co/img/field-notes/issue-2/og.jpg","mainEntityOfPage":"https://ultha.co/field-notes/your-power-users-are-a-preview","url":"https://ultha.co/field-notes/your-power-users-are-a-preview","author":{"@type":"Person","name":"Ultha Moktan","url":"https://ultha.co/"},"publisher":{"@type":"Organization","name":"Ultha","url":"https://ultha.co/","logo":"https://ultha.co/apple-touch-icon.png"}}
+</script>
+<script>window.va=window.va||function(){(window.vaq=window.vaq||[]).push(arguments)};(function(){try{var q=location.search;if(/[?&]me\b/.test(q))localStorage.setItem("ultha-me","1");if(/[?&]notme\b/.test(q))localStorage.removeItem("ultha-me");window.__me=localStorage.getItem("ultha-me")==="1"}catch(e){}if(window.__me)window.va("beforeSend",function(){return null})})();</script>
+<script defer src="/_vercel/insights/script.js"></script>
+<script>window.__me||(function(c,l,a,r,i,t,y){c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);})(window,document,"clarity","script","z8mwo19yvw");</script>
+</head>
+<body>
+<div class="stickybar"><header class="topbar" style="position: relative; z-index: 2; max-width: 1180px; margin: 0 auto; box-sizing: border-box; padding: 22px 24px; display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 12px">
+<a href="/" style="text-decoration:none;color:inherit;font-family: 'Young Serif', serif; font-size: 22px; letter-spacing: 0.02em; display: inline-flex; align-items: center; gap: 10px"><img src="/ultha-mark.svg" alt="" width="34" height="18">ULTHA</a>
+<nav style="display: flex; flex-wrap: wrap; align-items: center; gap: 26px; font-size: 15px">
+<a href="/#how" style="text-decoration: none">How it works</a>
+<a href="/about" style="text-decoration: none">About</a>
+<a href="/pricing" style="text-decoration: none">Pricing</a>
+<a href="/field-notes" style="text-decoration: none">Field Notes</a>
+<a href="/contact" style="text-decoration: none; background: #1F4FD8; color: #EEF2F6; border-radius: 999px; padding: 9px 18px">Let’s talk</a>
+</nav>
+</header></div>
+
+<main>
+<article class="article">
+  <a class="kicker" href="/field-notes">Field Notes · Issue 2</a>
+  <h1>Your power users are a preview of everyone else.</h1>
+  <p class="dek">Cursor's top 10% used nearly two-thirds of the tokens.</p>
+  <div class="byline"><img src="/img/face.jpg" alt="Ultha Moktan" width="44" height="44"><span>Ultha Moktan · Nov 23, 2026 · 6 min read</span></div>
+  <!-- Swap placeholder for: /img/field-notes/issue-2/00-header-top10-two-thirds-tokens.png -->
+  <div class="hero-img img-ph" data-src="/img/field-notes/issue-2/00-header-top10-two-thirds-tokens.png" role="img" aria-label="Header: Cursor's top 10% of users vs nearly two-thirds of all tokens, shown as two bars">00-header-top10-two-thirds-tokens.png</div>
+
+  <p>You've probably heard of the 80/20 rule. 20% of users drive 80% of usage. Cursor's split is even steeper. 10% of users drove about two-thirds of the tokens. That data comes from <a href="https://www.linkedin.com/in/daniel-hollick-11283833">Dan Hollick</a> at Cursor, in a September 1, 2026 Cursor Insights post. "Over the last four weeks, the top 10% of users accounted for nearly two-thirds of all tokens, while the remaining 90% accounted for just over one-third."</p>
+  <p>I probably don't need to tell you how that looks in your own dashboard. A few customers who live in the product, and a long tail that tried it, clicked around, and never quite got there. Honestly, that tail is doing what long tails do: lots of names, not much activity. If you sell AI, this is easy to miss, because overall usage can look fine.</p>
+  <p>Today I'm unpacking 7 things Cursor's public data shows about power users, and what I'd do with it if I were a Seed or Series A founder. What stood out to me the most: the gap is not only volume. Those users work differently, and Cursor's own read is that they may be an early view of how everyone else will work next.</p>
+
+  <h3>1. The top 10% used nearly two-thirds of the tokens.</h3>
+  <p class="reason-sub"><em>The other 90% accounted for just over one-third.</em></p>
+  <p>When you only watch the average, the product looks evenly used. Averages are polite that way, and they make a steep split look tidy. Cursor's four-week snapshot says otherwise. The people who use you most are not a slightly busier version of everyone else. They are where most of the work is happening. My rule of thumb: before you plan the next feature, write down who is already using you like that, and if you can't name them, the average is still hiding the story.</p>
+
+  <h3>2. The gap is wider at the very top, and it is growing.</h3>
+  <p class="reason-sub"><em>P99 users added 46 times as many lines as the median.</em></p>
+  <p>This pattern shows up in more than tokens. In the <a href="https://cursor.com/insights/developer-habits">Cursor Developer Habits Report</a> for Spring 2026, Cursor found that AI is leading to broad productivity gains, and that the change shows up most in the top 1% of developers. The same report says p99 power users are seeing larger gains than everyone else, and that the gap is growing much larger in absolute terms as total AI usage grows. "P99 developers produce 46x more lines than the median active user and merge 15x more PRs than the median active PR author, while p90 users show large but much smaller gaps."</p>
+  <!-- Swap placeholder for: /img/field-notes/issue-2/01-top1-46x-more-code.png -->
+  <div class="article-img img-ph" data-src="/img/field-notes/issue-2/01-top1-46x-more-code.png" role="img" aria-label="The top 1% of Cursor users wrote 46x more code than the typical user; the top 10% wrote 10x; the median is 1x. Source: Cursor Developer Habits Report, Spring 2026">01-top1-46x-more-code.png</div>
+  <p>Those p90 gaps were 10x more lines, and 4x more PRs. I'd bet a lot of teams see a rising average and assume the whole base is coming along. The average can rise while the people at the top pull farther away.</p>
+
+  <h3>3. They don't just use it more. They work differently.</h3>
+  <p class="reason-sub"><em>86.6% started a new agent chat while another was already running.</em></p>
+  <p>The clearest difference in Dan's post was not language or model choice. It was how often users ran agents at the same time. "Among the most engaged users, 86.6% opened a new agent chat while at least one other agent was running, and 40.4% did so while at least two others were running." Those figures were 25.2% and 3.1% for users in the p50 to p90 band.</p>
+  <!-- Swap placeholder for: /img/field-notes/issue-2/02-parallel-agents-86-vs-25.png -->
+  <div class="article-img img-ph" data-src="/img/field-notes/issue-2/02-parallel-agents-86-vs-25.png" role="img" aria-label="86.6% of the most engaged Cursor users opened a new agent chat while another was running, vs 25.2% of middle users (p50 to p90). Source: Dan Hollick, Cursor Insights, Sept 1, 2026">02-parallel-agents-86-vs-25.png</div>
+  <p>That is not a small difference in volume. Here's what I think is going on. The most engaged users keep more than one thread going, and the middle band mostly does not. If you only ask whether people use this, you will miss that. You have to ask how the people who use it most actually work.</p>
+
+  <h3>4. The widest feature gap was one the middle barely used.</h3>
+  <p class="reason-sub"><em>81% of power users used subagents. 15% of the median band did.</em></p>
+  <p>In an August 2026 Cursor Insights snapshot, Cursor compared feature use on June 29, 2026. Cohorts were based on agent-panel token usage. Power users adopted several features at much higher rates than the median band. The largest gap was in subagents. They were "used by 81% of power users on June 29 compared with 15% of the median band."</p>
+  <p>This is the kind of gap that does not show up if you only look at whether someone logged in. The feature exists, and a small group has built a habit around it, but most people have not. My guess is that this is usually an adoption problem, or a discovery problem, or both. I would want to know why the 81% reached for it, and what got in the way for everyone else.</p>
+
+  <h3>5. A few more turns go a long way.</h3>
+  <p class="reason-sub"><em>One-turn chats opened a PR about a third of the time. Twelve or more turns did it more than four in five times.</em></p>
+  <p>Another August 2026 Cursor Insights chart looks at cloud-agent conversations from June 2026. As those conversations got longer, they were much more likely to produce a pull request. About a third of one-turn conversations opened a PR, "compared with more than four in five conversations with 12 or more turns." The share of those PRs that merged fell slightly, from 67% to 59%. Cursor notes that the increase in PRs more than makes up for that decline.</p>
+  <!-- Swap placeholder for: /img/field-notes/issue-2/03-more-turns-more-prs.png -->
+  <div class="article-img img-ph" data-src="/img/field-notes/issue-2/03-more-turns-more-prs.png" role="img" aria-label="About 1 in 3 one-turn cloud-agent chats opened a PR, vs more than 4 in 5 chats with 12 or more turns; merged share dipped from 67% to 59%. Source: Cursor Insights, Aug 2026, June 2026 data">03-more-turns-more-prs.png</div>
+  <p>This finding is about conversation depth, not the same power-user cohorts as the token study. Still, I suspect it points at the same adoption problem. A lot of people start, and fewer stay in the work long enough to get a result. The plan for the middle is often not a new feature. It is helping them get further in the one they already tried.</p>
+
+  <h3>6. Cursor's own read: today's most engaged users may be a preview.</h3>
+  <p class="reason-sub"><em>They may show how the rest of the base will work next.</em></p>
+  <p>Dan does not claim the rest of the base already works this way. He is more careful than that. After comparing cohorts, his read is that these patterns point to a different way of working with agents. The most engaged users choose different models, run more work in parallel, and make greater use of features built for multi-step tasks. The line I would keep is this one: "Today's most engaged users may offer an early view of how agent use develops across the rest of the user base."</p>
+  <p>That caution matters. Cursor also flags its own limits: language mix is an imperfect measure of the underlying work, and model choice and language are associated, but the post does not say one causes the other. This is a snapshot of behavior, not a guarantee that every user will follow. Even with those caveats, the useful idea is simple. If you want to know what's next, start with the people who are already furthest along, then look at who has not made it there yet.</p>
+
+  <h3>7. Study the people who would hate to lose you. Then ask what held the others back.</h3>
+  <p class="reason-sub"><em>The dashboard shows the gap. The calls tell you why.</em></p>
+  <p>Usage data can show you who your power users are, but it cannot tell you why they stuck, or what almost stopped everyone else. A way to find that out comes from <a href="https://www.linkedin.com/in/rahulvohra">Rahul Vohra</a>, then CEO of Superhuman. He used a question from <a href="https://www.linkedin.com/in/seanellis">Sean Ellis</a>: ask users how they would feel if they could no longer use the product, and measure how many say very disappointed. After benchmarking nearly 100 startups, Sean found that companies with strong traction almost always cleared 40%.</p>
+  <p>Superhuman started at 22%. After segmenting to the people who loved the product most, the score was 33%. The work was to learn what those supporters loved, then look at the somewhat disappointed users who wanted the same main benefit, and remove what held them back. As Rahul put it, "Within just three quarters of our work to improve the product, the score nearly doubled to 58%."</p>
+  <!-- Swap placeholder for: /img/field-notes/issue-2/04-superhuman-22-to-58.png -->
+  <div class="article-img img-ph" data-src="/img/field-notes/issue-2/04-superhuman-22-to-58.png" role="img" aria-label="Superhuman's very-disappointed score went from 22% to 33% after segmenting, then to 58%, past Sean Ellis's 40% line. Source: Rahul Vohra, 2018">04-superhuman-22-to-58.png</div>
+  <p>A similar point on features comes from <a href="https://www.linkedin.com/in/elenaverna">Elena Verna</a>. For retention, she looks at the features your most retentive users use consistently, then tries to raise adoption of the ones that correlate with people staying. That is close to how I would start. Talk to the customers who use you most, then talk to a few who slowed down. The first group tells you what is working, and the second group tells you what gets in the way.</p>
+
+  <h2>What to steal</h2>
+  <p>Three things I would take from this list:</p>
+  <ol>
+    <li><strong>Pull your top 10% and your middle band, and compare one habit, not just total usage.</strong> Write down one thing the top group does that the middle barely does. If you only have an average, you cannot see the gap.</li>
+    <li><strong>Talk to a few of the people who use you most this week.</strong> Ask how they actually work, and which parts of the product they rely on. Write down their exact words. That is the start of your messaging, and of an adoption plan.</li>
+    <li><strong>Talk to one or two who slowed down.</strong> Ask what they were trying to get done, and what got in the way. The feature gap in the data often has a simple reason once you hear it.</li>
+  </ol>
+  <p>The hardest part is getting the real story behind the gap. So I talk to 10 to 15 of a startup's customers, starting with the ones who use it most, plus a few who slowed down. You get who your power users are, what to say to attract more of them, and a plan to help the rest get closer.</p>
+  <p>Still dreading that first customer call? <a href="https://www.ultha.co/">I can help.</a></p>
+  <p class="signoff">Ultha</p>
+
+  <h2>Source list</h2>
+  <p>Every number and named claim above is tied to a public source checked on November 20, 2026.</p>
+  <ol>
+    <li>Dan Hollick, "The asymmetry of token consumption," Cursor Insights, September 1, 2026: <a href="https://cursor.com/insights/the-asymmetry-of-token-consumption">https://cursor.com/insights/the-asymmetry-of-token-consumption</a></li>
+    <li>Cursor Insights, "The Cursor Developer Habits Report," Spring 2026 (listed as July 2026 on the Insights index): <a href="https://cursor.com/insights/developer-habits">https://cursor.com/insights/developer-habits</a></li>
+    <li>Cursor Insights, "Where power users pull away," August 2026 (no named author; lives on the Insights index): <a href="https://cursor.com/insights#feature-adoption-gap-snapshot">https://cursor.com/insights#feature-adoption-gap-snapshot</a></li>
+    <li>Cursor Insights, "A few more turns go a long way," August 2026 (no named author; lives on the Insights index): <a href="https://cursor.com/insights#conversation-depth-vs-pr-rate">https://cursor.com/insights#conversation-depth-vs-pr-rate</a></li>
+    <li>Rahul Vohra, "How Superhuman built an engine to find product-market fit," Superhuman Blog, November 27, 2018 (first published in First Round Review on November 13, 2018): <a href="https://blog.superhuman.com/how-superhuman-built-an-engine-to-find-product-market-fit/">https://blog.superhuman.com/how-superhuman-built-an-engine-to-find-product-market-fit/</a></li>
+    <li>Elena Verna, "Retention: The situationship of SaaS," June 23, 2025: <a href="https://www.elenaverna.com/p/retention-the-situationship-of-saas">https://www.elenaverna.com/p/retention-the-situationship-of-saas</a></li>
+  </ol>
+</article>
+
+<div class="signup-block">
+  <div class="welcome" id="welcome" hidden>You're in. Watch your inbox for the next Field Notes.</div>
+  <div class="err" id="emailErr" hidden>Please enter a valid email.</div>
+  <form class="signup" id="fnForm" action="/api/subscribe" method="post">
+    <input name="website" tabindex="-1" autocomplete="off" aria-hidden="true" style="position:absolute;left:-9999px">
+    <div class="row">
+      <label>Name<input name="name" autocomplete="name" required placeholder="Your name"></label>
+      <label>Email<input name="email" type="email" autocomplete="email" required placeholder="you@company.com"></label>
+      <label>What's your role? <span class="opt">(optional)</span>
+        <input name="role" maxlength="80" autocomplete="organization-title" placeholder="e.g. Founder, Head of Growth">
+      </label>
+    </div>
+    <button class="btn" type="submit">Subscribe to Field Notes</button>
+    <p class="hint">Free. No spam. Unsubscribe any time.</p>
+  </form>
+  <div class="thanks" id="fnThanks" hidden>You're in. Watch your inbox for the next Field Notes.</div>
+</div>
+</main>
+
+<footer style="background: #F9F9FA; color: #14213D">
+<div style="max-width: 1180px; margin: 0 auto; padding: 72px 24px 32px; display: flex; flex-direction: column; gap: 48px">
+<div style="display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; gap: 24px">
+<div class="ft-note"><div style="display: flex; flex-direction: column; gap: 8px; max-width: 520px">
+<h2 style="margin: 0; font-family: 'Young Serif', serif; font-weight: 400; font-size: clamp(26px, 3vw, 36px); color: #14213D">Curious where you stand?</h2>
+<p style="margin: 0">Book a 30-minute call. We’ll see what your best customers can tell you.</p><span class="ft-sig">— Ultha</span>
+</div></div>
+<div style="display: flex; flex-direction: column; align-items: flex-start; gap: 10px"><a href="/contact" style="text-decoration: none; background: #1F4FD8; color: #EEF2F6; border-radius: 999px; padding: 14px 26px; font-weight: 500">Let’s talk</a><a href="/pricing" style="color: #14213D; font-size: 15px; text-underline-offset: 4px">or see pricing →</a></div>
+</div>
+<div style="display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; gap: 16px; border-top: 1px solid #99A5C3; padding-top: 24px; font-size: 15px">
+<span style="font-family: 'Young Serif', serif; font-size: 20px; color: #14213D; display: inline-flex; align-items: center; gap: 10px"><img src="/ultha-mark-white.svg" alt="" width="30" height="16">ULTHA</span>
+<nav style="display: flex; flex-wrap: wrap; gap: 22px"><a href="/#how" style="color: #14213D; text-decoration: none">How it works</a><a href="/about" style="color: #14213D; text-decoration: none">About</a><a href="/pricing" style="color: #14213D; text-decoration: none">Pricing</a><a href="/testimonial-videos" style="color: #14213D; text-decoration: none">Testimonial videos</a><a href="/field-notes" style="color: #14213D; text-decoration: none">Field Notes</a><a href="/#faq" style="color: #14213D; text-decoration: none">FAQ</a><a href="/contact" style="color: #14213D; text-decoration: none">Let’s talk</a></nav>
+<span>© 2026 Ultha · Santa Barbara, CA</span>
+</div>
+</div>
+</footer>
+<script>(function(){var b=document.querySelector(".stickybar");if(!b)return;var f=function(){b.classList.toggle("scrolled",scrollY>8)};addEventListener("scroll",f,{passive:true});f()})();</script>
+<script src="/menu.js" defer></script>
+<script>
+(function () {
+  var q = location.search;
+  if (/[?&]welcome=1\b/.test(q)) {
+    var w = document.getElementById('welcome');
+    if (w) w.hidden = false;
+    var f = document.getElementById('fnForm');
+    if (f) f.hidden = true;
+  }
+  if (/[?&]error=email\b/.test(q)) {
+    var e = document.getElementById('emailErr');
+    if (e) e.hidden = false;
+  }
+  if (/[?&]error=name\b/.test(q)) {
+    var n = document.getElementById('emailErr');
+    if (n) { n.hidden = false; n.textContent = 'Please enter your name.'; }
+  }
+  var form = document.getElementById('fnForm');
+  var thanks = document.getElementById('fnThanks');
+  if (!form) return;
+  form.addEventListener('submit', function (ev) {
+    ev.preventDefault();
+    var btn = form.querySelector('button[type=submit]');
+    var data = {};
+    new FormData(form).forEach(function (v, k) { data[k] = v; });
+    if (btn) btn.disabled = true;
+    fetch('/api/subscribe', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json', Accept: 'application/json' },
+      body: JSON.stringify(data)
+    })
+      .then(function (r) { return r.json().catch(function () { return {}; }).then(function (j) { return { ok: r.ok && j.ok !== false, j: j }; }); })
+      .then(function (res) {
+        if (!res.ok) throw new Error((res.j && res.j.error) || '');
+        form.hidden = true;
+        if (thanks) thanks.hidden = false;
+        if (res.j && res.j.kit && thanks) { var d = document.createElement('p'); d.style.cssText = 'font:12px monospace;color:#586A7C;margin-top:8px'; d.textContent = 'Preview check: ' + res.j.kit.join(', '); thanks.appendChild(d); }
+      })
+      .catch(function (x) {
+        var err = document.getElementById('emailErr');
+        if (err) { err.hidden = false; err.textContent = (x && x.message) || 'That didn’t send. Please email ultha@ultha.co instead.'; }
+        if (btn) btn.disabled = false;
+      });
+  });
+})();
+</script>
+</body>
+</html>
