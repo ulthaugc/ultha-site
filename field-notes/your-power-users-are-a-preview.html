@@ -57,24 +57,7 @@
   .article h3 { margin-bottom: 6px; }
   .reason-sub { margin: 0 0 16px; color: #424A5E; }
   .reason-sub em { font-style: italic; }
-  .article-img { display: block; width: 100%; max-width: 600px; height: auto; border-radius: 16px; margin: 24px auto 28px; background: var(--blue); }
-  .img-ph {
-    background: #EEF3FE;
-    border: 1px solid #D5DFF8;
-    border-radius: 16px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    padding: 24px;
-    color: #424A5E;
-    font-size: 0.9rem;
-    line-height: 1.45;
-    font-weight: 500;
-  }
-  .hero-img.img-ph { aspect-ratio: 4 / 3; }
-  @media (min-width: 721px) { .hero-img.img-ph { aspect-ratio: 12 / 5; } }
-  .article-img.img-ph { aspect-ratio: 16 / 10; }
+  .article-img { display: block; width: 100%; max-width: 520px; height: auto; border-radius: 16px; margin: 24px auto 28px; background: var(--blue); }
   .signup-block { max-width: 680px; margin: 0 auto 80px; padding: 0 max(20px, env(safe-area-inset-left, 0px)) 0 max(20px, env(safe-area-inset-right, 0px)); }
   .signup-block .kicker { margin-bottom: 8px; }
   .signup { margin: 0; max-width: 440px; text-align: left; background: var(--card); border: 1px solid var(--line); border-radius: 18px; padding: 22px 22px 18px; }
@@ -125,8 +108,17 @@
   <h1>Your power users are a preview of everyone else.</h1>
   <p class="dek">Cursor's top 10% used nearly two-thirds of the tokens.</p>
   <div class="byline"><img src="/img/face.jpg" alt="Ultha Moktan" width="44" height="44"><span>Ultha Moktan · Nov 23, 2026 · 6 min read</span></div>
-  <!-- Swap placeholder for: /img/field-notes/issue-2/00-header-top10-two-thirds-tokens.png -->
-  <div class="hero-img img-ph" data-src="/img/field-notes/issue-2/00-header-top10-two-thirds-tokens.png" role="img" aria-label="Header: Cursor's top 10% of users vs nearly two-thirds of all tokens, shown as two bars">00-header-top10-two-thirds-tokens.png</div>
+  <picture>
+    <source media="(min-width: 721px)"
+      srcset="/img/field-notes/issue-2/header-wide-1200.webp 1200w, /img/field-notes/issue-2/header-wide.webp 2400w"
+      sizes="680px" width="1200" height="500">
+    <img class="hero-img"
+      src="/img/field-notes/issue-2/header-1200.webp"
+      srcset="/img/field-notes/issue-2/header-1200.webp 1200w, /img/field-notes/issue-2/header.webp 2400w"
+      sizes="(max-width: 520px) calc(100vw - 40px), 480px"
+      width="1200" height="900"
+      alt="Cursor's top 10% of users vs nearly two-thirds of all tokens, shown as two bars">
+  </picture>
 
   <p>You've probably heard of the 80/20 rule. 20% of users drive 80% of usage. Cursor's split is even steeper. 10% of users drove about two-thirds of the tokens. That data comes from <a href="https://www.linkedin.com/in/daniel-hollick-11283833">Dan Hollick</a> at Cursor, in a September 1, 2026 Cursor Insights post. "Over the last four weeks, the top 10% of users accounted for nearly two-thirds of all tokens, while the remaining 90% accounted for just over one-third."</p>
   <p>I probably don't need to tell you how that looks in your own dashboard. A few customers who live in the product, and a long tail that tried it, clicked around, and never quite got there. Honestly, that tail is doing what long tails do: lots of names, not much activity. If you sell AI, this is easy to miss, because overall usage can look fine.</p>
@@ -139,15 +131,23 @@
   <h3>2. The gap is wider at the very top, and it is growing.</h3>
   <p class="reason-sub"><em>P99 users added 46 times as many lines as the median.</em></p>
   <p>This pattern shows up in more than tokens. In the <a href="https://cursor.com/insights/developer-habits">Cursor Developer Habits Report</a> for Spring 2026, Cursor found that AI is leading to broad productivity gains, and that the change shows up most in the top 1% of developers. The same report says p99 power users are seeing larger gains than everyone else, and that the gap is growing much larger in absolute terms as total AI usage grows. "P99 developers produce 46x more lines than the median active user and merge 15x more PRs than the median active PR author, while p90 users show large but much smaller gaps."</p>
-  <!-- Swap placeholder for: /img/field-notes/issue-2/01-top1-46x-more-code.png -->
-  <div class="article-img img-ph" data-src="/img/field-notes/issue-2/01-top1-46x-more-code.png" role="img" aria-label="The top 1% of Cursor users wrote 46x more code than the typical user; the top 10% wrote 10x; the median is 1x. Source: Cursor Developer Habits Report, Spring 2026">01-top1-46x-more-code.png</div>
+  <img class="article-img"
+    src="/img/field-notes/issue-2/01-top1-46x-more-code-1080.webp"
+    srcset="/img/field-notes/issue-2/01-top1-46x-more-code-1080.webp 1080w, /img/field-notes/issue-2/01-top1-46x-more-code.webp 2160w"
+    sizes="(max-width: 520px) calc(100vw - 40px), 520px"
+    width="1080" height="1350"
+    alt="The top 1% of Cursor users wrote 46x more code than the typical user; the top 10% wrote 10x; the median is 1x. Source: Cursor Developer Habits Report, Spring 2026">
   <p>Those p90 gaps were 10x more lines, and 4x more PRs. I'd bet a lot of teams see a rising average and assume the whole base is coming along. The average can rise while the people at the top pull farther away.</p>
 
   <h3>3. They don't just use it more. They work differently.</h3>
   <p class="reason-sub"><em>86.6% started a new agent chat while another was already running.</em></p>
   <p>The clearest difference in Dan's post was not language or model choice. It was how often users ran agents at the same time. "Among the most engaged users, 86.6% opened a new agent chat while at least one other agent was running, and 40.4% did so while at least two others were running." Those figures were 25.2% and 3.1% for users in the p50 to p90 band.</p>
-  <!-- Swap placeholder for: /img/field-notes/issue-2/02-parallel-agents-86-vs-25.png -->
-  <div class="article-img img-ph" data-src="/img/field-notes/issue-2/02-parallel-agents-86-vs-25.png" role="img" aria-label="86.6% of the most engaged Cursor users opened a new agent chat while another was running, vs 25.2% of middle users (p50 to p90). Source: Dan Hollick, Cursor Insights, Sept 1, 2026">02-parallel-agents-86-vs-25.png</div>
+  <img class="article-img"
+    src="/img/field-notes/issue-2/02-parallel-agents-86-vs-25-1080.webp"
+    srcset="/img/field-notes/issue-2/02-parallel-agents-86-vs-25-1080.webp 1080w, /img/field-notes/issue-2/02-parallel-agents-86-vs-25.webp 2160w"
+    sizes="(max-width: 520px) calc(100vw - 40px), 520px"
+    width="1080" height="1350"
+    alt="86.6% of the most engaged Cursor users opened a new agent chat while another was running, vs 25.2% of middle users (p50 to p90). Source: Dan Hollick, Cursor Insights, Sept 1, 2026">
   <p>That is not a small difference in volume. Here's what I think is going on. The most engaged users keep more than one thread going, and the middle band mostly does not. If you only ask whether people use this, you will miss that. You have to ask how the people who use it most actually work.</p>
 
   <h3>4. The widest feature gap was one the middle barely used.</h3>
@@ -158,8 +158,12 @@
   <h3>5. A few more turns go a long way.</h3>
   <p class="reason-sub"><em>One-turn chats opened a PR about a third of the time. Twelve or more turns did it more than four in five times.</em></p>
   <p>Another August 2026 Cursor Insights chart looks at cloud-agent conversations from June 2026. As those conversations got longer, they were much more likely to produce a pull request. About a third of one-turn conversations opened a PR, "compared with more than four in five conversations with 12 or more turns." The share of those PRs that merged fell slightly, from 67% to 59%. Cursor notes that the increase in PRs more than makes up for that decline.</p>
-  <!-- Swap placeholder for: /img/field-notes/issue-2/03-more-turns-more-prs.png -->
-  <div class="article-img img-ph" data-src="/img/field-notes/issue-2/03-more-turns-more-prs.png" role="img" aria-label="About 1 in 3 one-turn cloud-agent chats opened a PR, vs more than 4 in 5 chats with 12 or more turns; merged share dipped from 67% to 59%. Source: Cursor Insights, Aug 2026, June 2026 data">03-more-turns-more-prs.png</div>
+  <img class="article-img"
+    src="/img/field-notes/issue-2/03-more-turns-more-prs-1080.webp"
+    srcset="/img/field-notes/issue-2/03-more-turns-more-prs-1080.webp 1080w, /img/field-notes/issue-2/03-more-turns-more-prs.webp 2160w"
+    sizes="(max-width: 520px) calc(100vw - 40px), 520px"
+    width="1080" height="1350"
+    alt="About 1 in 3 one-turn cloud-agent chats opened a PR, vs more than 4 in 5 chats with 12 or more turns; merged share dipped from 67% to 59%. Source: Cursor Insights, Aug 2026, June 2026 data">
   <p>This finding is about conversation depth, not the same power-user cohorts as the token study. Still, I suspect it points at the same adoption problem. A lot of people start, and fewer stay in the work long enough to get a result. The plan for the middle is often not a new feature. It is helping them get further in the one they already tried.</p>
 
   <h3>6. Cursor's own read: today's most engaged users may be a preview.</h3>
@@ -171,8 +175,12 @@
   <p class="reason-sub"><em>The dashboard shows the gap. The calls tell you why.</em></p>
   <p>Usage data can show you who your power users are, but it cannot tell you why they stuck, or what almost stopped everyone else. A way to find that out comes from <a href="https://www.linkedin.com/in/rahulvohra">Rahul Vohra</a>, then CEO of Superhuman. He used a question from <a href="https://www.linkedin.com/in/seanellis">Sean Ellis</a>: ask users how they would feel if they could no longer use the product, and measure how many say very disappointed. After benchmarking nearly 100 startups, Sean found that companies with strong traction almost always cleared 40%.</p>
   <p>Superhuman started at 22%. After segmenting to the people who loved the product most, the score was 33%. The work was to learn what those supporters loved, then look at the somewhat disappointed users who wanted the same main benefit, and remove what held them back. As Rahul put it, "Within just three quarters of our work to improve the product, the score nearly doubled to 58%."</p>
-  <!-- Swap placeholder for: /img/field-notes/issue-2/04-superhuman-22-to-58.png -->
-  <div class="article-img img-ph" data-src="/img/field-notes/issue-2/04-superhuman-22-to-58.png" role="img" aria-label="Superhuman's very-disappointed score went from 22% to 33% after segmenting, then to 58%, past Sean Ellis's 40% line. Source: Rahul Vohra, 2018">04-superhuman-22-to-58.png</div>
+  <img class="article-img"
+    src="/img/field-notes/issue-2/04-superhuman-22-to-58-1080.webp"
+    srcset="/img/field-notes/issue-2/04-superhuman-22-to-58-1080.webp 1080w, /img/field-notes/issue-2/04-superhuman-22-to-58.webp 2160w"
+    sizes="(max-width: 520px) calc(100vw - 40px), 520px"
+    width="1080" height="1350"
+    alt="Superhuman's very-disappointed score went from 22% to 33% after segmenting, then to 58%, past Sean Ellis's 40% line. Source: Rahul Vohra, 2018">
   <p>A similar point on features comes from <a href="https://www.linkedin.com/in/elenaverna">Elena Verna</a>. For retention, she looks at the features your most retentive users use consistently, then tries to raise adoption of the ones that correlate with people staying. That is close to how I would start. Talk to the customers who use you most, then talk to a few who slowed down. The first group tells you what is working, and the second group tells you what gets in the way.</p>
 
   <h2>What to steal</h2>
