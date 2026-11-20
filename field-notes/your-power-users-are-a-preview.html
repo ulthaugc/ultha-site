@@ -58,21 +58,21 @@
   .reason-sub { margin: 0 0 16px; color: #424A5E; }
   .reason-sub em { font-style: italic; }
   .article-img { display: block; width: 100%; max-width: 520px; height: auto; border-radius: 16px; margin: 24px auto 28px; background: var(--blue); }
-  .avg-viz { margin: 22px 0 26px; background: var(--card); border: 1px solid var(--line); border-radius: 16px; padding: 22px 22px 18px; }
-  .avg-viz .cols { display: grid; grid-template-columns: 1fr 1fr; gap: 18px; }
-  .avg-viz .col { background: #FBFAF7; border-radius: 12px; padding: 14px 14px 12px; }
-  .avg-viz .col.real { background: var(--blue); }
-  .avg-viz .lab { min-height: 2.4em; font-size: 0.72rem; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; color: var(--ink-3); margin: 0 0 4px; }
-    .avg-viz .lab, .avg-viz .ttl, .avg-viz .cap, .avg-viz .src { background: none !important; }
-  .avg-viz .ttl { min-height: 2.5em; font-family: var(--serif); font-weight: 600; font-size: 1.02rem; line-height: 1.25; color: var(--ink); margin: 0 0 12px; }
-  .avg-viz .bars { display: flex; align-items: flex-end; gap: 5px; height: 120px; border-bottom: 1.5px solid var(--ink); }
-  .avg-viz .bars span { flex: 1; background: #C9D3E6; border-radius: 4px 4px 0 0; }
-  .avg-viz .real .bars span { background: #B9C8EE; }
-  .avg-viz .real .bars span.top { background: var(--accent); }
-  .avg-viz .cap { font-size: 0.8rem; color: var(--ink-2); margin: 8px 0 0; line-height: 1.35; }
-  .avg-viz .note { font-family: "Caveat", cursive; font-weight: 600; font-size: 1.45rem; color: var(--accent); text-align: center; margin: 14px 0 0; line-height: 1.1; background: none !important; padding: 0; }
-  .avg-viz .src { font-size: 0.72rem; color: var(--ink-3); margin: 8px 0 0; text-align: center; }
-  @media (max-width: 480px) { .avg-viz { padding: 16px 14px 14px; } .avg-viz .cols { gap: 10px; } .avg-viz .col { padding: 12px 10px 10px; } .avg-viz .bars { height: 100px; gap: 3px; } .avg-viz .ttl { font-size: 0.92rem; min-height: 2.5em; } .avg-viz .lab { font-size: 0.66rem; } }
+  .avg-viz { margin: 22px 0 26px; background: #FCFCFA; border: 1px solid #E3E6EC; border-radius: 16px; padding: 22px 24px 16px; }
+  .avg-viz p { background: none !important; }
+  .avg-viz .lab { font-size: 0.72rem; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; color: var(--ink-3); margin: 0 0 4px; }
+  .avg-viz .ttl { font-family: var(--serif); font-weight: 600; font-size: 1.1rem; line-height: 1.25; color: var(--ink); margin: 0 0 4px; }
+  .avg-viz .sub { font-size: 0.85rem; color: var(--ink-2); margin: 0 0 16px; line-height: 1.4; }
+  .avg-viz .plot { position: relative; height: 170px; display: flex; align-items: flex-end; gap: 6px; border-bottom: 1px solid #B8BFCC; }
+  .avg-viz .plot span { flex: 1; background: #DFE3EA; border-radius: 4px 4px 0 0; min-height: 3px; }
+  .avg-viz .plot span.top { background: var(--accent); }
+  .avg-viz .avg { position: absolute; left: 0; right: 0; border-top: 1.5px dashed #8A93A6; }
+  .avg-viz .avg em { position: absolute; right: 0; bottom: 4px; font-style: normal; font-size: 0.72rem; color: #6B7488; background: #FCFCFA; padding: 0 4px; }
+  .avg-viz .toplab { position: absolute; left: 0; top: -2px; transform: translateY(-100%); font-size: 0.78rem; font-weight: 600; color: var(--accent); white-space: nowrap; }
+  .avg-viz .axis { display: flex; justify-content: space-between; font-size: 0.72rem; color: #6B7488; margin: 6px 0 0; }
+  .avg-viz .note { font-family: "Caveat", cursive; font-weight: 600; font-size: 1.4rem; color: var(--accent); text-align: center; margin: 12px 0 0; line-height: 1.1; }
+  .avg-viz .src { font-size: 0.72rem; color: var(--ink-3); margin: 6px 0 0; text-align: center; }
+  @media (max-width: 480px) { .avg-viz { padding: 16px 14px 14px; } .avg-viz .plot { height: 140px; gap: 4px; } }
   .signup-block { max-width: 680px; margin: 0 auto 80px; padding: 0 max(20px, env(safe-area-inset-left, 0px)) 0 max(20px, env(safe-area-inset-right, 0px)); }
   .signup-block .kicker { margin-bottom: 8px; }
   .signup { margin: 0; max-width: 440px; text-align: left; background: var(--card); border: 1px solid var(--line); border-radius: 18px; padding: 22px 22px 18px; }
@@ -141,13 +141,14 @@
 
   <h3>1. The top 10% used nearly two-thirds of the tokens.</h3>
   <p class="reason-sub"><em>The other 90% accounted for just over one-third.</em></p>
-  <figure class="avg-viz" role="img" aria-label="What an average suggests, every user doing about the same amount, compared with Cursor's four-week snapshot, where the top 10% of users used nearly two-thirds of the tokens">
-    <div class="cols">
-      <div class="col"><p class="lab">What the average shows</p><p class="ttl">Everyone uses it a bit</p><div class="bars"><span style="height:38%"></span><span style="height:38%"></span><span style="height:38%"></span><span style="height:38%"></span><span style="height:38%"></span><span style="height:38%"></span><span style="height:38%"></span><span style="height:38%"></span><span style="height:38%"></span><span style="height:38%"></span></div><p class="cap">10 users, same share each</p></div>
-      <div class="col real"><p class="lab">What Cursor saw</p><p class="ttl">1 in 10 does most of the work</p><div class="bars"><span class="top" style="height:100%"></span><span style="height:14%"></span><span style="height:12%"></span><span style="height:11%"></span><span style="height:9%"></span><span style="height:8%"></span><span style="height:7%"></span><span style="height:6%"></span><span style="height:5%"></span><span style="height:4%"></span></div><p class="cap">Top 10%: nearly two-thirds of tokens</p></div>
-    </div>
+  <figure class="avg-viz" role="img" aria-label="Illustration: each bar is 10% of users, busiest first. The top 10% used nearly two-thirds of the tokens, usage drops steeply after that, and the average sits far below the top and above most of the tail.">
+    <p class="lab">Cursor, over four weeks</p>
+    <p class="ttl">Usage is a steep curve, not a flat line</p>
+    <p class="sub">Each bar is 10% of users, busiest on the left. The dashed line is what an even split would look like.</p>
+    <div class="plot"><span class="top" style="height:90.3%"></span><span style="height:15.3%"></span><span style="height:11.1%"></span><span style="height:8.3%"></span><span style="height:5.6%"></span><span style="height:4.2%"></span><span style="height:2.1%"></span><span style="height:1.4%"></span><span style="height:0.7%"></span><span style="height:0.0%"></span><div class="avg" style="bottom:13.9%"><em>average</em></div></div>
+    <div class="axis"><span>Top 10%: nearly two-thirds of tokens</span><span>Long tail</span></div>
     <p class="note">averages are polite that way</p>
-    <p class="src">Illustration. Data: Dan Hollick, Cursor Insights, Sept 1, 2026</p>
+    <p class="src">Top 10% share: Dan Hollick, Cursor Insights, Sept 1, 2026. Shape of the other 90% is illustrative.</p>
   </figure>
   <p>When you only watch the average, the product looks evenly used. Averages are polite that way, and they make a steep split look tidy. Cursor's four-week snapshot says otherwise. The people who use you most are not a slightly busier version of everyone else. They are where most of the work is happening. My rule of thumb: before you plan the next feature, write down who is already using you like that, and if you can't name them, the average is still hiding the story.</p>
 
