@@ -23,5 +23,6 @@ Customer interviews, power user research, jobs-to-be-done (switch) questions, vo
 - [Testimonial videos](https://ultha.co/testimonial-videos): the testimonial video add-on.
 - [Contact](https://ultha.co/contact): send a note about your startup.
 - [Field Notes](https://ultha.co/field-notes): free newsletter on what makes customers stick, with reviews of AI company homepages and strategy and lessons from customer interviews.
+- [Field Notes Issue 2: Your power users are a preview of everyone else.](https://ultha.co/field-notes/your-power-users-are-a-preview): what Cursor's public data shows about its most engaged users, with 7 points and what to steal.
 - [Field Notes Issue 1: They loved the demo. Then the thread went quiet.](https://ultha.co/field-notes/why-great-demos-dont-close): why great demos still end in "not right now", with 7 reasons and what to steal.
 - [Sample review: why customers buy Attio](https://ultha.co/sample-review): what Attio's homepage says vs. what public reviews say. Built from public reviews, not client work.
